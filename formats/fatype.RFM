@@ -1,0 +1,10 @@
+PROJECT: fatype
+	RECORDS: 1 fatype
+
+LOGICAL_RECORD: 1
+	NAME:          fatype
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 fatype
+	TOTAL_FORMATS: 0
+
+ENDFILE

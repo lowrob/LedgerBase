@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a 
+OBJECTS=del_emp.o
+CC=cc -g
+
+$E/del_emp.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/del_emp.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_pp.h /usr/include/cfomstrc.h
+

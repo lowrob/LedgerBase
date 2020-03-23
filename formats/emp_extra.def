@@ -1,0 +1,8 @@
+	char	ee_numb[13] ;		/* Employee number    */
+	char	ee_type[2];		/* Type (earnings/deduction)	*/
+	char	ee_class[7];		/* Classification code	*/
+	char	ee_earn[7];		/* Earnings code	*/
+	char	ee_amt_flg[2];		/* Fixed/Percentage amount flag */
+	double	ee_amount;		/* Amount		*/
+	double	ee_target;		/* Target		*/
+	short	ee_cc;			/* Cost Center #	*/

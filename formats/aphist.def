@@ -1,0 +1,13 @@
+	char	a_supp_cd[11] ; 	/* Supplier number */
+	char	a_invc_no[16] ;		/* Purchase invoice number */
+	char	a_tr_type[3] ;		/* IN(voice),RT(Return),CM(Cr Memo),*/
+	short	a_sno ;			/* Running Sno under a_supp_cd + */
+	char	a_paid[1] ;		/* Invioce Complete - 'Y'es or 'N'o */
+	char	a_accno[19] ;		/* Cheque Bant Acct# */
+	short	a_fund ;		/* Transaction Fund */
+	long	a_po_no ;		/* Purchase Order number */
+	short	a_period ;		/* Period number */
+	long	a_chq_no ;		/* Cheque number */
+	long	a_tr_date ;		/* Invoice date */
+	double	a_disc_taken ;		/* Discount Taken */
+	double	a_gr_amt ;		/* Cheque Gross Amount (Including */

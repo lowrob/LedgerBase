@@ -1,0 +1,50 @@
+
+make: fatal error: Must be a separator on rules line 2 (bu39).
+MetaWare High C Compiler R2.3x 	Serial 1-NCR-799999.
+(c) Copyright 1987-91, MetaWare Incorporated
+E "copycc.c",L132/C31:	s_sth: Identifier is undeclared.
+
+make: fatal error.
+ld: csbloan.o: fatal error: cannot open file for reading
+
+make: fatal error.
+
+make: fatal error: don't know how to make empben.c (bu42).
+
+make: fatal error: don't know how to make misc.c (bu42).
+MetaWare High C Compiler R2.3x 	Serial 1-NCR-799999.
+(c) Copyright 1987-91, MetaWare Incorporated
+E "mon_att.c",L433/C12:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L435/C12:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1396/C34:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1461/C16:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1461/C36:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1465/C13:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1465/C33:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1625/C26:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1630/C30:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1638/C26:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1638/C46:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1640/C29:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1640/C49:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1644/C26:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1644/C46:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1646/C29:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1646/C49:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1652/C30:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1652/C50:	eah_perc: Undefined structure member of type Emp_at_his.
+E "mon_att.c",L1656/C30:	at_units: Undefined structure member of type Att.
+E "mon_att.c",L1656/C50:	eah_perc: Undefined structure member of type Emp_at_his.
+
+make: fatal error.
+
+make: fatal error: don't know how to make empded.c (bu42).
+ld: pay_cheque2.o: fatal error: cannot open file for reading
+
+make: fatal error.
+ld: terminat.o: fatal error: cannot open file for reading
+
+make: fatal error.
+ld: temp.o: fatal error: cannot open file for reading
+
+make: fatal error.

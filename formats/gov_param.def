@@ -1,0 +1,32 @@
+	long	gp_eff_date;		/* Effective Date		*/
+	double	gp_fed_sur1;		/* Federal Surtax Rate 1      */
+	double	gp_fed_sur_lim;		/* Fed Surtax Limit          */
+	double	gp_fed_sur2;		/* Federal Surtax Rate 2      */
+	double	gp_net_ptcr;		/* Net Pers Tax Cr Rate      */
+	double	gp_cpp_incr;		/* CPP Income Tax Rate            */
+	double	gp_cpp_incm;		/* CPP Income Tax Max        */ 
+	double	gp_cpp_ytd_inc;		/* CPP YTD Max Inc Tax       */
+	double	gp_uic_incr;		/* UIC Income Tax Rate       */
+	double	gp_uic_incm;		/* UIC Income Tax Max       */
+	double	gp_uic_ytd_inc;		/* UIC YTD Max Inc Tax       */
+	double	gp_tax_red; 		/* Prov Tax Reduction              */
+	double	gp_prov_tax_rate;	/* Provincial Tax Rate         */
+	double	gp_prov_sur;		/* Provincial Surtax         */
+	double	gp_prov_net;		/* Prov Net Inc Tax Surtax       */
+	double	gp_prov_sur_rate;	/* Prov Surtax Rate         */
+	double	gp_prov_sur_lim;	/* Prov Surtax Limit         */
+	double	gp_prov_flat1;		/* Provincial Flat Tax 1        */
+	double	gp_prov_flat2;		/* Provincial Flat Tax2      */
+	short	gp_cpp_min_age;		/* CPP Minimum Age             */
+	double	gp_cpp_pen_earn;	/* Yearly CPP Pen Earn       */
+	short	gp_cpp_max_age;		/* CPP Maximum Age              */
+	double	gp_cpp_max_contr;	/* Yearly CPP Max Contr      */
+	double	gp_cpp_reg_rate;	/* CPP Regular Rate            */
+	double	gp_cpp_bac_expt;	/* CPP Basic Exemption       */
+	double	gp_uic_prem;		/* UIC Emp Premium Rate           */
+	double	gp_uic_empl_rate;	/* UIC Employer's Rate          */
+	char	gp_empl_ref[12];	/* Rev Can Tax Acc # 1       */
+	double	gp_net_inc_rate;	/* Net Income Tax Rate         */
+	char	gp_tax_acct[12];	/* Rev Can Tax Acc # 2      */
+	double	gp_soc_ben;		/* Social Benefit Repay     */
+	double	gp_soc_benl;		/* Social Benefit Limit      */

@@ -1,0 +1,17 @@
+makelou
+cd $HOME/pp/personnel
+rm *.o
+makecmnd
+cd $HOME/pp/payroll
+rm *.o
+makecmnd
+cd $HOME/pp/employee
+rm *.o
+makecmnd
+cd $HOME/pp/yearend
+rm *.o
+makecmnd
+cd $HOME/pp/setup
+rm *.o
+makecmnd
+cd $HOME

@@ -1,0 +1,14 @@
+	short	th_fund ;		/* Fund */
+	short	th_reccod ;		/* Record code */
+	char	th_create[2] ;		/* Created E- entered G- generated */
+	long	th_seq_no ;		/* Running sno under tr_userid[11]*/
+	long	th_sys_dt ;		/* Trans Entered date */
+	char	th_userid[11] ;		/* UserId(login name) */
+	short	th_period ;		/* Period */
+	long	th_date ;		/* Date of Transaction */
+	double  th_debits ;		/* Optional .. Sum of all -ve amnts */
+	double  th_credits ;		/* Optional .. Sum of all +ve amnts */
+	char	th_descr[25] ;		/* Description */
+	char	th_supp_cd[11] ;	/* Supplier number */
+	char	th_reference[16] ;	/* Reference number */
+	char	th_type[1] ;		/* Transaction type */

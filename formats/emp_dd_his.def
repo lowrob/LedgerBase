@@ -1,0 +1,6 @@
+	char	edh_numb[13] ;		/* Employee number    */
+	short	edh_pp;			/* Pay period		*/
+	long	edh_date;		/* Date of the transaction	*/
+	char	edh_code[7];		/* Benefit code		*/
+	char	edh_group[7];
+	double	edh_amount;		/* Amount for the pay period	*/

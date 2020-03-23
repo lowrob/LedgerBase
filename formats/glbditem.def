@@ -1,0 +1,11 @@
+	char	ti_term[5] ;		/* Terminal name */
+	long	ti_sys_dt ;		/* Trans Entered date */
+	short	ti_seq_no ;		/* Running sno under tr_term+tr_sys_dt*/
+	short	tr_item_no ;		/* Item No. 	                  */
+	short	tr_fund ;		/* Fund Code        Key-2, Part-2 */
+	short	tr_reccod ;		/* Record code      Key-2, Part-3 */
+	char	tr_accno[19] ;		/* Account code     Key-2, part-4 */
+	short	tr_period ;		/* Period           Key-2, Part-1 */
+	double	tr_amount ;		/* Transaction Amount 	  	  */
+	short	tr_status ;		/* Transaction Update status 	  */
+

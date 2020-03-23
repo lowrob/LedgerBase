@@ -1,0 +1,98 @@
+HEADER
+SCREEN  fatype
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,28]  "FA ITEM TYPE MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,10]  "Code:" 
+
+ DISPLAY_MASK  [3,16] ____ 
+STRING  XXXX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    550 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,3]  "Description:" 
+
+ DISPLAY_MASK  [6,17] _(30) 
+STRING  X(30)
+LOG_ATTR (REQUIRED,UESCAPE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

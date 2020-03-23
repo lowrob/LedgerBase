@@ -1,0 +1,13 @@
+
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,2]  "7. Telephone No.      :" 
+
+ DISPLAY_MASK  [12,27] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (UESCAPE,SHODUP)
+
+END

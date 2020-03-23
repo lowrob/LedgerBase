@@ -1,0 +1,6 @@
+	short	gl_fund ;		/* Fund number    */
+	short	gl_cc ;			/* Cost Center number    */
+	char	gl_type[2] ;		/* Type S,U,C,D,R,T    */
+	char	gl_earn[7] ;		/* Earnings Code	*/
+	char	gl_class[7] ;		/* Classification Code	*/
+	char	gl_acct[19] ;		/* G/L Payroll Account	*/

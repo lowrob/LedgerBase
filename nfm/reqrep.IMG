@@ -1,0 +1,24 @@
+ REQREP                      REQUISITION  REPORTS             Date: 1997/06/16
+
+0   RETURN TO PREVIOUS MENU            10   LIST OF PROCESSED REQ
+1   LIST OF SUPPLIERS BY CODE          11   LIST OF DISAPPROVED REQ
+2   LIST OF SUPPLIERS BY NAME          12   PRINT REQUISITIONS
+3   SUPPLIER ADDRESS LIST BY CODE      13   REQUISITION AUDIT
+4   SUPPLIER ADDRESS LIST BY NAME      14   LIST OF REQ BY STOCK CODE
+5   LIST OF REQ BY NUMBER              15   LIST OF INVENTORY STOCK CODES
+6   LIST OF REQ BY SUPPLIER
+7   LIST OF REQ BY COST CENTER
+8   LIST OF REQ BY G/L ACCOUNT
+9   REQ AGED TRIAL BALANCE
+                                                             OPTION:  08
+-------------------------------------------------------------------------------
+Output On: B
+
+
+
+
+
+
+
+
+

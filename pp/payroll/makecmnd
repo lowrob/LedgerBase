@@ -1,0 +1,14 @@
+make -f makebena > err
+make -f makeccp >> err
+make -f makechin >> err
+make -f makechqc >> err
+make -f makeearnmnt >> err
+make -f makepadv >> err
+make -f makepaya >> err
+make -f makepchq >> err
+make -f makepdes >> err
+make -f makephis >> err
+make -f makeppayrp >> err
+make -f makepprp >> err
+make -f makepsel >> err
+make -f maketime >> err

@@ -1,0 +1,10 @@
+	char	tm_numb[13] ;		/* Employee number    */
+	short	tm_week;
+	short	tm_fund;
+	char	tm_class[7];		/* Classification code	*/
+	short	tm_cost;		/* Cost center number	*/
+	char	tm_dept[7];		/* Department code 	*/
+	char	tm_area[7];		/* Area code		*/	
+	char	tm_sortk_1[41];		/* sort key 1		*/
+	char	tm_sortk_2[41];		/* sort key 2		*/
+	char	tm_sortk_3[41];		/* sort key 3		*/

@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a 
+OBJECTS=mass_roe.o
+CC=cc -g
+
+$E/mass_roe.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/mass_roe.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_pp.h /usr/include/cfomstrc.h
+

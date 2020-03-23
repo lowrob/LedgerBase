@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a 
+OBJECTS=roll_sen.o
+CC=cc -g
+
+$E/roll_sen.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/roll_sen.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_pp.h /usr/include/cfomstrc.h
+

@@ -1,0 +1,218 @@
+HEADER
+SCREEN  mancheq
+VERSION 1
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,35]  "MANUAL CHEQUE" 
+PROMPT_VIDEO (REVERSE)
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+DATE   YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,1]  "Fn:" 
+
+ DISPLAY_MASK  [4,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,10]  "Employee #:" 
+
+ DISPLAY_MASK  [4,22] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,10]  "Fund #    :" 
+
+ DISPLAY_MASK  [5,22] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,41]  "Bank Acct #:" 
+
+ DISPLAY_MASK  [5,54] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,10]  "Cheque #  :" 
+
+ DISPLAY_MASK  [6,22] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,41]  "Cheque Date:" 
+
+ DISPLAY_MASK  [6,54] ####/##/## 
+DATE   YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,10]  "Deduction :" 
+
+ DISPLAY_MASK  [8,22] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,41]  "Amount     :" 
+
+ DISPLAY_MASK  [8,54] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,17]  "Employee Name:" 
+
+ DISPLAY_MASK  [11,32] _(48) 
+STRING  X(48)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,31]  "Mailing Address  :" 
+
+ DISPLAY_MASK  [12,50] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,31]  "Street Address   :" 
+
+ DISPLAY_MASK  [13,50] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,31]  "City             :" 
+
+ DISPLAY_MASK  [14,50] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,31]  "Prov/State       :" 
+
+ DISPLAY_MASK  [15,50] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,31]  "Postal/Zip Code  :" 
+
+ DISPLAY_MASK  [16,50] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ENDFILE

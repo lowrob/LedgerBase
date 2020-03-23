@@ -1,0 +1,177 @@
+HEADER
+SCREEN  reqindpro
+VERSION 1.00
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ FIELDNAME     pgm 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,29]  "INDIVIDUAL PROCESSING" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ FIELDNAME     rundt 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ FIELDNAME     fn 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ FIELDNAME     req_no 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,9]  "Requisition Number:" 
+
+ DISPLAY_MASK  [3,29] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    600 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    700 
+
+ FIELDNAME     supp_code 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,1]  "1. Supplier Code:" 
+
+ DISPLAY_MASK  [6,19] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    800 
+
+ FIELDNAME     supp_name 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,1]  "2. Supplier Name:" 
+
+ DISPLAY_MASK  [8,19] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    900 
+
+ FIELDNAME     cc_no 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,1]  "3. Cost Center  :" 
+
+ DISPLAY_MASK  [10,19] ## 
+NUMERIC   99
+
+END
+
+ FIELD    1000 
+
+ FIELDNAME     order_date 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,1]  "4. Order Date   :" 
+
+ DISPLAY_MASK  [12,19] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    1100 
+
+ FIELDNAME     amount 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,1]  "5. Amount       :" 
+
+ DISPLAY_MASK  [14,19] #(7).## 
+NUMERIC   9(7).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1200 
+
+ FIELDNAME     status 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "6. Status       :" 
+
+ DISPLAY_MASK  [16,19] _ 
+STRING  X
+
+END
+
+ FIELD    1300 
+
+ FIELDNAME     mesg 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    1400 
+
+ FIELDNAME     resp 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

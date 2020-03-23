@@ -1,0 +1,345 @@
+HEADER
+SCREEN  vacacc 
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,28]  "VACATION ACCRUAL MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,11]  "Bargaining Unit:" 
+
+ DISPLAY_MASK  [3,29] ______ 
+STRING  XXXXXX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "------------------------------------------------------------------------------- " 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,71]  "Page:" 
+
+ DISPLAY_MASK  [5,77] ## 
+NUMERIC   99
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,64]  "Status(Act/Del)" 
+
+ DISPLAY_MASK  [6,78] __ 
+STRING  XX
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,2]  "1. Low Sen. Years  :" 
+
+ DISPLAY_MASK  [7,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,37]  "Vacation Days :" 
+
+ DISPLAY_MASK  [7,55] ##.####
+NUMERIC   99.9999
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,5]  "High Sen. Years :" 
+
+ DISPLAY_MASK  [8,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (VALIDITY,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [8,71] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,2]  "2. Low Sen. Years  :" 
+
+ DISPLAY_MASK  [10,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,37]  "Vacation Days :" 
+
+ DISPLAY_MASK  [10,55] ##.#### 
+NUMERIC   99.9999
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,5]  "High Sen. Years :" 
+
+ DISPLAY_MASK  [11,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (VALIDITY,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [11,71] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,2]  "3. Low Sen. Years  :" 
+
+ DISPLAY_MASK  [13,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,37]  "Vacation Days :" 
+
+ DISPLAY_MASK  [13,55] ##.#### 
+NUMERIC   99.9999
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,5]  "High Sen. Years :" 
+
+ DISPLAY_MASK  [14,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (VALIDITY,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [14,71] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,2]  "4. Low Sen. Years  :" 
+
+ DISPLAY_MASK  [16,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,37]  "Vacation Days :" 
+
+ DISPLAY_MASK  [16,55] ##.#### 
+NUMERIC   99.9999
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,5]  "High Sen. Years :" 
+
+ DISPLAY_MASK  [17,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (VALIDITY,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,71] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,2]  "5. Low Sen. Years  :" 
+
+ DISPLAY_MASK  [19,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,37]  "Vacation Days :" 
+
+ DISPLAY_MASK  [19,55] ##.#### 
+NUMERIC   99.9999
+LOG_ATTR (SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,5]  "High Sen. Years :" 
+
+ DISPLAY_MASK  [20,25] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (VALIDITY,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,71] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ENDFILE

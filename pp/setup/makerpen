@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a 
+OBJECTS=reg_pen.o
+CC=cc -g
+
+$E/reg_pen.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/reg_pen.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_pp.h /usr/include/cfomstrc.h
+

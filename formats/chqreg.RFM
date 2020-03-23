@@ -1,0 +1,10 @@
+PROJECT: chqreg
+	RECORDS: 1 chqreg
+
+LOGICAL_RECORD: 1
+	NAME:          chqreg
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 chqreg
+	TOTAL_FORMATS: 0
+
+ENDFILE

@@ -1,0 +1,41 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=attrep.o attreputl.o attabsent.o attsum.o balsick.o negsick.o \
+empabsent.o trendsatt.o union.o substute.o
+
+CC=cc -g
+
+$E/attrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/attrep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+attrep.o  	: $I/bfs_defs.h
+
+attreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+negsick.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+empabsent.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+attabsent.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+trendsatt.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+attsum.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+balsick.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+union.o		: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+substute.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h

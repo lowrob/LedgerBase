@@ -1,0 +1,5 @@
+	char	p_code[7] ; 		/* Position Code */
+	char	p_desc[31] ;		/* Psition Description */
+	char	p_type[3] ;		/* Position type */
+	char	p_ctr_type[3] ;		/* Position contract type */
+	long	p_ctr_lgth;		/* Position contract length */

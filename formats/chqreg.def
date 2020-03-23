@@ -1,0 +1,9 @@
+	short	cr_funds ;		/* Fund#, where the cheque belongs to */
+	long	cr_chq_no ;		/* Cheque Seq. number */
+	long	cr_date ;		/* Cheque date */
+	char	cr_supp_cd[11] ;	/* Supplr#, to whom cheque is issued */
+	char	cr_chq_type[1] ;	/* 'M' - Manual, 'R' - Regular Cheque */
+	char	cr_cancelled[1] ;	/* 'Y'es or 'N'o */
+	char	cr_sys[1];		/* system flag A - A/P     */
+	double	cr_disc_taken ;		/* Discount Taken */
+	double	cr_gr_amt ;		/* Cheque Gross Amount (Including

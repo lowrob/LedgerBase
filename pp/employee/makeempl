@@ -1,0 +1,17 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a 
+OBJECTS=emp_demo.o emp_emp2.o emp_resp.o emp_earn.o emp_ben.o emp_garn.o\
+empldrvr.o emp_loan.o emp_misc.o emp_ded.o teach_qual.o teach_ass.o\
+emp_st.o emp_att.o emp_sen.o emp_chq.o emp_comp.o
+CC=cc -g
+
+$E/employee.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/employee.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_pp.h $I/empldrvr.h /usr/include/cfomstrc.h
+

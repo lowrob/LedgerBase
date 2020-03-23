@@ -1,0 +1,3 @@
+	long	reqr_code;		/* requisition number */
+	short	reqr_item_no;		/* requisition item number */
+	char	reqr_reason[71]; 	/* Disapproval reason */

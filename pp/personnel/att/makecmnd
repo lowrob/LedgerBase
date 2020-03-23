@@ -1,0 +1,4 @@
+make -f makeattrep > err
+make -f makedatt >>err
+make -f makeiatt >>err
+make -f makematt >>err

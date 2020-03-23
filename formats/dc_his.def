@@ -1,0 +1,4 @@
+	char	dch_numb[13] ;
+	char	dch_code[7] ;
+	long	dch_date;
+	double	dch_amount;

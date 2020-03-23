@@ -1,0 +1,8 @@
+	short	ui_numb ;		/* UIC Number of Pay Periods.	*/
+	long	ui_date;		/* UIC table effective date */
+	short	ui_min_hrs;		/* UIC Minimum hours */
+	double	ui_min_earn;		/* UIC mimimum insurable earnings */
+	double	ui_max_earn;		/* UIC maximum insurable earnings */
+	double	ui_max_prem;		/* UIC maximum premium */
+	double	ui_yrly_prem;		/* UIC Yearly maximum Premium */
+	double	ui_yrly_earn;		/* UIC Yealry maximum Earnings */

@@ -1,0 +1,2 @@
+	char	ma_numb[13] ;		/* Employee number    */
+	char	ma_code[7] ; 		/* Garnishment Code */

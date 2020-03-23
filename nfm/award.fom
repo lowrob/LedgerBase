@@ -1,0 +1,529 @@
+HEADER
+SCREEN  award
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+LOG_ATTR (UESCAPE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,34]  "AWARD PRICES" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,10]  "Catalogue #:" 
+
+ DISPLAY_MASK  [3,23] #(7) 
+NUMERIC  9(7)
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE)
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,1]  "1. Category  :" 
+
+ DISPLAY_MASK  [5,16] _(40) 
+STRING  X(40)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,1]  "2. Item Group:" 
+
+ DISPLAY_MASK  [7,16] _(40) 
+STRING  X(40)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [8,16] _(40) 
+STRING  X(40)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,16] _(40) 
+STRING  X(40)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,1]  "3. Item      :" 
+
+ DISPLAY_MASK  [11,16] _(40) 
+STRING  X(40)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,71]  "Page:" 
+
+ DISPLAY_MASK  [11,77] ## 
+NUMERIC   99
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,1]  "----------------------------------------------------------------------------" 
+
+ DISPLAY_MASK  [12,77] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,4]  "Supp Code       Supp Name            New Desc               Bid     Status" 
+
+ DISPLAY_MASK  [13,59] __
+STRING  XX
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,70]  "(   /AWD)" 
+
+ DISPLAY_MASK  [14,59] __ 
+STRING  XX
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,1]  "1." 
+
+ DISPLAY_MASK  [15,4] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [15,16] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [15,38] _(19) 
+STRING  X(19)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,61] ####.#### 
+NUMERIC   9999.9999
+LOG_ATTR (SUP_ZEROES)
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [15,73] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "2." 
+
+ DISPLAY_MASK  [16,4] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [16,16] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [16,38] _(19) 
+STRING  X(19)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [16,61] ####.#### 
+NUMERIC   9999.9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [16,73] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [17,1]  "3." 
+
+ DISPLAY_MASK  [17,4] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,16] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,38] _(19) 
+STRING  X(19)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,61] ####.#### 
+NUMERIC   9999.9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,73] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,1]  "4." 
+
+ DISPLAY_MASK  [18,4] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,16] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,38] _(19) 
+STRING  X(19)
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [18,61] ####.#### 
+NUMERIC   9999.9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,73] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,1]  "5." 
+
+ DISPLAY_MASK  [19,4] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,16] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,38] _(19) 
+STRING  X(19)
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [19,61] ####.#### 
+NUMERIC   9999.9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,73] ___ 
+STRING  XXX
+
+END
+
+ FIELD    4200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [20,1]  "6." 
+
+ DISPLAY_MASK  [20,4] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    4300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,16] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    4400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,38] _(19) 
+STRING  X(19)
+
+END
+
+ FIELD    4500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [20,61] ####.#### 
+NUMERIC   9999.9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,73] ___ 
+STRING  XXX
+
+END
+
+ FIELD    4700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,1]  "7." 
+
+ DISPLAY_MASK  [21,4] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    4800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,16] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    4900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,38] _(19) 
+STRING  X(19)
+
+END
+
+ FIELD    5000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [21,61] ####.#### 
+NUMERIC   9999.9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    5100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,73] ___ 
+STRING  XXX
+
+END
+
+ FIELD    5200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    5300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

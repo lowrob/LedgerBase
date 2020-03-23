@@ -1,0 +1,10 @@
+PROJECT: userprof
+	RECORDS: 1 userprof
+
+LOGICAL_RECORD: 1
+	NAME:          User~Profile~File
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 userprof
+	TOTAL_FORMATS: 0
+
+ENDFILE

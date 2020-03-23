@@ -1,0 +1,515 @@
+HEADER
+SCREEN  teach_qual
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,26]  "QUALIFICATIONS MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,9]  "Employee #:" 
+
+ DISPLAY_MASK  [3,21] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [3,35] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,70]  "Field:" 
+
+ DISPLAY_MASK  [3,77] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    800 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,2]  "1. Certification:" 
+
+ DISPLAY_MASK  [5,20] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,35]  "2. Level      :" 
+
+ DISPLAY_MASK  [5,51] ## 
+NUMERIC 99	
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [5,55] _(15) 
+STRING  X(15)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,2]  "3. Years Exp    :" 
+
+ DISPLAY_MASK  [6,20] ## 
+NUMERIC   99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,35]  "4. School Pref:" 
+
+ DISPLAY_MASK  [6,51] #### 
+NUMERIC   9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [6,57] _(20) 
+STRING  X(20)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,2]  "5. Institution  :" 
+
+ DISPLAY_MASK  [8,20] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,43]  "6. Program:" 
+
+ DISPLAY_MASK  [8,55] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,2]  "7. Institution  :" 
+
+ DISPLAY_MASK  [9,20] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,43]  "8. Program:" 
+
+ DISPLAY_MASK  [9,55] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,2]  "9. Institution  :" 
+
+ DISPLAY_MASK  [10,20] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,42]  "10. Program:" 
+
+ DISPLAY_MASK  [10,55] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,1]  "11. Institution  :" 
+
+ DISPLAY_MASK  [11,20] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,42]  "12. Program:" 
+
+ DISPLAY_MASK  [11,55] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,1]  "13. Institution  :" 
+
+ DISPLAY_MASK  [12,20] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,42]  "14. Program:" 
+
+ DISPLAY_MASK  [12,55] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,1]  "----------------------------------------------------------------------------" 
+
+ DISPLAY_MASK  [13,77] ____ 
+STRING  XXXX
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,5]  "AREA OF SPECIALIZATION                   STATUS               Page:" 
+
+ DISPLAY_MASK  [14,73] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,7]  "CODE            DESCRIPTION            (Act/Del)" 
+
+ DISPLAY_MASK  [15,56] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [17,2]  "1." 
+
+ DISPLAY_MASK  [17,6] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,14] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,49] _(5) 
+STRING  X(5)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,2]  "2." 
+
+ DISPLAY_MASK  [18,6] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,14] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,49] _(5) 
+STRING  X(5)
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,2]  "3." 
+
+ DISPLAY_MASK  [19,6] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,14] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,49] _(5) 
+STRING  X(5)
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [20,2]  "4." 
+
+ DISPLAY_MASK  [20,6] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,14] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,49] _(5) 
+STRING  X(5)
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,2]  "5." 
+
+ DISPLAY_MASK  [21,6] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    4100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,14] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    4200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,49] _(5) 
+STRING  X(5)
+
+END
+
+ FIELD    4300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [22,2]  "6." 
+
+ DISPLAY_MASK  [22,6] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    4400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [22,14] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    4500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [22,49] _(5) 
+STRING  X(5)
+
+END
+
+ FIELD    4600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    4700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

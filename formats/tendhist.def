@@ -1,0 +1,6 @@
+	long	th_cat_num;		/* Catalogue Number */
+	char	th_supp[3][11];		/* Supplier Code */
+	double	th_price[3];		/* Price */
+	double	th_qty[3];		/* Quantity */
+	double	th_min_dollar[3];	/* Min Dollar */
+	long	th_date[3];		/* Date */

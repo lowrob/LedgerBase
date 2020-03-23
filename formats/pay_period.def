@@ -1,0 +1,4 @@
+	char	pp_code[7] ;	 	/* Pay Period Code */
+	short	pp_year;
+	short	pp_numb ;		/* Pay Period Number */
+	char	pp_desc[31] ;		/* Pay Period Decription */

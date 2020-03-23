@@ -1,0 +1,10 @@
+PROJECT: audit
+	RECORDS: 1 audit
+
+LOGICAL_RECORD: 1
+	NAME:          audit
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 audit
+	TOTAL_FORMATS: 0
+
+ENDFILE

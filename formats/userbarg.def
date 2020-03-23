@@ -1,0 +1,6 @@
+	char	ub_id[11];	/* user's login name */
+	char	ub_barg[7];	/* user's login teminal */
+	char	ub_add[2];	/* user's class: Administrator or User */
+	char	ub_update[2];	/* user's class: Administrator or User */
+	char	ub_delete[2];	/* user's class: Administrator or User */
+	char	ub_browse[2];	/* user's class: Administrator or User */

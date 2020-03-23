@@ -1,0 +1,478 @@
+rm *.RPF
+
+echo 'PROJECT: aphist'
+crtdef.out aphist <<END
+aphist
+n
+END
+rpfrm.out aphist
+
+echo 'PROJECT: aphstrep'
+crtdef.out aphist supplier <<END
+aphstrep
+n
+END
+rpfrm.out aphstrep
+
+echo 'PROJECT: apinvc3'
+crtdef.out invoice <<END
+invoice 
+n
+END
+rpfrm.out apinvc3
+
+echo 'PROJECT: arshdr'
+crtdef.out arshdr <<END
+arshdr
+n
+END
+rpfrm.out arshdr
+
+echo 'PROJECT: arsitem'
+crtdef.out arsitem <<END
+arsitem
+n
+END
+rpfrm.out arsitem
+
+echo 'PROJECT: audit'
+crtdef.out audit <<END
+audit
+n
+END
+rpfrm.out audit
+
+echo 'PROJECT: bdtrrep'
+crtdef.out glbdhdr glbditem <<END
+bdtrrep
+n
+END
+rpfrm.out bdtrrep
+
+echo 'PROJECT: bsheet'
+crtdef.out glmast control <<END
+bsheet
+n
+END
+rpfrm.out bsheet
+
+echo 'PROJECT: cc_rpt'
+crtdef.out school <<END
+cc_rpt
+n
+END
+rpfrm.out cc_rpt
+
+echo 'PROJECT: cheques'
+crtdef.out cheques <<END
+cheques
+n
+END
+rpfrm.out cheques
+
+echo 'PROJECT: chqhist'
+crtdef.out chqhist <<END
+chqhist
+n
+END
+rpfrm.out chqhist
+
+echo 'PROJECT: chqhrpt'
+crtdef.out chqhist control <<END
+chqhrpt
+n
+END
+rpfrm.out chqhrpt
+
+echo 'PROJECT: chqpurge'
+crtdef.out invoice <<END
+chqpurge
+n
+END
+rpfrm.out chqpurge
+
+echo 'PROJECT: chqreg'
+crtdef.out chqreg <<END
+chqreg
+n
+END
+rpfrm.out chqreg
+
+echo 'PROJECT: control'
+crtdef.out control <<END
+control
+n
+END
+rpfrm.out control
+
+echo 'PROJECT: customer'
+crtdef.out customer <<END
+customer
+n
+END
+rpfrm.out customer
+
+echo 'PROJECT: custrpt'
+crtdef.out customer <<END
+custrpt
+n
+END
+rpfrm.out custrpt
+
+echo 'PROJECT: dbhaudit'
+crtdef.out dbhaudit <<END
+dbhaudit
+n
+END
+rpfrm.out dbhaudit
+
+echo 'PROJECT: fadept'
+crtdef.out fadept <<END
+fadept
+n
+END
+rpfrm.out fadept
+
+echo 'PROJECT: famast'
+crtdef.out famast <<END
+famast
+n
+END
+rpfrm.out famast
+
+echo 'PROJECT: farpt'
+crtdef.out famast fatype school <<END
+farpt
+n
+END
+rpfrm.out farpt
+
+echo 'PROJECT: fatran'
+crtdef.out fatran <<END
+fatran
+n
+END
+rpfrm.out fatran
+
+echo 'PROJECT: farrpt'
+crtdef.out fatran famast fadept school <<END
+fatrrpt
+n
+END
+rpfrm.out fatrrpt
+
+echo 'PROJECT: fatype'
+crtdef.out fatype <<END
+fatype
+n
+END
+rpfrm.out fatype
+
+echo 'PROJECT: glbdhdr'
+crtdef.out glbdhdr <<END
+glbdhdr
+n
+END
+rpfrm.out glbdhdr
+
+echo 'PROJECT: glbditem'
+crtdef.out glbditem <<END
+glbditem
+n
+END
+rpfrm.out glbditem
+
+echo 'PROJECT: glmast'
+crtdef.out glmast <<END
+glmast
+n
+END
+rpfrm.out glmast
+
+echo 'PROJECT: gltran'
+crtdef.out gltran <<END
+gltran
+n
+END
+rpfrm.out gltran
+
+echo 'PROJECT: gltrhdr'
+crtdef.out gltrhdr <<END
+gltrhdr
+n
+END
+rpfrm.out gltrhdr
+
+echo 'PROJECT: invchdr'
+crtdef.out invchdr <<END
+invchdr
+n
+END
+rpfrm.out invchdr
+
+echo 'PROJECT: invcitem'
+crtdef.out invcitem <<END
+invcitem
+n
+END
+rpfrm.out invcitem
+
+echo 'PROJECT: invoice'
+crtdef.out invoice <<END
+invoice
+n
+END
+rpfrm.out invoice
+
+echo 'PROJECT: journal'
+crtdef.out gltrhdr gltran <<END
+journal
+n
+END
+rpfrm.out journal
+
+echo 'PROJECT: jrnlant'
+crtdef.out gltrhdr gltran glmast <<END
+jrnlant
+n
+END
+rpfrm.out jrnlant
+
+echo 'PROJECT: param'
+crtdef.out param <<END
+param
+n
+END
+rpfrm.out param
+
+echo 'PROJECT: pohdr'
+crtdef.out pohdr <<END
+pohdr
+n
+END
+rpfrm.out pohdr
+
+echo 'PROJECT: poitem'
+crtdef.out poitem <<END
+poitem
+n
+END
+rpfrm.out poitem
+
+echo 'PROJECT: porpt'
+crtdef.out supplier pohdr poitem glmast <<END
+porpt
+n
+END
+rpfrm.out porpt
+
+echo 'PROJECT: rcptrep'
+crtdef.out rcpthdr rcptitem <<END
+rcptrep
+n
+END
+rpfrm.out rcptrep
+
+echo 'PROJECT: receipt'
+crtdef.out receipt <<END
+receipt
+n
+END
+rpfrm.out receipt
+
+echo 'PROJECT: recentry'
+crtdef.out rechdr rectran glmast <<END
+recentry
+n
+END
+rpfrm.out recentry
+
+echo 'PROJECT: rechdr'
+crtdef.out rechdr <<END
+rechdr
+n
+END
+rpfrm.out rechdr
+
+echo 'PROJECT: rectran'
+crtdef.out rectran <<END
+rectran
+n
+END
+rpfrm.out rectran
+
+echo 'PROJECT: registr'
+crtdef.out glmast gltrhdr gltran control <<END
+registr
+n
+END
+rpfrm.out registr
+
+echo 'PROJECT: school'
+crtdef.out school <<END
+school
+n
+END
+rpfrm.out school
+
+echo 'PROJECT: st_alloc'
+crtdef.out st_alloc <<END
+st_alloc
+n
+END
+rpfrm.out st_alloc
+
+echo 'PROJECT: st_sect'
+crtdef.out st_sect <<END
+st_sect
+n
+END
+rpfrm.out st_sect
+
+echo 'PROJECT: stmast'
+crtdef.out stmast <<END
+stmast
+n
+END
+rpfrm.out stmast
+
+echo 'PROJECT: stmastb'
+crtdef.out stmast <<END
+stmastb
+n
+END
+rpfrm.out stmastb
+
+echo 'PROJECT: stockrep'
+crtdef.out stmast sttran st_alloc st_sect school <<END
+stockrep
+n
+END
+rpfrm.out stockrep
+
+echo 'PROJECT: sttran'
+crtdef.out sttran <<END
+sttran
+n
+END
+rpfrm.out sttran
+
+echo 'PROJECT: supp_gst'
+crtdef.out gltrhdr gltran supplier <<END
+supp_gst
+n
+END
+rpfrm.out supp_gst
+
+echo 'PROJECT: supplier'
+crtdef.out supplier <<END
+supplier
+n
+END
+rpfrm.out supplier
+
+echo 'PROJECT: supprpt'
+crtdef.out supplier <<END
+supprpt
+n
+END
+rpfrm.out supprpt
+
+echo 'PROJECT: trans'
+crtdef.out gltrhdr gltran control glsect <<END
+trans
+n
+END
+rpfrm.out trans
+
+echo 'PROJECT: trial'
+crtdef.out glmast control glsect glacct <<END
+trial
+n
+END
+rpfrm.out trial
+
+echo 'PROJECT: userprof'
+crtdef.out userprof <<END
+userprof
+n
+END
+rpfrm.out userprof
+
+echo 'PROJECT: reqrpt1'
+crtdef.out reqhdr reqitem supplier school <<END
+reqrpt1
+n
+END
+rpfrm.out reqrpt1
+
+echo 'PROJECT: reqrpt2'
+crtdef.out reqhdr reqitem glmast stmast <<END
+reqrpt2
+n
+END
+rpfrm.out reqrpt2
+
+echo 'PROJECT: earncode'
+crtdef.out earnings pay_param <<END
+earncode
+n
+END
+rpfrm.out earncode
+
+echo 'PROJECT: jourlist'
+crtdef.out jr_ent glmast <<END
+jourlist
+n
+END
+rpfrm.out jourlist
+
+echo 'PROJECT: position'
+crtdef.out position pp_earn <<END
+position
+n
+END
+rpfrm.out position
+
+echo 'PROJECT: reparea'
+crtdef.out area pay_param <<END
+reparea
+n
+END
+rpfrm.out reparea
+
+echo 'PROJECT: pptable'
+crtdef.out pay_period pay_per_it pay_param <<END
+pptable
+n
+END
+rpfrm.out pptable
+
+echo 'PROJECT: repcsbl'
+crtdef.out csb_loan pay_param <<END
+repcsbl
+n
+END
+rpfrm.out repcsbl
+
+echo 'PROJECT: repdept'
+crtdef.out department pay_param <<END
+repdept
+n
+END
+rpfrm.out repdept
+
+echo 'PROJECT: repstat'
+crtdef.out stat_hol pay_param <<END
+repstat
+n
+END
+rpfrm.out repstat
+
+echo 'PROJECT: taxtable'
+crtdef.out tax_table pay_param <<END
+taxtable
+n
+END
+rpfrm.out taxtable
+

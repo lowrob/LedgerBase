@@ -1,0 +1,19 @@
+	char	tm_numb[13] ;		/* Employee number    */
+	long	tm_date;		/* Pay date 		*/
+	short	tm_no;			/* Sequence number	*/
+	short	tm_pp;			/* Pay period		*/
+	short	tm_week;		/* Week			*/
+	short	tm_fund;		/* Fund */
+	char	tm_adj[2];		/* Adjustment flag	*/
+	char	tm_class[7];		/* Classification code	*/
+	char	tm_earn[7];		/* Earnings code	*/
+	char	tm_trans[7];		/* Transaction code	*/
+	char	tm_exp[7];		/* Expense code		*/
+	double	tm_units[7];		/* Units/day		*/
+	char	tm_att[7][4];		/* Attendance Code 	*/
+	double	tm_tot_amt;		/* Total amount		*/
+	short	tm_cost;		/* Cost center number	*/
+	char	tm_teach[13];		/* Teacher Code 	*/
+	char	tm_comment[46];		/* Comment	*/
+	char	tm_stat[4];		/* Status		*/
+	short	tm_year;

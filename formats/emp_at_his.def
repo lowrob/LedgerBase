@@ -1,0 +1,4 @@
+	char	eah_numb[13] ;		/* Employee number    */
+	char	eah_code[4] ; 		/* Attendance code	 */
+	long	eah_date;		/* Date of the transaction	*/
+	char	eah_teach[13] ;		/* Teacher number    */

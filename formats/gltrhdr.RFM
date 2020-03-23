@@ -1,0 +1,10 @@
+PROJECT: gltrhdr
+	RECORDS: 1 gltrhdr
+
+LOGICAL_RECORD: 1
+	NAME:          gltrhdr
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 gltrhdr
+	TOTAL_FORMATS: 0
+
+ENDFILE

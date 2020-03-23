@@ -1,0 +1,5 @@
+	char	ebh_numb[13] ;		/* Employee number    */
+	short	ebh_pp;			/* Pay period		*/
+	long	ebh_date;		/* Date of the transaction	*/
+	char	ebh_code[7];		/* Benefit code		*/
+	double	ebh_amount;		/* Amount for the pay period	*/

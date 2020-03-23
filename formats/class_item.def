@@ -1,0 +1,7 @@
+	char	ci_code[7] ; 		/* Classification Code */
+	long	ci_date;		/* Classification table eff date */
+	short	ci_fund;		/* Classification Fund */
+	char	ci_cpp_acct[19] ;	/* Classification CPP Account */
+	long	ci_cpp_keys[12] ; 	/* Classification CPP Acct Keys */
+	char	ci_uic_acct[19] ;	/* Classification UIC Account */
+	long	ci_uic_keys[12] ; 	/* Classification UIC Acct Keys */

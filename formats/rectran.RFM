@@ -1,0 +1,10 @@
+PROJECT: rectran
+	RECORDS: 1 rectran
+
+LOGICAL_RECORD: 1
+	NAME:          rectran
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 rectran
+	TOTAL_FORMATS: 0
+
+ENDFILE

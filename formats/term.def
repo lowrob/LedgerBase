@@ -1,0 +1,2 @@
+	char	t_code[3] ; 		/* Termination Code */
+	char	t_desc[31] ;		/* Termination description */

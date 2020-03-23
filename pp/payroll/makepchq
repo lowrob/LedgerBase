@@ -1,0 +1,19 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a 
+OBJECTS=pay_cheque.o joursum.o cheqreg.o
+CC=cc -g
+
+$E/pay_cheque.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/pay_cheque.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+pay_cheque.o : $I/bfs_defs.h $I/bfs_com.h $I/bfs_pp.h $I/reports.h\
+	 /usr/include/cfomstrc.h
+
+joursum.o : $I/bfs_defs.h $I/bfs_com.h $I/bfs_pp.h $I/reports.h
+
+cheqreg.o : $I/bfs_defs.h $I/bfs_com.h $I/bfs_pp.h $I/reports.h

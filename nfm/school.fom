@@ -1,0 +1,222 @@
+HEADER
+SCREEN  school
+VERSION 2
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+LOG_ATTR (UESCAPE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,27]  "COST CENTER MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,70] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,6] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,15]  "Number:" 
+
+ DISPLAY_MASK  [3,24] #### 
+NUMERIC   9999
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP,BOUNDS)
+LOWER_BOUND	"0001"
+UPPER_BOUND	"9999"
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,70]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE)
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "------------------------------------------------------------------------------- " 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,2]  "1. Name               :" 
+
+ DISPLAY_MASK  [6,27] _(28) 
+STRING  X(28)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,2]  "2. Mailing Address    :" 
+
+ DISPLAY_MASK  [7,27] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,2]  "3. Street Address     :" 
+
+ DISPLAY_MASK  [8,27] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,2]  "4. City,Prov/State    :" 
+
+ DISPLAY_MASK  [9,27] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,2]  "5. Postal/Zip Code    :" 
+
+ DISPLAY_MASK  [10,27] _(7) 
+STRING  X(7)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,2]  "6. Contact            :" 
+
+ DISPLAY_MASK  [11,27] _(25) 
+STRING  X(25)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,2]  "7. Telephone No.      :" 
+
+ DISPLAY_MASK  [12,27] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,2]  "8. Fax No.            :" 
+
+ DISPLAY_MASK  [13,27] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,2]  "9. Size (Square Ft)   :" 
+
+ DISPLAY_MASK  [15,27] #(6) 
+NUMERIC   9(6)
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "10. Rural or Town (R/T):" 
+
+ DISPLAY_MASK  [16,27] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+LOG_ATTR (SHODUP)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE,SHODUP)
+
+END
+
+ENDFILE

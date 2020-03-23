@@ -1,0 +1,7 @@
+	char	sn_position[7];
+	long	sn_eff_date;
+	double	sn_max_days_yr;
+	double	sn_num_hrs_day;
+	char	sn_barg[7];
+	char	sn_month[12][32] ;
+	double	sn_poss_days[12];

@@ -1,0 +1,98 @@
+HEADER
+SCREEN  sen_aud
+VERSION 1
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,27]  "END OF PERIOD AUDIT REPORT" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,62]  "Date:" 
+
+ DISPLAY_MASK  [1,68] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,41]  "OPTION:" 
+
+ DISPLAY_MASK  [8,49] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ PROMPT [15,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "Sort Option1   :" 
+
+ DISPLAY_MASK  [16,18] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [17,1]  "Sort Option2   :" 
+
+ DISPLAY_MASK  [17,18] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

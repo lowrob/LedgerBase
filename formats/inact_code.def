@@ -1,0 +1,3 @@
+	char	i_code[4] ; 		/* Inactivation Code */
+	char	i_desc[31] ;		/* Inactivation description */
+	char	i_at_code[4] ; 		/* Attendance Code */

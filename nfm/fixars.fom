@@ -1,0 +1,336 @@
+HEADER
+SCREEN  fixars
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ FIELDNAME     s_pgm 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,32]  "FIX A/R STATEMENTS" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ FIELDNAME     s_rundate 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,70] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ FIELDNAME     s_fn 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (REQUIRED,UCASE)
+
+END
+
+ FIELD    500 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    600 
+
+ FIELDNAME     s_cu_code 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,1]  " 1. Customer Code:" 
+
+ DISPLAY_MASK  [5,20] _(10) 
+STRING  X(10)
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ FIELDNAME     s_fund 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,5]  "Fund:" 
+
+ DISPLAY_MASK  [7,11] ### 
+NUMERIC   999
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    800 
+
+ FIELDNAME     s_inv_no 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,19]  "Invoice#:" 
+
+ DISPLAY_MASK  [7,29] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    900 
+
+ FIELDNAME     s_sno 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,49]  "Seq No:" 
+
+ DISPLAY_MASK  [7,57] ### 
+NUMERIC   999
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ FIELDNAME     s_type 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,5]  "Type:" 
+
+ DISPLAY_MASK  [9,11] __ 
+STRING  XX
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ FIELDNAME     s_status 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,19]  "Status  :" 
+
+ DISPLAY_MASK  [9,29] _ 
+STRING  X
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    1200 
+
+ FIELDNAME     s_trandt 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,5]  "Tran Date:" 
+
+ DISPLAY_MASK  [11,16] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ FIELDNAME     s_duedt 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,40]  "Due Date:" 
+
+ DISPLAY_MASK  [11,50] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ FIELDNAME     s_netamt 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,5]  "Net Amount   :" 
+
+ DISPLAY_MASK  [13,20] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ FIELDNAME     s_gramt 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,40]  "Gross Amount:" 
+
+ DISPLAY_MASK  [13,54] #(9).## 
+NUMERIC   S9(8).99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ FIELDNAME     s_gstpercent 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,5]  "GST %:" 
+
+ DISPLAY_MASK  [15,12] ###.## 
+NUMERIC   999.99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ FIELDNAME     s_gstamt 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,30]  "GST. Amount:" 
+
+ DISPLAY_MASK  [15,43] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ FIELDNAME     s_txpercent 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,5]  "PST %:" 
+
+ DISPLAY_MASK  [17,12] ###.## 
+NUMERIC   999.99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ FIELDNAME     s_txamt 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,30]  "PST. Amount:" 
+
+ DISPLAY_MASK  [17,43] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ FIELDNAME     s_oriamt 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,5]  "Orig. Amount :" 
+
+ DISPLAY_MASK  [19,20] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ FIELDNAME     s_balance 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,35]  "Balance :" 
+
+ DISPLAY_MASK  [19,45] #(9).## 
+NUMERIC   S9(8).99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ FIELDNAME     s_period 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,60]  "Period:" 
+
+ DISPLAY_MASK  [19,68] ## 
+NUMERIC   99
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ FIELDNAME     s_remarks 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,5]  "Remarks:" 
+
+ DISPLAY_MASK  [21,15] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ FIELDNAME     s_mesg 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    2500 
+
+ FIELDNAME     s_resp 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (REQUIRED,UCASE)
+
+END
+
+ENDFILE

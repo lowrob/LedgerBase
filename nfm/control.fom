@@ -1,0 +1,401 @@
+HEADER
+SCREEN  control
+VERSION 2.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,32]  "FUND MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date: " 
+
+ DISPLAY_MASK  [1,70] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,9]  "Fund: " 
+
+ DISPLAY_MASK  [3,15] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,70]  "Field#: " 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,2]  "1.  Description   : " 
+
+ DISPLAY_MASK  [5,22] _(30) 
+STRING  X(30)
+LOG_ATTR (REQUIRED,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,27]  "G/L Account#                          G/L Account#" 
+
+ DISPLAY_MASK  [7,79] _ 
+STRING  X
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,2]  "2. A/P Ordinary   :" 
+
+ DISPLAY_MASK  [8,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,2]  "3. A/P Contract   :" 
+
+ DISPLAY_MASK  [9,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,2]  "4. GST Receivable :" 
+
+ DISPLAY_MASK  [10,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,2]  "5. Discount       : " 
+
+ DISPLAY_MASK  [11,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,2]  "6. Exp Discount   : " 
+
+ DISPLAY_MASK  [12,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,2]  "7. Oper Suspense  : " 
+
+ DISPLAY_MASK  [13,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,2]  "8. Bank-1         :" 
+
+ DISPLAY_MASK  [14,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,2]  "9. Bank-2         :" 
+
+ DISPLAY_MASK  [15,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "10. PST            :" 
+
+ DISPLAY_MASK  [16,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [17,1]  "11. GST Due on Pur :" 
+
+ DISPLAY_MASK  [17,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,1]  "12. A/R General    :" 
+
+ DISPLAY_MASK  [18,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,1]  "13. GST Payable    :" 
+
+ DISPLAY_MASK  [19,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [20,1]  "14. Inventory Gen  :" 
+
+ DISPLAY_MASK  [20,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,1]  "15. S/D Current    :" 
+
+ DISPLAY_MASK  [21,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [22,1]  "16. S/D Accum      :" 
+
+ DISPLAY_MASK  [22,22] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                  " 
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,42]  "17. Due to From :" 
+
+ DISPLAY_MASK  [8,60] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,42]  "18. Bank-1 Last Cheque#  :" 
+
+ DISPLAY_MASK  [10,69] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,42]  "19. Bank-2 Last Cheque#  :" 
+
+ DISPLAY_MASK  [11,69] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,42]  "20. Last Purchase Order# :" 
+
+ DISPLAY_MASK  [12,69] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,42]  "21. Last Requisition#    :" 
+
+ DISPLAY_MASK  [13,69] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,42]  "22. PST (%)    :" 
+
+ DISPLAY_MASK  [15,59] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,42]  "23. GST (%)    :" 
+
+ DISPLAY_MASK  [16,59] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,42]  "24. Rebate (%) :" 
+
+ DISPLAY_MASK  [17,59] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+LOG_ATTR (UCASE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

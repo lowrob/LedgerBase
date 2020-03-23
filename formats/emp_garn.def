@@ -1,0 +1,12 @@
+	char	eg_numb[13] ;		/* Employee number    */
+	short	eg_pr_cd ;		/* Priority code    */
+	short	eg_seq ;		/* Sequence number    */
+	char	eg_desc[31];		/* Description */
+	double	eg_amount;		/* Amount of loan (target)	*/
+	double	eg_amnt_out;		/* Amount of loan outstanding	*/
+	char	eg_amt_flg[2];		/* Fixed/Percentage amount flag	*/
+	double	eg_pp_amount;		/* Fixed/Percentage Amount	*/
+	double	eg_min_tresh;		/* Minimum Treshold		*/
+	char	eg_ded_pp[5][2];	/* Deduct monthly pay period        */
+	short	eg_fund;		/* Fund */
+	char	eg_lia_acct[19] ;	/* Liability G/L Account */

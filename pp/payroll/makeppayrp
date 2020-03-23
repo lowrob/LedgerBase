@@ -1,0 +1,25 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=ppayrep.o ppayreputl.o mthded.o pensalcont.o time_sheet.o
+
+CC=cc -g
+
+$E/ppayrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/ppayrep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+ppayrep.o  	: $I/bfs_defs.h
+
+ppayreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+mthded.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+pensalcont.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+time_sheet.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h

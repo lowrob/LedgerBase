@@ -1,0 +1,2 @@
+	char	tq_numb[13] ;		/* Employee number    */
+	char	tq_code[7] ;		/* Qualification code */

@@ -1,0 +1,18 @@
+	char	ta_numb[13] ;		/* Employee number    */
+	double	ta_emp_inc;		/* Employment Income */
+	double	ta_cpp_cont;		/* CPP Contribution */
+	double	ta_uic_prem;		/* UIC Premiums */
+	double	ta_tax_ded;		/* Income Tax Deducted */
+	double	ta_uic_ins_earn;	/* UIC Insurance Earnings */
+	double	ta_cpp_pen_earn;	/* CPP Pension Earnings */
+	double	ta_housing;		/* Housing Board and Lodging */
+	double	ta_travel;		/* Travel in a Prescribed Area */
+	double	ta_auto;		/* Personal Use of Employer's Auto */
+	double	ta_intrest;		/* Intrest Free & Low Intrest Loans */
+	double	ta_other_tax;		/* Other Tax Allowance & Benefits */
+	double	ta_emp_com;		/* Employment Commissions */
+	double	ta_union_du;		/* Union Dues */
+	double	ta_donnat;		/* Charitable Donations */
+	double	ta_pay_dpsp;		/* Payments to DPSP */
+	double	ta_pen_adj;		/* Pension Adjustment */
+	char	ta_reg_pen_num[13];	/* Reg num for registered pen plan */

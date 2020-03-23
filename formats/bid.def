@@ -1,0 +1,6 @@
+	char	bid_supp_cd[11];	/* Supplier Code */
+	long	bid_cat_num;		/* Catalogue Number */
+	short	bid_tend_num;		/* Tender Number */
+	double	bid_price;		/* Bid Price */
+	char	bid_desc[36];		/* New Description */
+	char	bid_status[4];		/* Awarded Status */

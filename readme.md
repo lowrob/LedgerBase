@@ -3,3 +3,7 @@ Old code I have from a financial system that was writen in the late 80's, early 
 This code was ran on a server and vt100 was used to access the system.  It had a isam DB.  Will fill in more info if I can reocover the software from old tapes and drives.
 
 dbh = database code and utilities.
+nfm = menu system that was used on terminal - tnames limited access
+pp = personnel / payroll
+include = include files for all the code
+formats = structures (don't remember how to use this yet - builds a data file .RFM or RPM)

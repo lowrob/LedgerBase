@@ -1,0 +1,10 @@
+PROJECT: stmastb
+	RECORDS: 1 stmast
+
+LOGICAL_RECORD: 1
+	NAME:          stmast
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 stmast
+	TOTAL_FORMATS: 0
+
+ENDFILE

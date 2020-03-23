@@ -1,0 +1,4 @@
+	short	sa_fund;		/* Fund #         */
+	char	sa_class[7];		/* Classification code */
+	char	sa_earn[7];		/* Earnings code  */
+	long	sa_keys[12];		/* G/L account Keys   */

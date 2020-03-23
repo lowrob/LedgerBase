@@ -1,0 +1,44 @@
+	cc -g -c -I/disk2/lbase/include -DENGLISH benadj.c
+	cc -g benadj.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/benadj.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH calc_pay.c
+	cc -g calc_pay.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/calc_pay.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH chhinq.c
+	cc -g chhinq.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a /lib/librp.a -o /disk2/lbase/bin/chhinq.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH chqcan.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH cheqreg.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH jrhlist.c
+	cc -g chqcan.o cheqreg.o jrhlist.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a /lib/librp.a -o /disk2/lbase/bin/chqcan.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH earn_mnt.c
+	cc -g earn_mnt.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/earn_mnt.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH payadv.c
+	cc -g payadv.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/payadv.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH payadj.c
+	cc -g payadj.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/payadj.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH pay_cheque.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH joursum.c
+	cc -g pay_cheque.o joursum.o cheqreg.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a  -o /disk2/lbase/bin/pay_cheque.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH pay_des.c
+	cc -g pay_des.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/pay_des.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH payhis.c
+	cc -g payhis.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/payhis.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH ppayrep.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH ppayreputl.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH mthded.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH pensalcont.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH time_sheet.c
+	cc -g ppayrep.o ppayreputl.o mthded.o pensalcont.o time_sheet.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a -o  /disk2/lbase/bin/ppayrep.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH pprep.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH ppreputl.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH empppben.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH rpposition.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH adjust.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH jourlist.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH pp_reg.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH neg_pay.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH earn_per.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH earn_cod.c
+	cc -g pprep.o ppreputl.o cheqreg.o empppben.o rpposition.o adjust.o jourlist.o pp_reg.o neg_pay.o earn_per.o earn_cod.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a -o  /disk2/lbase/bin/pprep.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH pay_sel.c
+	cc -g pay_sel.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/pay_sel.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH time.c
+	cc -g time.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/time.out

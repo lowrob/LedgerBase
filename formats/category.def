@@ -1,0 +1,2 @@
+	short	catag_num;		/* Catagory Number */
+	char	catag_desc[41];		/* Catagory Description */

@@ -1,0 +1,373 @@
+HEADER
+SCREEN  loan
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,31]  "CSB/LOAN MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+
+END
+
+ FIELD    600 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,71]  "Page:" 
+
+ DISPLAY_MASK  [5,77] ## 
+NUMERIC   99
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,1]  "1    Code:" 
+
+ DISPLAY_MASK  [6,12] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,21]  "Description:" 
+
+ DISPLAY_MASK  [6,34] _(30) 
+STRING  X(30)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,6]  "Fund:" 
+
+ DISPLAY_MASK  [7,12] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,21]  "G/L Account Deduction Amount:" 
+
+ DISPLAY_MASK  [7,51] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,21]  "G/L Account Interest Amount :" 
+
+ DISPLAY_MASK  [8,51] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [8,72] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,1]  "2    Code:" 
+
+ DISPLAY_MASK  [10,12] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,21]  "Description:" 
+
+ DISPLAY_MASK  [10,34] _(30) 
+STRING  X(30)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,6]  "Fund:" 
+
+ DISPLAY_MASK  [11,12] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,21]  "G/L Account Deduction Amount:" 
+
+ DISPLAY_MASK  [11,51] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,21]  "G/L Account Interest Amount :" 
+
+ DISPLAY_MASK  [12,51] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [12,72] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,1]  "3    Code:" 
+
+ DISPLAY_MASK  [14,12] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,21]  "Description:" 
+
+ DISPLAY_MASK  [14,34] _(30) 
+STRING  X(30)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,6]  "Fund:" 
+
+ DISPLAY_MASK  [15,12] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,21]  "G/L Account Deduction Amount:" 
+
+ DISPLAY_MASK  [15,51] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,21]  "G/L Account Interest Amount :" 
+
+ DISPLAY_MASK  [16,51] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [16,72] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,1]  "4    Code:" 
+
+ DISPLAY_MASK  [18,12] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,21]  "Description:" 
+
+ DISPLAY_MASK  [18,34] _(30) 
+STRING  X(30)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,6]  "Fund:" 
+
+ DISPLAY_MASK  [19,12] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,21]  "G/L Account Deduction Amount:" 
+
+ DISPLAY_MASK  [19,51] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [20,21]  "G/L Account Interest Amount :" 
+
+ DISPLAY_MASK  [20,51] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,72] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ENDFILE

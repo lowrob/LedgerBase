@@ -1,0 +1,15 @@
+	short	fa_costcen;	/* cost centre# */
+	long	fa_itemid;	/* item id */
+	char	fa_desc[36];	/* description of the item */
+	char	fa_type[5];	/* fixed asset item type code */
+	char	fa_sno[13];	/* model or s# under the type */
+	char	fa_dept[5];	/* department number */
+	char	fa_roomno[6];	/* room number */
+	char	fa_cond[2];	/* condition code */
+	char	fa_suppname[21];/* supplier name */
+	char	fa_invc[11];	/* invoice number */
+	short   fa_curcostcen;   /* current cost center */
+	long	fa_rectdate;	/* date of receipt */
+	long	fa_qty;		/* quantity */
+	double	fa_rate;	/* rate */
+	double	fa_value;	/* value of the stock */

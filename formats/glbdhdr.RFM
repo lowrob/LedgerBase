@@ -1,0 +1,10 @@
+PROJECT: glbdhdr
+	RECORDS: 1 glbdhdr
+
+LOGICAL_RECORD: 1
+	NAME:          glbdhdr
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 glbdhdr
+	TOTAL_FORMATS: 0
+
+ENDFILE

@@ -1,0 +1,61 @@
+	cc -g -c -I/disk2/lbase/include -DENGLISH attrep.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH attreputl.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH attabsent.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH attsum.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH balsick.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH negsick.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH empabsent.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH trendsatt.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH union.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH substute.c
+	cc -g attrep.o attreputl.o attabsent.o attsum.o balsick.o negsick.o  empabsent.o trendsatt.o union.o substute.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a -o  /disk2/lbase/bin/attrep.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH chg_emp.c
+	cc -g chg_emp.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/chg_emp.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH dail_att.c
+	cc -g dail_att.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/dail_att.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH del_emp.c
+	cc -g del_emp.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/del_emp.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH ind_att.c
+	cc -g ind_att.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/ind_att.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH inact_react.c
+	cc -g inact_react.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/inact_react.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH mass_att.c
+	cc -g mass_att.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/mass_att.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH mass_roe.c
+	cc -g mass_roe.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/mass_roe.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH pperrep.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH pperreputl.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH senlist.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH empinfo.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH annivdate.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH teachqual.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH empperc.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH subteach.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH teachassign.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH empserv.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH empsum.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH ageindex.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH empage.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH sickbank.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH vaclia.c
+	cc -g pperrep.o pperreputl.o senlist.o empinfo.o  annivdate.o teachqual.o empperc.o  subteach.o teachassign.o empserv.o empsum.o  ageindex.o empage.o sickbank.o vaclia.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a -o  /disk2/lbase/bin/pperrep.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH pre_sen.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH jourlist.c
+	cc -g pre_sen.o jourlist.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a  -o /disk2/lbase/bin/pre_sen.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH roe_prt.c
+	cc -g roe_prt.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a  -o /disk2/lbase/bin/roe_prt.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH roe_adj.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH roe_adj2.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH roe_adj3.c
+	cc -g roe_adj.o roe_adj2.o roe_adj3.o  /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/roe_adj.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH roe_des.c
+	cc -g roe_des.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/roe_des.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH roe_sel.c
+	cc -g roe_sel.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/roe_sel.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH sen_aud.c
+	cc -g sen_aud.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/sen_aud.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH sen_mnt.c
+	cc -g sen_mnt.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/sen_mnt.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH updt_sen.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH joursum.c
+	cc -g updt_sen.o joursum.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a  -o /disk2/lbase/bin/updt_sen.out

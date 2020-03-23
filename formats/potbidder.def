@@ -1,0 +1,3 @@
+	short	pb_categ_num;		/* Category Number */
+	char	pb_supp[11];		/* Supplier Code */
+	long	pb_select;		/* Rotational Selection */

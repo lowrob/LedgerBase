@@ -1,0 +1,10 @@
+	short	al_fund;		/* Fund to which stock belongs */
+	char	al_code[11];		/* Stock item code */
+	short	al_location;		/* Location/Cost centre # */
+	long	al_date;		/* Date of allocation */
+	short	al_time;		/* Time of allocation */
+	char	al_expacc[19];		/* Expense acnt for this allocation */
+	double	al_issued;		/* Total quantity issued so far */
+	double	al_alloc;		/* Balance of stock allocated */
+	double	al_value;		/* Value of balance */
+

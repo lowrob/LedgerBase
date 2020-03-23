@@ -1,0 +1,47 @@
+	char	pe_numb[13] ;		/* Employee number    */
+	short	pe_cc;			/* Cost Center	*/
+	short	pe_pp;			/* Pay period		*/
+	long	pe_date;		/* Date of the transaction	*/
+	double	pe_reg_units;		/* Regular units      */
+	double	pe_high_units;		/* High units         */
+	double	pe_reg_inc1;		/* Reg income		*/
+	double	pe_reg_inc2;		/* Reg income		*/
+	double	pe_high_inc;		/* High income    */
+	double	pe_ben;			/* Benefits	*/
+	double	pe_def_inc;		/* Deffered income    */
+	double	pe_cpp;			/* CPP contribution */
+	double	pe_cpp_pen;		/* CPP pensionable earnings	*/
+	double	pe_uic;			/* UIC premiums 	*/
+	double	pe_uic_ins;		/* UIC insurable earnings	*/
+	short	pe_num_ins_wk;		/* Number of insurable weeks in */
+	double	pe_reg1;		/* Registered pen plan contr rate1 */
+	double	pe_reg2;		/* Registered pen plan contr rate2 */
+	double	pe_reg3;		/* Registered pen plan contr rate3 */
+	double	pe_tax;			/* Income tax		*/
+	double	pe_net;			/* Net Income 		*/
+	double	pe_vac;			/* Vacation Pay		*/
+	long	pe_chq_no;		/* Cheque No 		*/
+	long	pe_cp_chq_no;		/* Cheque No for rerun	*/
+	char	pe_chq_type[2];		/* Type M(anual) or R(egular) */
+	char	pe_accno[19];		/* Account Number */
+	double	pe_uic_employer;	/* Amount paid by employee */
+	double	pe_reg_prior;
+	double	pe_reg_opt;
+	double	pe_reg_nonm;
+	double	pe_week_inc[5];		/*  income		*/
+	double	pe_week_hinc[5];	/*  income		*/
+	double	pe_week_units[5];	/* Regular units      */
+	double	pe_week_hunits[5];	/* High units         */
+	double	pe_week_vac[5];
+	double	pe_wk_def_inc[5];
+	double	pe_week_cpp[5];
+	double	pe_wk_cpp_pen[5];
+	double	pe_week_uic[5];
+	double	pe_week_reg1[5];
+	double	pe_week_reg2[5];
+	double	pe_week_reg3[5];
+	double	pe_wk_reg_pr[5];
+	double	pe_wk_reg_opt[5];
+	double	pe_wk_reg_nonm[5];
+	double	pe_week_tax[5];
+	double	pe_week_net[5];

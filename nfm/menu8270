@@ -1,0 +1,10 @@
+T4
+0 RETURN~TO~PREVIOUS~MENU	P
+I RETURN~TO~INITIAL~MENU	I
+
+1 T4~SELECTION			E	t4_sel.out
+2 DESELECT~T4			E	t4_des.out
+3 T4~ADJUSTMENT			E	t4_adj.out
+4 PRINT~T4			E	t4_print.out
+
+5 REPORTS			E	t4rep.out

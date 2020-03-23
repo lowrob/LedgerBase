@@ -1,0 +1,10 @@
+PROJECT: fadept
+	RECORDS: 1 fadept
+
+LOGICAL_RECORD: 1
+	NAME:          fadept
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 fadept
+	TOTAL_FORMATS: 0
+
+ENDFILE

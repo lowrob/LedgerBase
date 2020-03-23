@@ -1,0 +1,23 @@
+	char	s_supp_cd[11];	/* Supplier number */
+	char	s_name[49];	/* Supplier Name */
+	char	s_category[21];	/* Supplier Category Name */
+	char	s_fax[11];	/* Supplier fax number */
+	char    s_abb[25];	/* Abbreviation for supplier name */
+	char    s_add1[31];	/* Address line 1 */
+	char    s_add2[31];	/* Address line 2 */
+	char    s_add3[31];	/* Address line 3 */
+	char    s_pc[11];	/* postal code */
+	char	s_contact[26];	/* contact person at supplier */
+	char	s_payee[11];	/* Payee */
+	char	s_phone[11];	/* Supplier phone number */
+	char    s_tmp_flg[1];	/* Temporary supplier (Y,N) */
+	char	s_type[1];	/* Contract or Ordinary */
+	double	s_discount;	/* Supplier discount on goods */
+	double  s_ytd_ord;	/* Total goods in $ ordered */ 
+	double  s_ytd_ret;	/* Total goods in $ returned */ 
+	double 	s_ytd_recpt;	/* Amount year to date received */
+	double 	s_ytd_disc;	/* Amount year to date received */
+	double 	s_balance;	/* balance */
+	long	s_last_actv;	/* Date of last Activity */
+	char	s_gst_reg[11];	/* GST Registration number */
+	double	s_min_dollar;	/* Min $ Required used thru tendering */

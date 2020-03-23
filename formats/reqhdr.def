@@ -1,0 +1,18 @@
+	long	reqh_code;		/* requisition number */
+	char	reqh_supp_cd[11];	/* Supplier number */
+	double	reqh_amount;		/* requisition amount. */	
+	long	reqh_date;		/* requisition date */
+	long	reqh_due_date;		/* requisition due date */
+	double	reqh_appamt;		/* approved amount */
+	short	reqh_billto;		/* Bill To Number */
+	short   reqh_funds;		/* requisition fund no */
+	long	reqh_appdate;		/* approval date */
+	short	reqh_shipto;		/* Ship To Number */
+	short	reqh_costcenter;	/* Cost Center Requesting goods */
+	short	reqh_period ;		/* Accounting Period */
+	char	reqh_attention[16];	/* Contact for shipment */
+	char	reqh_status[2];		/* Status Approval status */ 
+	char	reqh_print_form[2] ;	/* Requisition form Print Status */
+	char	reqh_print_stock[2] ;	/* Requisition stock Print Status */
+	char	reqh_print_rpt[2] ;	/* Requisition report Print Status */
+	short	reqh_stock_fund;	/* The stock fund for Interfund Req */

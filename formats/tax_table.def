@@ -1,0 +1,5 @@
+	long	tx_date;		/* Tax date */
+	double	tx_low_amnt ;		/* Tax Low Amount.  */
+	double	tx_high_amnt;		/* Tax High Amount. */
+	double	tx_rate;		/* Tax rate */
+	double	tx_fed_const;		/* Tax constant */

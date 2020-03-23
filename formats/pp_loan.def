@@ -1,0 +1,9 @@
+	char	pc_numb[13] ;		/* Employee number    */
+	char	pc_code[7] ; 		/* CSB/Loan Code */
+	short	pc_seq ;		/* Sequence number    */
+	short	pc_pp;			/* Pay period		*/
+	long	pc_date;		/* Date of the transaction	*/
+	short	pc_fund ;		/* Fund number    */
+	char	pc_acct[19] ; 		/* Payroll G/L Account	*/
+	double	pc_amount;		/* Fixed/Percentage Amount	*/
+	double	pc_int_amt;		/* Interest amount		*/

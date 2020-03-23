@@ -1,0 +1,7 @@
+	long	cat_num;		/* Item Group Number */
+	char	cat_desc[41];		/* Item Group Description */
+	char	cat_uom[7];		/* Unit Of Measure */
+	char	cat_awd_supp[11];	/* Awarded Supplier */
+	double	cat_min_dollar;		/* Min $ Required */
+	double	cat_unit_price[2];	/* Unit Price 0 - Current year 
+	double	cat_qty[2];		/* Quantity   0 - Current year 

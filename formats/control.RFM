@@ -1,0 +1,10 @@
+PROJECT: control
+	RECORDS: 1 control
+
+LOGICAL_RECORD: 1
+	NAME:          control
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 control
+	TOTAL_FORMATS: 0
+
+ENDFILE

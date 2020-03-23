@@ -1,0 +1,359 @@
+HEADER
+SCREEN  aprep
+VERSION 1
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(11) 
+STRING  X(11)
+LOG_ATTR (SUP_ZEROES)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,28] _(24) 
+STRING  X(24)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,20]  "0 " 
+
+ DISPLAY_MASK  [4,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,20]  "1 " 
+
+ DISPLAY_MASK  [5,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,20]  "2 " 
+
+ DISPLAY_MASK  [6,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,20]  "3 " 
+
+ DISPLAY_MASK  [7,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,20]  "4 " 
+
+ DISPLAY_MASK  [8,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,20]  "5 " 
+
+ DISPLAY_MASK  [9,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,20]  "6 " 
+
+ DISPLAY_MASK  [10,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,20]  "7 " 
+
+ DISPLAY_MASK  [11,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,20]  "8 " 
+
+ DISPLAY_MASK  [12,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,20]  "9 " 
+
+ DISPLAY_MASK  [13,24] _(38) 
+STRING  X(38)
+PROMPT_VIDEO (BOLD)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,62]  "OPTION:" 
+
+ DISPLAY_MASK  [14,71] _ 
+NUMERIC   9
+LOG_ATTR (REQUIRED,VALIDITY)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    - 
+
+ PROMPT [15,1]  "------------------------------------------------------------------------------" 
+
+ DISPLAY_MASK  [15,79] - 
+STRING  X
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "Output On:" 
+
+ DISPLAY_MASK  [16,12] _ 
+STRING  X
+LOG_ATTR (REQUIRED,VALIDITY,UCASE,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,19]  "Filename:" 
+
+ DISPLAY_MASK  [16,29] _(15) 
+STRING  X(15)
+LOG_ATTR (REQUIRED,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,48]  "Printer#:" 
+
+ DISPLAY_MASK  [16,58] ## 
+NUMERIC   99
+LOG_ATTR (REQUIRED,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,63]  "No of Copies :" 
+
+ DISPLAY_MASK  [16,78] ## 
+NUMERIC   99
+LOG_ATTR (REQUIRED,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,1]  "Current Period Ends  :" 
+
+ DISPLAY_MASK  [17,24] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,1]  "Next Period Ends     :" 
+
+ DISPLAY_MASK  [18,24] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,1]  "Following Period Ends:" 
+
+ DISPLAY_MASK  [19,24] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,1]  "Fund                 :" 
+
+ DISPLAY_MASK  [20,24] ### 
+NUMERIC   999
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,41]  "To:" 
+
+ DISPLAY_MASK  [20,46] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,1]  "Supplier Code        :" 
+
+ DISPLAY_MASK  [21,24] _(10) 
+STRING  X(10)
+LOG_ATTR (VALIDITY,UCASE,SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,41]  "To:" 
+
+ DISPLAY_MASK  [21,46] _(10) 
+STRING  X(10)
+LOG_ATTR (VALIDITY,UCASE,SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [22,1]  "Trans Ref No         :" 
+
+ DISPLAY_MASK  [22,24] _(15) 
+STRING  X(15)
+LOG_ATTR (UCASE,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [22,41]  "To:" 
+
+ DISPLAY_MASK  [22,46] _(15) 
+STRING  X(15)
+LOG_ATTR (VALIDITY,UCASE,SHODUP)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(76) 
+STRING  X(76)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (REQUIRED,UCASE)
+
+END
+
+ENDFILE

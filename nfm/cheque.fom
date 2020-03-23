@@ -1,0 +1,212 @@
+HEADER
+SCREEN  cheque
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,34]  "PRINT CHEQUES" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,64]  "Date:" 
+
+ DISPLAY_MASK  [1,70] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,9]  "Fund         :" 
+
+ DISPLAY_MASK  [4,24] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,SHODUP)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,9]  "Bank Acct #  :" 
+
+ DISPLAY_MASK  [5,24] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,9]  "Last Cheque #:" 
+
+ DISPLAY_MASK  [6,24] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (VALIDITY,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,9]  "Cheque Date  :" 
+
+ DISPLAY_MASK  [7,24] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    750 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,45]  "Printer #:" 
+
+ DISPLAY_MASK  [7,56] ## 
+NUMERIC   99
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,41]  "OPTION:" 
+
+ DISPLAY_MASK  [10,49] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,20]  "No of Cancelled Cheques:" 
+
+ DISPLAY_MASK  [14,52] #(5) 
+NUMERIC   9(5)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    950 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,20]  "No of Manual Cheques   :" 
+
+ DISPLAY_MASK  [15,52] #(5) 
+NUMERIC   9(5)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,20]  "No of Cheques Written  :" 
+
+ DISPLAY_MASK  [16,52] #(5) 
+NUMERIC   9(5)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,20]  "No of Items Input      :" 
+
+ DISPLAY_MASK  [17,52] #(5) 
+NUMERIC   9(5)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,20]  "Gross Payment Amount   :" 
+
+ DISPLAY_MASK  [18,45] #(9).## 
+NUMERIC   9(9).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,20]  "Discount               :" 
+
+ DISPLAY_MASK  [19,45] #(9).## 
+NUMERIC   9(9).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,20]  "Net Payment            :" 
+
+ DISPLAY_MASK  [21,45] #(9).## 
+NUMERIC   9(9).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

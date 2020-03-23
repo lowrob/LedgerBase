@@ -1,0 +1,4 @@
+	char	ed_numb[13] ;		/* Employee number    */
+	char	ed_code[7];		/* Deduction code		*/
+	char	ed_group[7];		/* Deduction group code		*/
+	double	ed_amount;		/* Amount for the pay period	*/

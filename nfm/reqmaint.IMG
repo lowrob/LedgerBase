@@ -1,0 +1,1824 @@
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/04/02
+
+Fn: A    Requisition No:    32717
+-------------------------------------------------------------------------------
+1. Supp Cd : WAREHOUSE            CC#      :   54        2. Req Amt:       0.00
+3. Entry Dt: 1996/04/02        4. Due Dt   : 1996/04/02     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   54              6. Stck Fund:   1         8. Status : O
+9. Requested By: Gordon Power     Period   : 10                  Page No:   6
+------------------------------------------------------------------------------
+  1  G/L Acct:           42006054   Stock Code: &{UV0YUK>_  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:     309.87     Diff:      309.87
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/04/02
+
+Fn: A    Requisition No:    32717
+-------------------------------------------------------------------------------
+1. Supp Cd : WAREHOUSE            CC#      :   54        2. Req Amt:       0.00
+3. Entry Dt: 1996/04/02        4. Due Dt   : 1996/04/02     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   54              6. Stck Fund:   1         8. Status : O
+9. Requested By: Gordon Power     Period   : 10                  Page No:   6
+------------------------------------------------------------------------------
+  1  G/L Acct:           42006054   Stock Code:  _________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:     309.87     Diff:      309.87
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/04/02
+
+Fn: A    Requisition No:    32717
+-------------------------------------------------------------------------------
+1. Supp Cd : WAREHOUSE            CC#      :   54        2. Req Amt:       0.00
+3. Entry Dt: 1996/04/02        4. Due Dt   : 1996/04/02     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   54              6. Stck Fund:   1         8. Status : O
+9. Requested By: Gordon Power     Period   : 10                  Page No:   6
+------------------------------------------------------------------------------
+  1  G/L Acct:           42006054   Stock Code: ;5R*TSL.__  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:     309.87     Diff:      309.87
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/04/02
+
+Fn: A    Requisition No:    32717
+-------------------------------------------------------------------------------
+1. Supp Cd : WAREHOUSE            CC#      :   54        2. Req Amt:       0.00
+3. Entry Dt: 1996/04/02        4. Due Dt   : 1996/04/02     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   54              6. Stck Fund:   1         8. Status : O
+9. Requested By: Gordon Power     Period   : 10                  Page No:   6
+------------------------------------------------------------------------------
+  1  G/L Acct:           42006054   Stock Code: CX'V%H=___  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:     309.87     Diff:      309.87
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/05/08
+
+Fn: _    Requisition No:    33215
+-------------------------------------------------------------------------------
+1. Supp Cd : WAREHOUSE            CC#      :   36        2. Req Amt:      77.44
+3. Entry Dt: 1996/05/08        4. Due Dt   : 1996/05/16     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   36              6. Stck Fund:   1         8. Status : O
+9. Requested By: Main Office      Period   : 11                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018036   Stock Code: 600007      Status:   CC#:   36
+     Desc    : FILM, LAMINATING 25" X 500'
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  E   E      2.0000  ROLL      37.953       75.91       75.91         0   ACT
+
+  2  G/L Acct:           37018036   Stock Code: 600120      Status:   CC#:   36
+     Desc    : CLIPS, PAPER, #1
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  E   E     10.0000  BOX        0.153        1.53        1.53         0   ACT
+
+
+     Req Amount:      77.44    Item Total:      77.44     Diff:        0.00
+
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/06/25
+
+Fn: A    Requisition No:    33912
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :   36        2. Req Amt:       0.00
+3. Entry Dt: 1996/06/25        4. Due Dt   : 1996/09/15     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   36              6. Stck Fund:   1         8. Status : O
+9. Requested By: Main Office      Period   : 12                  Page No:   3
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018036   Stock Code:             Status:   CC#:    0
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:      13.08     Diff:       13.08
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/09/12
+
+Fn: A    Requisition No:    35282
+-------------------------------------------------------------------------------
+1. Supp Cd : NFLDALUM             CC#      :   10        2. Req Amt:       0.00
+3. Entry Dt: 1996/09/12        4. Due Dt   : 1996/09/12     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   10              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. WELCHER       Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           42002010   Stock Code:             Status:   CC#:    0
+     Desc    : d=wNuTBg*+}|/'$<go%
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  E   T     76.2000  +h4?UE     8.000      609.60  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/09/12
+
+Fn: A    Requisition No:    35282
+-------------------------------------------------------------------------------
+1. Supp Cd : NFLDALUM             CC#      :   10        2. Req Amt:       0.00
+3. Entry Dt: 1996/09/12        4. Due Dt   : 1996/09/12     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   10              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. WELCHER       Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           42002010   Stock Code:             Status:   CC#:    0
+     Desc    : d=wNuTBg*+}|/'$<go%
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  E   T     76.2000  +h4?UE     8.000  9H#####.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/10/01
+
+Fn: D    Requisition No: 4K######
+-------------------------------------------------------------------------------
+1. Supp Cd : WAREHOUSE            CC#      :   50        2. Req Amt:      26.54
+3. Entry Dt: 1996/10/01        4. Due Dt   : 1996/10/01     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   50              6. Stck Fund:   1         8. Status : O
+9. Requested By: M. HONG          Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018050   Stock Code: 600100      Status:   CC#:   50
+     Desc    : ENVELOPE, KRAFT, 6 1/2 X 9 1/2
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  E   E      1.0000  BOX       26.535       26.54       26.54         0   ACT
+
+
+
+
+
+
+
+     Req Amount:      26.54    Item Total:      26.54     Diff:        0.00
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/10/01
+
+Fn: D    Requisition No:        4
+-------------------------------------------------------------------------------
+1. Supp Cd : WAREHOUSE            CC#      :   50        2. Req Amt:      26.54
+3. Entry Dt: 1996/10/01        4. Due Dt   : 1996/10/01     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   50              6. Stck Fund:   1         8. Status : O
+9. Requested By: M. HONG          Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018050   Stock Code: 600100      Status:   CC#:   50
+     Desc    : ENVELOPE, KRAFT, 6 1/2 X 9 1/2
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  E   E      1.0000  BOX       26.535       26.54       26.54         0   ACT
+
+
+
+
+
+
+
+     Req Amount:      26.54    Item Total:      26.54     Diff:        0.00
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/10/01
+
+Fn: A    Requisition No:    35947
+-------------------------------------------------------------------------------
+1. Supp Cd : THOMASGLAS           CC#      :   61        2. Req Amt:       0.00
+3. Entry Dt: 1996/10/01        4. Due Dt   : 1996/10/01     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   61              6. Stck Fund:   1         8. Status : O
+9. Requested By: D. Stack         Period   : 04                  Page No:   3
+------------------------------------------------------------------------------
+  1  G/L Acct:           42011061   Stock Code:             Status:   CC#:    0
+     Desc    : Lexan 29 1/8 x 47 3/4 x 1/4 -_______________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:     865.43     Diff:      865.43
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/10/01
+
+Fn: A    Requisition No:    35947
+-------------------------------------------------------------------------------
+1. Supp Cd : THOMASGLAS           CC#      :   61        2. Req Amt:       0.00
+3. Entry Dt: 1996/10/01        4. Due Dt   : 1996/10/01     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   61              6. Stck Fund:   1         8. Status : O
+9. Requested By: D. Stack         Period   : 04                  Page No:   3
+------------------------------------------------------------------------------
+  1  G/L Acct:           42011061   Stock Code:             Status:   CC#:    0
+     Desc    : Lexan 29 1/8 x 47 3/4 x 1/4 -Supply only
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   T      2.0000  eax        0.000      250.00      299.60         0   ACT
+
+  2  G/L Acct:           42011061   Stock Code:             Status:   CC#:    0
+     Desc    : Supply & install____________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+     Req Amount:       0.00    Item Total:    1165.03     Diff:     1165.03
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/10/09
+
+Fn: D    Requisition No:      130
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/10/22
+
+Fn: A    Requisition No:    36493
+-------------------------------------------------------------------------------
+1. Supp Cd : __________           CC#      : ####        2. Req Amt: #######.##
+3. Entry Dt: 1996/10/22        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :   99              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 04
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/11/05
+
+Fn: A    Requisition No:    36889
+-------------------------------------------------------------------------------
+1. Supp Cd : RESEARCHP            CC#      :   61        2. Req Amt:       0.00
+3. Entry Dt: 1996/11/05        4. Due Dt   : 1996/11/05     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   61              6. Stck Fund:   1         8. Status : O
+9. Requested By: M. Felt          Period   : 05                  Page No:   2
+------------------------------------------------------------------------------
+  1  G/L Acct:           37001061   Stock Code:             Status:   CC#:    0
+     Desc    : #1042 Progressive Relaxation Training Manual
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  ea        20.950       20.95       22.42         0   ACT
+
+  2  G/L Acct: ]]UH"G               Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+     Req Amount:       0.00    Item Total:     112.20     Diff:      112.20
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/11/14
+
+Fn: C    Requisition No:    37072                                   Field#: ###
+-------------------------------------------------------------------------------
+1. Supp Cd : MACDONALDS           CC#      :   61        2. Req Amt:      20.36
+3. Entry Dt: 1996/11/14        4. Due Dt   : 1996/11/14     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   61              6. Stck Fund:   1         8. Status : O
+9. Requested By: D. Stack         Period   : 05                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           42002061   Stock Code: __________  Status:   CC#:    0
+     Desc    : #1049-564 l6 ft. measuring tape
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   T      1.0000  ea        16.990       16.99       20.36         0   ACT
+
+
+
+
+
+
+
+     Req Amount:      20.36    Item Total:      20.36     Diff:        0.00
+Enter RETURN to terminate Edit
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/11/14
+
+Fn: C    Requisition No:    37072                                   Field#: ###
+-------------------------------------------------------------------------------
+1. Supp Cd : MACDONALDS           CC#      :   61        2. Req Amt:      20.36
+3. Entry Dt: 1996/11/14        4. Due Dt   : 1996/11/14     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   61              6. Stck Fund:   1         8. Status : O
+9. Requested By: D. Stack         Period   : 05                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           42002061   Stock Code: __________  Status:   CC#:    0
+     Desc    : #1049-564 l6 ft. measuring tape
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   T      1.0000  ea        16.990       16.99       20.36         0   ACT
+
+
+
+
+
+
+
+     Req Amount:      20.36    Item Total:      20.36     Diff:        0.00
+Enter RETURN to terminate Edit
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/11/14
+
+Fn: A    Requisition No:    37083
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :   32        2. Req Amt:       0.00
+3. Entry Dt: 1996/11/14        4. Due Dt   : 1996/11/14     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   32              6. Stck Fund:   1         8. Status : O
+9. Requested By: Cathy Chafe      Period   : 05                  Page No:   5
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018032   Stock Code:             Status:   CC#:    0
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:     260.97     Diff:      260.97
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/11/20
+
+Fn: A    Requisition No:    37214
+-------------------------------------------------------------------------------
+1. Supp Cd : W_________           CC#      :   61        2. Req Amt: #######.##
+3. Entry Dt: 1996/11/20        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :   99              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 05
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/12/01
+
+Fn: A    Requisition No:    37465
+-------------------------------------------------------------------------------
+1. Supp Cd : TUCKER               CC#      :   51        2. Req Amt:       0.00
+3. Entry Dt: 1996/12/01        4. Due Dt   : 1996/12/01     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   51              6. Stck Fund:   1         8. Status : O
+9. Requested By: HELEN p'RN       Period   : 06
+
+
+
+
+
+
+
+
+
+
+
+
+
+A(dd Items), E(dit), C(ancel)                                                 _
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/12/03
+
+Fn: _    Requisition No:    37483
+-------------------------------------------------------------------------------
+1. Supp Cd : HARCOURT             CC#      :   56        2. Req Amt:      47.88
+3. Entry Dt: 1996/12/01        4. Due Dt   : 1996/12/01     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   56              6. Stck Fund:   1         8. Status : O
+9. Requested By: C.Kennedy Gr.4   Period   : 06                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37010056   Stock Code: __________  Status:   CC#:    0
+     Desc    : Teacher Enhancement Booklets Gr.4 03-998816-3
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   T      1.0000            39.950       39.95       47.88         0   ACT
+
+
+
+
+
+
+
+     Req Amount:      47.88    Item Total:      47.88     Diff:        0.00
+
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1996/12/05
+
+Fn: A    Requisition No:    37575
+-------------------------------------------------------------------------------
+1. Supp Cd : MUSIC                CC#      :   51        2. Req Amt:       0.00
+3. Entry Dt: 1996/12/05        4. Due Dt   : 1996/12/05     App Amt:       0.00
+   Bill To :   99              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :   51              6. Stck Fund:   1         8. Status : O
+9. Requested By: fu$dR!P9         Period   : 06
+
+
+
+
+
+
+
+
+
+
+
+
+
+Confirm the Cancel (Y/N)?                                                     _
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/02/03
+
+Fn: A    Requisition No:      658
+-------------------------------------------------------------------------------
+1. Supp Cd : __________           CC#      : ####        2. Req Amt: #######.##
+3. Entry Dt: 1997/02/03        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 08
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/02/03
+
+Fn: A    Requisition No:      658
+-------------------------------------------------------------------------------
+1. Supp Cd : __________           CC#      :  316        2. Req Amt: #######.##
+3. Entry Dt: 1997/02/03        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 08
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/02/17
+
+Fn: A    Requisition No:     1151
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  449        2. Req Amt:       0.00
+3. Entry Dt: 1997/02/17        4. Due Dt   : 1997/02/17     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  449              6. Stck Fund:   1         8. Status : O
+9. Requested By: SHARON POWER     Period   : 08                  Page No:  14
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018449   Stock Code:             Status:   CC#:    0
+     Desc    : POST IT NOTES, 1 1/2" X 2", PADS OF 100, 12/PKG., 3M #YFgf0{
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  E   B      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:     447.61     Diff:      447.61
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/02/17
+
+Fn: A    Requisition No:     1151
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  449        2. Req Amt:       0.00
+3. Entry Dt: 1997/02/17        4. Due Dt   : 1997/02/17     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  449              6. Stck Fund:   1         8. Status : O
+9. Requested By: SHARON POWER     Period   : 08                  Page No:  14
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018449   Stock Code:             Status:   CC#:    0
+     Desc    : POST IT NOTES, 1 1/2" X 2", PADS OF 100, 12/PKG., 3M #YFgf0{
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  E   3      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:     447.61     Diff:      447.61
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/02/24
+
+Fn: A    Requisition No: 396630F#
+-------------------------------------------------------------------------------
+1. Supp Cd : KOOL                 CC#      :  303        2. Req Amt:     563.02
+3. Entry Dt: 1997/02/24        4. Due Dt   : 1997/02/24     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  303              6. Stck Fund:   1         8. Status : O
+9. Requested By: Mary Purchase    Period   : 08                  Page No:   2
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018303   Stock Code:             Status:   CC#:    0
+     Desc    : Half Round Table Blue 24" leg #014-868B
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   T      2.0000  each     139.950      279.90      335.43         0   ACT
+
+
+
+
+
+
+
+     Req Amount:     563.02    Item Total:     563.02     Diff:        0.00
+
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/02/24
+
+Fn: _    Requisition No:     1379
+-------------------------------------------------------------------------------
+1. Supp Cd : CLARKEELEC           CC#      :  304        2. Req Amt:       0.00
+3. Entry Dt: 1997/02/24        4. Due Dt   : 1997/02/24     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  304              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. DAWE          Period   : 08                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           32002304   Stock Code: __________  Status:   CC#:    0
+     Desc    : REPAIRS TO OVERHEAD PROJECTOR APOLLO A1 - 1000
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   T      1.0000             0.000        0.00        0.00         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:       0.00     Diff:        0.00
+
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/03/04
+
+Fn: I    Requisition No: 90001623
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/03/11
+
+Fn: A    Requisition No:     1947
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/03/11        4. Due Dt   : 1997/03/11     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: office           Period   : 09                  Page No:   2
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : Binders 1" ACCO P407
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   T      2.0000  ea         1.250        2.50        3.00         0   ACT
+
+  2  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : Binder - Accopress Letter___________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+     Req Amount:       0.00    Item Total:      34.21     Diff:       34.21
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/03/13
+
+Fn: I    Requisition No: 0U######
+-------------------------------------------------------------------------------
+1. Supp Cd : EASTMEDIC            CC#      :  305        2. Req Amt:      10.48
+3. Entry Dt: 1997/03/13        4. Due Dt   : 1997/03/13     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  305              6. Stck Fund:   1         8. Status : O
+9. Requested By: MAINTENANCE      Period   : 09                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           33007305   Stock Code:             Status:   CC#:    0
+     Desc    : DISPOSABLE GLOVES (LATEX)
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   T      1.0000  BOX`       8.750        8.75       10.48         0   ACT
+
+
+
+
+
+
+
+     Req Amount:      10.48    Item Total:      10.48     Diff:        0.00
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/03/21
+
+Fn: A    Requisition No:     2355
+-------------------------------------------------------------------------------
+1. Supp Cd : CLARKEELEC           CC#      :  449        2. Req Amt:       0.00
+3. Entry Dt: 1997/03/21        4. Due Dt   : 1997/03/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  449              6. Stck Fund:   1         8. Status : O
+9. Requested By: ~HYXJoh________  Period   : 09
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/03/21
+
+Fn: A    Requisition No:     2355
+-------------------------------------------------------------------------------
+1. Supp Cd : CLARKEELEC           CC#      :  449        2. Req Amt:       0.00
+3. Entry Dt: 1997/03/21        4. Due Dt   : 1997/03/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  449              6. Stck Fund:   1         8. Status : O
+9. Requested By: ~HYXJohq(]vE'l#  Period   : 09                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: "32_______________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/03/21
+
+Fn: A    Requisition No:     2355
+-------------------------------------------------------------------------------
+1. Supp Cd : CLARKEELEC           CC#      :  449        2. Req Amt:       0.00
+3. Entry Dt: 1997/03/21        4. Due Dt   : 1997/03/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  449              6. Stck Fund:   1         8. Status : O
+9. Requested By: ~HYXJohq(]vE'l#  Period   : 09                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: %be;?6=6-m________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/03/24
+
+Fn: A    Requisition No:     2379
+-------------------------------------------------------------------------------
+1. Supp Cd : BROUGHTON            CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/03/24        4. Due Dt   : 1997/03/24     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: Ms. Fahey        Period   : 09                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : First Holy Communion Certificates XA003-PT;jq"b7~,@>p]W/H3r
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  M   0      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/03/24
+
+Fn: A    Requisition No:     2382
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/03/24        4. Due Dt   : 1997/03/24     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: office           Period   : 09                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : B105t 4*Fmr_________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:       0.00     Diff:        0.00
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/04/17
+
+Fn: A    Requisition No:     3283
+-------------------------------------------------------------------------------
+1. Supp Cd : PSYCHOL              CC#      :  449        2. Req Amt:       0.00
+3. Entry Dt: 1997/04/17        4. Due Dt   : 1997/04/17     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  449              6. Stck Fund:   1         8. Status : O
+9. Requested By: st@",d;B]!6@OUO  Period   : 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+A(dd Items), E(dit), C(ancel)                                                 _
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/04/17
+
+Fn: A    Requisition No:     3305
+-------------------------------------------------------------------------------
+1. Supp Cd : SPORTSC              CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/04/17        4. Due Dt   : 1997/04/17     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: D. Ezekiel       Period   : 10                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : Ping Pong Paddles - Swiftflighty\pHGB_______________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/04/24
+
+Fn: A    Requisition No:     3728
+-------------------------------------------------------------------------------
+1. Supp Cd : SMITHSHOME           CC#      :  308        2. Req Amt:       0.00
+3. Entry Dt: 1997/04/24        4. Due Dt   : 1997/04/24     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  308              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. WELCHER       Period   : 10                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: %}________________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/04/24
+
+Fn: A    Requisition No:     3728
+-------------------------------------------------------------------------------
+1. Supp Cd : SMITHSHOME           CC#      :  308        2. Req Amt:       0.00
+3. Entry Dt: 1997/04/24        4. Due Dt   : 1997/04/24     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  308              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. WELCHER       Period   : 10                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: %}Q2______________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/05/09
+
+Fn: A    Requisition No:     4103
+-------------------------------------------------------------------------------
+1. Supp Cd : B&BSALES             CC#      :  359        2. Req Amt:       0.00
+3. Entry Dt: 1997/05/09        4. Due Dt   : 1997/05/09     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  359              6. Stck Fund:   1         8. Status : O
+9. Requested By: JOHN PARSONS     Period   : 11                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           41005359   Stock Code:             Status:   CC#:    0
+     Desc    : CORN BROOMS`1(v-H{4{}
+ GST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  [   T      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/06/16
+
+Fn: A    Requisition No:     5219
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/06/16        4. Due Dt   : 1997/09/01     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: office           Period   : 12                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/06/16
+
+Fn: A    Requisition No:     5219
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/06/16        4. Due Dt   : 1997/09/01     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: office           Period   : 12                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : x*J`wwww____________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/06/16
+
+Fn: A    Requisition No:     5395
+-------------------------------------------------------------------------------
+1. Supp Cd : 0_________           CC#      :  353        2. Req Amt: #######.##
+3. Entry Dt: 1997/06/16        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/06/16
+
+Fn: A    Requisition No:     5524
+-------------------------------------------------------------------------------
+1. Supp Cd : ABKN:V____           CC#      :  353        2. Req Amt: #######.##
+3. Entry Dt: 1997/06/16        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/06/16
+
+Fn: A    Requisition No:     5648
+-------------------------------------------------------------------------------
+1. Supp Cd : ~~~~~~M=__           CC#      :  356        2. Req Amt: #######.##
+3. Entry Dt: 1997/06/16        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/06/16
+
+Fn: C    Requisition No: 2#######
+-------------------------------------------------------------------------------
+1. Supp Cd : CANEBSCO             CC#      :  323        2. Req Amt:     576.28
+3. Entry Dt: 1997/06/16        4. Due Dt   : 1997/06/16     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  323              6. Stck Fund:   1         8. Status : O
+9. Requested By: L. BUSSEY        Period   : 12                  Page No:   4
+------------------------------------------------------------------------------
+  1  G/L Acct:           37011323   Stock Code: __________  Status:   CC#:    0
+     Desc    : 844927012 SPORTS ILLUSTRATED FOR CANADA
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  EACH      88.900       88.90      102.24         0   ACT
+
+  2  G/L Acct:           37011323   Stock Code: __________  Status:   CC#:    0
+     Desc    : 892081019 TIME FOR CANADA
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  EACH      71.160       71.16       81.83         0   ACT
+
+
+     Req Amount:     576.28    Item Total:     576.28     Diff:        0.00
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/09
+
+Fn: A    Requisition No:     7336
+-------------------------------------------------------------------------------
+1. Supp Cd : B&BSALES             CC#      :  303        2. Req Amt:       0.00
+3. Entry Dt: 1997/09/09        4. Due Dt   : 1997/09/09     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  303              6. Stck Fund:   1         8. Status : O
+9. Requested By: Gordon Power     Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           41006303   Stock Code:             Status:   CC#:    0
+     Desc    : Garbage Bags 1.0ml. 250Cs. 30x38 Black
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      2.0000  cases  1633|.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/11
+
+Fn: A    Requisition No:     7459
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/09/11        4. Due Dt   : 1997/09/11     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: office           Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : API Bristol Bd. 2___________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/11
+
+Fn: A    Requisition No:     7459
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/09/11        4. Due Dt   : 1997/09/11     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: office           Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018353   Stock Code:             Status:   CC#:    0
+     Desc    : API Bristol Bd. 2ply (25____________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/11
+
+Fn: A    Requisition No:     7480
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  305        2. Req Amt:       0.00
+3. Entry Dt: 1997/09/11        4. Due Dt   : 1997/09/11     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  305              6. Stck Fund:   1         8. Status : O
+9. Requested By: OFFICE           Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: 3701oo9EW%o;EE+&!_   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/11
+
+Fn: A    Requisition No:     7480
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  305        2. Req Amt:       0.00
+3. Entry Dt: 1997/09/11        4. Due Dt   : 1997/09/11     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  305              6. Stck Fund:   1         8. Status : O
+9. Requested By: OFFICE           Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: U_________________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/11
+
+Fn: A    Requisition No:     7480
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  305        2. Req Amt:       0.00
+3. Entry Dt: 1997/09/11        4. Due Dt   : 1997/09/11     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  305              6. Stck Fund:   1         8. Status : O
+9. Requested By: OFFICE           Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: okh\y{____________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/11
+
+Fn: _    Requisition No:     7490
+-------------------------------------------------------------------------------
+1. Supp Cd : THOMASGLAS           CC#      :  323        2. Req Amt:       0.00
+3. Entry Dt: 1997/09/11        4. Due Dt   : 1997/09/11     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  323              6. Stck Fund:   1         8. Status : O
+9. Requested By: ED NEVILLE       Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           42011323   Stock Code: __________  Status:   CC#:    0
+     Desc    : 27 1/2" X 38 1/4", 1/4" THICK PGW
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      3.0000             0.000        0.00        0.00         0   ACT
+
+  2  G/L Acct:           42011323   Stock Code: __________  Status:   CC#:    0
+     Desc    : 74" X 30 1/4", 1/4" THICK PGW
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000             0.000        0.00        0.00         0   ACT
+
+
+     Req Amount:       0.00    Item Total:       0.00     Diff:        0.00
+
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/22
+
+Fn: _    Requisition No:     7793
+-------------------------------------------------------------------------------
+1. Supp Cd : FANNING              CC#      :  348        2. Req Amt:       8.40
+3. Entry Dt: 1997/09/22        4. Due Dt   : 1997/09/22     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  348              6. Stck Fund:   1         8. Status : O
+9. Requested By: COOMBS, CYRIL;   Period   : 03                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           37018348   Stock Code:             Status:   CC#:    0
+     Desc    : HANGING FILE FOLDERS 3153
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  BOX        7.300        7.30        8.40         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       8.40    Item Total:       8.40     Diff:        0.00
+
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/30
+
+Fn: A    Requisition No:     8088
+-------------------------------------------------------------------------------
+1. Supp Cd : MOYER                CC#      :  449        2. Req Amt: 28#####.##
+3. Entry Dt: 1997/09/30        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 03
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/09/30
+
+Fn: A    Requisition No:     8088
+-------------------------------------------------------------------------------
+1. Supp Cd : MOYER                CC#      :  449        2. Req Amt:      28.00
+3. Entry Dt: 1997/09/30        4. Due Dt   : 1997/09/30     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  449              6. Stck Fund: 41e         8. Status : O
+9. Requested By: _______________  Period   : 03
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/01
+
+Fn: A    Requisition No:     8090
+-------------------------------------------------------------------------------
+1. Supp Cd : MOYER                CC#      :  318        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/01        4. Due Dt   : 1997/10/01     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  318              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. Dawson        Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: i_________________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:       0.00     Diff:        0.00
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/01
+
+Fn: A    Requisition No:     8090
+-------------------------------------------------------------------------------
+1. Supp Cd : MOYER                CC#      :  318        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/01        4. Due Dt   : 1997/10/01     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  318              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. Dawson        Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: cv-Isfa"__________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:       0.00     Diff:        0.00
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/01
+
+Fn: A    Requisition No:     8090
+-------------------------------------------------------------------------------
+1. Supp Cd : MOYER                CC#      :  318        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/01        4. Due Dt   : 1997/10/01     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  318              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. Dawson        Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: cv-Isfa"[wv;C_____   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:       0.00     Diff:        0.00
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/01
+
+Fn: A    Requisition No:     8090
+-------------------------------------------------------------------------------
+1. Supp Cd : MOYER                CC#      :  318        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/01        4. Due Dt   : 1997/10/01     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  318              6. Stck Fund:   1         8. Status : O
+9. Requested By: B. Dawson        Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: <J________________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:       0.00     Diff:        0.00
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/01
+
+Fn: A    Requisition No: 90000008
+-------------------------------------------------------------------------------
+1. Supp Cd : 484#;_____           CC#      :  371        2. Req Amt: #######.##
+3. Entry Dt: 1997/10/01        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 04
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/03
+
+Fn: I    Requisition No: 6#######
+-------------------------------------------------------------------------------
+1. Supp Cd : TASCOMM              CC#      :  323        2. Req Amt:     286.87
+3. Entry Dt: 1997/10/03        4. Due Dt   : 1997/10/03     App Amt:       0.00
+   Bill To :  900              5. Fund     :   3            App Dt : 0000/00/00
+7. Ship To :  323              6. Stck Fund:   3         8. Status : O
+9. Requested By: L. BUDGELL       Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:            4633323   Stock Code: __________  Status:   CC#:    0
+     Desc    : CELLULAR PHONE SUPERPACK
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  ______   189.500      189.50      217.93         0   ACT
+
+  2  G/L Acct:            4633323   Stock Code: __________  Status:   CC#:    0
+     Desc    : CIGARETTE ADAPTOR
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  ______    59.950       59.95       68.94         0   ACT
+
+
+     Req Amount:     286.87    Item Total:     286.87     Diff:        0.00
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/06
+
+Fn: A    Requisition No:     8324
+-------------------------------------------------------------------------------
+1. Supp Cd : CLARKEELEC           CC#      :  345        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/06        4. Due Dt   : 1997/10/06     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  345              6. Stck Fund:   1         8. Status : O
+9. Requested By: GLYNN/LANE       Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct: ~~~~~~~~__________   Stock Code: __________  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/06
+
+Fn: A    Requisition No:     8360
+-------------------------------------------------------------------------------
+1. Supp Cd : PSYCHOLASS           CC#      :  353        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/06        4. Due Dt   : 1997/10/06     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  353              6. Stck Fund:   1         8. Status : O
+9. Requested By: M. Felt          Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           33007353   Stock Code:             Status:   CC#:    0
+     Desc    : 7DhoMz______________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/07
+
+Fn: A    Requisition No:     8431
+-------------------------------------------------------------------------------
+1. Supp Cd : GY0_______           CC#      :  330        2. Req Amt: #######.##
+3. Entry Dt: 1997/10/07        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 04
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/15
+
+Fn: A    Requisition No:     8798
+-------------------------------------------------------------------------------
+1. Supp Cd : PETERPAN             CC#      :  341        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/15        4. Due Dt   : 1997/10/15     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  341              6. Stck Fund:   1         8. Status : O
+9. Requested By: _______________  Period   : 04
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/17
+
+Fn: A    Requisition No:     8881                                   Field#: ###
+-------------------------------------------------------------------------------
+1. Supp Cd : B&BSALES             CC#      :  309        2. Req Amt:     158.80
+3. Entry Dt: 1997/10/17        4. Due Dt   : 1997/10/17     App Amt:       0.00
+   Bill To :  900              5. Fund     :   1            App Dt : 0000/00/00
+7. Ship To :  309              6. Stck Fund:   1         8. Status : O
+9. Requested By: CARETAKER        Period   : 04                  Page No:   1
+------------------------------------------------------------------------------
+  1  G/L Acct:           41005309   Stock Code:             Status:   CC#:    0
+     Desc    : PAPER TOWELS
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      8.0000            17.260      138.08      158.79         0   ACT
+
+
+
+
+
+
+
+     Req Amount:     158.80    Item Total:     158.79     Diff:        0.01
+Enter RETURN to terminate Edit
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/21
+
+Fn: A    Requisition No:     8952
+-------------------------------------------------------------------------------
+1. Supp Cd : ALLAN                CC#      :  447        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/21        4. Due Dt   : 1997/10/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   6            App Dt : 0000/00/00
+7. Ship To :  447              6. Stck Fund:   1         8. Status : O
+9. Requested By: L. MORIARTY      Period   : 04                  Page No:   5
+------------------------------------------------------------------------------
+  1  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : Licence 20 Users (Windows NT 4.0)
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  ea       295.000      295.00      339.25         0   ACT
+
+  2  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : :yl
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   E      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+     Req Amount:       0.00    Item Total:    4181.40     Diff:     4181.40
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/21
+
+Fn: A    Requisition No:     8952
+-------------------------------------------------------------------------------
+1. Supp Cd : ALLAN                CC#      :  447        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/21        4. Due Dt   : 1997/10/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   6            App Dt : 0000/00/00
+7. Ship To :  447              6. Stck Fund:   1         8. Status : O
+9. Requested By: L. MORIARTY      Period   : 04                  Page No:   5
+------------------------------------------------------------------------------
+  1  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : Licence 20 Users (Windows NT 4.0)
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  ea       295.000      295.00      339.25         0   ACT
+
+  2  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : :yl
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  V   E      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+     Req Amount:       0.00    Item Total:    4181.40     Diff:     4181.40
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/21
+
+Fn: A    Requisition No:     8952
+-------------------------------------------------------------------------------
+1. Supp Cd : ALLAN                CC#      :  447        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/21        4. Due Dt   : 1997/10/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   6            App Dt : 0000/00/00
+7. Ship To :  447              6. Stck Fund:   1         8. Status : O
+9. Requested By: L. MORIARTY      Period   : 04                  Page No:   5
+------------------------------------------------------------------------------
+  1  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : Licence 20 Users (Windows NT 4.0)
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  ea       295.000      295.00      339.25         0   ACT
+
+  2  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : :yl
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E   6368.0000  'y>___ #####.###  #######.##  #######.##         0   ACT
+
+
+     Req Amount:       0.00    Item Total:    4181.40     Diff:     4181.40
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/21
+
+Fn: A    Requisition No:     8952
+-------------------------------------------------------------------------------
+1. Supp Cd : ALLAN                CC#      :  447        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/21        4. Due Dt   : 1997/10/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   6            App Dt : 0000/00/00
+7. Ship To :  447              6. Stck Fund:   1         8. Status : O
+9. Requested By: L. MORIARTY      Period   : 04                  Page No:   5
+------------------------------------------------------------------------------
+  1  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : Licence 20 Users (Windows NT 4.0)
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  ea       295.000      295.00      339.25         0   ACT
+
+  2  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : :yl
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E   6368.0000  'y>8d      0.000  7######.##  #######.##         0   ACT
+
+
+     Req Amount:       0.00    Item Total:    4181.40     Diff:     4181.40
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/21
+
+Fn: A    Requisition No:     8952
+-------------------------------------------------------------------------------
+1. Supp Cd : ALLAN                CC#      :  447        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/21        4. Due Dt   : 1997/10/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   6            App Dt : 0000/00/00
+7. Ship To :  447              6. Stck Fund:   1         8. Status : O
+9. Requested By: L. MORIARTY      Period   : 04                  Page No:   5
+------------------------------------------------------------------------------
+  1  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : Licence 20 Users (Windows NT 4.0)
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E      1.0000  ea       295.000      295.00      339.25         0   ACT
+
+  2  G/L Acct:         6039002900   Stock Code:             Status:   CC#:    0
+     Desc    : :yl
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  T   E   6368.0000  'y>8d      0.000  7322###.##  #######.##         0   ACT
+
+
+     Req Amount:       0.00    Item Total:    4181.40     Diff:     4181.40
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/21
+
+Fn: A    Requisition No:     8952
+-------------------------------------------------------------------------------
+1. Supp Cd : ALLAN                CC#      :  447        2. Req Amt:       0.00
+3. Entry Dt: 1997/10/21        4. Due Dt   : 1997/10/21     App Amt:       0.00
+   Bill To :  900              5. Fund     :   6            App Dt : 0000/00/00
+7. Ship To :  447              6. Stck Fund:   1         8. Status : O
+9. Requested By: L. MORIARTY      Period   : 04                  Page No:   6
+------------------------------------------------------------------------------
+  1  G/L Acct:         6039002900   Stock Code: 7NWCB$____  Status:   CC#: ####
+     Desc    : ____________________________________________________________
+ HST PST  Order Qty   UOM   Cost/Unit     Net Amt   Gross Amt  PO Number
+  _   _      1.0000  ______ #####.###  #######.##  #######.##         0   ACT
+
+
+
+
+
+
+
+     Req Amount:       0.00    Item Total:   88393.60     Diff:    88393.60
+Press ESC-F to Terminate
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/27
+
+Fn: A    Requisition No:     9162
+-------------------------------------------------------------------------------
+1. Supp Cd : __________           CC#      : ####        2. Req Amt: #######.##
+3. Entry Dt: 1997/10/27        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 04
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+
+ REQMAINT                  REQUISITION  MAINTENANCE          Date: 1997/10/27
+
+Fn: A    Requisition No:     9162
+-------------------------------------------------------------------------------
+1. Supp Cd : CLW>G_____           CC#      :  353        2. Req Amt: #######.##
+3. Entry Dt: 1997/10/27        4. Due Dt   : ####/##/##     App Amt:       0.00
+   Bill To :  900              5. Fund     : ###            App Dt : 0000/00/00
+7. Ship To : ####              6. Stck Fund: ###         8. Status : O
+9. Requested By: _______________  Period   : 04
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press ESC-F to Go Back to Fn:
+

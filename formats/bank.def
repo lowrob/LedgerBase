@@ -1,0 +1,9 @@
+	char	bk_numb[13] ;		/* Bank number PIC 99 */
+	char	bk_name[31] ;		/* Bank name PIC X(28)  */
+	char	bk_add1[31];		/* Address Line 1 */
+	char	bk_add2[31];		/* Address Line 2 */
+	char	bk_add3[31];		/* Address Line 3 */
+	char	bk_add4[31];		/* Address Line 4 */
+	char	bk_pc[8];		/* postal code */
+	char	bk_cont[31];		/* contact person */
+	char	bk_phone[11];		/* telephone number */

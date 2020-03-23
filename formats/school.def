@@ -1,0 +1,11 @@
+	short	sc_numb ;		/* School number PIC 99 */
+	char	sc_name[29] ;		/* School name PIC X(28)  */
+	char	sc_add1[31] ;		/* address line 1 */
+	char	sc_add2[31] ;		/* address line 2 */
+	char	sc_add3[31] ;		/* address line 3 */
+	char	sc_pc[8] ;		/* postal code */
+	char 	sc_contact[26] ;	/* Contact Person*/
+	char 	sc_phone[11] ;		/* phone number */
+	char	sc_fax[11] ;		/* fax number */
+	long	sc_size ;		/* School size, or area, PIC 9(6) */
+	char	sc_r_t[2];		/* school Rural or Town */

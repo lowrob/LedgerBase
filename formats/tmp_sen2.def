@@ -1,0 +1,13 @@
+	char	tsn2_numb[13];
+	short	tsn2_pp;
+	long	tsn2_date;
+	char	tsn2_pos[7];
+	char	tsn2_class[7];
+	double	tsn2_cas_hrs0;
+	double	tsn2_cas_days0;
+	double	tsn2_perm_days0;
+	double	tsn2_cas_totd0;
+	double	tsn2_cas_hrs1;
+	double	tsn2_cas_days1;
+	double	tsn2_perm_days1;
+	double	tsn2_cas_totd1;

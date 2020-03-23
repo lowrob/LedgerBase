@@ -1,0 +1,10 @@
+PROJECT: invchdr
+	RECORDS: 1 invchdr
+
+LOGICAL_RECORD: 1
+	NAME:          invchdr
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 invchdr
+	TOTAL_FORMATS: 0
+
+ENDFILE

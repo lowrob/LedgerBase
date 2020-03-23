@@ -1,0 +1,8 @@
+	short	ch_funds ;		/* Fund#, where the cheque belongs to */
+	long	ch_chq_no ;		/* Cheque Seq. number */
+	char	ch_accno[19] ;		/* Cheque Bank Acct# */
+	char	ch_name[49] ;		/* Name on Cheque */
+	char	ch_sys[1];		/* system flag A(A/P) or P(Payroll) */
+	char	ch_status[1] ;		/* cheque status  C, X or O */
+	long	ch_date ;		/* Cheque date */
+	double	ch_net_amt ;		/* Cheque Amount */

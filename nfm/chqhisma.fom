@@ -1,0 +1,197 @@
+HEADER
+SCREEN  chqhisma
+VERSION 1
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,28] _(26) 
+STRING  X(26)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,70] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field#:" 
+
+ DISPLAY_MASK  [3,79] # 
+NUMERIC   9
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,9]  "Fund:" 
+
+ DISPLAY_MASK  [3,15] ### 
+NUMERIC   999
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    650 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,20]  "Bank Acct#:" 
+
+ DISPLAY_MASK  [3,32] _(18) 
+STRING  X(18)
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,52]  "Cheque#:" 
+
+ DISPLAY_MASK  [3,61] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    800 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,1]  "1. Date         :" 
+
+ DISPLAY_MASK  [6,19] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    950 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,50]  "Period:" 
+
+ DISPLAY_MASK  [6,58] ## 
+NUMERIC   99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,1]  "2. Supplier Name:" 
+
+ DISPLAY_MASK  [7,19] _(48) 
+STRING  X(48)
+LOG_ATTR (REQUIRED,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,1]  "3. Amount       :" 
+
+ DISPLAY_MASK  [8,19] #(9).## 
+NUMERIC   S9(8).99
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,1]  "4. System       :" 
+
+ DISPLAY_MASK  [9,19] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,1]  "5. Status       :" 
+
+ DISPLAY_MASK  [10,19] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(76) 
+STRING  X(76)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,78] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

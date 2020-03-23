@@ -1,0 +1,9 @@
+	char	es_numb[13] ;		/* Employee number    */
+	short	es_week;		/* Week			*/
+	short	es_fund;		/* Fund			*/
+	char	es_class[7];		/* Classification code	*/
+	short	es_cost;		/* Cost center number	*/
+	double	es_units[7];		/* Units/day		*/
+	double	es_amount;		/* Amount		*/
+	char	es_dept[7];		/* Department code	*/
+	char	es_area[7];		/* Area code		*/

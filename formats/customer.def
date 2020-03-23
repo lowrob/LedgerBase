@@ -1,0 +1,19 @@
+	char	cu_code[11] ;		/* Customer unique code */
+	char	cu_name[31] ;		/* customer's name */
+	char	cu_abrev[31] ;		/* customer's abreviated name */
+	char	cu_adr1[31] ;		/* customer's address line 1 */
+	char	cu_adr2[31] ;		/* address line 2 */
+	char	cu_adr3[31] ;		/* address line 3 */
+	char	cu_pc[11] ;		/* Postal Code */
+	char	cu_phone[11] ;		/* Phone Number */
+	char	cu_fax[11] ;		/* Fax Number */
+	char	cu_contper[26] ;	/* Contact person */
+	char	cu_prnt_cd[1] ;		/* Statement Print Code */
+	long	cu_open_dt ;		/* date account opened */
+	long	cu_sale_dt ;		/* Last Sales date */
+	long	cu_rcpt_dt ;		/* Last Receipt date */
+	double	cu_mon_op ;		/* Monthly Opening Balance in Value */
+	double	cu_cur_bal ;		/* Current Outstanding balance */
+	double	cu_ytd_sales ;		/* YTD Sales */
+	double	cu_ytd_rcpts ;		/* YTD Receipts */
+

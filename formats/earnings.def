@@ -1,0 +1,7 @@
+	char	ea_code[7];		/* Earnings code  */
+	long	ea_date;		/* Earnings date */
+	char	ea_desc[31];		/* Earnings Description  */
+	char	ea_type[2];		/* Earnings type; fixed amount or */
+	double	ea_amount;		/* Earnings amount.  */
+	char	ea_reg_hgh[2];		/* Earnings Regular/High (R/H)   */
+	char	ea_lump_sum[2];		/* Lump Sum or Hourly	*/

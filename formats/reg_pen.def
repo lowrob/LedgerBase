@@ -1,0 +1,20 @@
+	char	rg_code[7] ; 		/* Reg Pension Plan Code */
+	char	rg_pp_code[7] ;		/* Reg Pension Plan Pay Period Code */
+	char	rg_desc[31] ;		/* Reg Pension Plan description */
+	char	rg_t4_fld[2] ;		/* T4 field code     */	
+	short	rg_pac;			/* Pension Adj Calc Number	*/
+	char	rg_dd_code[3] ; 	/* Second Deduction Code */
+	char	rg_reg_num[13];  		/* Registration number */
+	char	rg_type[3] ; 		/* Type		 */
+	double	rg_perc1;  		/* Percentage 1   */ 
+	double	rg_perc2;  		/* Percentage 2   */
+	double	rg_perc3;  		/* Percentage 3   */ 
+	double	rg_amount;		/* Amount		 */
+	double	rg_amount2;		/* Amount		 */
+	double	rg_employer_sh;		/* Employer Share */
+	double	rg_min_earn;		/* Minimum earnings   */
+	double	rg_max_contr;		/* Maximum contribution */
+	char	rg_ded_pp[5][2];	/* Deduct monthly pay period        */
+	short	rg_fund;		/* Fund */
+	char	rg_lia_acct[19] ;	/* G/L Account */
+	long	rg_exp_acct[12] ;	/* G/L Account */

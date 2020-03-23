@@ -1,0 +1,11 @@
+	short	ti_fund ;		/* Fund Code        Key-1, Part-1 */
+	short	ti_reccod ;		/* Record code      Key-1, Part-2 */
+	char	ti_create[2] ;		/* create E- entered G- generated */
+	long	ti_seq_no ;		/* Running sno under tr_userid[11]*/
+	short	ti_item_no ;		/* Item No. 	                  */
+	long	ti_sys_dt ;		/* Trans Entered date */
+	short	ti_period ;		/* Period           Key-1, Part-4 */
+	char	ti_accno[19] ;		/* Account code     Key-1, part-3 */
+	double	ti_amount ;		/* Transaction Amount 	  	  */
+	short	ti_status ;		/* Transaction Update status 	  */
+	short	ti_section ;		/* Section code     */

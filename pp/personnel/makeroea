@@ -1,0 +1,14 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a 
+OBJECTS=roe_adj.o roe_adj2.o roe_adj3.o 
+CC=cc -g
+
+$E/roe_adj.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/roe_adj.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_pp.h $I/roe_adj.h /usr/include/cfomstrc.h
+

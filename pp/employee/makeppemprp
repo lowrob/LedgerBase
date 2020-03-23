@@ -1,0 +1,48 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=ppemprep.o ppempreputl.o empaddlist.o stdate.o inactlist.o \
+	termdate.o termcode.o prntlbl.o emplist.o complbl.o\
+	emplistsum.o strep.o
+
+CC=cc -g
+
+$E/ppemprep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/ppemprep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+ppemprep.o  	: $I/bfs_defs.h
+
+ppempreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+empaddlist.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+stdate.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+inactlist.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+termdate.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+termcode.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+emplist.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+prntlbl.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+emplistsum.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+complbl.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+strep.o		: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h

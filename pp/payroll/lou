@@ -1,0 +1,415 @@
+
+{
+	int	retval, week_no;
+	int	mode;
+
+	week_no = 0;
+
+	for( ; ; ){
+	  if(week_no >= 2) break;
+	  if(pp_earn.pe_week_inc[week_no] != 0 ||
+		 pp_earn.pe_week_hinc[week_no] != 0){
+	    strcpy(pay_per_it.ppi_code,barg_unit.b_pp_code);
+	    pay_per_it.ppi_numb = pp_earn.pe_pp;
+	    pay_per_it.ppi_year = 9999;
+	    flg_reset(PAY_PER_ITEM);
+
+	    retval = get_n_pp_it(&pay_per_it,BROWSE,3,BACKWARD,e_mesg);
+	    if(retval<0 || strcmp(pay_per_it.ppi_code,barg_unit.b_pp_code)!=0 ||
+		pay_per_it.ppi_numb != pp_earn.pe_pp){
+	  	fomer("Error Reading Pay Period Item File") ;
+	  	return(NOERROR);
+	    }
+	    seq_over(PAY_PER_ITEM);
+	
+	    strcpy(emp_earn.en_numb,emp_rec.em_numb);
+	    emp_earn.en_year = pay_per_it.ppi_year;
+	    emp_earn.en_pp = pp_earn.pe_pp;
+	    emp_earn.en_week = week_no+1;
+
+	    retval = get_emp_earn(&emp_earn,BROWSE,1,e_mesg) ;
+	    if( retval < 0 && retval != UNDEF) {
+		DispError((char *)&s_sth,e_mesg) ;
+		seq_over(EMP_EARN);
+		return(retval) ;
+	    }
+
+	    if(retval == UNDEF){
+	  	mode = ADD;
+	    	strcpy(emp_earn.en_numb,emp_rec.em_numb);
+	  	emp_earn.en_date = pay_per_it.ppi_end_date;
+	    	emp_earn.en_year = pay_per_it.ppi_year;
+	   	emp_earn.en_pp = pp_earn.pe_pp;
+	  	emp_earn.en_week = week_no+1;
+
+	  	emp_earn.en_reg_inc = D_Roundoff(pp_earn.pe_week_inc[week_no]); 
+	  	emp_earn.en_reg_units =
+			 D_Roundoff(pp_earn.pe_week_units[week_no]);
+	  	emp_earn.en_high_units =
+			 D_Roundoff(pp_earn.pe_week_hunits[week_no]);
+	  	emp_earn.en_high_inc =
+			 D_Roundoff(pp_earn.pe_week_hinc[week_no]);
+	  	emp_earn.en_def_inc =
+			 D_Roundoff(pp_earn.pe_wk_def_inc[week_no]);
+	 	emp_earn.en_cpp =
+			 D_Roundoff(pp_earn.pe_week_cpp[week_no]);
+		emp_earn.en_cpp_pen =
+			 D_Roundoff(pp_earn.pe_wk_cpp_pen[week_no]);
+		emp_earn.en_uic =
+			 D_Roundoff(pp_earn.pe_week_uic[week_no]);
+		emp_earn.en_reg1 =
+			 D_Roundoff(pp_earn.pe_week_reg1[week_no]);
+		emp_earn.en_reg2 =
+			 D_Roundoff(pp_earn.pe_week_reg2[week_no]);
+		emp_earn.en_reg3 =
+			 D_Roundoff(pp_earn.pe_week_reg3[week_no]);
+		emp_earn.en_reg_prior =
+			 D_Roundoff(pp_earn.pe_wk_reg_pr[week_no]);
+		emp_earn.en_reg_opt =
+			 D_Roundoff(pp_earn.pe_wk_reg_opt[week_no]);
+		emp_earn.en_reg_nonm =
+			 D_Roundoff(pp_earn.pe_wk_reg_nonm[week_no]);
+		emp_earn.en_tax =
+			 D_Roundoff(pp_earn.pe_week_tax[week_no]);
+		emp_earn.en_net =
+			 D_Roundoff(pp_earn.pe_week_net[week_no]);
+	    }
+	    else{
+		DispError((char *)&s_sth,e_mesg);
+		return(retval);
+	    }
+
+	    /* Write the cheque number to the employees file L.R. March 95*/
+	    emp_earn.en_chq_no = temp_chq_no;
+
+	    emp_earn.en_year = pay_per_it.ppi_year;
+	    strcpy(emp_earn.en_reg_pen,emp_rec.em_reg_pen);
+
+	    retval = put_emp_earn(&emp_earn,mode,e_mesg);
+	    if( retval < 0) {
+		roll_back(e_mesg);
+		DispError((char *)&s_sth,e_mesg) ;
+		return(retval) ;
+	    }
+	    retval = commit(e_mesg);
+	    if(retval < 0) {
+		DispError((char *)&s_sth,e_mesg);
+		roll_back(e_mesg);
+		return(ERROR);
+	    }
+	    week_no++;
+	  }
+	  else
+	    week_no++;
+	}
+	seq_over(EMP_EARN);
+	close_file(EMP_EARN);
+
+	strcpy(emp_ins.in_numb,emp_rec.em_numb);
+	emp_ins.in_pp = pp_earn.pe_pp;
+	emp_ins.in_date = pp_earn.pe_date;
+
+	retval = get_emp_ins(&emp_ins,UPDATE,0,e_mesg) ;
+	if( retval < 0 && retval != UNDEF) {
+		roll_back(e_mesg);
+		DispError((char *)&s_sth,e_mesg) ;
+		return(retval) ;
+	}
+	if( retval == UNDEF){
+	  emp_ins.in_uic_ins = D_Roundoff(pp_earn.pe_uic_ins);
+	  emp_ins.in_num_ins_wk = pp_earn.pe_num_ins_wk;
+
+	  retval = put_emp_ins(&emp_ins,ADD,e_mesg);
+	  if( retval < 0) {
+		roll_back(e_mesg);
+		DispError((char *)&s_sth,e_mesg) ;
+		return(retval) ;
+	  }
+	  if( commit(e_mesg)<0 ){	/* If everything goes right, commit */
+		DispError((char *)&s_sth,e_mesg) ;
+		return(-1);
+	  }
+	}
+	else{
+		DispError((char *)&s_sth,
+		"Record Already Exists In Employee Insurable Earnings History");
+		return(retval); 
+	}
+	close_file(EMP_INS);
+
+	emp_bh.ebh_amount = 0.00;
+
+	strcpy(pp_ben.pb_numb,emp_rec.em_numb);
+	pp_ben.pb_pp = LV_SHORT;
+	pp_ben.pb_date = LV_LONG;
+	pp_ben.pb_fund = LV_SHORT;
+	pp_ben.pb_acct[0] = LV_CHAR;
+	pp_ben.pb_code[0] = LV_CHAR;
+	flg_reset(PP_BEN) ;
+
+	for( ; ; ) {
+		retval = get_n_pp_ben(&pp_ben,BROWSE,0,FORWARD,e_mesg) ;
+		if( retval == EFL ||
+			strcmp(pp_ben.pb_numb,emp_rec.em_numb) != 0)
+			break;
+
+		if( retval < 0 ) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			seq_over(PP_BEN);
+			return(retval) ;
+		}
+
+		strcpy(emp_bh.ebh_numb,emp_rec.em_numb);
+		strcpy(emp_bh.ebh_code,pp_ben.pb_code);
+		emp_bh.ebh_pp = pp_earn.pe_pp;
+		emp_bh.ebh_date = pp_earn.pe_date;
+
+		retval = get_emp_bhis(&emp_bh,UPDATE,0,e_mesg) ;
+		if( retval < 0 && retval != UNDEF){ 
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg);
+			return(retval) ;
+		}
+		if(retval == UNDEF){
+		  if(strcmp(emp_bh.ebh_code,pp_ben.pb_code) != 0){
+
+		    if(emp_bh.ebh_amount != 0){
+			retval = put_emp_bhis(&emp_bh,ADD,e_mesg);
+			if( retval < 0) {
+				roll_back(e_mesg);
+				DispError((char *)&s_sth,e_mesg) ;
+				return(retval) ;
+			}
+	  		if( commit(e_mesg)<0 ){	
+				DispError((char *)&s_sth,e_mesg) ;
+				return(-1);
+			}
+			emp_bh.ebh_amount = 0;
+		    }
+		  }
+		  strcpy(emp_bh.ebh_code,pp_ben.pb_code);
+		  emp_bh.ebh_amount += pp_ben.pb_amount;
+		}
+		else{
+			DispError((char *)&s_sth,"Record Already Exists in Employee Benefit History File") ;
+			return(retval) ;
+		}
+	}
+	seq_over(PP_BEN);
+
+	strcpy(pp_ded.pd_numb,emp_rec.em_numb);
+	pp_ded.pd_pp = 0;
+	pp_ded.pd_date = 0;
+	pp_ded.pd_fund = 0;
+	pp_ded.pd_acct[0] = '\0';
+	pp_ded.pd_code[0] = '\0';
+	flg_reset(PP_DED) ;
+
+	for( ; ; ){
+		retval = get_n_pp_ded(&pp_ded,BROWSE,0,FORWARD,e_mesg) ;
+		if( retval == EFL ||
+			strcmp(pp_ded.pd_numb,emp_rec.em_numb) != 0)
+			break;
+
+		if( retval < 0) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			seq_over(PP_DED);
+			return(retval) ;
+		}
+
+		strcpy(emp_dh.edh_numb,emp_rec.em_numb);
+		emp_dh.edh_pp = pp_earn.pe_pp;
+		emp_dh.edh_date = pp_earn.pe_date;
+		strcpy(emp_dh.edh_code,pp_ded.pd_code);
+		strcpy(emp_dh.edh_group,pp_ded.pd_group);
+
+		retval = get_emp_dhis(&emp_dh,UPDATE,0,e_mesg) ;
+		if( retval < 0 && retval != UNDEF){
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg);
+			return(retval) ;
+		}
+		if( retval == UNDEF){
+		
+		  emp_dh.edh_amount = pp_ded.pd_amount;
+
+		  retval = put_emp_dhis(&emp_dh,ADD,e_mesg);
+		  if( retval < 0) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			return(retval) ;
+		  }
+	  	  if( commit(e_mesg)<0 ){
+			DispError((char *)&s_sth,e_mesg) ;
+			return(-1);
+		  }
+		}
+		else{
+			DispError((char *)&s_sth,"Record Already Exists in Employee Deduction History File") ;
+			return(retval) ;
+		}
+	}
+	seq_over(PP_DED);
+
+	strcpy(pp_garn.pg_numb,emp_rec.em_numb);
+	pp_garn.pg_pr_cd = 0;
+	pp_garn.pg_seq = 0;
+	pp_garn.pg_pp = 0;
+	pp_garn.pg_fund = 0;
+	pp_garn.pg_date = 0;
+	flg_reset(PP_GARN) ;
+
+	for( ; ; ) {
+		retval = get_n_pp_garn(&pp_garn,BROWSE,0,FORWARD,e_mesg) ;
+		if( retval == EFL ||
+			strcmp(pp_garn.pg_numb,emp_rec.em_numb) != 0)
+			break;
+
+		if( retval < 0) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			seq_over(PP_GARN);
+			return(retval) ;
+		}
+		strcpy(emp_gh.egh_numb,emp_rec.em_numb);
+		emp_gh.egh_pr_cd = pp_garn.pg_pr_cd;
+		emp_gh.egh_seq = pp_garn.pg_seq;
+		emp_gh.egh_pp = pp_earn.pe_pp;
+		emp_gh.egh_date = pp_earn.pe_date;
+
+		retval = get_emp_ghis(&emp_gh,UPDATE,0,e_mesg) ;
+		if( retval < 0 && retval != UNDEF) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			return(retval) ;
+		}
+
+		if(retval == UNDEF){
+		  emp_gh.egh_amount = pp_garn.pg_amount;
+
+		  retval = put_emp_ghis(&emp_gh,ADD,e_mesg);
+		  if( retval < 0) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			return(retval) ;
+		  }
+	  	  if( commit(e_mesg)<0 ){
+			DispError((char *)&s_sth,e_mesg) ;
+			return(-1);
+		  }
+		}
+		else{
+			DispError((char *)&s_sth,"Record Already Exists in Employee Garnishment History File") ;
+			return(retval) ;
+		}
+
+		strcpy(emp_garn.eg_numb, emp_rec.em_numb);
+		emp_garn.eg_pr_cd = emp_gh.egh_pr_cd;
+		emp_garn.eg_seq = emp_gh.egh_seq;
+
+		retval = get_emp_garn(&emp_garn, UPDATE, 0, e_mesg);
+		if(retval < 0){
+			DispError((char *)&s_sth,e_mesg);
+			return(retval);
+		}
+		emp_garn.eg_amnt_out -= emp_gh.egh_amount;
+		
+		retval = put_emp_garn(&emp_garn,UPDATE,e_mesg);
+		if(retval < 0){
+			DispError((char *)&s_sth,e_mesg);
+			return(retval);
+		}
+	  	if( commit(e_mesg)<0 ){
+			DispError((char *)&s_sth,e_mesg) ;
+			return(-1);
+		}
+
+	}
+	seq_over(PP_GARN);
+
+	strcpy(pp_loan.pc_numb,emp_rec.em_numb);
+	pp_loan.pc_pp = 0;
+	pp_loan.pc_date = 0;
+	pp_loan.pc_code[0] = '\0';
+	pp_loan.pc_seq = 0;
+	pp_loan.pc_fund = 0;
+	pp_loan.pc_acct[0] = '\0';
+	flg_reset(PP_LOAN) ;
+
+	for( ; ; ) {
+		retval = get_n_pp_loan(&pp_loan,BROWSE,0,FORWARD,e_mesg) ;
+		if( retval == EFL ||
+			strcmp(pp_loan.pc_numb,emp_rec.em_numb) != 0)
+			break;
+
+		if( retval < 0) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			seq_over(PP_LOAN);
+			return(retval) ;
+		}
+
+		strcpy(emp_lh.elh_numb,emp_rec.em_numb);
+		emp_lh.elh_pp = pp_earn.pe_pp;
+		emp_lh.elh_date = pp_earn.pe_date;
+		strcpy(emp_lh.elh_code,pp_loan.pc_code);
+		emp_lh.elh_seq = pp_loan.pc_seq;
+
+		retval = get_emp_lhis(&emp_lh,BROWSE,0,e_mesg) ;/* ANDRE */
+		if( retval < 0 && retval != UNDEF) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			return(retval) ;
+		}
+		if(retval == UNDEF){
+
+		  emp_lh.elh_amount = pp_loan.pc_amount;
+		  emp_lh.elh_int_amt = pp_loan.pc_int_amt;
+
+		  retval = put_emp_lhis(&emp_lh,ADD,e_mesg);
+		  if( retval < 0) {
+			roll_back(e_mesg);
+			DispError((char *)&s_sth,e_mesg) ;
+			return(retval) ;
+		  }
+	  	  if( commit(e_mesg)<0 ){
+			DispError((char *)&s_sth,e_mesg) ;
+			return(-1);
+		  }
+		}
+		else{
+			DispError((char *)&s_sth,"Record Already Exists in Employee Loan History File") ;
+			return(retval) ;
+		}
+
+		strcpy(emp_loan.el_numb,emp_rec.em_numb);
+		strcpy(emp_loan.el_code,pp_loan.pc_code);
+		emp_loan.el_seq = pp_loan.pc_seq;
+
+		retval = get_emp_loan(&emp_loan,UPDATE,0,e_mesg);
+		if(retval < 0){
+			DispError((char *)&s_sth,e_mesg) ;
+		  	return(ERROR);
+		}
+		emp_loan.el_amnt_out = D_Roundoff(emp_loan.el_amnt_out -
+				 pp_loan.pc_amount);
+		emp_loan.el_pp_num_el -= emp_loan.el_pp_num_el;
+		
+		retval = put_emp_loan(&emp_loan,UPDATE,e_mesg) ;
+		if(retval < 0) {
+			DispError((char *)&s_sth,e_mesg) ;
+			roll_back(e_mesg);
+			return(retval);
+		}
+		retval = commit(e_mesg) ;
+	  	if(retval < 0) {
+			DispError((char *)&s_sth,e_mesg) ;
+		  	roll_back(e_mesg);
+		  	return(retval);
+		}
+	}
+	seq_over(PP_LOAN);
+
+	return(NOERROR) ;

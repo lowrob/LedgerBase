@@ -1,0 +1,131 @@
+HEADER
+SCREEN  tendyend
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ PROMPT [1,22]  "TRANSFER TENDERS TO PREVIOUS YEAR" 
+
+END
+
+ FIELD    200 
+
+ PROMPT [3,5]  "1. Transfers Current Yr Prices and Quantities to Previous Year." 
+
+END
+
+ FIELD    300 
+
+ PROMPT [4,5]  "2. Transfers Awared Suppliers and Min $ Requirements to Prev Yr." 
+
+END
+
+ FIELD    400 
+
+ PROMPT [5,5]  "3. Reads The System Date And Updates The History File." 
+
+END
+
+ FIELD    500 
+
+ PROMPT [6,5]  "4. Removes Catalogue Bids For Each Supplier." 
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,8]  "Do You Want To Transfer All Categories To Previous Year (Y/N)?" 
+
+ DISPLAY_MASK  [9,72] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UCASE)
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,8]  "Category # :" 
+
+ DISPLAY_MASK  [12,29] ## 
+NUMERIC   99
+LOG_ATTR (VALIDITY,SUP_ZEROES)
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,34]  "To:" 
+
+ DISPLAY_MASK  [12,44] ## 
+NUMERIC   99
+LOG_ATTR (VALIDITY,SUP_ZEROES)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,8]  "Item Group :" 
+
+ DISPLAY_MASK  [13,27] #### 
+NUMERIC   9999
+LOG_ATTR (VALIDITY,SUP_ZEROES)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,34]  "To:" 
+
+ DISPLAY_MASK  [13,42] #### 
+NUMERIC   9999
+LOG_ATTR (VALIDITY,SUP_ZEROES)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,8]  "Catalogue #:" 
+
+ DISPLAY_MASK  [14,24] #(7) 
+NUMERIC   9(7)
+LOG_ATTR (VALIDITY,SUP_ZEROES)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,34]  "To:" 
+
+ DISPLAY_MASK  [14,39] #(7) 
+NUMERIC   9(7)
+LOG_ATTR (VALIDITY,SUP_ZEROES)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,53]  "Confirm (Y/N)?" 
+
+ DISPLAY_MASK  [18,69] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UCASE)
+END
+
+ENDFILE

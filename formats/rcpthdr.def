@@ -1,0 +1,10 @@
+	long	rhdr_refno;		/* reference number */
+	short	rhdr_fund;		/* Invoice fund number */
+	char	rhdr_applied[2];	/* Applied or Unapplied */
+	char	rhdr_cust[11] ;		/* Customer unique code */
+	long	rhdr_rcptdate;		/* receipt date */
+	char	rhdr_chequeno[16];	/* Cheque number */
+	double	rhdr_amount;		/* Receipt amount */
+	short	rhdr_period;		/* G/L period */
+	char	rhdr_acctno[19];	/* G/L account number */
+	char	rhdr_remarks[21];	/* remarks */

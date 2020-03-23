@@ -1,0 +1,752 @@
+/******************************************************************************
+		Sourcename   : neg_pay.c
+		System       : Budgetary Financial system.
+		Module       : Fixed Assets System : Reports
+		Created on   : 91-10-30
+		Created  By  : Andre Cormier 
+		Cobol Source : 
+
+******************************************************************************
+About the file:	
+	This file has routines to print Fixed Asset Report. 
+	It is called by the file pprep.c .
+
+History:
+Programmer      Last change on    Details
+m. galvin	92-JUL-18	  Added page break and quit checks.  
+
+******************************************************************************/
+
+#include <stdio.h>
+#include <bfs_defs.h>
+#include <bfs_pp.h>
+#include <bfs_com.h>
+#include <repdef.h>
+
+#define CONTINUE	10
+#define EXIT		12
+
+#ifdef ENGLISH
+#define PRINTER 	'P'
+#define DISPLAY		'D'
+#define FILE_IO		'F'
+#else
+#define PRINTER		'I'
+#define DISPLAY		'A'
+#define FILE_IO		'D'
+#endif
+
+static Pa_rec	pa_rec;
+static Emp	emp;
+static Barg_unit	barg_unit;
+static Pay_earn	pay_earn;
+static Earn	earn;
+static Pp_ben	pp_ben;
+static Pay_ded	pay_ded;
+static Time	time;
+static Pay_param	pay_param;
+static Deduction	deduction;
+
+/*  Data items for storing the key range end values */
+static char	barg1[7];
+static char	barg2[7];
+static char	posi1[7];
+static char	posi2[7];
+static char	empl1[13];
+static char	empl2[13];
+	
+static int	PG_SIZE;
+static double	tot_ben;
+static double	tot_ded;
+static int	retval;
+static char 	discfile[15];	/* for storing outputfile name */
+static short	pgcnt; 		/* for page count */
+static char	resp[2];	/* for storing response */
+static short	copies;
+
+extern char 	e_mesg[80];	/* for storing error messages */
+
+neg_pay()
+{
+
+	/* Get details for output medium */
+#ifdef ENGLISH
+	STRCPY(resp,"P");
+#else
+	STRCPY(resp,"I");
+#endif
+	if((retval =  GetOutputon(resp))<0 )
+		return(retval);
+
+	switch(*resp) {
+		case DISPLAY:
+			resp[0]='D';
+			STRCPY( discfile, terminal );
+			PG_SIZE = 22;
+			break;
+		case FILE_IO:
+			resp[0]='F';
+			STRCPY( discfile, "neg_pay.dat" );
+			if((retval = GetFilename(discfile))<0 )
+				return(retval);
+			PG_SIZE = 63;
+			break;
+		case PRINTER:
+		default:
+			resp[0]='P';
+			discfile[0]= '\0';
+			PG_SIZE = 63;
+			break;
+	}
+
+	copies = 1;
+	if( *resp=='P' ){
+		if((retval = GetNbrCopies(&copies))<0 )
+			return(retval);
+	}
+
+	strcpy( barg1, "     0");
+	strcpy( barg2, "ZZZZZZ" );
+	retval = GetBargRange( barg1,barg2 );
+	if(retval < 0) return(retval);
+
+	strcpy( posi1, "     0");
+	strcpy( posi2, "ZZZZZZ" );
+	retval = GetPosRange( posi1,posi2 );
+	if(retval < 0) return(retval);
+
+	strcpy( empl1, "           1");
+	strcpy( empl2, "999999999999" );
+	retval = GetEmpRange( empl1,empl2 );
+	if(retval < 0) return(retval);
+
+	if( (retval=Confirm())<=0 )
+		return(retval);
+
+	retval = get_param( &pa_rec, BROWSE, 1, e_mesg );
+	if( retval<1 ){
+		return(DBH_ERR);
+	}
+
+	if( opn_prnt( resp, discfile, 1, e_mesg, 1 /* spool */)<0 ){
+		return(REPORT_ERR);
+	}
+	if( *resp=='P' )
+		SetCopies( (int)copies );
+	pgcnt = 0;		/* Page count is zero */
+	LNSZ = 132;		/* line size in no. of chars */
+	linecnt = PG_SIZE;	/* Page size in no. of lines */
+
+	retval = PrintRep();
+	close_rep();	/* close output file */
+	close_dbh();
+	return(retval);
+}
+
+static
+PrintRep()
+{
+
+	PrntHdg();
+
+	pay_earn.pe_numb[0] = '\0';
+	pay_earn.pe_pp = 0;
+	pay_earn.pe_date = 0;
+
+	flg_reset(PP_EARN);
+
+	for(;;) {
+
+		retval = get_n_pp_earn(&pay_earn,BROWSE,0,FORWARD,e_mesg);
+
+		if(retval == EFL) break;
+		if(retval < 0) {
+			fomen(e_mesg);
+			get();
+			roll_back(e_mesg);
+			return(-1);
+		}
+		strcpy(emp.em_numb,pay_earn.pe_numb);
+		retval = get_employee(&emp,BROWSE,0,e_mesg);
+		if(retval < 0) {
+			fomen(e_mesg);
+			get();
+			roll_back(e_mesg);
+			return(-1);
+		}
+
+		if(pay_earn.pe_net >= 0)
+			continue;
+
+		if(strcmp(emp.em_barg,barg1) < 0 ||
+		   strcmp(emp.em_barg,barg2) > 0) {
+			roll_back(e_mesg);
+			continue;
+		}
+
+		if(strcmp(emp.em_pos,posi1) < 0 ||
+		   strcmp(emp.em_pos,posi2) > 0) {
+			roll_back(e_mesg);
+			continue;
+		}
+
+		if(strcmp(emp.em_numb,empl1) < 0 ||
+		   strcmp(emp.em_numb,empl2) > 0) {
+			roll_back(e_mesg);
+			continue;
+		}
+
+		strcpy(barg_unit.b_code,emp.em_barg);
+		barg_unit.b_date = get_date();
+		flg_reset(BARG);
+
+		retval = get_n_barg(&barg_unit,BROWSE,0,BACKWARD,e_mesg);
+		if(retval == EFL ||
+			strcmp(barg_unit.b_code, emp.em_barg) != 0){
+			sprintf(e_mesg,"Bargaining Unit does no exist: %s",
+				emp.em_barg);
+			fomer(e_mesg);
+			return(NOERROR);
+		}
+		if(retval < 0){
+			fomer(e_mesg);
+  			return(ERROR);
+		}
+		seq_over(BARG);
+
+		retval = PrntRec();
+		if(retval < 0)		return(retval);
+		if(retval == EXIT)  return(EXIT);
+	}	
+	seq_over(PP_EARN);
+
+	if(pgcnt) {
+		if(term < 99) 
+			last_page();	
+#ifndef	SPOOLER
+		else
+			rite_top();
+#endif
+	}
+	return(NOERROR);
+}
+
+static
+PrntHdg()	/* Print heading  */
+{
+	short	offset;
+	long	sysdt ;
+
+	if( pgcnt && term < 99)   /* new page and display */
+		if(next_page()<0) return(EXIT);	
+		
+	if( pgcnt || term < 99) { /* if not the first page or display */
+		if( rite_top()<0 ) return( -1 );	/* form_feed */
+	}
+	else
+		linecnt = 0;
+	pgcnt++; 			/* increment page no */
+
+	mkln( 1, PROG_NAME, 10 );
+#ifdef ENGLISH
+	mkln( 103, "Date:", 5 );
+#else
+	mkln( 103, "Date:", 5 );
+#endif
+	sysdt = get_date() ;
+	tedit( (char *)&sysdt,"____/__/__",line+cur_pos, R_LONG ); 
+	cur_pos += 10;
+
+#ifdef ENGLISH
+	mkln( 122, "PAGE:", 5 );
+#else
+	mkln( 122, "PAGE:", 5 );
+#endif
+	tedit( (char *)&pgcnt,"__0_",  line+cur_pos, R_SHORT ); 
+	cur_pos += 4;
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+	offset = ( LNSZ-strlen(pa_rec.pa_co_name) )/2;
+	mkln( offset, pa_rec.pa_co_name, strlen(pa_rec.pa_co_name) );
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+#ifdef ENGLISH
+	mkln((LNSZ-28)/2,"NEGATIVE PAY PERIOD REGISTER", 28 );
+#else
+	mkln((LNSZ-19)/2,"PAY PERIOD REGISTER", 19 );
+#endif
+	if( PrintLine()<0 )	return(REPORT_ERR);
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+
+	return(NOERROR);
+}
+
+static
+PrntHdgDed()
+{
+	mkln(1,"EMPLOYEE #:",11);
+	mkln(13,emp.em_numb,12);
+	mkln(29,"NAME :",6);
+	mkln(35,emp.em_first_name,15);
+	mkln(52,emp.em_last_name,25);
+	
+	if( PrintLine()<0 )	return(REPORT_ERR);
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+#ifdef ENGLISH
+	mkln(2,"EARNING",7);
+	mkln(20,"DESCRIPTION",11);
+	mkln(52,"AMOUNT",6);
+	mkln(64,"DEDUCTION",9);
+	mkln(82,"DESCRIPTION",11);
+	mkln(111,"AMOUNT",6);
+	mkln(124,"NET",3);
+#else
+	mkln(2,"EARNING",7);
+	mkln(20,"DESCRIPTION",11);
+	mkln(52,"AMOUNT",6);
+	mkln(64,"DEDUCTION",9);
+	mkln(82,"DESCRIPTION",11);
+	mkln(111,"AMOUNT",6);
+	mkln(124,"NET",3);
+#endif
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+#ifdef ENGLISH
+	mkln(3,"CODE",4);
+	mkln(66,"CODE",4);
+	mkln(123,"INCOME",6);
+#else
+	mkln(3,"CODE",4);
+	mkln(79,"CODE",4);
+	mkln(123,"INCOME",6);
+#endif
+	if( PrintLine()<0 )	return(REPORT_ERR);
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+	return(NOERROR);
+}
+static
+PrntRec()
+{
+	retval = PrntHdgDed();
+	if(retval < 0)	return(retval);
+	if(retval == EXIT)	return(EXIT);
+
+	retval = PrntRec1();
+	if(retval < 0)	return(retval);
+	if(retval == EXIT) return(EXIT);
+
+	retval = PrntRec2();
+	if(retval < 0)	return(retval);
+	if(retval == EXIT) return(EXIT);
+
+	retval = PrntBen();
+	if(retval < 0)	return(retval);
+	if(retval == EXIT) return(EXIT);
+
+	retval = PrntTot();
+	if(retval < 0)	return(retval);
+	if(retval == EXIT) return(EXIT);
+
+	return(NOERROR);
+}
+
+
+static
+PrntRec1()
+{
+	char	code[7];
+	char	txt_buff[132];
+
+	/***** EARNINGS *****/
+	/* get code for first line */
+	get_pay_param(&pay_param,BROWSE,1,e_mesg);
+	if(retval < 0) {
+		fomen(e_mesg);
+		get();
+		return(retval);
+	} 	
+
+	strcpy(code,pay_param.pr_reg_earn);
+	retval = GetDesc(code);
+	if(retval < 0)	return(retval); 
+
+	/* get amount for first line */
+	pay_earn.pe_reg_inc2 = pay_earn.pe_reg_inc1 + pay_earn.pe_reg_inc2;
+	
+	mkln(2,pay_param.pr_reg_earn,6);
+	mkln(12,earn.ea_desc,30);
+	tedit((char*)&pay_earn.pe_reg_inc2,"_,___,_0_.__-",txt_buff,R_DOUBLE);
+	mkln(46,txt_buff,13);
+
+	tot_ben = tot_ben +pay_earn.pe_reg_inc2;
+
+	/***** DEDUCTIONS *****/
+
+	mkln(74,"CPP CONTRIBUTION",16);
+	tedit((char*)&pay_earn.pe_cpp,"_,___,_0_.__-",txt_buff,R_DOUBLE);
+	mkln(104,txt_buff,13);
+
+	tot_ded = tot_ded + pay_earn.pe_cpp;
+
+	retval =  PrintLine();
+	if(retval < 0) return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+
+	return(NOERROR);
+}
+
+static
+PrntRec2()
+{
+	char	code[7];
+	char	txt_buff[132];
+
+	if(pay_earn.pe_vac != 0) {
+		strcpy(code,pay_param.pr_vac_earn);
+		retval = GetDesc(code);
+		if(retval < 0) 	return(retval);
+	
+		/* get amount for second line */
+		mkln(2,pay_param.pr_vac_earn,6);
+		mkln(12,earn.ea_desc,30);
+		tedit((char*)&pay_earn.pe_vac,"_,___,_0_.__-",txt_buff,R_DOUBLE);
+		mkln(46,txt_buff,13);
+
+		tot_ben = tot_ben + pay_earn.pe_vac;
+	}
+
+	/***** DEDUCTIONS *****/
+
+	mkln(74,"UIC PREMIUM",11);
+	tedit((char*)&pay_earn.pe_uic,"_,___,_0_.__-",txt_buff,R_DOUBLE);
+	mkln(104,txt_buff,13);
+
+	tot_ded = tot_ded + pay_earn.pe_uic;
+
+	retval = PrintLine();
+	if(retval < 0)	return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+
+	PrntLines();
+
+	return(NOERROR);
+}
+static
+PrntLines()
+{
+	char	code[7];
+	int	count;
+	int	flag1;
+	int	flag2;
+	char	txt_buff[132];
+
+
+	strcpy(pay_ded.pd_numb, emp.em_numb);
+	pay_ded.pd_pp = 0;
+	pay_ded.pd_date = 0;
+	pay_ded.pd_code[0] = '\0';
+	pay_ded.pd_fund = 0;
+	pay_ded.pd_acct[0] = '\0';
+
+	flg_reset(PP_DED);
+
+	/*****  Earnings *****/
+
+	strcpy(time.tm_numb,emp.em_numb);
+	time.tm_date = 0;
+	time.tm_no = 0;
+
+	flag1 = 1;
+	flag2 = 1;
+	count = 0;
+
+	flg_reset(TIME);
+
+	for(;;) {
+		count += 1;
+		for(;;) {
+			retval = get_n_ptime(&time,BROWSE,0,FORWARD,e_mesg);
+
+			if((strcmp(time.tm_numb,emp.em_numb)!=0) ||
+			(retval == EFL))
+				flag1 = 0;
+
+			if(flag1 == 0)
+				break;
+			if(time.tm_date != pay_earn.pe_date)
+				continue;
+
+			strcpy(code,time.tm_earn);
+			retval = GetDesc(code);
+			if(retval < 0)	return(retval);
+
+			mkln(2,time.tm_earn,6);
+			mkln(12,earn.ea_desc,30);
+			tedit((char*)&time.tm_tot_amt,"_,___,_0_.__-",
+				txt_buff,R_DOUBLE);
+			mkln(46,txt_buff,13);
+
+ 			tot_ben = tot_ben + time.tm_tot_amt;
+
+			break;
+		}
+		if(flag1 == 0 && flag2 == 0)
+			break;
+	/*****  Deductions *****/
+		if(flag2 == 1) {
+			if(count == 1) {
+				mkln(74,"INCOME TAX",10);
+				tedit((char*)&pay_earn.pe_tax,"_,___,_0_.__-",
+					txt_buff,R_DOUBLE);
+				mkln(104,txt_buff,13);
+
+				tot_ded = tot_ded + pay_earn.pe_tax;
+			}
+			if(count == 2) {
+				pay_earn.pe_reg1 = (pay_earn.pe_reg1 +
+						    pay_earn.pe_reg2 +
+						    pay_earn.pe_reg3);
+
+				mkln(74,"REGISTERED PENSION PLAN",23);
+				tedit((char*)&pay_earn.pe_reg1,"_,___,_0_.__-",
+					txt_buff,R_DOUBLE);
+				mkln(104,txt_buff,13);
+
+				tot_ded = tot_ded + pay_earn.pe_reg1;
+			}
+			if(count >= 3) {
+				retval = get_n_pp_ded(&pay_ded,BROWSE,0,
+					 FORWARD,e_mesg);
+
+				if(strcmp(pay_ded.pd_numb,emp.em_numb) != 0 ||
+					retval == EFL)
+						flag2 = 0;
+
+				if(flag1 == 0 && flag2 == 0)
+					break;
+
+				strcpy(deduction.dd_code,pay_ded.pd_code);
+				strcpy(deduction.dd_pp_code,
+							barg_unit.b_pp_code);
+
+				get_deduction(&deduction,BROWSE,0,e_mesg);
+
+				mkln(65,pay_ded.pd_code,6);
+				mkln(74,deduction.dd_desc,30);
+				tedit((char*)&pay_ded.pd_amount,"_,___,_0_.__-",
+					txt_buff,R_DOUBLE);
+				mkln(104,txt_buff,13);
+
+				tot_ded = tot_ded + pay_ded.pd_amount;
+			}
+		}
+
+		retval = PrintLine();	
+		if(retval < 0)	return(REPORT_ERR);
+		if(retval == EXIT)	return(EXIT);
+	}
+	seq_over(TIME);
+	retval = PrintLine();	
+	if(retval < 0)	return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+
+	return(NOERROR);
+
+}
+static
+GetDesc(code)
+char	*code;
+{
+	int sysdate = 0;
+	strcpy(earn.ea_code,code);
+	sysdate = get_date();
+	earn.ea_date = sysdate;
+
+	flg_reset(EARN);
+	
+	for(;;) {
+		retval=get_n_earn(&earn,BROWSE,1,BACKWARD,e_mesg);
+		if(retval == EFL || retval < 0) {
+			fomen(e_mesg);
+			get();
+			return(retval);
+		}	
+		if((strcmp(earn.ea_code,code) == 0) && (earn.ea_date < sysdate)) {
+			seq_over(EARN);
+			break;
+		}
+		
+	}
+	seq_over(EARN);
+	return(NOERROR);
+
+}
+static
+PrntHdgBen()
+{
+
+#ifdef ENGLISH
+	mkln(2,"BENEFIT",7);
+	mkln(20,"DESCRIPTION",11);
+	mkln(52,"AMOUNT",6);
+#else
+	mkln(2,"BENEFIT",7);
+	mkln(20,"DESCRIPTION",11);
+	mkln(52,"AMOUNT",6);
+#endif
+	retval = PrintLine();
+	if(retval < 0)	return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+
+#ifdef ENGLISH
+	mkln(3,"CODE",4);
+#else
+	mkln(3,"CODE",4);
+#endif
+	retval = PrintLine();
+	if(retval < 0)	return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+	retval = PrintLine();
+	if(retval < 0)	return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+
+	return(NOERROR);
+}
+static
+PrntBen()
+{
+	int	first_time;
+	int	err;
+	char	code[7];
+	char	txt_buff[132];
+	char	old_code[7];
+	double	amount_ben;
+
+	strcpy(pp_ben.pb_numb, emp.em_numb);
+	pp_ben.pb_pp = 0;
+	pp_ben.pb_date = 0;
+	pp_ben.pb_code[0] = '\0';
+	pp_ben.pb_fund = 0;
+	pp_ben.pb_acct[0] = '\0';
+
+	flg_reset(PP_BEN);
+
+	first_time = 0;
+	old_code[0] = '\0';
+
+	for(;;) {
+		err = get_n_pp_ben(&pp_ben,BROWSE,1,FORWARD,e_mesg);
+
+		if(strcmp(emp.em_numb,pp_ben.pb_numb) != 0 || err == EFL) {
+			if(old_code[0] != '\0') {	
+			
+				strcpy(code,old_code);
+
+				retval = GetDesc(code);
+				if(retval < 0)	return(retval);
+
+				mkln(2,old_code,6);
+				mkln(12,earn.ea_desc,30);
+				tedit((char*)&amount_ben,"_,___,_0_.__-",
+					txt_buff,R_DOUBLE);
+				mkln(46,txt_buff,13);
+
+				tot_ben = tot_ben + amount_ben;
+
+				retval = PrintLine();
+				if(retval < 0)	return(REPORT_ERR);
+				if(retval == EXIT)	return(EXIT);
+			}
+			break;
+		}
+
+		if(first_time == 0) {
+			strcpy(old_code,pp_ben.pb_code);
+			first_time = 1;
+
+			retval = PrntHdgBen();
+			if(retval < 0)	return(retval);
+			if(retval == EXIT) return(EXIT);
+
+		}
+
+		if(strcmp(old_code,pp_ben.pb_code) == 0) {
+			amount_ben = pp_ben.pb_amount + amount_ben;
+		}
+		else {
+			strcpy(code,old_code);
+
+			retval = GetDesc(code);
+			if(retval < 0)	return(retval);
+
+			mkln(2,old_code,6);
+
+			mkln(12,earn.ea_desc,30);
+			tedit((char*)&amount_ben,"_,___,_0_.__-", txt_buff,R_DOUBLE);
+			mkln(46,txt_buff,13);
+
+			tot_ben = tot_ben + amount_ben;
+
+			retval = PrintLine();
+			if(retval < 0)	return(REPORT_ERR);
+			if(retval == EXIT)	return(EXIT);
+
+			amount_ben = 0;
+			strcpy(old_code,pp_ben.pb_code);
+			amount_ben = pp_ben.pb_amount + amount_ben;
+		}
+	}
+
+	seq_over(PP_BEN);
+
+	return(NOERROR);
+}
+static
+PrntTot()
+{
+	double	fin_tot;
+	char	txt_buff[132];
+
+	retval = PrintLine();
+	if(retval < 0)	return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+
+	fin_tot = tot_ben - tot_ded;
+
+	mkln(1,"TOTAL:",6);
+	tedit((char*)&tot_ben,"_,___,_0_.__-", txt_buff,R_DOUBLE);
+	mkln(46,txt_buff,13);
+	tedit((char*)&tot_ded,"_,___,_0_.__-",txt_buff,R_DOUBLE);
+	mkln(104,txt_buff,13);
+	tedit((char*)&fin_tot,"_,___,_0_.__-",txt_buff,R_DOUBLE);
+	mkln(119,txt_buff,13);
+
+	retval = PrintLine();
+	if(retval < 0)	return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+	retval = PrintLine();
+	if(retval < 0)	return(REPORT_ERR);
+	if(retval == EXIT)	return(EXIT);
+
+	tot_ben = 0;
+	tot_ded = 0;
+	fin_tot = 0;
+
+	return(NOERROR);
+}
+static
+PrintLine()
+{
+	if(prnt_line() < 0 )	return(REPORT_ERR);
+
+	if(linecnt > PG_SIZE)
+		retval = PrntHdg();
+ 		if(retval < 0)	return(-1);
+		if(retval == EXIT) 	return(EXIT);
+
+	return(NOERROR);
+}
+

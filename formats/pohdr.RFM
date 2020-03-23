@@ -1,0 +1,10 @@
+PROJECT: pohdr
+	RECORDS: 1 pohdr
+
+LOGICAL_RECORD: 1
+	NAME:          pohdr
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 pohdr
+	TOTAL_FORMATS: 0
+
+ENDFILE

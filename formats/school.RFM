@@ -1,0 +1,10 @@
+PROJECT: school
+	RECORDS: 1 school
+
+LOGICAL_RECORD: 1
+	NAME:          school
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 school
+	TOTAL_FORMATS: 0
+
+ENDFILE

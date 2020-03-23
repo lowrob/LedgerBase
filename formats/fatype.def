@@ -1,0 +1,2 @@
+	char	code[5];	/* FA Item type code */
+	char	descp[31];	/* FA Item type description */

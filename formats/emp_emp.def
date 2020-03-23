@@ -1,0 +1,6 @@
+	char	ep_numb[13] ;		/* Employee number    */
+	char	ep_class[7];		/* Classification code	*/
+	char	ep_dept[7];		/* Department code	*/
+	char	ep_area[7];		/* Area code	*/
+	char	ep_trans[7];		/* Transaction code	*/
+	char	ep_exp[7];		/* Expense code	*/

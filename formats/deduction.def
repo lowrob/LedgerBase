@@ -1,0 +1,11 @@
+	char	dd_code[7] ; 		/* Deduction Code */
+	char	dd_pp_code[7] ;		/* Deduction Pay Period Code */
+	char	dd_desc[31] ;		/* Deduction description */
+	char	dd_second[3] ;		/* Second Code */
+	char	dd_t4_fld[2] ;		/* T4 field code     */	
+	double	dd_min_earn;		/* Minimum Earnings               */
+	double	dd_max_contr;		/* Maximum yearly contribution     */
+	char	dd_ded_pp[5][2];	/* Add to monthly pay period        */
+	short	dd_fund;		/* Fund */
+	char	dd_lia_acct[19] ;	/* G/L Account */
+	long	dd_exp_acct[12] ;	/* G/L Account */

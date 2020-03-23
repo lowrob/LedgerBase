@@ -1,0 +1,11 @@
+	char	at_disp_code[2] ; 	/* Attendance display code.   */
+	char	at_code[4] ; 		/* Attendance code.   */
+	char	at_desc[31] ;		/* Attendance description */
+	char	at_sen[2];		/* Attendance seniority flag  */
+	char	at_sick[2];		/* Attendance sick flag  */
+	char	at_earn[2];		/* Attendance earnings flag  */
+	char	at_vac[2];		/* Attendance vacation flag  */
+	char	at_sckbank[2];		/* Attendance sick bank flag  */
+	char	at_vacbank[2];		/* Attendance vac. bank flag  */
+	char	at_sic_acc[2];		/* Attendance sick accrual flag */
+	char	at_vac_acc[2];		/* Attendance vac accrual flag */

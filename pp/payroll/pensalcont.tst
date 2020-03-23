@@ -1,0 +1,871 @@
+/******************************************************************************
+		Sourcename   : pensalcont.c
+		System       : Budgetary Financial system.
+		Module       : Fixed Assets System : Reports
+		Created on   : 92-05-05
+		Created  By  : Andre Cormier 
+		Cobol Source : 
+
+******************************************************************************
+About the file:	
+	This file has routines to print Fixed Asset Report. 
+	It is called by the file ppayrep.c .
+
+History:
+Programmer      Last change on    Details
+
+******************************************************************************/
+
+#include <stdio.h>
+#include <bfs_defs.h>
+#include <bfs_pp.h>
+#include <bfs_com.h>
+#include <repdef.h>
+
+#define CONTINUE	10
+#define EXIT		12
+
+#ifdef ENGLISH
+#define PRINTER 	'P'
+#define DISPLAY		'D'
+#define FILE_IO		'F'
+#else
+#define PRINTER		'I'
+
+#define DISPLAY		'A'
+#define FILE_IO		'D'
+#endif
+
+static Pa_rec		pa_rec;
+static Emp		emp_rec;
+static Emp_sched1	emp_sched1;
+static Pay_per		pay_period;
+static Emp_earn		emp_earn;
+static Pay_param	pay_param;
+static Emp_ln_his	emp_ln_his;
+static Emp_dh		emp_dh;
+static Class		class_rec;
+static Barg_unit	barg_unit;
+
+/*  Data items for storing the key range end values */
+static double	month_to_date;
+static double	year_to_date;
+	
+static int	flag;		/* flag to print the employee or not */
+static int	PG_SIZE;
+static int	retval;
+static char 	discfile[15];	/* for storing outputfile name */
+static short	pgcnt; 		/* for page count */
+static char	resp[2];	/* for storing response */
+static short	copies;
+
+extern 	char 	e_mesg[200];	/* for storing error messages */
+static	double	annual_salary;
+	
+/* Total variables for year to date */
+static	double	tot_year_reg1;
+static	double	tot_year_retro;
+static	double	tot_year_cash_pay;
+static	double	tot_year_reg2;
+static	double	tot_year_prior;
+static	double	tot_year_opt;
+static	double	tot_year_nonm;
+
+/* Total variables for month to date */
+static	double	emp_curr_reg1;
+static	double	emp_curr_retro;
+static	double	emp_curr_cash_pay;
+static	double	emp_curr_reg2;
+static	double	emp_curr_prior;
+static	double	emp_curr_opt;
+static	double	emp_curr_nonm;
+
+static	double	tot_month_reg1;
+static	double	tot_month_retro;
+static	double	tot_month_cash_pay;
+static	double	tot_month_reg2;
+static	double	tot_month_prior;
+static	double	tot_month_opt;
+static	double	tot_month_nonm;
+static	double	prior;
+static	double	optional;
+static	double	non_match;
+static	double	reg_sal;
+static	double	regular;
+
+static	double	emp_reg_tot;
+static	double	emp_retro_tot;
+static	double	emp_cash_tot;
+static	double	emp_reg_contr;
+static	double	emp_prior_tot;
+static  double	emp_opt_tot;
+static	double	emp_nonm_tot;
+static	long	date1;
+static	long	date2;
+static	double	retro = 0;
+static	double	cash_pay = 0;
+
+static	short	tot_employee;
+static	long	effective_date;
+static	int	curr_month_ded;
+static	int	curr_month_contrib;
+static	int	curr_month;
+static	long	earn_date;
+
+double	D_Roundoff();	
+
+pensalcont()
+{
+	int year;
+
+	/* Initialize Total variables */
+	tot_year_reg1 = 0;
+	tot_month_reg1 = 0;
+	tot_year_retro = 0;
+	tot_month_retro = 0;
+	tot_year_cash_pay = 0;
+	tot_month_cash_pay = 0;
+	tot_year_reg2 = 0;
+	tot_month_reg2 = 0;
+	tot_year_prior = 0;
+	tot_month_prior = 0;
+	tot_year_opt = 0;
+	tot_month_opt = 0;
+	tot_year_nonm = 0;
+	tot_month_nonm = 0;
+	tot_employee = 0;
+
+	curr_month_ded = 0;
+	
+	/* Get details for output medium */
+#ifdef ENGLISH
+	STRCPY(resp,"P");
+#else
+	STRCPY(resp,"I");
+#endif
+	if((retval =  GetOutputon(resp))<0 )
+		return(retval);
+
+	switch(*resp) {
+		case DISPLAY:
+			resp[0]='D';
+			STRCPY( discfile, terminal );
+			PG_SIZE = 22;
+			break;
+		case FILE_IO:
+			resp[0]='F';
+			STRCPY( discfile, "pensalcont.dat" );
+			if((retval = GetFilename(discfile))<0 )
+				return(retval);
+			PG_SIZE = 63;
+			break;
+		case PRINTER:
+		default:
+			resp[0]='P';
+			discfile[0]= '\0';
+			PG_SIZE = 63;
+			break;
+	}
+
+	copies = 1;
+	if( *resp=='P' ){
+		if((retval = GetNbrCopies(&copies))<0 )
+			return(retval);
+	}
+
+	year = get_date() / 10000;
+	date1 = year * 10000 + 101;
+	date2 = get_date();
+	if((retval = GetDateRange(&date1,&date2))<0)
+		return(retval);
+
+	curr_month = (date2/100)%100;
+
+	if( (retval=Confirm())<=0 )
+		return(retval);
+
+	retval = get_param( &pa_rec, BROWSE, 1, e_mesg );
+	if( retval<1 ){
+		return(DBH_ERR);
+	}
+
+	if( opn_prnt( resp, discfile, 1, e_mesg, 1 /* spool */)<0 ){
+		return(REPORT_ERR);
+	}
+	if( *resp=='P' )
+		SetCopies( (int)copies );
+	pgcnt = 0;		/* Page count is zero */
+	LNSZ = 132;		/* line size in no. of chars */
+	linecnt = PG_SIZE;	/* Page size in no. of lines */
+
+	retval = PrintReport();
+
+	close_rep();	/* close output file */
+	close_dbh();
+	return(retval);
+}
+
+/******************************************************************************
+Main logic of the program
+******************************************************************************/
+static
+PrintReport()
+{
+	int	need_to_print, first_time, time_to_end ;
+	short	last_pp, pp_to_chk, last_week;
+	long	last_date;
+
+	retval = get_pay_param( &pay_param, BROWSE, 1, e_mesg );
+	if( retval<1 ){
+		return(DBH_ERR);
+	}
+
+	retval = PrntHdr();
+	if(retval < 0)	return(retval);
+
+	emp_rec.em_sin[0] = '\0';
+	emp_rec.em_numb[0] ='\0';
+
+	flg_reset(EMPLOYEE);
+
+	for(;;) {
+		retval = get_n_employee(&emp_rec,BROWSE,3,FORWARD,e_mesg);
+		if(retval==EFL)	break;
+		if(retval < 0) {
+			fomen(e_mesg);
+			get();
+			return(retval);
+		}
+
+		strcpy(barg_unit.b_code,emp_rec.em_barg);
+		barg_unit.b_date = get_date();
+		flg_reset(BARG);
+
+		retval = get_n_barg(&barg_unit,BROWSE,0,BACKWARD,e_mesg);
+		if(retval == EFL ||
+			strcmp(barg_unit.b_code, emp_rec.em_barg) != 0){
+			sprintf(e_mesg,"Bargaining Unit does no exist: %s %s",
+				emp_rec.em_barg,emp_rec.em_numb);
+			fomer(e_mesg);
+			get();
+			return(NOERROR);
+		}
+		if(retval < 0){
+			fomer(e_mesg);
+  			return(ERROR);
+		}
+		seq_over(BARG);
+
+		retval = CalcAnnualSal();
+		if(retval < 0)	return(retval);
+
+		emp_curr_reg1 = 0;
+		emp_curr_reg2 = 0;
+		emp_curr_prior = 0;
+		emp_curr_opt = 0;
+		emp_curr_nonm = 0;
+
+		emp_reg_tot = 0;
+		emp_retro_tot = 0;
+		emp_cash_tot = 0;
+		emp_reg_contr = 0;
+		emp_prior_tot = 0;
+		emp_opt_tot = 0;
+		emp_nonm_tot = 0;
+		regular = 0;
+		reg_sal = 0;
+		prior = 0;
+		non_match = 0;
+		optional = 0;
+
+		time_to_end = 0;
+
+		last_date = date1;
+		last_pp = 0;
+		last_week = 0;
+		
+		for(;;){
+		  first_time = 0;
+		  earn_date = 9999;
+
+		  strcpy(emp_earn.en_numb,emp_rec.em_numb);
+		  emp_earn.en_date = last_date;
+		  emp_earn.en_pp = last_pp;
+		  emp_earn.en_week = last_week;
+
+		  flg_reset(EMP_EARN);
+
+		  for(;;) {
+			retval = get_n_emp_earn(&emp_earn,BROWSE,0,FORWARD,
+				e_mesg);
+			if(retval == EFL){ 
+				if(first_time == 0)
+					earn_date = 0;
+				time_to_end = 1;
+				break;
+			}
+			if(retval < 0){
+				fomer(e_mesg);
+				get();
+				return(retval);
+			}
+
+			if(strcmp(emp_earn.en_reg_pen,"PSPP")!=0)
+				continue;
+printf("\npast pspp check");get;
+
+			if(first_time == 0){
+				if(emp_earn.en_date > date2 ||
+				   strcmp(emp_rec.em_numb,emp_earn.en_numb)!=0){
+					earn_date = 0;
+printf("\nbreaking in first_time because of date or numb");get;
+					break;
+				}
+				pp_to_chk = emp_earn.en_pp;
+printf("\nsetting pp_to_chk to %d",pp_to_chk);get();
+				first_time = 1;
+			}
+			if(strcmp(emp_rec.em_numb,emp_earn.en_numb) != 0){ 
+printf("\nbreaking numbs dont match");get;
+				time_to_end = 1;
+				break;
+			}
+			if(pp_to_chk != emp_earn.en_pp){
+				last_date = emp_earn.en_date;
+				last_week = emp_earn.en_week;
+				last_pp = emp_earn.en_pp;
+printf("\nbreaking pp %d dont match emppp %d",pp_to_chk,emp_earn.en_pp);get();
+				break;
+			}
+			if(emp_earn.en_date > date2){
+printf("\nbreaking date too large ");get;
+				time_to_end = 1;
+				break;
+			}
+			
+			earn_date = emp_earn.en_date;
+			if(earn_date == 19940405)
+				earn_date = 19940330;
+
+printf("\ngoing into addition routine");
+			regular += (emp_earn.en_reg1 +
+			            emp_earn.en_reg2 + emp_earn.en_reg3);
+			reg_sal += emp_earn.en_reg_inc;
+			curr_month_contrib = (emp_earn.en_date/100)%100;
+printf("curr month contrib is %ld curr month is %ld",curr_month_contrib,curr_month);get();
+			if(curr_month_contrib == curr_month){
+				curr_month_ded = 1;
+			}
+		  }
+		  if(earn_date == 0)
+			break;
+
+		  retval = GetPenBuy();
+		  if(retval < 0) return(retval);
+
+		  retval = GetOpt();
+		  if(retval < 0) return(retval);
+
+		  retval = GetNonMatch();
+		  if(retval < 0) return(retval);
+
+		  if(regular==0 && prior== 0 && optional == 0 && non_match == 0)
+			reg_sal = 0;
+			
+		  emp_reg_tot += reg_sal;
+		  emp_retro_tot = 0;
+		  emp_cash_tot = 0;
+		  emp_reg_contr += regular;
+		  emp_prior_tot += prior;
+		  emp_opt_tot += optional;
+		  emp_nonm_tot += non_match;
+
+/*andre		  tot_year_reg1 += reg_sal;
+		  tot_year_retro = 0;
+		  tot_year_cash_pay = 0;
+		  tot_year_reg2 += regular;
+		  tot_year_prior += prior;
+		  tot_year_opt += optional;
+		  tot_year_nonm += non_match;*/
+
+		  if(curr_month_ded == 1){
+			emp_curr_reg1 += reg_sal;
+			emp_curr_retro = 0;
+			emp_curr_cash_pay = 0;
+			emp_curr_reg2 += regular;
+			emp_curr_prior += prior;
+			emp_curr_opt += optional;
+			emp_curr_nonm += non_match;
+		  }
+		  
+		  reg_sal = 0;
+		  regular = 0;
+		  prior = 0;
+		  optional = 0;
+		  non_match = 0;
+		 	 
+		  if(time_to_end == 1)
+			break;
+		}
+
+		retval = PrntRecord();
+		if(retval == EXIT)	return(NOERROR);
+
+/*		tot_year_reg1 += emp_reg_tot;
+		tot_year_retro = 0;
+		tot_year_cash_pay = 0;
+		tot_year_reg2 += emp_reg_contr;
+		tot_year_prior += emp_prior_tot;
+		tot_year_opt += emp_opt_tot;
+		tot_year_nonm += emp_nonm_tot; */
+		if(curr_month_ded == 1){
+			tot_month_reg1 += emp_curr_reg1;
+			tot_month_retro = 0;
+			tot_month_cash_pay = 0;
+			tot_month_reg2 += emp_curr_reg2;
+			tot_month_prior += emp_curr_prior;
+			tot_month_opt += emp_curr_opt;
+			tot_month_nonm += emp_curr_nonm;
+		}
+		
+		regular = 0;
+		reg_sal = 0;
+		curr_month_ded = 0;
+
+	}
+	seq_over(EMPLOYEE);
+
+	retval = PrintTotal();
+	if(retval < 0)	return(retval);
+
+	if(pgcnt) {
+		if(term < 99) 
+			last_page();	
+#ifndef	SPOOLER
+		else
+			rite_top();
+#endif
+	}
+	return(NOERROR);
+}
+/*-----------------------------------------------------------------*/
+GetPenBuy()
+{
+	int	retval;
+
+	prior = 0;
+
+	/* the pension prior is setup as a loan */
+	strcpy(emp_ln_his.elh_code,"PENBUY");
+	strcpy(emp_ln_his.elh_numb ,emp_rec.em_numb);
+	emp_ln_his.elh_date = earn_date;
+
+	retval = get_emp_lhis(&emp_ln_his,BROWSE,1, e_mesg);
+	if(retval < 0 && retval != UNDEF){
+		fomer(e_mesg);
+		get();
+		return(retval);
+	}
+	if(retval != UNDEF){
+		prior += emp_ln_his.elh_amount; 
+		curr_month_contrib = (emp_ln_his.elh_date/100)%100;
+		if(curr_month_contrib == curr_month){
+			curr_month_ded = 1;
+		}
+	}
+	return(NOERROR);
+}
+/*-----------------------------------------------------------------*/
+GetOpt()
+{
+	int	retval;
+
+	optional = 0;
+
+	/* pension optional has been setup as 
+			a optpen deduction */
+	strcpy(emp_dh.edh_code,"OPTPEN");
+	strcpy(emp_dh.edh_group,"OPTPEN");
+	strcpy(emp_dh.edh_numb ,emp_rec.em_numb);
+	emp_dh.edh_date = earn_date;
+
+	retval = get_emp_dhis(&emp_dh,BROWSE,2,e_mesg);
+	if(retval < 0 && retval != UNDEF){
+		fomer(e_mesg);
+		get();
+		return(retval);
+	}
+	if(retval != UNDEF){
+		optional += emp_dh.edh_amount; 
+		curr_month_contrib = (emp_dh.edh_date/100)%100;
+		if(curr_month_contrib == curr_month){
+			curr_month_ded = 1;
+		}
+	}
+	return(NOERROR);
+}
+/*--------------------------------------------------------------------*/
+GetNonMatch()
+{
+	int	retval;
+
+	non_match = 0;
+
+	/* pension non-matching has been setup as 
+			extra pension deduction */
+	strcpy(emp_dh.edh_code,"EX PEN");
+	strcpy(emp_dh.edh_group,"EX PEN");
+	strcpy(emp_dh.edh_numb ,emp_rec.em_numb);
+	emp_dh.edh_date = earn_date;
+
+	retval = get_emp_dhis(&emp_dh,BROWSE,2,e_mesg);
+	if(retval < 0 && retval != UNDEF){
+		fomer(e_mesg);
+		get();
+		return(retval);
+	}
+	if(retval != UNDEF){
+		non_match += emp_dh.edh_amount; 
+		curr_month_contrib = (emp_dh.edh_date/100)%100;
+		if(curr_month_contrib == curr_month){
+			curr_month_ded = 1;
+		}
+	}
+	return(NOERROR);
+}
+
+/******************************************************************************
+Prints the headings of the report GROSS EARNINGS FOR PAY PERIOD
+******************************************************************************/
+static
+PrntHdr()	/* Print heading  */
+{
+	short	offset;
+	long	sysdt ;
+	char	txt_buff[132];
+	long	tmp_date2;
+
+	if( pgcnt && term < 99)   /* new page and display */
+		if(next_page()<0) return(EXIT);	
+		
+	if( pgcnt || term < 99) { /* if not the first page or display */
+		if( rite_top()<0 ) return( -1 );	/* form_feed */
+	}
+	else
+		linecnt = 0;
+	pgcnt++; 			/* increment page no */
+
+	mkln( 1, PROG_NAME, 10 );
+	mkln(12,"PAYROLL 01",10);
+#ifdef ENGLISH
+	mkln( 103, "Date:", 5 );
+#else
+	mkln( 103, "Date:", 5 );
+#endif
+	sysdt = get_date() ;
+	tedit( (char *)&sysdt,"____/__/__",line+cur_pos, R_LONG ); 
+	cur_pos += 10;
+
+#ifdef ENGLISH
+	mkln( 122, "PAGE:", 5 );
+#else
+	mkln( 122, "PAGE:", 5 );
+#endif
+	tedit( (char *)&pgcnt,"__0_",  line+cur_pos, R_SHORT ); 
+	cur_pos += 4;
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+	offset = ( LNSZ-strlen(pa_rec.pa_co_name)+4 )/2;
+	mkln( offset-4,"430",3);
+	mkln( offset, pa_rec.pa_co_name, strlen(pa_rec.pa_co_name) );
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+#ifdef ENGLISH
+	mkln((LNSZ-33)/2,"PENSIONABLE SALARY / CONTRIBUTION", 33 );
+#else
+	mkln((LNSZ-33)/2,"Translate                        ", 33 );
+#endif
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+	mkln(60,"for",3);
+	tmp_date2 = date2 % 1000000;	/* get date format YY/MM/DD */
+	tedit( (char *)&tmp_date2,"__/__/__",txt_buff, R_LONG ); 
+	mkln(64,txt_buff,8);
+
+	if( PrintLine()<0 )	return(REPORT_ERR);
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+	mkln(1,"S.I. NUMBER",11);
+	mkln(14,"P.P.",13);
+	mkln(20,"NAME",4);
+	mkln(42,"REGULAR",7);
+	mkln(52,"RETRO PAY",9);
+	mkln(64,"CASH PAY",8);
+	mkln(75,"REGULAR",7);
+	mkln(86,"PRIOR",5);
+	mkln(95,"OPTIONAL",8);
+	mkln(106,"NON",3);
+	mkln(116,"ANNUAL",6);
+	mkln(123,"EFFECTIVE",9);
+	
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+	mkln(103,"MATCHING",8);
+	mkln(116,"SALARY",6);
+	mkln(125,"DATE",4);
+
+	if( PrintLine()<0 )	return(REPORT_ERR);
+	if( PrintLine()<0 )	return(REPORT_ERR);
+
+	return(NOERROR);
+}
+/******************************************************************************
+Prints the detail line for all employees that has a registered pension period
+code = PSPP 
+******************************************************************************/
+static
+PrntRecord()
+{
+	char	txt_buff[132], name[50], sin[12];
+	int	retval;
+	long	check_month;
+
+	/*  if there are not any deductions for the month for this 
+	    employee then do not print details */
+	if(curr_month_ded == 0)
+		return(NOERROR);
+
+	/* if the contributions are all 0 then do not print details */
+	if(emp_curr_reg1==0 && emp_curr_reg2== 0 && emp_curr_opt==0 && 
+						emp_curr_nonm == 0)
+		return(NOERROR);
+
+	check_month = date2;
+	check_month = check_month / 100 * 100;
+		
+	effective_date = effective_date % 1000000;	/* get date format 
+							   YY/MM/DD */
+	tot_year_reg1 += emp_reg_tot;
+	tot_year_retro = 0;
+	tot_year_cash_pay = 0;
+	tot_year_reg2 += emp_reg_contr;
+	tot_year_prior += emp_prior_tot;
+	tot_year_opt += emp_opt_tot;
+	tot_year_nonm += emp_nonm_tot;
+
+	strncpy(sin,emp_rec.em_sin,3);
+	sin[3] = '\0';
+	strcat(sin,"-");
+	sin[4] = '\0';
+	strcat(sin,emp_rec.em_sin+3,3);
+	sin[7] = '\0';
+	strcat(sin,"-");
+	sin[8] = '\0';
+	strcat(sin,emp_rec.em_sin+6,3);
+	mkln(1,sin,11);
+
+	mkln(14,"01",2);	
+
+	sprintf(txt_buff,"%s %s",emp_rec.em_first_name,emp_rec.em_last_name);
+	mkln(18,txt_buff,strlen(txt_buff));
+	/* Andre */
+	tedit((char *)&emp_reg_tot ,"_,___,_0_.__",txt_buff,R_DOUBLE);
+	mkln(37,txt_buff,12);
+	mkln(55,"0.00",4);	/* RETRO PAY */
+	mkln(66,"0.00",4);	/* CASH PAY */
+	regular = D_Roundoff(emp_curr_reg2);
+	/* Andre */
+	tedit((char *)&emp_reg_contr,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(72,txt_buff,9);
+	/* Andre */
+	tedit((char *)&emp_prior_tot,"_,_0_.__",txt_buff,R_DOUBLE);
+	mkln(83,txt_buff,8);
+	tedit((char *)&emp_opt_tot,"_,_0_.__",txt_buff,R_DOUBLE);
+	mkln(93,txt_buff,8);
+	tedit((char *)&emp_nonm_tot,"_,_0_.__",txt_buff,R_DOUBLE);
+	mkln(103,txt_buff,8);
+	annual_salary = D_Roundoff(annual_salary);
+	tedit((char *)&annual_salary,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(113,txt_buff,9);
+	tedit((char *)&effective_date,"__/__/__",txt_buff,R_LONG);
+	mkln(124,txt_buff,8);
+
+	retval = PrintLine();
+	if(retval < 0)		return(REPORT_ERR);
+	if(retval == EXIT)	return(retval);
+
+	tot_employee ++;
+
+	return(NOERROR);
+}
+/******************************************************************************
+Calculate Annual Salary for Each Employees
+******************************************************************************/
+static
+CalcAnnualSal()
+{
+	int	retval;
+
+	annual_salary = 0;
+	effective_date = 0;
+
+	strcpy(emp_sched1.es_numb,emp_rec.em_numb);
+	emp_sched1.es_week = 0;
+	emp_sched1.es_fund = 0;
+	emp_sched1.es_class[0] = '\0';
+	emp_sched1.es_cost = 0;
+
+	flg_reset(EMP_SCHED1);
+
+	for(;;) {
+		retval = get_n_emp_sched1(&emp_sched1,BROWSE,0,FORWARD,e_mesg);
+		if(retval == EFL)	break;
+		if(retval < 0) {
+			fomen(e_mesg);
+			get();
+			return(retval);
+		}
+
+		if(strcmp(emp_sched1.es_numb,emp_rec.em_numb) != 0)	break;
+
+		strcpy(pay_period.pp_code,barg_unit.b_pp_code);
+		pay_period.pp_year = 0;
+		flg_reset(PAY_PERIOD);
+
+		retval = get_n_pay_per(&pay_period,BROWSE,0,FORWARD,e_mesg);
+		if(retval < 0){
+			fomen(e_mesg);
+			get();
+			return(retval);
+		}
+		if(strcmp(pay_period.pp_code,barg_unit.b_pp_code)!=0){
+#ifdef ENGLISH
+		    	sprintf(e_mesg,"Pay Period Code %s Not on File",
+			    	barg_unit.b_pp_code);
+#else
+			sprintf(e_mesg,"Pay Period Code %s Not on File",
+	    			barg_unit.b_pp_code);
+#endif
+			fomen(e_mesg);
+			return(ERROR);
+		}
+		seq_over(PAY_PERIOD);
+
+		annual_salary += (pay_period.pp_numb * emp_sched1.es_amount);
+
+		strcpy(class_rec.c_code,emp_sched1.es_class);
+		class_rec.c_date = date2;
+		flg_reset(CLASSIFICATION);
+
+		retval = get_n_class(&class_rec,BROWSE,0,BACKWARD,e_mesg);
+		if(retval != EFL && retval < 0) {
+			fomen(e_mesg);
+			get();
+			return(retval);
+		}
+/* Nicola December 20 1993 if(retval == EFL || 
+		   strcmp(class_rec.c_code, emp_sched1.es_class) != 0) {
+			fomen("Employee's Class File does not Exist");
+			get();
+			return(UNDEF);
+		}*/
+		effective_date = class_rec.c_date;
+	}
+
+	seq_over(EMP_SCHED1);
+
+	return(NOERROR);
+}
+/******************************************************************************
+Print Total at the end of the report
+******************************************************************************/
+static
+PrintTotal()
+{
+	char	txt_buff[132];
+	int	retval;
+
+	retval = PrintLine();
+	if(retval < 0)		return(REPORT_ERR);
+	if(retval == EXIT)	return(retval);
+
+	mkln(1,"TOTAL YEAR TO DATE:",19);
+	tot_year_reg1 = D_Roundoff(tot_year_reg1);
+	tedit((char *)&tot_year_reg1,"_,___,_0_.__",txt_buff,R_DOUBLE);
+	mkln(37,txt_buff,12);
+	tot_year_retro = D_Roundoff(tot_year_retro);
+	tedit((char *)&tot_year_retro,"_,_0_.__",txt_buff,R_DOUBLE);
+	mkln(51,txt_buff,8);
+	tot_year_cash_pay = D_Roundoff(tot_year_cash_pay);
+	tedit((char *)&tot_year_cash_pay,"_,_0_.__",txt_buff,R_DOUBLE);
+	mkln(62,txt_buff,8);
+	tot_year_reg2 = D_Roundoff(tot_year_reg2);
+	tedit((char *)&tot_year_reg2,"___,_0_.__",txt_buff,R_DOUBLE);
+	mkln(71,txt_buff,10);
+	tot_year_prior = D_Roundoff(tot_year_prior);
+	tedit((char *)&tot_year_prior,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(82,txt_buff,9);
+	tot_year_opt = D_Roundoff(tot_year_opt);
+	tedit((char *)&tot_year_opt,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(92,txt_buff,9);
+	tot_year_nonm = D_Roundoff(tot_year_nonm);
+	tedit((char *)&tot_year_nonm,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(102,txt_buff,9);
+
+	retval = PrintLine();
+	if(retval < 0)		return(REPORT_ERR);
+	if(retval == EXIT)	return(retval);
+
+	mkln(1,"TOTAL CURRENT AMOUNTS THIS PERIOD:",34);
+	tot_month_reg1 = D_Roundoff(tot_month_reg1);
+	tedit((char *)&tot_month_reg1,"_,___,_0_.__",txt_buff,R_DOUBLE);
+	mkln(37,txt_buff,12);
+	tot_month_retro = D_Roundoff(tot_month_retro);
+	tedit((char *)&tot_month_retro,"_,_0_.__",txt_buff,R_DOUBLE);
+	mkln(51,txt_buff,8);
+	tot_month_cash_pay = D_Roundoff(tot_month_cash_pay);
+	tedit((char *)&tot_month_cash_pay,"_,_0_.__",txt_buff,R_DOUBLE);
+	mkln(62,txt_buff,8);
+	tot_month_reg2 = D_Roundoff(tot_month_reg2);
+	tedit((char *)&tot_month_reg2,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(72,txt_buff,9);
+	tot_month_prior = D_Roundoff(tot_month_prior);
+	tedit((char *)&tot_month_prior,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(82,txt_buff,9);
+	tot_month_opt = D_Roundoff(tot_month_opt);
+	tedit((char *)&tot_month_opt,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(92,txt_buff,9);
+	tot_month_nonm = D_Roundoff(tot_month_nonm);
+	tedit((char *)&tot_month_nonm,"__,_0_.__",txt_buff,R_DOUBLE);
+	mkln(102,txt_buff,9);
+
+	retval = PrintLine();
+	if(retval < 0)		return(REPORT_ERR);
+	if(retval == EXIT)	return(retval);
+
+	mkln(1,"TOTAL PLAN MEMBERS THIS PERIOD:",31);
+	tedit((char *)&tot_employee,"___0_",txt_buff,R_SHORT);
+	mkln(44,txt_buff,5);
+
+	retval = PrintLine();
+	if(retval < 0)		return(REPORT_ERR);
+	if(retval == EXIT)	return(retval);
+
+	return(NOERROR);
+}
+/******************************************************************************
+Function that prints every line of the report 
+******************************************************************************/
+static
+PrintLine()
+{
+	if(prnt_line() < 0 )	return(REPORT_ERR);
+
+	if(linecnt > PG_SIZE){
+		retval = PrntHdr();
+		if(retval == EXIT)	return(retval);
+	}
+
+	return(NOERROR);
+}
+

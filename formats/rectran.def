@@ -1,0 +1,5 @@
+	short	ri_fund ;		/* Fund Code of Entry */
+	short	ri_sno ;		/* Running Sno under Fund */
+	short	ri_item_no ;		/* Item No. */
+	double	ri_amount ;		/* Transaction Amount */
+	char	ri_accno[19] ;		/* Account code */

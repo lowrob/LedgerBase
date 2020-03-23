@@ -1,0 +1,17 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a 
+OBJECTS=pre_sen.o jourlist.o
+CC=cc -g
+
+$E/pre_sen.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/pre_sen.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+pre_sen.o : $I/bfs_defs.h $I/bfs_com.h $I/bfs_pp.h $I/reports.h\
+	 /usr/include/cfomstrc.h
+
+jourlist.o : $I/bfs_defs.h $I/bfs_com.h $I/bfs_pp.h $I/reports.h

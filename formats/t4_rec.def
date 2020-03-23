@@ -1,0 +1,2 @@
+	char	t4_code[2];		/* Employee number    */
+	char  	t4_desc[13];		/* Description

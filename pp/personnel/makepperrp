@@ -1,0 +1,58 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=pperrep.o pperreputl.o senlist.o empinfo.o \
+annivdate.o teachqual.o empperc.o \
+subteach.o teachassign.o empserv.o empsum.o \
+ageindex.o empage.o sickbank.o vaclia.o
+
+CC=cc -g
+
+$E/pperrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/pperrep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+pperrep.o  	: $I/bfs_defs.h
+
+pperreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+senlist.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h 
+
+empinfo.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+annivdate.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+teachqual.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+teachassign.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+subteach.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+empperc.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+empsum.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+empserv.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+ageindex.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+empage.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+sickbank.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h
+
+vaclia.o	: $I/bfs_defs.h  $I/bfs_pp.h /usr/include/cfomstrc.h \
+		$I/filein.h /usr/include/isnames.h

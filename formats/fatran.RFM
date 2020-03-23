@@ -1,0 +1,10 @@
+PROJECT: fatran
+	RECORDS: 1 fatran
+
+LOGICAL_RECORD: 1
+	NAME:          fatran
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 fatran
+	TOTAL_FORMATS: 0
+
+ENDFILE

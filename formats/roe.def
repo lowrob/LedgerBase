@@ -1,0 +1,44 @@
+	char	ro_emp_numb[13];	/* Employee Number	*/
+	char	ro_serial[11];		/* Serial Number        */
+	long	ro_first_dt;		/* First Day Worked	*/
+	long	ro_last_dt;		/* Last Day Worked	*/
+	long	ro_uic_prdt;		/* UIC Prem Pay Up To	*/
+	long	ro_final_dt;		/* Final Pay Per Ending	*/
+	long	ro_stat1_dt;		/* Statutory Holiday	*/
+	double	ro_stat1_amnt;		/* Amount	*/
+	long	ro_stat2_dt;		/* Statutory Holiday	*/
+	double	ro_stat2_amnt;		/* Amount	*/
+	long	ro_stat3_dt;		/* Statutory Holiday	*/
+	double	ro_stat3_amnt;		/* Amount	*/
+	short	ro_fund;		/* Fund Number		*/	
+	char	ro_reas1[12];		/* Account		*/
+	double	ro_reas1_amnt;		/* Amount	*/
+	char	ro_reas2[12];		/* Account		*/
+	double	ro_reas2_amnt;		/* Amount	*/
+	char	ro_reas3[12];		/* Account		*/
+	double	ro_reas3_amnt;		/* Amount	*/
+	char	ro_all[3];		/* Allocated Final Pay	*/
+	long	ro_start_dt;		/* Last Day Worked	*/
+	char	ro_wk_days[2];		/* Weeks_Days	*/
+	short	ro_week_dno;		/* No of weeks or days */
+	double	ro_amnt;		/* Amount	*/
+	char	ro_e_n_u[2];		/* Weeks_Days	*/
+	long	ro_ret_dt;		/* Last Day Worked	*/
+	char	ro_reason[2];		/* Weeks_Days	*/
+	char	ro_contact[31];		/* Weeks_Days	*/
+	char	ro_cntct_tel[11];		/* Last Day Worked	*/
+	char	ro_issuer[31];		/* Weeks_Days	*/
+	char	ro_issuer_tel[11];		/* Last Day Worked	*/
+	long	ro_issue_dt;		/* Last Day Worked	*/
+	char	ro_com1[31];		/* Weeks_Days	*/
+	char	ro_com2[31];		/* Weeks_Days	*/
+	char	ro_com3[31];		/* Weeks_Days	*/
+	char	ro_com4[31];		/* Weeks_Days	*/
+	double	ro_ins_earn[27];	/* 27 weeks earnings */
+	short	ro_ins_wks[27];		/* 27 hours per pay period */
+	double	ro_vac;			/* vacation earnings */
+	char	ro_all_wks_max[2];	/* all weeks max earnings */
+	short	ro_ins_week;
+	double	ro_hours;		/* Total hours for 53 or 27 pay p. */
+	double	ro_earnings;		/* Total insurable earnings */
+	char	ro_un_ins[2];		/* Flag weather to print details */

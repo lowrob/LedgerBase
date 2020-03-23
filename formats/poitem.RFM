@@ -1,0 +1,10 @@
+PROJECT: poitem
+	RECORDS: 1 poitem
+
+LOGICAL_RECORD: 1
+	NAME:          poitem
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 poitem
+	TOTAL_FORMATS: 0
+
+ENDFILE

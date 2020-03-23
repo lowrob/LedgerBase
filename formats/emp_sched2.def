@@ -1,0 +1,3 @@
+	char	es2_numb[13] ;		/* Employee number    */
+	short	es2_week;		/* Week			*/
+	double	es2_units[7];		/* Units/day		*/

@@ -1,0 +1,2 @@
+	short	itmgrp_num;		/* Item Group Number */
+	char	itmgrp_desc[41];	/* Item Group Description */

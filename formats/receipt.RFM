@@ -1,0 +1,10 @@
+PROJECT: receipt
+	RECORDS: 1 receipt
+
+LOGICAL_RECORD: 1
+	NAME:          receipt
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 receipt
+	TOTAL_FORMATS: 0
+
+ENDFILE

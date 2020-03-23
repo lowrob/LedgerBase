@@ -1,0 +1,4 @@
+	char	vc_barg[7];		/* Vacation Bargaining Unit */
+	double	vc_low_sen ;		/* Vac Low Seniority Years  */
+	double	vc_high_sen;		/* Vac High Seniority Years */
+	double	vc_days;		/* Vacation Days */

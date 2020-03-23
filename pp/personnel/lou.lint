@@ -1,0 +1,268 @@
+(79) error: syntax error, probably missing ",", ";" or "="
+(79) error: syntax error before or at: param
+(79) warning: old-style declaration; add "int"
+(80) error: syntax error, probably missing ",", ";" or "="
+(80) error: syntax error before or at: scho
+(80) warning: old-style declaration; add "int"
+(99) error: undefined symbol: SYS_NAME
+(99) warning: argument mismatch: 3 args passed, 0 expected
+(99) warning: variable may be used before set: SYS_NAME
+(100) error: undefined symbol: CHNG_DATE
+(100) warning: argument mismatch: 3 args passed, 0 expected
+(100) warning: variable may be used before set: CHNG_DATE
+(101) error: undefined symbol: CHQHIST
+(101) warning: argument mismatch: 3 args passed, 0 expected
+(101) warning: variable may be used before set: CHQHIST
+(103) error: undefined symbol: terminal
+(103) warning: argument mismatch: 2 args passed, 0 expected
+(103) warning: variable may be used before set: terminal
+(106) warning: argument mismatch: 1 arg passed, 0 expected
+(110) warning: argument mismatch: 1 arg passed, 0 expected
+(113) warning: using out of scope declaration: Close
+(114) error: undefined symbol: NOERROR
+(114) warning: argument mismatch: 1 arg passed, 0 expected
+(114) warning: variable may be used before set: NOERROR
+(134) warning: using out of scope declaration: fomcs
+(135) warning: using out of scope declaration: fomrt
+(139) warning: using out of scope declaration: fomcs
+(140) warning: using out of scope declaration: fomrt
+(143) error: undefined symbol: NOERROR
+(143) warning: variable may be used before set: NOERROR
+(151) warning: argument mismatch: 1 arg passed, 0 expected
+(153) warning: argument mismatch: 1 arg passed, 0 expected
+(153) warning: argument mismatch: 1 arg passed, 0 expected
+(155) warning: argument mismatch: 2 args passed, 0 expected
+(156) error: undefined symbol: NOERROR
+(156) warning: variable may be used before set: NOERROR
+(164) warning: using out of scope declaration: STRCPY
+(164) error: undefined symbol: NFM_PATH
+(164) warning: argument mismatch: 2 args passed, 0 expected
+(164) warning: variable may be used before set: NFM_PATH
+(165) warning: argument mismatch: 2 args passed, 0 expected
+(167) error: undefined symbol: PROG_NAME
+(167) warning: argument mismatch: 2 args passed, 0 expected
+(167) warning: variable may be used before set: PROG_NAME
+(172) error: undefined symbol: NOERROR
+(172) warning: variable may be used before set: NOERROR
+(182) warning: using out of scope declaration: STRCPY
+(182) warning: argument mismatch: 2 args passed, 0 expected
+(185) warning: argument mismatch: 5 args passed, 0 expected
+(186) warning: argument mismatch: 1 arg passed, 0 expected
+(189) error: undefined symbol: NOERROR
+(189) warning: variable may be used before set: NOERROR
+(198) warning: using out of scope declaration: STRCPY
+(198) warning: argument mismatch: 2 args passed, 0 expected
+(199) warning: argument mismatch: 2 args passed, 0 expected
+(201) warning: using out of scope declaration: opn_prnt
+(201) warning: argument mismatch: 5 args passed, 0 expected
+(202) warning: using out of scope declaration: fomen
+(202) warning: argument mismatch: 1 arg passed, 0 expected
+(202) warning: using out of scope declaration: get
+(205) error: undefined symbol: NOERROR
+(205) warning: variable may be used before set: NOERROR
+(216) error: undefined symbol: NOERROR
+(216) warning: variable may be used before set: NOERROR
+(225) warning: argument mismatch: 3 args passed, 0 expected
+(231) error: undefined symbol: LNSZ
+(238) warning: using out of scope declaration: close_rep
+(251) warning: argument mismatch: 2 args passed, 0 expected
+(258) warning: using out of scope declaration: strcpy
+(258) warning: argument mismatch: 2 args passed, 0 expected
+(259) warning: using out of scope declaration: strcat
+(259) warning: argument mismatch: 2 args passed, 0 expected
+(264) warning: using out of scope declaration: strcpy
+(264) warning: argument mismatch: 2 args passed, 0 expected
+(265) warning: using out of scope declaration: strcat
+(265) warning: argument mismatch: 2 args passed, 0 expected
+(267) warning: argument mismatch: 2 args passed, 0 expected
+(268) warning: argument mismatch: 2 args passed, 0 expected
+(271) warning: argument mismatch: 1 arg passed, 0 expected
+(273) warning: argument mismatch: 3 args passed, 0 expected
+(287) warning: argument mismatch: 3 args passed, 0 expected
+(288) warning: argument mismatch: 3 args passed, 0 expected
+(291) warning: argument mismatch: 1 arg passed, 0 expected
+(296) warning: using out of scope declaration: STRCPY
+(296) warning: argument mismatch: 2 args passed, 0 expected
+(298) warning: using out of scope declaration: DispMesgFld
+(298) warning: argument mismatch: 1 arg passed, 0 expected
+(302) warning: using out of scope declaration: WriteFields
+(302) warning: argument mismatch: 3 args passed, 0 expected
+(309) warning: argument mismatch: 6 args passed, 0 expected
+(310) error: undefined symbol: PROFOM_ERR
+(310) error: undefined symbol: DBH_ERR
+(310) warning: variable may be used before set: PROFOM_ERR
+(310) warning: variable may be used before set: DBH_ERR
+(313) warning: argument mismatch: 1 arg passed, 0 expected
+(316) error: undefined symbol: NOERROR
+(316) warning: variable may be used before set: NOERROR
+(325) warning: using out of scope declaration: STRCPY
+(325) warning: argument mismatch: 2 args passed, 0 expected
+(331) warning: using out of scope declaration: GetOption
+(331) warning: argument mismatch: 3 args passed, 0 expected
+(340) warning: argument mismatch: 3 args passed, 0 expected
+(341) warning: argument mismatch: 3 args passed, 0 expected
+(345) warning: argument mismatch: 3 args passed, 0 expected
+(347) warning: argument mismatch: 3 args passed, 0 expected
+(348) warning: argument mismatch: 3 args passed, 0 expected
+(350) warning: argument mismatch: 3 args passed, 0 expected
+(353) warning: argument mismatch: 3 args passed, 0 expected
+(354) warning: argument mismatch: 3 args passed, 0 expected
+(355) warning: argument mismatch: 3 args passed, 0 expected
+(359) warning: argument mismatch: 3 args passed, 0 expected
+(360) warning: argument mismatch: 3 args passed, 0 expected
+(361) warning: argument mismatch: 3 args passed, 0 expected
+(365) warning: argument mismatch: 3 args passed, 0 expected
+(368) warning: argument mismatch: 3 args passed, 0 expected
+(370) warning: argument mismatch: 3 args passed, 0 expected
+(371) warning: argument mismatch: 3 args passed, 0 expected
+(372) warning: argument mismatch: 3 args passed, 0 expected
+(373) warning: argument mismatch: 3 args passed, 0 expected
+(375) warning: argument mismatch: 3 args passed, 0 expected
+(377) warning: argument mismatch: 3 args passed, 0 expected
+(378) warning: argument mismatch: 3 args passed, 0 expected
+(379) warning: argument mismatch: 3 args passed, 0 expected
+(380) warning: argument mismatch: 3 args passed, 0 expected
+(382) warning: argument mismatch: 3 args passed, 0 expected
+(384) warning: argument mismatch: 3 args passed, 0 expected
+(385) warning: argument mismatch: 3 args passed, 0 expected
+(386) warning: argument mismatch: 3 args passed, 0 expected
+(387) warning: argument mismatch: 3 args passed, 0 expected
+(390) warning: argument mismatch: 3 args passed, 0 expected
+(391) warning: argument mismatch: 3 args passed, 0 expected
+(392) warning: argument mismatch: 3 args passed, 0 expected
+(393) warning: argument mismatch: 3 args passed, 0 expected
+(398) warning: argument mismatch: 3 args passed, 0 expected
+(405) warning: argument mismatch: 3 args passed, 0 expected
+(406) warning: argument mismatch: 3 args passed, 0 expected
+(407) warning: argument mismatch: 3 args passed, 0 expected
+(408) warning: argument mismatch: 3 args passed, 0 expected
+(409) warning: argument mismatch: 3 args passed, 0 expected
+(410) warning: argument mismatch: 3 args passed, 0 expected
+(411) warning: argument mismatch: 3 args passed, 0 expected
+(412) warning: argument mismatch: 3 args passed, 0 expected
+(417) warning: argument mismatch: 3 args passed, 0 expected
+(418) warning: argument mismatch: 3 args passed, 0 expected
+(424) warning: argument mismatch: 3 args passed, 0 expected
+(425) warning: argument mismatch: 3 args passed, 0 expected
+(426) warning: argument mismatch: 3 args passed, 0 expected
+(427) warning: argument mismatch: 3 args passed, 0 expected
+(428) warning: argument mismatch: 3 args passed, 0 expected
+(429) warning: argument mismatch: 3 args passed, 0 expected
+(430) warning: argument mismatch: 3 args passed, 0 expected
+(431) warning: argument mismatch: 3 args passed, 0 expected
+(432) warning: argument mismatch: 3 args passed, 0 expected
+(433) warning: argument mismatch: 3 args passed, 0 expected
+(434) warning: argument mismatch: 3 args passed, 0 expected
+(435) warning: argument mismatch: 3 args passed, 0 expected
+(436) warning: argument mismatch: 3 args passed, 0 expected
+(440) warning: argument mismatch: 3 args passed, 0 expected
+(441) warning: argument mismatch: 3 args passed, 0 expected
+(442) warning: argument mismatch: 3 args passed, 0 expected
+(443) warning: argument mismatch: 3 args passed, 0 expected
+(444) warning: argument mismatch: 3 args passed, 0 expected
+(445) warning: argument mismatch: 3 args passed, 0 expected
+(449) warning: argument mismatch: 3 args passed, 0 expected
+(450) warning: argument mismatch: 3 args passed, 0 expected
+(454) warning: argument mismatch: 3 args passed, 0 expected
+(459) warning: argument mismatch: 3 args passed, 0 expected
+(460) warning: argument mismatch: 3 args passed, 0 expected
+(461) warning: argument mismatch: 3 args passed, 0 expected
+(462) warning: argument mismatch: 3 args passed, 0 expected
+(463) warning: argument mismatch: 3 args passed, 0 expected
+(464) warning: argument mismatch: 3 args passed, 0 expected
+(465) warning: argument mismatch: 3 args passed, 0 expected
+(469) warning: argument mismatch: 3 args passed, 0 expected
+(470) warning: argument mismatch: 3 args passed, 0 expected
+(471) warning: argument mismatch: 3 args passed, 0 expected
+(472) warning: argument mismatch: 3 args passed, 0 expected
+(473) warning: argument mismatch: 3 args passed, 0 expected
+(478) warning: argument mismatch: 3 args passed, 0 expected
+(484) warning: argument mismatch: 3 args passed, 0 expected
+(485) warning: argument mismatch: 3 args passed, 0 expected
+(486) warning: argument mismatch: 3 args passed, 0 expected
+(487) warning: argument mismatch: 3 args passed, 0 expected
+(488) warning: argument mismatch: 3 args passed, 0 expected
+(489) warning: argument mismatch: 3 args passed, 0 expected
+(490) warning: argument mismatch: 3 args passed, 0 expected
+(498) warning: using out of scope declaration: fomen
+(498) warning: argument mismatch: 1 arg passed, 0 expected
+(500) warning: using out of scope declaration: get
+(502) error: undefined symbol: NOERROR
+(502) warning: variable may be used before set: NOERROR
+(510) error: undefined symbol: NOERROR
+(510) warning: variable may be used before set: NOERROR
+(515) error: undefined symbol: NOERROR
+(515) warning: variable may be used before set: NOERROR
+(527) warning: using out of scope declaration: GetOption
+(528) warning: argument mismatch: 3 args passed, 0 expected
+(530) error: undefined symbol: PROFOM_ERR
+(530) warning: variable may be used before set: PROFOM_ERR
+(542) warning: argument mismatch: 3 args passed, 0 expected
+(545) warning: argument mismatch: 1 arg passed, 0 expected
+(552) error: undefined symbol: DBH_ERR
+(552) warning: variable may be used before set: DBH_ERR
+(566) warning: using out of scope declaration: STRCPY
+(566) warning: argument mismatch: 2 args passed, 0 expected
+(568) warning: using out of scope declaration: DispMesgFld
+(568) warning: argument mismatch: 1 arg passed, 0 expected
+(573) error: undefined symbol: BROWSE
+(573) warning: argument mismatch: 4 args passed, 0 expected
+(573) warning: variable may be used before set: BROWSE
+(575) warning: argument mismatch: 2 args passed, 0 expected
+(576) warning: using out of scope declaration: roll_back
+(576) warning: argument mismatch: 1 arg passed, 0 expected
+(581) warning: variable may be used before set: i
+(593) warning: using out of scope declaration: prnt_line
+(599) warning: using out of scope declaration: mkln
+(599) error: undefined struct/union member: sc_name
+(599) warning: left operand of "." must be struct/union object
+(599) warning: argument mismatch: 3 args passed, 0 expected
+(601) error: undefined struct/union member: sc_add1
+(601) warning: left operand of "." must be struct/union object
+(601) warning: argument mismatch: 3 args passed, 0 expected
+(604) error: undefined struct/union member: sc_add2
+(604) warning: left operand of "." must be struct/union object
+(604) warning: argument mismatch: 3 args passed, 0 expected
+(607) error: undefined struct/union member: sc_add3
+(607) warning: left operand of "." must be struct/union object
+(607) warning: argument mismatch: 3 args passed, 0 expected
+(611) error: undefined struct/union member: sc_pc
+(611) warning: left operand of "." must be struct/union object
+(611) warning: argument mismatch: 3 args passed, 0 expected
+(639) warning: argument mismatch: 3 args passed, 0 expected
+(643) warning: argument mismatch: 3 args passed, 0 expected
+(656) warning: argument mismatch: 3 args passed, 0 expected
+(659) warning: argument mismatch: 3 args passed, 0 expected
+(661) warning: using out of scope declaration: rite_top
+(663) error: undefined symbol: NOERROR
+(663) warning: variable may be used before set: NOERROR
+
+static unused
+    (92) total          (91) tot_num_ins_wk    (90) emp_name       (80) Sch_rec
+    (79) Pa_rec     
+
+variable unused in function
+    (162) retval in InitScreens
+    (590) retval in DoPrint
+
+set but not used in function
+    (231) LNSZ in Process
+
+statement has null effect
+    (581)           
+
+implicitly declared to return int
+    (99) strncpy        (101) proc_switch    (103) STRCPY        (105) Initialize
+    (106) exit          (108) Process       (109) Close         (124) fomcs
+    (125) fomrt         (126) close_dbh     (127) close_rep     (133) InitProfom
+    (138) InitScreens    (151) fomin         (153) ret           (153) err_chk
+    (155) fomcf         (165) strcat        (168) get_date      (185) opn_prnt
+    (186) fomen         (186) get           (199) strcpy        (214) ReadInfo
+    (218) ConfirmScreen    (225) GetOption     (236) DoTestPrint    (243) PrntRec
+    (251) get_prn_fd    (271) DispMesgFld    (273) WriteFields    (287) fomca1
+    (291) fomud         (309) ReadFields    (336) prnt_line     (340) mkln
+    (493) rite_top      (545) roll_back     (573) get_param     (575) DispError
+    (582) DoPrint   
+
+function falls off bottom without returning value
+    (116) main          (128) Close         (585) PrntRec   

@@ -1,0 +1,25 @@
+	short	fund ;			/* fund number */
+	char	desc[31];		/* description of fund */
+	char	ap_gen_acnt[19] ;	/* A/P General Account */
+	char	ap_cnt_acnt[19] ;	/* A/P Contract Acccount */
+	char	ar_gst_acnt[19] ;	/* A/P GST Acccount */
+	char	dis_acnt[19] ;		/* Discount General Account */
+	char	expdis_acnt[19] ;	/* Expense Discount Account */
+	char	sus_acnt[19] ;		/* Suspence general Account */
+	char	bank1_acnt[19];		/* Bank-1 Account */
+	char	bank2_acnt[19];		/* Bank-1 Account */
+	char	pst_tax_acnt[19] ;	/* Provincial tax Account */
+	char	gst_tax_acnt[19] ;	/* Provincial tax Account */
+	char	ar_acnt[19] ;		/* A/R General Account */
+	char	ap_gst_acnt[19] ;	/* A/R General Account */
+	char	inv_acnt[19] ;		/* Inventory General Account */
+	char	p_and_l_acnt[19] ;	/* Profit & Loss Account */
+	char	s_d_accm_acnt[19] ;	/* Surplus/Deficit Accumulated Acct */
+	long	bank1_chq ;		/* Last cheque# printed for bank 1 */
+	long	bank2_chq ;		/* Last cheque# printed for bank 2 */
+	long	last_po ;		/* Last Po number generated */
+	long	last_req;		/* Last Requisition number generated */
+	short	pst_tax ;		/* Percentage of PST */
+	short	gst_tax ;		/* Percentage of GST */
+	short	rebate ;		/* Percentage of REBATE */
+	char	duetofrom_acct[19];	/* Due to From Account Numer */

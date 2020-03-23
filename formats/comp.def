@@ -1,0 +1,2 @@
+	char	cm_code[8];		/* Competition code	*/
+	char	cm_desc[41];		/* Competition Description */

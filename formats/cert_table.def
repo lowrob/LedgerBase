@@ -1,0 +1,4 @@
+	char	cr_code[7];		/* Certification code  */
+	long	cr_date;		/* Certification date */
+	short	cr_level ;		/* Certification Level.  */
+	double	cr_income;		/* Certification Yearly income.  */

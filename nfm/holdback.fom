@@ -1,0 +1,317 @@
+HEADER
+SCREEN  holdback
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,36]  "Screen  4" 
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ PROMPT [2,32]  "RELEASE HOLDBACK" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,1]  "Fn:" 
+
+ DISPLAY_MASK  [4,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,9]  "Supp Cd:" 
+
+ DISPLAY_MASK  [4,18] _(10) 
+STRING  X(10)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,70]  "Field#:" 
+
+ DISPLAY_MASK  [4,78] ## 
+NUMERIC   99
+
+END
+
+ FIELD    800 
+
+ PROMPT [5,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,1]  "Reference# :" 
+
+ DISPLAY_MASK  [6,14] _(15) 
+STRING  X(15)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    950 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,35]  "  Cutoff Date:" 
+
+ DISPLAY_MASK  [6,50] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (REQUIRED,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,1]  "Tran Type  :" 
+
+ DISPLAY_MASK  [7,14] __ 
+STRING  XX
+LOG_ATTR (UCASE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,1]  "Fund       :" 
+
+ DISPLAY_MASK  [8,14] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,1]  "Period     :" 
+
+ DISPLAY_MASK  [9,14] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,1]  "PO#        :" 
+
+ DISPLAY_MASK  [10,14] #(6) 
+NUMERIC   9(6)
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,1]  "Tran Date  :" 
+
+ DISPLAY_MASK  [11,14] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,1]  "Due Date   :" 
+
+ DISPLAY_MASK  [12,14] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,1]  "Type       :" 
+
+ DISPLAY_MASK  [13,14] _ 
+STRING  X
+LOG_ATTR (UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,1]  "Tran Amount:" 
+
+ DISPLAY_MASK  [14,14] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,1]  "Holdback % :" 
+
+ DISPLAY_MASK  [16,14] ##.## 
+NUMERIC   99.99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,1]  "HB Amount  :" 
+
+ DISPLAY_MASK  [16,14] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [17,1]  "Pmnt Code  :" 
+
+ DISPLAY_MASK  [17,14] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2050 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,18] _(8) 
+STRING  X(8)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,1]  "Partial Amt:" 
+
+ DISPLAY_MASK  [18,14] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,1]  "Cheque#    :" 
+
+ DISPLAY_MASK  [19,14] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [20,1]  "Bank Acct# :" 
+
+ DISPLAY_MASK  [20,14] _(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,1]  "Remarks    :" 
+
+ DISPLAY_MASK  [21,14] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

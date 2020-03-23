@@ -1,0 +1,10 @@
+PROJECT: arshdr
+	RECORDS: 1 arshdr
+
+LOGICAL_RECORD: 1
+	NAME:          arshdr
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 arshdr
+	TOTAL_FORMATS: 0
+
+ENDFILE

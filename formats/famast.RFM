@@ -1,0 +1,10 @@
+PROJECT: famast
+	RECORDS: 1 famast
+
+LOGICAL_RECORD: 1
+	NAME:          famast
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 famast
+	TOTAL_FORMATS: 0
+
+ENDFILE

@@ -1,0 +1,24 @@
+	short	funds ;			/* Funds PIC 999 */
+	char	accno[19] ;		/* Account number */
+	short	reccod ;		/* Record Code PIC 99 */
+	short	sect ;			/* Section Code? PIC 9 */
+	short	admis ;			/* Admissibility code PIC 9 */
+	long	keys[12] ;		/* 12 keys PIC 9[5] */
+	short	cdbud ;			/* Budget code */
+	short	cdpro ;			/* Projection code */
+	short	cdunit ;		/* Unit of measurement code */
+	char	descp[49] ;		/* Description */
+	double	grad ;			/* Gradiant ? PIC 999.99 */
+	double	comdat ;		/* Committed to date */
+	double	curdb ;			/* Current period Debits */
+	double	curcr ;			/* Current period Credits */
+	double	ytd ;			/* Year to Date */
+	double	budcur;			/* Budget current Year */
+	double	budpre ;		/* Budget previous Year */
+	double	currel[13] ;	/* actual current yr ..13 periods */
+	double	prerel[13] ;	/* actual previous yr ..13 periods */
+	double	curbud[13] ;	/* Budget current yr ..13 periods */
+	double	prebud[13] ;	/* Budget current yr ..13 periods */
+	double	opbal ;			/* Opening balance */
+	double	nextdb ;		/* Next period Debits(Accruals) */
+	double	nextcr ;		/* Next period Credits(Accruals) */

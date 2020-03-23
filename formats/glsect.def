@@ -1,0 +1,2 @@
+	int	section ;		/* Section Code 1,2,3,4 */
+	char	name[16];		/* Section Name ASSET .. INCOME */

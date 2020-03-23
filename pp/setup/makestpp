@@ -1,0 +1,66 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=setpp.o setpputl.o pptable.o payrep.o bargunit.o taxtable.o earncode.o\
+posrep.o repgl.o costcent.o repdept.o reparea.o repstat.o repcsbl.o repbank.o \
+inactive.o repatt.o terminat.o reparea_spec.o classlist.o setpp2.o \
+rep_senpar.o regded.o pen_plan.o benlist.o
+
+CC=cc -g
+
+$E/setpp.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/setpp.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+setpp.o  	: $I/bfs_defs.h
+
+setpputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+pptable.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+payrep.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+bargunit.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+taxtable.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+earncode.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+posrep.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+repgl.o		: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+costcent.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+repdept.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+reparea.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+repstat.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+repcsbl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+repbank.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+inactive.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+repatt.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+terminat.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+reparea_spec.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+classlist.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+setpp2.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+rep_senpar.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+regded.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+benlist.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+pen_plan.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+

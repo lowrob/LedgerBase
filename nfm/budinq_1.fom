@@ -1,0 +1,283 @@
+HEADER
+SCREEN  budinq_1
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ FIELDNAME     s_pgm 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,37]  "Screen 1" 
+
+END
+
+ FIELD    300 
+
+ FIELDNAME     s_rundt 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ PROMPT [2,34]  "BUDGET INQUIRY" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    500 
+
+ FIELDNAME     s_fn 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,1]  "Fn:" 
+
+ DISPLAY_MASK  [4,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    600 
+
+ FIELDNAME     s_fund_cd 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,9]  "Fund:" 
+
+ DISPLAY_MASK  [4,15] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    700 
+
+ FIELDNAME     s_acct_no 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,21]  "Account#:" 
+
+ DISPLAY_MASK  [4,31] #(18) 
+STRING  X(18)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    800 
+
+ FIELDNAME     s_rec_cd 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,52]  "Record Cd:" 
+
+ DISPLAY_MASK  [4,63] ## 
+NUMERIC   99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    900 
+
+ PROMPT [5,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    1000 
+
+ FIELDNAME     s_section 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,1]  "Section:" 
+
+ DISPLAY_MASK  [6,10] # 
+NUMERIC   9
+
+END
+
+ FIELD    1100 
+
+ FIELDNAME     s_desc 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,18]  "Description:" 
+
+ DISPLAY_MASK  [6,31] _(48) 
+STRING  X(48)
+
+END
+
+ FIELD    1200 
+
+ FIELDNAME     s_bud_cd 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,1]  "Budget Code:" 
+
+ DISPLAY_MASK  [8,14] # 
+NUMERIC   9
+
+END
+
+ FIELD    1300 
+
+ FIELDNAME     s_comm_req 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,1]  "Commitments To Date (Requ):" 
+
+ DISPLAY_MASK  [10,29] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1400 
+
+ FIELDNAME     s_comm_po 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,1]  "Commitments To Date (PO)  :" 
+
+ DISPLAY_MASK  [12,29] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1500 
+
+ FIELDNAME     s_ytd 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,1]  "Year To Date              :" 
+
+ DISPLAY_MASK  [14,29] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1600 
+
+ FIELDNAME     s_opbal 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,1]  "Opening Balance           :" 
+
+ DISPLAY_MASK  [16,29] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1700 
+
+ FIELDNAME     s_cur_bud 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,48]  "Budget Cur Year:" 
+
+ DISPLAY_MASK  [12,65] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1800 
+
+ FIELDNAME     s_pre_bud 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,48]  "Budget Pre Year:" 
+
+ DISPLAY_MASK  [14,65] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1900 
+
+ FIELDNAME     s_pre_act 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,48]  "Pre Yr Activity:" 
+
+ DISPLAY_MASK  [16,65] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2000 
+
+ FIELDNAME     s_bud_bal 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,1]  "Budget Balance            :" 
+
+ DISPLAY_MASK  [18,29] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2100 
+
+ FIELDNAME     s_mesg 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    2200 
+
+ FIELDNAME     s_resp 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

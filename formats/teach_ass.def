@@ -1,0 +1,10 @@
+	char	tc_numb[13] ;		/* Employee number    */
+	short	tc_cost;		/* Cost center number	*/
+	char	tc_ar_sp[7];		/* Area of specialization	*/
+	short	tc_grade;		/* Grade		*/
+	double	tc_perc;		/* Percentage		*/
+	char	tc_crs[7];		/* Course code	*/
+	short	tc_sem;			/* Semester code	*/
+	short	tc_sec;			/* Section code		*/
+	char	tc_room[5];		/* Room code		*/
+	short	tc_load;		/* Load			*/

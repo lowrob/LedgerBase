@@ -1,0 +1,13 @@
+	short	ts_total_years;		/* employee's total years */
+	double	ts_total_days;		/* employee's total days */
+	char	ts_position[7];		/* employee's position */
+	char	ts_barg[7];		/* employee's bargaining unit */
+	short	ts_cc;			/* employee's cost center */
+	char	ts_class[7];		/* employee's class code */
+	char	ts_emp_numb[13] ;		/* Employee number    */
+	short	ts_cas_years;		/* employee's casual years */
+	double	ts_cas_days;		/* employee's casual days */
+	short	ts_perm_years;		/* employee's perm years */
+	double	ts_perm_days;		/* employee's perm days */
+	double	ts_sick_bal;		/* employee's sick balance */
+	double	ts_vac_bal;		/* employee's vacation balance */

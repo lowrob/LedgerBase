@@ -1,0 +1,351 @@
+HEADER
+SCREEN  supplier
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+LOG_ATTR (UESCAPE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,28]  "SUPPLIER MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,9]  "Supplier Code:" 
+
+ DISPLAY_MASK  [3,24] _(10) 
+STRING  X(10)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE)
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,1]  " 1. Full Supplier Name:" 
+
+ DISPLAY_MASK  [5,25] _(48) 
+STRING  X(48)
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,1]  " 2. Sort Name         :" 
+
+ DISPLAY_MASK  [6,25] _(24) 
+STRING  X(24)
+LOG_ATTR (REQUIRED,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,1]  " 3. Category          :" 
+
+ DISPLAY_MASK  [7,25] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,1]  " 4. Mailing Address   :" 
+
+ DISPLAY_MASK  [8,25] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,1]  " 5. Street Address    :" 
+
+ DISPLAY_MASK  [9,25] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,1]  " 6. City, Prov/State  :" 
+
+ DISPLAY_MASK  [10,25] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,1]  " 7. Postal/Zip Code   :" 
+
+ DISPLAY_MASK  [11,25] _(10) 
+STRING  X(10)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,42]  "8. Fax Number:" 
+
+ DISPLAY_MASK  [11,59] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,1]  " 9. Contact Name      :" 
+
+ DISPLAY_MASK  [12,25] _(25) 
+STRING  X(25)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,1]  "10. Telephone Number  :" 
+
+ DISPLAY_MASK  [13,25] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,1]  "11. Temporary (Y/N)   :" 
+
+ DISPLAY_MASK  [14,25] _ 
+BOOLEAN   B
+LOG_ATTR (UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,41]  "12. Contract/Ordinary (C/O):" 
+
+ DISPLAY_MASK  [14,70] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,1]  "13. Payee Code        :" 
+
+ DISPLAY_MASK  [15,25] _(10) 
+STRING  X(10)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,41]  "14. GST Registration Number:" 
+
+ DISPLAY_MASK  [15,70] _(10) 
+STRING  X(10)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,1]  "15. Discount %        :" 
+
+ DISPLAY_MASK  [16,25] ##.## 
+NUMERIC   99.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,41]  "16. Min $ Required         :" 
+
+ DISPLAY_MASK  [16,70] ####.## 
+NUMERIC   9999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,1]  "17. YTD Ordered :" 
+
+ DISPLAY_MASK  [18,19] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,41]  "18. YTD Returns      :" 
+
+ DISPLAY_MASK  [18,66] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,1]  "19. YTD Received:" 
+
+ DISPLAY_MASK  [19,19] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,41]  "20. YTD Discount(Amt):" 
+
+ DISPLAY_MASK  [19,66] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,1]  "21. Balance     :" 
+
+ DISPLAY_MASK  [21,19] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

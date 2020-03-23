@@ -1,0 +1,15 @@
+	char	b_code[7] ; 		/* Bargaining Unit Code */
+	long	b_date;			/* Bargaining Unit table eff date */
+	char	b_name[31] ;		/* Bargaining Unit Name */
+	long	b_contract_dt;		/* Contract End Date */
+	char	b_stat_hol[2] ;		/* Statutory Holiday */	
+	char	b_pp_code[7] ;		/* Pay Period Code */
+	short	b_fund;			/* Fund */
+	char	b_cpp_acct[19] ;	/* Bargaining Unit CPP Account */
+	char	b_uic_acct[19] ;	/* Bargaining Unit UIC Account */
+	char	b_tax_acct[19] ;	/* Bargaining Unit Tax Account */
+	double	b_sick_rate;		/* Sick day accrual rate */
+	double	b_sick_max;		/* Maximum number of sick days */
+	short	b_dept_cd;
+	double	b_stat_thrs;		/* Maximum number of sick days */
+	double	b_stat_hpd;		/* Maximum number of sick days */

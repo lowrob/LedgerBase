@@ -1,0 +1,311 @@
+HEADER
+SCREEN  roe_adj3
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,31]  "ROE ADJUSTMENT" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ PROMPT [2,34]  "Screen 3" 
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,1]  "Fn:" 
+
+ DISPLAY_MASK  [4,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,9]  "Employee #:" 
+
+ DISPLAY_MASK  [4,21] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,68]  "Field:" 
+
+ DISPLAY_MASK  [4,75] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    800 
+
+ PROMPT [5,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,5]  "Payment After Last Day Worked" 
+
+ DISPLAY_MASK  [6,51] _ 
+STRING  X
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,2]  "1. Start Date:" 
+
+ DISPLAY_MASK  [7,17] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,30]  "2. Weeks/Days (W/D):" 
+
+ DISPLAY_MASK  [7,51] _ 
+STRING  X
+LOG_ATTR (UESCAPE,VALIDITY,UCASE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [7,53] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,57]  "3. Amount:" 
+
+ DISPLAY_MASK  [7,68] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,2]  "4. Expected Recall/Not Returning/Unknown (E/N/U):" 
+
+ DISPLAY_MASK  [9,52] _ 
+STRING  X
+LOG_ATTR (UESCAPE,VALIDITY,UCASE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,2]  "5. Date  :" 
+
+ DISPLAY_MASK  [11,13] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,2]  "6. Reason:" 
+
+ DISPLAY_MASK  [12,13] __ 
+STRING  XX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,17]  "Description:" 
+
+ DISPLAY_MASK  [12,30] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,2]  "7. Contact    :" 
+
+ DISPLAY_MASK  [14,18] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,52]  "8. Telephone #:" 
+
+ DISPLAY_MASK  [14,68] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,2]  "9. Issuer Name:" 
+
+ DISPLAY_MASK  [15,18] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,51]  "10. Telephone #:" 
+
+ DISPLAY_MASK  [15,68] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,1]  "11. Date of issue:" 
+
+ DISPLAY_MASK  [17,20] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,1]  "12. Comments:" 
+
+ DISPLAY_MASK  [18,15] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,15] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,15] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,15] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

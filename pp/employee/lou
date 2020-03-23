@@ -1,0 +1,4 @@
+L.Robichaud	96/10/15	Added a flag in the BuildList routine 
+			called some_info to stop the attempt to copy info
+			to the s_dedcd & s_group fields when they have not
+			been created. This was causing core dumps.

@@ -1,0 +1,14 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a 
+OBJECTS=deduct.o deduct2.o
+CC=cc -g
+
+$E/deduct.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/deduct.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : deduct.c deduct2.c $I/deduct.h $I/pp_msgs.h $I/bfs_com.h $I/bfs_defs.h $I/bfs_pp.h /usr/include/cfomstrc.h
+

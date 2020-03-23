@@ -1,0 +1,10 @@
+PROJECT: invcitem
+	RECORDS: 1 invcitem
+
+LOGICAL_RECORD: 1
+	NAME:          invcitem
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 invcitem
+	TOTAL_FORMATS: 0
+
+ENDFILE

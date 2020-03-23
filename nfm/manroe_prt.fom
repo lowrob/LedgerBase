@@ -1,0 +1,104 @@
+HEADER
+SCREEN  manroe_prt
+VERSION 1
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,36]  "PRINT MANUAL ROE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,70] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,30]  "Printer #:" 
+
+ DISPLAY_MASK  [7,41] ## 
+NUMERIC   99
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,15]  "No. of Roe's to Printed :" 
+
+ DISPLAY_MASK  [9,40] #(5) 
+NUMERIC   9(5)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,5]  "Name of Issuer:" 
+
+ DISPLAY_MASK  [14,22] _(40) 
+STRING  X(40)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,5]  "Phone Number of Issuer:" 
+
+ DISPLAY_MASK  [16,30] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

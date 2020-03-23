@@ -1,0 +1,84 @@
+	cc -g -c -I/disk2/lbase/include -DENGLISH area.c
+	cc -g area.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/area.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH area_spec.c
+	cc -g area_spec.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/area_spec.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH attend.c
+	cc -g attend.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/attend.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH bank.c
+	cc -g bank.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/bank.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH bargain.c
+	cc -g bargain.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/bargain.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH benefit.c
+	cc -g benefit.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/benefit.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH certif.c
+	cc -g certif.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/certif.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH classoth.c
+	cc -g classoth.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/classoth.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH comp.c
+	cc -g comp.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/comp.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH department.c
+	cc -g department.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/department.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH deduct.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH deduct2.c
+	cc -g deduct.o deduct2.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/deduct.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH earnings.c
+	cc -g earnings.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/earnings.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH govern.c
+	cc -g govern.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/govern.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH inact.c
+	cc -g inact.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/inact.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH loan.c
+	cc -g loan.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/loan.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH pay_par.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH pay_par2.c
+	cc -g pay_par.o pay_par2.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/pay_par.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH position.c
+	cc -g position.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/position.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH payper.c
+	cc -g payper.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/payper.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH religion.c
+	cc -g religion.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/religion.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH reg_pen.c
+	cc -g reg_pen.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/reg_pen.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH sen_par.c
+	cc -g sen_par.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/sen_par.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH stathol.c
+	cc -g stathol.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/stathol.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH setpp.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH setpputl.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH pptable.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH payrep.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH bargunit.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH taxtable.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH earncode.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH posrep.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH repgl.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH costcent.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH repdept.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH reparea.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH repstat.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH repcsbl.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH repbank.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH inactive.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH repatt.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH terminat.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH reparea_spec.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH classlist.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH setpp2.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH rep_senpar.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH regded.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH pen_plan.c
+	cc -g -c -I/disk2/lbase/include -DENGLISH benlist.c
+	cc -g setpp.o setpputl.o pptable.o payrep.o bargunit.o taxtable.o earncode.o posrep.o repgl.o costcent.o repdept.o reparea.o repstat.o repcsbl.o repbank.o  inactive.o repatt.o terminat.o reparea_spec.o classlist.o setpp2.o  rep_senpar.o regded.o pen_plan.o benlist.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a -o  /disk2/lbase/bin/setpp.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH taxtbl.c
+	cc -g taxtbl.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/taxtbl.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH termination.c
+	cc -g termination.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/termination.out
+	cc -c -I/disk2/lbase/include -DENGLISH uic.c
+	cc uic.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/uic.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH userbarg.c
+	cc -g userbarg.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/userbarg.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH vacacc.c
+	cc -g vacacc.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/vacacc.out
+	cc -c -I/disk2/lbase/include -DENGLISH procgl.c
+	cc procgl.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/procgl.out

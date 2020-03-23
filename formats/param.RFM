@@ -1,0 +1,10 @@
+PROJECT: param
+	RECORDS: 1 param
+
+LOGICAL_RECORD: 1
+	NAME:          param
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 param
+	TOTAL_FORMATS: 0
+
+ENDFILE

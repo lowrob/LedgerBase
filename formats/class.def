@@ -1,0 +1,6 @@
+	char	c_code[7] ; 		/* Classification Code */
+	long	c_date;			/* Classification table eff date */
+	char	c_desc[31] ;		/* Classification Description */
+	double	c_yrly_inc;		/* Classification yearly income */
+	double	c_units;		/* Classification units/year */
+	char	c_pos[7] ; 		/* Classification position code */

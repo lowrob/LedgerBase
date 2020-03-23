@@ -1,0 +1,98 @@
+HEADER
+SCREEN  download
+VERSION 1
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,28]  "TRANSFER FILES TO PC" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,64]  "Date:" 
+
+ DISPLAY_MASK  [1,70] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+
+END
+
+ FIELD    500 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,2]  "1. Source (LedgerBase) Filename:" 
+
+ DISPLAY_MASK  [6,35] _(20) 
+STRING  X(20)
+LOG_ATTR (VALIDITY,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,2]  "2.    Destination (PC) Filename:" 
+
+ DISPLAY_MASK  [8,35] _(20) 
+STRING  X(20)
+LOG_ATTR (VALIDITY,SHODUP)
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UCASE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ENDFILE

@@ -1,0 +1,13 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a /lib/librp.a
+OBJECTS=chqcan.o cheqreg.o jrhlist.o
+CC=cc -g
+
+$E/chqcan.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/chqcan.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : chqcan.c cheqreg.c jrhlist.c $I/pp_msgs.h $I/bfs_com.h $I/bfs_defs.h $I/bfs_pp.h /usr/include/cfomstrc.h

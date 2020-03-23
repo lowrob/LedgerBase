@@ -1,0 +1,10 @@
+PROJECT: cheques
+	RECORDS: 1 cheques
+
+LOGICAL_RECORD: 1
+	NAME:          cheques
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 cheques
+	TOTAL_FORMATS: 0
+
+ENDFILE

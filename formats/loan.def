@@ -1,0 +1,5 @@
+	char	cs_code[7];		/* CSB/Loan code  */
+	char	cs_desc[31];		/* CSB/Loans code  */
+	short	cs_fund;		/* Fund #         */
+	char	cs_amt_acct[19];	/* Amount G/L account    */
+	char	cs_int_acct[19];	/* Interest G/L account    */

@@ -1,0 +1,17 @@
+	long	reqi_code;		/* requisition number */
+	short	reqi_item_no;	/* requisition item number */
+	char	reqi_acct[19]; 	/* Account number */
+	short	reqi_fund; 		/* Fund number */
+	char	reqi_st_code[11];	/* Stock code in inventory */
+	char	reqi_appstat[2];	/* approval status */
+	short	reqi_school;		/* school Number */
+	char	reqi_desc[61];	/* Description of items */
+	char	reqi_tax1[2];	/* Field for tax */
+	char	reqi_tax2[2];	/* Field for 2nd tax */
+	double  reqi_orig_qty;	/* Quantity originally requisted */
+	char	reqi_unit[7];	/* Unit of measurement */
+	double	reqi_unitprice;	/* Unit Price of the item */
+	double	reqi_value;		/* Originial price of items */
+	long	reqi_pocode;		/* purchase order number */
+	char	reqi_bdgt_flag[2];	/* Over Budget Flag */
+	short	reqi_stock_fund;	/* Used in Interfund Requisitioning */

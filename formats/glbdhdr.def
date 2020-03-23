@@ -1,0 +1,6 @@
+	char	tr_term[5] ;		/* Terminal name */
+	long	tr_sys_dt ;		/* Trans Entered date */
+	short	tr_seq_no ;		/* Running no under tr_term+tr_sys_dt */
+	char	tr_descr[25] ;		/* Description */
+
+

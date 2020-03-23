@@ -1,0 +1,229 @@
+HEADER
+SCREEN  inactreact
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,31]  "INACTIVATE/REACTIVATE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,64]  "Date:" 
+
+ DISPLAY_MASK  [1,70] ####/##/## 
+NUMERIC   9999F99F99
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,9]  "Inactivation Code:" 
+
+ DISPLAY_MASK  [5,29] ___ 
+STRING  XXX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE)
+
+END
+
+ FIELD    450 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [5,35] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,9]  "Termination Code :" 
+
+ DISPLAY_MASK  [6,29] __
+STRING  XX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE)
+
+END
+
+ FIELD    550 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [6,35] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,9]  "Termination Date :" 
+
+ DISPLAY_MASK  [7,29] ####/##/## 
+DATE	YYYYFMMFDD
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,9]  "Bargaining Unit :" 
+
+ DISPLAY_MASK  [9,27] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,46]  "To:" 
+
+ DISPLAY_MASK  [9,50] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,9]  "Position Code   :" 
+
+ DISPLAY_MASK  [10,27] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,46]  "To:" 
+
+ DISPLAY_MASK  [10,50] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,9]  "Employee #      :" 
+
+ DISPLAY_MASK  [11,27] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,46]  "To:" 
+
+ DISPLAY_MASK  [11,50] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,54]  "OPTION:" 
+
+ DISPLAY_MASK  [15,62] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,9]  "Number of Employees Inactivated:" 
+
+ DISPLAY_MASK  [17,42] #### 
+NUMERIC   9999
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,9]  "Number of Employees Reactivated:" 
+
+ DISPLAY_MASK  [18,42] #### 
+NUMERIC   9999
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,9]  "Number of Employees Terminated :" 
+
+ DISPLAY_MASK  [19,42] #### 
+NUMERIC   9999
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

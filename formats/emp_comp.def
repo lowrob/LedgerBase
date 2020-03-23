@@ -1,0 +1,2 @@
+	char	ec_numb[13];		/* Employee Number */
+	char	ec_code[8];		/* Competition code */

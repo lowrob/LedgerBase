@@ -1,0 +1,2 @@
+	char	rel_code[3] ; 		/* Department Code */
+	char	rel_desc[31] ;		/* Department description */

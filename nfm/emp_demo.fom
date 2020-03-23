@@ -1,0 +1,334 @@
+HEADER
+SCREEN  emp_demo
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,28]  "DEMOGRAPHIC MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,9]  "Employee #:" 
+
+ DISPLAY_MASK  [3,21] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "------------------------------------------------------------------------------- " 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,2]  "1. Last Name        :" 
+
+ DISPLAY_MASK  [5,24] _(25) 
+STRING  X(25)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    850 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,66]  "Status:" 
+
+ DISPLAY_MASK  [5,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,2]  "2. First Name       :" 
+
+ DISPLAY_MASK  [6,24] _(15) 
+STRING  X(15)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,2]  "3. Middle Name      :" 
+
+ DISPLAY_MASK  [7,24] _(15) 
+STRING  X(15)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,2]  "4. Mailing Address  :" 
+
+ DISPLAY_MASK  [8,24] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,2]  "5. Street Address   :" 
+
+ DISPLAY_MASK  [9,24] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,2]  "6. City             :" 
+
+ DISPLAY_MASK  [10,24] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,2]  "7. Prov/State       :" 
+
+ DISPLAY_MASK  [11,24] _(30) 
+STRING  X(30)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,2]  "8. Postal/Zip Code  :" 
+
+ DISPLAY_MASK  [12,24] _(10) 
+STRING  X(10)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,2]  "9. Social Ins Number:" 
+
+ DISPLAY_MASK  [14,24] ___-___-___ 
+STRING  XXXFXXXFXXX
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,1]  "10. Birth Date       :" 
+
+ DISPLAY_MASK  [15,24] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,42]  "11. Sex           :" 
+
+ DISPLAY_MASK  [15,62] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "12. Marital Status   :" 
+
+ DISPLAY_MASK  [16,24] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,42]  "13. Telephone     :" 
+
+ DISPLAY_MASK  [16,62] ___-___-____ 
+STRING  XXXFXXXFXXXX
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [17,1]  "14. Title            :" 
+
+ DISPLAY_MASK  [17,24] ____ 
+STRING  XXXX
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,42]  "15. Cost Center # :" 
+
+ DISPLAY_MASK  [17,62] ### 
+NUMERIC   999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,1]  "16. Maiden Name      :" 
+
+ DISPLAY_MASK  [18,24] _(15) 
+STRING  X(15)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2350 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,45] _(32) 
+STRING  X(32)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,1]  "17. Religion Code    :" 
+
+ DISPLAY_MASK  [19,24] __ 
+STRING  XX
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [20,1]  "18. Comment          :" 
+
+ DISPLAY_MASK  [20,24] _(51) 
+STRING  X(51)
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

@@ -1,0 +1,5 @@
+	long	cr_numb ;		/* Cheque number	*/
+	long	cr_date;		/* Cheque Date		*/
+	char	cr_emp_numb[13];	/* Employee Number	*/
+	char	cr_status[2];		/* Cheque Status */
+	double	cr_amount;		/* Amount	*/

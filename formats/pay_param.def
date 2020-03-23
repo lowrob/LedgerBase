@@ -1,0 +1,49 @@
+	char	pr_tp_ft_code[7];	/* Teacher Position Code Ft   */ 
+	char	pr_tp_pt_code[7];	/* Teacher Position Code Pt   */ 
+	double	pr_tot_units;		/* Total Units for pay period	*/
+	char	pr_sb_code[7];		/* Substitute Teacher Code */ 
+	long	pr_retro;		/* Retropay effective after    */
+	char	pr_up_gl[2];		/* Update G/L                */
+	short	pr_dept;		/* Department Key */
+	short	pr_area;		/* Area Key       */
+	short	pr_cost;		/* Cost Center Key*/
+	char	pr_langu[2];		/* Language Preffered        */
+	char	pr_prov[3];		/* Province        */
+	char	pr_att_pay[2];		/* Attendance entry during payroll  */
+	char	pr_bk_dep[2];
+	char	pr_teach_pay[2];	/* Teacher # entry during payroll   */
+	char	pr_area_def[2];		/* Area defined              */
+	char	pr_reg_earn[7];		/* Regular Earnings Code	*/
+	char	pr_vac_earn[7];		/* Vacation Earnings Code	*/
+	short	pr_st_mth;
+	long	pr_fisc_st_dt;		/* Fiscal year start date  */
+	long	pr_fisc_end_dt;		/* Fiscal year end date  */
+	long	pr_cal_st_dt;		/* Calendar year start date  */
+	long	pr_cal_end_dt;		/* Calendar year end date  */
+	long	pr_schl_st_dt;		/* School year start date  */
+	long	pr_schl_end_dt;		/* School year end date  */
+	long	pr_last_chq;		/* Last cheque number    */
+	long	pr_last_ec;     	/* Last ec number  */
+	char	pr_cpp_exp[12][2];	/* Y/N/A for key */
+	char	pr_uic_exp[12][2];	/* Y/N/A for key */
+	char	pr_salary[12][2];	/* Y/N/A for key */
+	char	pr_deduct[12][2];	/* Y/N/A for key */
+	char	pr_reg_pen[12][2];	/* Y/N/A for key */
+	char	pr_teacher[12][2];	/* Y/N/A for key */
+	double	pr_ben_acc;		/* Benefit Accrual maximum */
+	double	pr_low_earn;	  	/* Low excluded earnings   */
+	double	pr_high_earn;	  	/* High excluded earnings   */
+	short	pr_pen_mult;    	/* Pension Adjustment Multiplier  */
+	double	pr_pen_const;		/* Pension Adjustment Constant    */
+	long	pr_tel_ext;		/* Telephone ext. for Payroll	*/
+	char	pr_retro_cd[7];
+	short	pr_fund;
+	char	pr_teach_gl[19];
+	long	pr_keys[12];
+	char	pr_trans_cd[7];
+	long	pr_10mth_st_dt;
+	long	pr_10mth_end_dt;
+	char	pr_exp_cd[7];
+	char	pr_payper[7];
+	long	pr_week_date;		/* Last Complete week of period */
+	long	pr_bi_date;		/* Last Complete week of period */

@@ -1,0 +1,8 @@
+	char	esn_numb[13];
+	short	esn_month;
+	char	esn_pos[7];
+	char	esn_class[7];
+	double	esn_cas_hrs;
+	double	esn_cas_days;
+	double	esn_perm_days;
+	double	esn_cas_totd;

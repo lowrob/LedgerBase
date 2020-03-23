@@ -1,0 +1,17 @@
+	char	tmh_numb[13] ;		/* Employee number	*/
+	long	tmh_date;		/* Pay date 		*/
+	short	tmh_no;			/* Sequence Number	*/
+	short	tmh_pp;			/* Pay period		*/
+	short	tmh_week;		/* Week			*/
+	short	tmh_fund;		/* Fund 		*/
+	char	tmh_adj[2];		/* Adjustment flag	*/
+	char	tmh_class[7];		/* Classification code	*/
+	char	tmh_earn[7];		/* Earnings code	*/
+	char	tmh_trans[7];		/* Transaction code	*/
+	char	tmh_exp[7];		/* Expense code		*/
+	double	tmh_units[7];		/* Units/day		*/
+	double	tmh_tot_amt;		/* Total amount		*/
+	short	tmh_cost;		/* Cost center number	*/
+	char	tmh_comment[46];	/* Comment		*/
+	char	tmh_stat[4];		/* Status		*/
+	short	tmh_year;

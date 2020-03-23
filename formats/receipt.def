@@ -1,0 +1,11 @@
+	long	rcpt_refno;		/* reference number */
+	short	rcpt_fund;		/* Invoice fund number */
+	char	rcpt_applied[2];	/* Applied or Unapplied */
+	long	rcpt_invnumb;		/* Invoice number */
+	char	rcpt_cust[7] ;		/* Customer unique code */
+	long	rcpt_rcptdate;		/* receipt date */
+	char	rcpt_chequeno[16];	/* Cheque number */
+	double	rcpt_amount;		/* Receipt amount */
+	short	rcpt_period;		/* G/L period */
+	char	rcpt_acctno[19];	/* G/L account number */
+	char	rcpt_remarks[21];	/* remarks */

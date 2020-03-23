@@ -1,0 +1,11 @@
+	char	el_numb[13] ;		/* Employee number    */
+	char	el_code[7] ; 		/* CSB/Loan Code */
+	short	el_seq ;		/* Sequence number    */
+	double	el_amount;		/* Amount of loan (target)	*/
+	double	el_amnt_out;		/* Amount of loan outstanding	*/
+	short	el_pp_num ;		/* Number of pay periods	*/
+	short	el_pp_num_el ;		/* Number of pay periods ellapsed*/
+	char	el_amt_flg[2];		/* Fixed/Percentage amount flag	*/
+	double	el_pp_amount;		/* Fixed/Percentage Amount	*/
+	double	el_int;			/* Interest rate	*/
+	char	el_ded_pp[5][2];	/* Deduct monthly pay period        */

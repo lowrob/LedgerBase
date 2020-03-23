@@ -1,0 +1,7 @@
+	char	mc_emp_numb[13];	/* Employee Number	*/
+	long	mc_date;		/* Cheque Date		*/
+	short	mc_fund;		/* Fund Number		*/	
+	char	mc_acct[19];		/* Account		*/
+	long	mc_chq_numb ;		/* Cheque number	*/
+	char	mc_ded_code[7];		/* Deduction Code	*/
+	double	mc_amount;		/* Amount	*/

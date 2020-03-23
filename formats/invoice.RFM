@@ -1,0 +1,10 @@
+PROJECT: invoice
+	RECORDS: 1 invoice
+
+LOGICAL_RECORD: 1
+	NAME:          invoice
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 invoice
+	TOTAL_FORMATS: 0
+
+ENDFILE

@@ -1,0 +1,17 @@
+
+
+	strcpy(barg_unit.b_code,emp_rec.em_barg);
+	barg_unit.b_date = get_date();
+	flg_reset(BARG);
+
+	retval = get_n_barg(&barg_unit,BROWSE,0,BACKWARD,e_mesg);
+	if(retval == EFL ||
+		strcmp(barg_unit.b_code, emp_rec.em_barg) != 0){
+  	  DispError((char *)&s_sth,"Bargaining Unit does not Exist");
+		return(ERROR);
+	}
+	if(retval < 0){
+  		DispError((char *)&s_sth,e_mesg);
+  		return(ERROR);
+	}
+	seq_over(BARG);

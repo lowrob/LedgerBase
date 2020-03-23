@@ -1,0 +1,10 @@
+PROJECT: st_alloc
+	RECORDS: 1 st_alloc
+
+LOGICAL_RECORD: 1
+	NAME:          st_alloc
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 st_alloc
+	TOTAL_FORMATS: 0
+
+ENDFILE

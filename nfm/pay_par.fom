@@ -1,0 +1,441 @@
+HEADER
+SCREEN  pay_par
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,28]  "PAYROLL PARAMETER FILE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ PROMPT [2,34]  "Screen 1" 
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "------------------------------------------------------------------------------- " 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,2]  "1. Teacher Position Cd FT :" 
+
+ DISPLAY_MASK  [5,30] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,42]  "2. Payroll Att (Y/N)      :" 
+
+ DISPLAY_MASK  [5,70] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,2]  "3. Teacher Position Cd PT :" 
+
+ DISPLAY_MASK  [6,30] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,42]  "4. Payroll Teacher # (Y/N):" 
+
+ DISPLAY_MASK  [6,70] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,2]  "5. Teacher Weekly Units   :" 
+
+ DISPLAY_MASK  [7,30] ##.## 
+NUMERIC   99.99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,2]  "6. Sub Teacher Code       :" 
+
+ DISPLAY_MASK  [8,30] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,42]  "7. Area Defined (Y/N)     :" 
+
+ DISPLAY_MASK  [8,70] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,2]  "8. Retro Pay Eff After    :" 
+
+ DISPLAY_MASK  [9,30] ###### 
+NUMERIC   999999
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,42]  "9. Calendar Year Start Dt :" 
+
+ DISPLAY_MASK  [9,70] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,1]  "10. Update G/L (Y/N)       :" 
+
+ DISPLAY_MASK  [10,30] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,41]  "11. Calendar Year End Date :" 
+
+ DISPLAY_MASK  [10,70] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,1]  "12. Department Key         :" 
+
+ DISPLAY_MASK  [11,30] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,41]  "13. Fiscal Year Start Date :" 
+
+ DISPLAY_MASK  [11,70] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,1]  "14. Area Key               :" 
+
+ DISPLAY_MASK  [12,30] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,41]  "15. Fiscal Year End Date   :" 
+
+ DISPLAY_MASK  [12,70] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,1]  "16. Cost Center Key        :" 
+
+ DISPLAY_MASK  [13,30] #### 
+NUMERIC   9999
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,41]  "17. School Year Start Date :" 
+
+ DISPLAY_MASK  [13,70] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,1]  "18. Regular Earnings Code  :" 
+
+ DISPLAY_MASK  [14,30] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,41]  "19. School Year End Date   :" 
+
+ DISPLAY_MASK  [14,70] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,1]  "20. Retro Earnings Code    :" 
+
+ DISPLAY_MASK  [15,30] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,41]  "21. Calendar Month         :" 
+
+ DISPLAY_MASK  [15,70] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "22. Vacation Pay Earn Code :" 
+
+ DISPLAY_MASK  [16,30] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,41]  "23. Last Cheque Number     :" 
+
+ DISPLAY_MASK  [16,70] #(9) 
+NUMERIC   9(9)
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [17,1]  "24. Province               :" 
+
+ DISPLAY_MASK  [17,30] ___ 
+STRING  XXX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,41]  "25. Last EC Number         :" 
+
+ DISPLAY_MASK  [17,70] #(9) 
+NUMERIC   9(9)
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,1]  "26. Communication Pref(E/F):" 
+
+ DISPLAY_MASK  [18,30] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,41]  "27. 10mth Payroll Start Dt :" 
+
+ DISPLAY_MASK  [18,70] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,1]  "28. General Pay Period     :" 
+
+ DISPLAY_MASK  [19,30] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,41]  "29. 10mth Payroll End Date :" 
+
+ DISPLAY_MASK  [19,70] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (UESCAPE,SHODUP)
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    3800 
+
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

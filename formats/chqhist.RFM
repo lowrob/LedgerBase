@@ -1,0 +1,10 @@
+PROJECT: chqhist
+	RECORDS: 1 chqhist
+
+LOGICAL_RECORD: 1
+	NAME:          CHQHIST~reports
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 chqhist
+	TOTAL_FORMATS: 0
+
+ENDFILE

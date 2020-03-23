@@ -1,0 +1,10 @@
+	short	fatr_numb;	/* FA Transfer number */
+	short	fatr_costcen;	/* FA Cost center */
+	long	fatr_itemid;	/* FA item id number */
+	short	fatr_frcostcen;	/* FA current location */
+	short	fatr_tocostcen;	/* FA transfer location */
+	char	fatr_dept[5];	/* Fa transfer dept */
+	char	fatr_roomno[6]; /* Fa transfer room no */
+	long	fatr_date;	/* FA transfer date */
+	char	fatr_cond[2];	/* FA condition code on transfer */
+	char	fatr_remarks[25]; /* FA remarks */

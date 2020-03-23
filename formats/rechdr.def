@@ -1,0 +1,10 @@
+	short	rh_fund ;		/* Fund Code of Entry */
+	short	rh_sno ;		/* Running Sno under Fund */
+	char	rh_descr[25] ;		/* Description */
+	short	rh_reccod ;		/* Record code. 97,98 or 99 */
+	char	rh_type[1] ;		/* Recurring type. Daily, Weekly*/
+	double  rh_debits ;		/* Optional .. Sum of all -ve amnts */
+	double  rh_credits ;		/* Optional .. Sum of all +ve amnts */
+	long	rh_date ;		/* Last Posted Date */
+	short	rh_speriod;		/* Starting Period for Posting */
+	short	rh_lperiod;		/* Last Posted Period */

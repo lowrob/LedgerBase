@@ -1,0 +1,692 @@
+HEADER
+SCREEN  earn_mnt
+VERSION 1
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,28]  "EARNINGS MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,62]  "Date:" 
+
+ DISPLAY_MASK  [1,68] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,9]  "Employee #:" 
+
+ DISPLAY_MASK  [3,21] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [3,36] _(28) 
+STRING  X(28)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,69]  "Field:" 
+
+ DISPLAY_MASK  [3,76] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    800 
+
+ PROMPT [4,1]  "------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,69]  "Page:" 
+
+ DISPLAY_MASK  [5,75] ## 
+NUMERIC   99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,1]  "1. Pay Period #:" 
+
+ DISPLAY_MASK  [6,19] ## 
+NUMERIC   99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,23]  "Week:" 
+
+ DISPLAY_MASK  [6,29] # 
+NUMERIC   9
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,32]  "PP End Dt:" 
+
+ DISPLAY_MASK  [6,43] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (REQUIRED,VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,56]  "Status (Act/Del):" 
+
+ DISPLAY_MASK  [6,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,4]  "Pay Year    :" 
+
+ DISPLAY_MASK  [7,19] #### 
+NUMERIC   9999
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,29]  "Reg Units  :" 
+
+ DISPLAY_MASK  [7,43] ##.## 
+NUMERIC   99.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,54]  "Reg Income :" 
+
+ DISPLAY_MASK  [7,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,4]  "High Units  :" 
+
+ DISPLAY_MASK  [8,19] ##.## 
+NUMERIC   99.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,29]  "High Income:" 
+
+ DISPLAY_MASK  [8,43] ##,###.## 
+NUMERIC   S9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,54]  "Deferred   :" 
+
+ DISPLAY_MASK  [8,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,4]  "CPP         :" 
+
+ DISPLAY_MASK  [9,19] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,29]  "CPP Pens   :" 
+
+ DISPLAY_MASK  [9,43] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,54]  "UIC        :" 
+
+ DISPLAY_MASK  [9,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,4]  "Reg Pens 1  :" 
+
+ DISPLAY_MASK  [10,19] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,29]  "Reg Pens 2 :" 
+
+ DISPLAY_MASK  [10,43] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,54]  "Reg Pens 3 :" 
+
+ DISPLAY_MASK  [10,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,4]  "Prior Pens  :" 
+
+ DISPLAY_MASK  [11,19] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,29]  "Opt Pens   :" 
+
+ DISPLAY_MASK  [11,43] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,54]  "Reg Non-Mem:" 
+
+ DISPLAY_MASK  [11,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,4]  "Chq Type    :" 
+
+ DISPLAY_MASK  [12,19] _ 
+STRING  X
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,24]  "Chq No  :" 
+
+ DISPLAY_MASK  [12,38] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,48]  "Acc't No :" 
+
+ DISPLAY_MASK  [12,59] _(18) 
+STRING  X(18)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,4]  "Income Tax  :" 
+
+ DISPLAY_MASK  [13,19] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,29]  "Net Income :" 
+
+ DISPLAY_MASK  [13,43] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,1]  "2. Pay Period #:" 
+
+ DISPLAY_MASK  [15,19] ## 
+NUMERIC   99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,23]  "Week:" 
+
+ DISPLAY_MASK  [15,29] # 
+NUMERIC   9
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,32]  "PP End Dt:" 
+
+ DISPLAY_MASK  [15,43] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,56]  "Status (Act/Del):" 
+
+ DISPLAY_MASK  [15,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,4]  "Pay Year    :" 
+
+ DISPLAY_MASK  [16,19] #### 
+NUMERIC   9999
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,29]  "Reg Units  :" 
+
+ DISPLAY_MASK  [16,43] ##.## 
+NUMERIC   99.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4100 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,54]  "Reg Income :" 
+
+ DISPLAY_MASK  [16,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4200 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,4]  "High Units  :" 
+
+ DISPLAY_MASK  [17,19] ##.## 
+NUMERIC   99.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4300 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,29]  "High Income:" 
+
+ DISPLAY_MASK  [17,43] ##,###.## 
+NUMERIC   S9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4400 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,54]  "Deferred   :" 
+
+ DISPLAY_MASK  [17,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4500 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,4]  "CPP         :" 
+
+ DISPLAY_MASK  [18,19] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4600 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,29]  "CPP Pens   :" 
+
+ DISPLAY_MASK  [18,43] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4700 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,54]  "UIC        :" 
+
+ DISPLAY_MASK  [18,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4800 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,4]  "Reg Pens 1  :" 
+
+ DISPLAY_MASK  [19,19] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4900 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,29]  "Reg Pens 2 :" 
+
+ DISPLAY_MASK  [19,43] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    5000 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,54]  "Reg Pens 3 :" 
+
+ DISPLAY_MASK  [19,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    5100 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,4]  "Prior Pens  :" 
+
+ DISPLAY_MASK  [20,19] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    5200 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,29]  "Opt Pens   :" 
+
+ DISPLAY_MASK  [20,43] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    5300 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,54]  "Reg Non-Mem:" 
+
+ DISPLAY_MASK  [20,68] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    5400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,4]  "Chq Type    :" 
+
+ DISPLAY_MASK  [21,19] _ 
+STRING  X
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    5500 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,24]  "Chq No  :" 
+
+ DISPLAY_MASK  [21,38] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    5600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,48]  "Acc't No :" 
+
+ DISPLAY_MASK  [21,59] _(18) 
+STRING  X(18)
+
+END
+
+ FIELD    5700 
+
+ MASK_CHAR    # 
+
+ PROMPT [22,4]  "Income Tax  :" 
+
+ DISPLAY_MASK  [22,19] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    5800 
+
+ MASK_CHAR    # 
+
+ PROMPT [22,29]  "Net Income :" 
+
+ DISPLAY_MASK  [22,43] #,###.## 
+NUMERIC   9F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    5900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    6000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

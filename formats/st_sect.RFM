@@ -1,0 +1,10 @@
+PROJECT: st_sect
+	RECORDS: 1 st_sect
+
+LOGICAL_RECORD: 1
+	NAME:          st_sect
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 st_sect
+	TOTAL_FORMATS: 0
+
+ENDFILE

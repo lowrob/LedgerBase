@@ -1,0 +1,7 @@
+	char	tem_numb[13] ;		/* Employee number    */
+	char	tem_last_name[26] ;	/* Last name            */
+	char	tem_first_name[16] ;	/* First name           */
+	char	tem_mid_name[16] ;	/* Middle name          */
+	char	tem_barg[7];		/* Bargaining unit code    */
+	char	tem_pos[7];		/* Position code           */
+	short	tem_cc ;			/* Cost center number */

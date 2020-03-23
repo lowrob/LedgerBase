@@ -1,0 +1,7 @@
+	short	ai_fund;	/* fund of the header file record */
+	long	ai_inv_no;	/* Invoice number in the header file record */
+	short	ai_hno;		/* Header serial number under above invoice */
+	short	ai_sno;		/* Item number under above key */
+	char	ai_accno[19];	/* Account number to be debited */
+	double	ai_amount;	/* Amount debited to above account */
+	char	ai_desc[61];	/* Invoice description */

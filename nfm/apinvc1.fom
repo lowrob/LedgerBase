@@ -1,0 +1,330 @@
+HEADER
+SCREEN  apinvc1
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,36]  "Screen  1" 
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+DATE    YYYYFMMFDD
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ PROMPT [2,33]  "SESSION TOTALS" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,1]  "Fn:" 
+
+ DISPLAY_MASK  [4,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,11]  "Session#:" 
+
+ DISPLAY_MASK  [4,21] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    700 
+
+ PROMPT [5,1]  "------------------------------------------------------------------------------- " 
+
+END
+
+ FIELD    800 
+
+ PROMPT [9,16]  "No. of Trans" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    900 
+
+ PROMPT [9,30]  "Gross Amount" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    1000 
+
+ PROMPT [9,52]  "Discount" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    1100 
+
+ PROMPT [9,70]  "Holdback" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,1]  "IN   Invoice" 
+
+ DISPLAY_MASK  [11,19] #### 
+NUMERIC   9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [11,28] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [11,47] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [11,66] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,1]  "RT   Return" 
+
+ DISPLAY_MASK  [13,19] #### 
+NUMERIC   9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [13,28] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [13,47] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [13,66] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,1]  "CM   CR Memo" 
+
+ DISPLAY_MASK  [15,19] #### 
+NUMERIC   9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,28] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,47] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,66] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,1]  "DM   DB Memo" 
+
+ DISPLAY_MASK  [17,19] #### 
+NUMERIC   9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,28] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,47] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,66] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,6]  "TOTALS" 
+
+ DISPLAY_MASK  [20,19] #### 
+NUMERIC   9999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [20,28] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [20,47] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [20,66] ###,###,###.## 
+NUMERIC   S99F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

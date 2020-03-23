@@ -1,0 +1,17 @@
+	/* Check to see if payroll in process */
+	jr_ent.jr_fund = 0;
+	jr_ent.jr_no = 0;
+	flg_reset(JR_ENT);
+
+	err = get_n_jr_ent(&jr_ent,UPDATE,0,FORWARD,e_mesg);
+	if(err < 0 && err != EFL){
+	  	DispError((char *)&s_sth,e_mesg) ;
+		seq_over(JR_ENT);
+		roll_back(e_mesg);
+	  	return(ERROR);
+	}
+	if(err != EFL && jr_ent.jr_pay_sen[0] == 'P'){
+	  	DispError((char *)&s_sth,"Payroll in process, can't continue") ;
+		return(NOERROR);
+	}
+

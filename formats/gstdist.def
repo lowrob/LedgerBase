@@ -1,0 +1,3 @@
+	short	fund ;			/* Funds PIC 999 */
+	char	gst_accno[19] ;		/* GST Account number */
+	char	accno[19] ;		/* Distribution Account number */

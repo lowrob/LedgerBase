@@ -1,0 +1,17 @@
+	long	pi_code;		/* Purchase order number */
+	short	pi_item_no;		/* Purchase order item number */
+	short	pi_school;		/* school Number */
+	short	pi_fund;		/* Fund Number */
+	char	pi_acct[19]; 		/* Account number */
+	char	pi_st_code[11];		/* Stock code in inventory */
+	char	pi_desc[61];		/* Description of item */
+	long	pi_req_no;		/* Requisition number */
+	char	pi_unit[7];		/* Unit of measurement */
+	char	pi_tax1[2];		/* Field for tax */
+	char	pi_tax2[2];		/* Field for 2nd tax */
+	double	pi_pd_qty;		/* Quantity ordered and paid for */
+	double	pi_unitprice;		/* Unit Price of the item */
+	double  pi_orig_qty;		/* Quantity originally ordered */
+	double	pi_original;		/* Originial price of item */
+	double	pi_paid;		/* Price paid for the item */
+	double  pi_value;		/* Change in the originial price */

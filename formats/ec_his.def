@@ -1,0 +1,12 @@
+	char	ech_numb[13] ;		/* Employee number	*/
+	short	ech_cc;			/* Cost Center		*/
+	char	ech_exp[7] ;		/* Expense Code		*/
+	short	ech_pp_numb;		/* Pay Period Number	*/
+	char	ech_trans[7] ;		/* Transaction Code	*/
+	char	ech_earn[7] ;		/* Earnings Code	*/
+	double	ech_wk1_rate;		/* Week 1 Rate	*/
+	double	ech_wk1_units;		/* Week 1 Units	*/
+	double	ech_wk1_earn;		/* Week 1 Earn	*/
+	double	ech_wk2_rate;		/* Week 2 Rate	*/
+	double	ech_wk2_units;		/* Week 2 Units	*/
+	double	ech_wk2_earn;		/* Week 2 Earnings	*/

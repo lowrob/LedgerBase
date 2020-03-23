@@ -1,0 +1,12 @@
+	char	i_supp_cd[11] ; 	/* Supplier number */
+	char	i_invc_no[16] ;		/* Purchase invoice number */
+	char	i_tr_type[3] ;		/* IN,RT,CM,DM */
+	short	i_item_no ;		/* Invoice item number */
+	char	i_stck_cd[11];		/* Stock code in inventory */
+	char	i_99accno[19]; 		/* Record Cd 99 G/L Account number */
+	char	i_97accno[19]; 		/* Record Cd 97 G/L Account number */
+	short	i_school ;		/* School# */
+	short	i_fund ;		/* Fund# */
+	double	i_qty;			/* Quantity Received */
+	double  i_value;		/* Total Value of the item */
+

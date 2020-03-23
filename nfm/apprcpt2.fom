@@ -1,0 +1,694 @@
+HEADER
+SCREEN  apprcpt2
+VERSION 1.0
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,29]  "APPLY UNAPPLIED RECEIPTS" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,12]  "Receipt#:" 
+
+ DISPLAY_MASK  [3,22] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,68]  "Field#:" 
+
+ DISPLAY_MASK  [3,76] ### 
+NUMERIC   999
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,1]  "1.  Customer Code :" 
+
+ DISPLAY_MASK  [5,21] _(10) 
+STRING  X(10)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [5,32] _(26) 
+STRING  X(26)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,1]  "2.  Receipt Amount:" 
+
+ DISPLAY_MASK  [6,21] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,1]  "3.  Trans Type    :" 
+
+ DISPLAY_MASK  [8,21] __ 
+STRING  XX
+LOG_ATTR (VALIDITY,UESCAPE,UCASE)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,71]  "Page:" 
+
+ DISPLAY_MASK  [8,77] ## 
+NUMERIC   99
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,1]  "----------------------------------------------------------------------------" 
+
+ DISPLAY_MASK  [9,78] _ 
+STRING  X
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,1]  "LINE  TYPE    INVOICE#       TRAN DATE        AMOUNT       APPLIED    STATUS" 
+
+ DISPLAY_MASK  [10,79] _ 
+STRING  X
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,60]  "AMOUNT    (APP/UAP)" 
+
+ DISPLAY_MASK  [11,79] _ 
+STRING  X
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,2]  "1   " 
+
+ DISPLAY_MASK  [12,8] __ 
+STRING  XX
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [12,15] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [12,29] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [12,44] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [12,58] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [12,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,2]  "2   " 
+
+ DISPLAY_MASK  [13,8] __ 
+STRING  XX
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [13,15] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [13,29] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [13,44] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [13,58] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [13,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,2]  "3   " 
+
+ DISPLAY_MASK  [14,8] __ 
+STRING  XX
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [14,15] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [14,29] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [14,44] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [14,58] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [14,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,2]  "4   " 
+
+ DISPLAY_MASK  [15,8] __ 
+STRING  XX
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,15] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,29] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,44] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,58] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [15,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,2]  "5   " 
+
+ DISPLAY_MASK  [16,8] __ 
+STRING  XX
+
+END
+
+ FIELD    4100 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [16,15] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4200 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [16,29] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    4300 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [16,44] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4400 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [16,58] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    4500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [16,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    4600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [17,2]  "6   " 
+
+ DISPLAY_MASK  [17,8] __ 
+STRING  XX
+
+END
+
+ FIELD    4700 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,15] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4800 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,29] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    4900 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,44] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    5000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,58] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    5100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    5200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,2]  "7   " 
+
+ DISPLAY_MASK  [18,8] __ 
+STRING  XX
+
+END
+
+ FIELD    5300 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [18,15] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    5400 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [18,29] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    5500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [18,44] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    5600 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [18,58] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    5700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    5800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,2]  "8   " 
+
+ DISPLAY_MASK  [19,8] __ 
+STRING  XX
+
+END
+
+ FIELD    5900 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [19,15] #(8) 
+NUMERIC   9(8)
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    6000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [19,29] ####/##/## 
+NUMERIC   9999F99F99
+
+END
+
+ FIELD    6100 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [19,44] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    6200 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [19,58] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP,SUP_ZEROES)
+
+END
+
+ FIELD    6300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    6400 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,2]  "Receipt Amt:" 
+
+ DISPLAY_MASK  [21,15] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    6500 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,28]  "Applied Amt:" 
+
+ DISPLAY_MASK  [21,41] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    6600 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,54]  "Unapplied Amt:" 
+
+ DISPLAY_MASK  [21,69] #(8).## 
+NUMERIC   9(8).99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    6700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    6800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

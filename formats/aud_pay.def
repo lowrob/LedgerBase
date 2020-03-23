@@ -1,0 +1,5 @@
+	char	aud_emp[13] ;		/* Employee number	*/
+	char	aud_code[21] ;		/* Code	*/
+	char	aud_flag[2];		/* Earns/Deducted	*/
+	double	aud_old_amnt;		/* Previous Amount	*/
+	double	aud_new_amnt;		/* Adjusted Amount	*/

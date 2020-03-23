@@ -1,0 +1,10 @@
+PROJECT: glbditem
+	RECORDS: 1 glbditem
+
+LOGICAL_RECORD: 1
+	NAME:          glbditem
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 glbditem
+	TOTAL_FORMATS: 0
+
+ENDFILE

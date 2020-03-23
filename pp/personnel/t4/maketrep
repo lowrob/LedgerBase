@@ -1,0 +1,21 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=t4rep.o t4reputl.o t4prelist.o t4prelist2.o
+
+CC=cc -g
+
+$E/t4rep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/t4rep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+t4rep.o  	: $I/bfs_defs.h
+
+t4reputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+t4prelist.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+t4prelist2.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+

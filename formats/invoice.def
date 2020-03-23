@@ -1,0 +1,20 @@
+	char	in_supp_cd[11] ; 	/* Supplier number */
+	char	in_invc_no[16] ;	/* Purchase invoice number */
+	char	in_tr_type[3] ;		/* IN,RT,CM, DM */
+	char	in_type[1] ;		/* D(irect Charge),B(ulk), N(on Bulk) */
+	char	in_pmtcode[1] ;		/*Open,Stop,Comp.,Relse HB,Part/Manual*/
+	char	in_accno[19] ;		/* Bank Account nbr for manual cheque */
+	char	in_remarks[21] ;	/* Invoice Remarks */
+	short   in_funds ;		/* Fund no */
+	short	in_period ;		/* Period */
+	long	in_po_no ;		/* Purchase Order Number */
+	long	in_invc_dt ;		/* Invoice date */
+	long	in_due_dt ;		/* Payment Due date */
+	long	in_chq_no ;		/* Latest Paid cheque# */
+	double	in_disc_per ;		/* Discount % */
+	double	in_disc_amt ;		/* Discount on Gross Amount */
+	double	in_amount ;		/* Gross amount (Without Discount) */
+	double	in_gsttax ;		/* GST Tax amount */
+	double	in_psttax ;		/* PST Tax amount */
+	double	in_part_amt ;		/* Partial Pmnt Amt/Manual Chq Paid */
+	char	in_orgsupp_cd[11];	/* For the AP history */

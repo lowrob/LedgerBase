@@ -1,0 +1,5 @@
+	char	exi_code[7];		/* Expense code  */
+	char	exi_class[7];		/* Classification code */
+	char	exi_earn[7];		/* Earnings code  */
+	short	exi_fund;		/* Fund #         */
+	char	exi_acct[19];		/* G/L account    */

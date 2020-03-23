@@ -1,0 +1,16 @@
+	long	tr_date;		/* Transaction date */
+	char	tr_type[3];		/* Type of transaction */
+	short	tr_seq_no;		/* Transaction number */
+	short	tr_fund;		/* Fund to which stock belongs */
+	char	tr_code[11];		/* Stock item code */
+	char	tr_suppl_cd[11];	/* supplier code */
+	char	tr_ref[13];		/* Reference: PO# or Inv# */
+	short	tr_location;		/* Location/Cost centre # */
+	short	tr_period;		/* Period to which GL posting is made */
+	char	tr_db_acc[19];		/* Debit account number */
+	char	tr_cr_acc[19];		/* Credit account number */
+	double	tr_qty;			/* Quantity of transaction */
+	double	tr_amount;		/* Value of transaction */
+	char	tr_remarks[31];		/* Remarks on the transaction */
+	short	tr_fund2;		/* Fund to which stock belongs */
+	long	tr_po_no;		/* Po Number for Receipts */

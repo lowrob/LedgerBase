@@ -1,0 +1,7 @@
+	char	dg_code[7] ; 		/* Deduction Code */
+	char	dg_pp_code[7] ;		/* Deduction Pay Period Code */
+	char	dg_group[7];		/* Deduction Group Code   */
+	char	dg_desc[16] ;		/* Deduction description */
+	char	dg_amt_flag[2] ;	/* Amount flag: fixed or percentage */
+	double	dg_amount;  		/* Amount   */
+	double	dg_employer_sh;		/* Employer share    */

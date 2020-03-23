@@ -1,0 +1,6 @@
+	char	egh_numb[13] ;		/* Employee number    */
+	short	egh_pr_cd;		/* priority Code */
+	short	egh_seq ;		/* Sequence number    */
+	short	egh_pp;			/* Pay period		*/
+	long	egh_date;		/* Date of the transaction	*/
+	double	egh_amount;		/* Fixed/Percentage Amount	*/

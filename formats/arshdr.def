@@ -1,0 +1,18 @@
+	short	ah_fund;	/* fund# for which invoice is raised */
+	long	ah_inv_no;	/* invoice number under fund */
+	short	ah_sno;		/* header serial number under invoice */
+	char	ah_type[3];	/* Invoice/DM/CM type code */
+	char	ah_status[1];	/* Invoice status O/C : Open/Close */
+	char	ah_cu_code[11];	/* customer code */
+	long	ah_trandt;	/* transaction date */
+	long	ah_duedt;	/* due date for the invoice */
+	double	ah_oriamt;	/* original amt for which invoice is raised */
+	double	ah_gramt;	/* gross amount inclusive of DM and CM */
+	double	ah_txpercent;	/* tax % on net amount */
+	double	ah_txamt;	/* tax amount on net amount */
+	double	ah_netamt;	/* net amount */
+	double	ah_balance;	/* payment outstanding against the invoice */
+	short	ah_period;	/* accounting period */
+	char	ah_remarks[21];	/* remarks on the invoice */
+	double  ah_gstpercent;	/* GST percentage	*/
+	double  ah_gstamt;	/* GST amount		*/

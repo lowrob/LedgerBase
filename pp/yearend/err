@@ -1,0 +1,6 @@
+	cc -g -c -I/disk2/lbase/include -DENGLISH crt_yr.c
+	cc -g crt_yr.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/crt_yr.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH roll_att.c
+	cc -g roll_att.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/roll_att.out
+	cc -g -c -I/disk2/lbase/include -DENGLISH roll_sen.c
+	cc -g roll_sen.o /disk2/lbase/dbh/libpp.a /lib/libfom.a  /lib/libuisam.a  -o /disk2/lbase/bin/roll_sen.out

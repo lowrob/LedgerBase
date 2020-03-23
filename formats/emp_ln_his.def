@@ -1,0 +1,7 @@
+	char	elh_numb[13] ;		/* Employee number    */
+	char	elh_code[7] ; 		/* CSB/Loan Code */
+	short	elh_seq ;		/* Sequence number    */
+	short	elh_pp;			/* Pay period		*/
+	long	elh_date;		/* Date of the transaction	*/
+	double	elh_amount;		/* Fixed/Percentage Amount	*/
+	double	elh_int_amt;		/* Interet amount		*/

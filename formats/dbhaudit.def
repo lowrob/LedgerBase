@@ -1,0 +1,11 @@
+	char	terminal[4] ;		/* Terminal Name */
+	char	user_id[11] ;		/* User Id */
+	char	program_id[11] ;	/* Program Id */
+	long	run_date ;		/* Date */
+	short	run_time ;		/* Time */
+	short	file_no;		/* DBH file Number */
+	short	field_no ;		/* Field# in Record */
+	short	iomode ;		/* Audit Mode. */
+	char	rec_key[26] ;		/* record Key */
+	char	old_value[51] ;		/* Old Value */
+	char	new_value[51] ;		/* New Value */

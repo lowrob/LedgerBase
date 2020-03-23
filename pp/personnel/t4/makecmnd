@@ -1,0 +1,6 @@
+make -f maketrep 2> err
+make -f maketadj 2>> err
+make -f maketdes 2>> err
+make -f maketprn 2>> err
+make -f maketsel 2>> err
+make -f maket4rp 2>> err

@@ -1,0 +1,6 @@
+	char	ppi_code[7] ;	 	/* Pay Period Code */
+	short	ppi_year;
+	short	ppi_numb ;		/* Pay Period Number */
+	long	ppi_st_date;		/* Pay Period start date */
+	long	ppi_end_date;		/* Pay Period end date */
+	short	ppi_mthly;		/* Monthly Pay Period */	

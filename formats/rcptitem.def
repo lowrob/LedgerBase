@@ -1,0 +1,5 @@
+	long	ritm_refno;		/* reference number */
+	long	ritm_seqno;		/* Sequence number */
+	long	ritm_invnumb;		/* Invoice number */
+	char	ritm_cust[11] ;		/* Customer unique code */
+	double	ritm_amount;		/* Receipt amount */

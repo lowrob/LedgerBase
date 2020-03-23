@@ -1,0 +1,351 @@
+HEADER
+SCREEN  t4_adj
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,34]  "T4 ADJUSTMENT" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,12]  "Employee #:" 
+
+ DISPLAY_MASK  [3,24] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UCASE,SHODUP,UESCAPE)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,70]  "Field:" 
+
+ DISPLAY_MASK  [3,77] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,2]  "1. Employee Name :" 
+
+ DISPLAY_MASK  [5,18] _(30) 
+STRING  X(30)
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,69]  "Status:" 
+
+ DISPLAY_MASK  [5,77] ___ 
+STRING  XXX
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,2]  "3. Employment Inc  :" 
+
+ DISPLAY_MASK  [7,23] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1050 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,38]  "CPP Exempt (Y/N):" 
+
+ DISPLAY_MASK  [7,56] _ 
+STRING  X
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,2]  "4. CPP Contribution:" 
+
+ DISPLAY_MASK  [8,23] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1150 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,38]  "UIC Exempt (Y/N):" 
+
+ DISPLAY_MASK  [8,56] _ 
+STRING  X
+LOG_ATTR (SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,2]  "5. UIC Premiums    :" 
+
+ DISPLAY_MASK  [9,23] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,2]  "6. Inc Tax Deducted:" 
+
+ DISPLAY_MASK  [10,23] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1350 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,38]  "Reg Pension Plan:" 
+
+ DISPLAY_MASK  [10,56] _(18) 
+STRING  X(18)
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,2]  "7. UIC Ins Earnings:" 
+
+ DISPLAY_MASK  [11,23] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1450 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,38]  "Pension Plan Num:" 
+
+ DISPLAY_MASK  [11,56] _(12) 
+STRING  X(12)
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,2]  "8. CPP Pen Earn    :" 
+
+ DISPLAY_MASK  [12,23] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,2]  "9. Housing Board and Lodging            :" 
+
+ DISPLAY_MASK  [14,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,1]  "10. Travel in a Prescribed Area          :" 
+
+ DISPLAY_MASK  [15,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,1]  "11. Personel Use of the Employer's Auto  :" 
+
+ DISPLAY_MASK  [16,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,1]  "12. Interest Free and Low Interest Loans :" 
+
+ DISPLAY_MASK  [17,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,1]  "13. Other Taxable Allowances and Benefits:" 
+
+ DISPLAY_MASK  [18,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,1]  "14. Employment Commissions               :" 
+
+ DISPLAY_MASK  [19,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,1]  "15. Union Dues                           :" 
+
+ DISPLAY_MASK  [20,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,1]  "16. Charitable Donations                 :" 
+
+ DISPLAY_MASK  [21,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [22,1]  "17. Pension Adjustment                   :" 
+
+ DISPLAY_MASK  [22,44] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP,UESCAPE)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+LOG_ATTR (SHODUP)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE,SHODUP)
+
+END
+
+ENDFILE

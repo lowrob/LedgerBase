@@ -1,0 +1,6 @@
+	char	pg_numb[13] ;		/* Employee number    */
+	char	pg_code[7] ; 		/* Garnishment Code */
+	short	pg_seq ;		/* Sequence number    */
+	short	pg_pp;			/* Pay period		*/
+	long	pg_date;		/* Date of the transaction	*/
+	long	pg_amount;		/* Fixed/Percentage Amount	*/

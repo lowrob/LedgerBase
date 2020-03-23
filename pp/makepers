@@ -1,0 +1,23 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=perset.o persetutl.o terminat.o inactive.o repatt.o
+
+CC=cc -g
+
+$E/perset.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/perset.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+perset.o  	: $I/bfs_defs.h
+
+persetutl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+terminat.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+inactive.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+repatt.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+

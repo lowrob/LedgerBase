@@ -1,0 +1,10 @@
+	char	bn_code[7] ; 		/* Benefit Code */
+	char	bn_pp_code[7] ;		/* Benefit Pay Period Code */
+	char	bn_desc[31] ;		/* Benefit description */
+	char	bn_inc[2] ;		/* Employee income  */	
+	char	bn_t4_fld[2] ;		/* T4 field code     */	
+	char	bn_amt_flag[2] ;	/* Amount flag: fixed or percentage */
+	double	bn_amount;  		/* Amount   */
+	char	bn_add_pp[5][2];	/* Add monthly pay period    */
+	short	bn_fund;		/* Fund 		 */
+	char	bn_acct[19] ;		/* G/L Account */

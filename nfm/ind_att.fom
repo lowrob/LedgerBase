@@ -1,0 +1,537 @@
+HEADER
+SCREEN  tmp_ind
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,28]  "INDIVIDUAL ATTENDANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,12]  "Employee #:" 
+
+ DISPLAY_MASK  [3,24] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,39]  "Month:" 
+
+ DISPLAY_MASK  [3,46] ## 
+NUMERIC   99
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,70]  "Field:" 
+
+ DISPLAY_MASK  [3,77] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    800 
+
+ PROMPT [4,1]  "------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,4]  "Employee Name:" 
+
+ DISPLAY_MASK  [5,19] _(40) 
+STRING  X(40)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,67]  "Status:" 
+
+ DISPLAY_MASK  [5,75] ____ 
+STRING  XXXX
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,26]  "1         2         3     Balance Sick:" 
+
+ DISPLAY_MASK  [7,66] ####.## 
+NUMERIC   S999.99
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,17]  "1234567890123456789012345678901    Balance Vac :" 
+
+ DISPLAY_MASK  [8,66] ####.## 
+NUMERIC   S999.99
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,11] ____ 
+STRING  XXXX
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,17] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,52]  "Sick Bank   :" 
+
+ DISPLAY_MASK  [9,66] ####.## 
+NUMERIC   S999.99
+
+END
+
+ FIELD    1600 
+
+ PROMPT [10,1]  "------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,58]  "Page:" 
+
+ DISPLAY_MASK  [11,64] ## 
+NUMERIC   99
+
+END
+
+ FIELD    1750 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [11,64] ## 
+NUMERIC   99
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,1]  "1 Date From :" 
+
+ DISPLAY_MASK  [12,15] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,26]  "To :" 
+
+ DISPLAY_MASK  [12,31] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,42]  "Code:" 
+
+ DISPLAY_MASK  [12,48] ___ 
+STRING  XXX
+LOG_ATTR (VALIDITY,UCASE,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,53]  "Hrs:" 
+
+ DISPLAY_MASK  [12,59]  ##.##
+NUMERIC  99.99 
+LOG_ATTR (VALIDITY,SUP_ZEROES,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,66]  "Status:" 
+
+ DISPLAY_MASK  [12,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,3]  "Replacement:" 
+
+ DISPLAY_MASK  [13,16] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,29]  "Name:" 
+
+ DISPLAY_MASK  [13,35] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,1]  "2 Date From :" 
+
+ DISPLAY_MASK  [15,15] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,26]  "To :" 
+
+ DISPLAY_MASK  [15,31] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,42]  "Code:" 
+
+ DISPLAY_MASK  [15,48] ___ 
+STRING  XXX
+LOG_ATTR (VALIDITY,UCASE,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR   # 
+
+ PROMPT [15,53]  "Hrs:" 
+
+ DISPLAY_MASK  [15,59]  ##.## 
+NUMERIC  99.99 
+LOG_ATTR (VALIDITY,SUP_ZEROES,UESCAPE,SHODUP)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [15,66]  "Status:" 
+
+ DISPLAY_MASK  [15,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,3]  "Replacement:" 
+
+ DISPLAY_MASK  [16,16] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,29]  "Name:" 
+
+ DISPLAY_MASK  [16,35] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,1]  "3 Date From :" 
+
+ DISPLAY_MASK  [18,15] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,26]  "To :" 
+
+ DISPLAY_MASK  [18,31] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,42]  "Code:" 
+
+ DISPLAY_MASK  [18,48] ___ 
+STRING  XXX
+LOG_ATTR (VALIDITY,UCASE,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,53]  "Hrs:"
+
+ DISPLAY_MASK  [18,59]  ##.## 
+NUMERIC  99.99 
+LOG_ATTR (VALIDITY,SUP_ZEROES,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [18,66]  "Status:" 
+
+ DISPLAY_MASK  [18,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,3]  "Replacement:" 
+
+ DISPLAY_MASK  [19,16] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,29]  "Name:" 
+
+ DISPLAY_MASK  [19,35] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,1]  "4 Date From :" 
+
+ DISPLAY_MASK  [21,15] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,26]  "To :" 
+
+ DISPLAY_MASK  [21,31] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    4100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,42]  "Code:" 
+
+ DISPLAY_MASK  [21,48] ___ 
+STRING  XXX
+LOG_ATTR (VALIDITY,UCASE,UESCAPE,SHODUP)
+
+END
+
+ FIELD    4200 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,53]  "Hrs:" 
+
+ DISPLAY_MASK  [21,59] ##.## 
+NUMERIC  99.99 
+LOG_ATTR (VALIDITY,SUP_ZEROES,UESCAPE,SHODUP)
+
+END
+
+ FIELD    4300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [21,66]  "Status:" 
+
+ DISPLAY_MASK  [21,74] ___ 
+STRING  XXX
+
+END
+
+ FIELD    4400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [22,3]  "Replacement:" 
+
+ DISPLAY_MASK  [22,16] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    4500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [22,29]  "Name:" 
+
+ DISPLAY_MASK  [22,35] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    4600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    4700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

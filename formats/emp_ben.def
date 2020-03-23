@@ -1,0 +1,4 @@
+	char	eb_numb[13] ;		/* Employee number    */
+	char	eb_code[7];		/* Benefit code		*/
+	char	eb_pp_code[7];		/* Pay Period code		*/
+	double	eb_amount;		/* Amount for the pay period	*/

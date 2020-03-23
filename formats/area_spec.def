@@ -1,0 +1,2 @@
+	char	ar_code[7] ; 		/* Area of Specialization Code */
+	char	ar_desc[31];

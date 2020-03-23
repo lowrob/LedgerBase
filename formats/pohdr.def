@@ -1,0 +1,18 @@
+	long	ph_code;		/* Purchase order number */
+	char	ph_supp_cd[11];		/* Supplier number */
+	char	ph_payee[11];		/* Payee number */
+	short	ph_billto;		/* Bill To Number */
+	short	ph_shipto;		/* Ship To Number */
+	char	ph_attention[16];	/* contact person */
+	char	ph_req_no[11];		/* Requisition number */
+	char	ph_status[1];		/* Status indicating deletion of PO or
+	char	ph_type[1] ;		/* Type of Purchase Order */
+	char	ph_print[1] ;		/* PO Print Status */
+	long	ph_date;		/* Purchase order date */
+	long	ph_due_date;		/* Purchase order due date */
+	short   ph_funds;		/* Purchase order fund no */
+	short	ph_period ;		/* Accounting Period */
+	double	ph_comm;		/* PO total committed amount. */	
+	long	ph_lqdate;		/* Date of liquidation of PO */
+	double	ph_lqamt;		/* Liquidated amount */
+	char	ph_gstmsg[1];		/* Gst Message print on po form */

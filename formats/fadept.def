@@ -1,0 +1,2 @@
+	char	code[5];	/* FA Dept Code code */
+	char	descp[31];	/* FA Dept Code description */

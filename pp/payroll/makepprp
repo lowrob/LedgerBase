@@ -1,0 +1,37 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=pprep.o ppreputl.o cheqreg.o empppben.o rpposition.o\
+ adjust.o jourlist.o pp_reg.o neg_pay.o earn_per.o earn_cod.o bal_pay.o
+
+CC=cc -g
+
+$E/pprep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/pprep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+pprep.o  	: $I/bfs_defs.h
+
+ppreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+cheqreg.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+empppben.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+rpposition.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+adjust.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+jourlist.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+pp_reg.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+neg_pay.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+earn_per.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+earn_cod.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+bal_pay.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 

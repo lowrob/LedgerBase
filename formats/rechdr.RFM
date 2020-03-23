@@ -1,0 +1,10 @@
+PROJECT: rechdr
+	RECORDS: 1 rechdr
+
+LOGICAL_RECORD: 1
+	NAME:          rechdr
+	TOTAL_RECORDS: 1
+	RECORD_NAMES:  1 rechdr
+	TOTAL_FORMATS: 0
+
+ENDFILE

@@ -1,0 +1,8 @@
+	char	pg_numb[13] ;		/* Employee number    */
+	short	pg_pr_cd ; 		/* Priority Code */
+	short	pg_seq ;		/* Sequence number    */
+	short	pg_pp;			/* Pay period		*/
+	short	pg_fund ;		/* Fund number    */
+	char	pg_acct[19] ;		/* Payroll G/L Account	*/
+	long	pg_date;		/* Date of the transaction	*/
+	double	pg_amount;		/* Fixed/Percentage Amount	*/

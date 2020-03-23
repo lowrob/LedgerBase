@@ -1,0 +1,23 @@
+	char	h_term[5] ;		/* Terminal */
+	short	h_batch ;		/* Batch# */
+	short	h_sno ;			/* Running Sno */
+	char	h_supp_cd[11] ; 	/* Supplier number */
+	char	h_invc_no[16] ;		/* Purchase invoice number */
+	char	h_tr_type[3] ;		/* IN,RT,CM,DM */
+	char	h_type[1] ;		/* D(irect Charge),B(ulk), N(on Bulk) */
+	char	h_pmtcode[1] ;		/*Open,Stop,Comp.,Relse HB,Part/Manual*/
+	char	h_accno[19] ;		/* bank account nbr for manual cheque */
+	char	h_remarks[21] ;		/* Invoice Remarks */
+	short   h_funds ;		/* Fund no */
+	short	h_period ;		/* Period */
+	long	h_po_no ;		/* Purchase Order Number */
+	long	h_invc_dt ;		/* Invoice date */
+	long	h_due_dt ;		/* Payment Due date */
+	long	h_chq_no ;		/* Latest Paid cheque# */
+	double	h_disc_per ;		/* Discount % */
+	double	h_disc_amt ;		/* Discount on Gross Amount */
+	double	h_amount ;		/* Gross amount (Without Discount) */
+	double	h_gsttax ;		/* GST Tax amount */
+	double	h_psttax ;		/* PST Tax amount */
+	double	h_part_amt ;		/* Partial Pmnt Amt/Manual Chq Paid */
+	char 	h_po_cmp[2];		/* Po complete (Y/N) */

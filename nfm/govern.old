@@ -1,0 +1,470 @@
+HEADER
+SCREEN  govern
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,26]  "GOVERNMENT PARAMETER FILE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,15]  "Effective Date:" 
+
+ DISPLAY_MASK  [3,31] ####/##/## 
+NUMERIC   9999F99F99
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,71]  "Field:" 
+
+ DISPLAY_MASK  [3,78] ## 
+NUMERIC   99
+
+END
+
+ FIELD    700 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,2]  "1. Federal Surtax Rate 1   :" 
+
+ DISPLAY_MASK  [5,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,43]  "2. Fed Surtax Limit    :" 
+
+ DISPLAY_MASK  [5,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,2]  "3. Federal Surtax Rate 2   :" 
+
+ DISPLAY_MASK  [6,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,43]  "4. Net Pers Tax Cr Rate:" 
+
+ DISPLAY_MASK  [6,68] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,2]  "5. CPP Income Tax Rate     :" 
+
+ DISPLAY_MASK  [7,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    # 
+
+ PROMPT [7,43]  "6. CPP Income Tax Max  :" 
+
+ DISPLAY_MASK  [7,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,43]  "7. CPP YTD Max Inc Tax :" 
+
+ DISPLAY_MASK  [8,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,2]  "8. UIC Income Tax Rate     :" 
+
+ DISPLAY_MASK  [9,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,43]  "9. UIC Income Tax Max  :" 
+
+ DISPLAY_MASK  [9,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,42]  "10. UIC YTD Max Inc Tax :" 
+
+ DISPLAY_MASK  [10,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,1]  "11. Prov Tax Reduction      :" 
+
+ DISPLAY_MASK  [11,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,42]  "12. Prov Surtax Rate    :" 
+
+ DISPLAY_MASK  [11,68] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,1]  "13. Provincial Tax Rate     :" 
+
+ DISPLAY_MASK  [12,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,42]  "14. Provincial Surtax   :" 
+
+ DISPLAY_MASK  [12,68] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,1]  "15. Prov Net Inc Tax Surtax :" 
+
+ DISPLAY_MASK  [13,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,42]  "16. Prov Surtax Limit   :" 
+
+ DISPLAY_MASK  [13,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,1]  "17. Provincial Flat Tax 1   :" 
+
+ DISPLAY_MASK  [14,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,42]  "18. Provincial Flat Tax2:" 
+
+ DISPLAY_MASK  [14,68] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,1]  "19. CPP Minimum Age         :" 
+
+ DISPLAY_MASK  [15,31] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,42]  "20. Yearly CPP Pen Earn :" 
+
+ DISPLAY_MASK  [15,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,1]  "21. CPP Maximum Age         :" 
+
+ DISPLAY_MASK  [16,31] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,42]  "22. Yearly CPP Max Contr:" 
+
+ DISPLAY_MASK  [16,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,1]  "23. CPP Regular Rate        :" 
+
+ DISPLAY_MASK  [17,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,42]  "24. CPP Basic Exemption :" 
+
+ DISPLAY_MASK  [17,68] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,1]  "25. UIC Emp Premium Rate    :" 
+
+ DISPLAY_MASK  [18,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,1]  "26. UIC Employer's Rate     :" 
+
+ DISPLAY_MASK  [19,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,42]  "27. Rev Can Tax Acc # 1 :" 
+
+ DISPLAY_MASK  [19,68] _(12) 
+STRING  X(12)
+LOG_ATTR (UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,1]  "28. Net Income Tax Rate     :" 
+
+ DISPLAY_MASK  [20,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [20,42]  "29. Rev Can Tax Acc # 2 :" 
+
+ DISPLAY_MASK  [20,68] _(12) 
+STRING  X(12)
+LOG_ATTR (UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,1]  "30. Social Benefit Repay %  :" 
+
+ DISPLAY_MASK  [21,31] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (VALIDITY,UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,42]  "31. Social Benefit Limit:" 
+
+ DISPLAY_MASK  [21,68] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+MASK_VIDEO (REVERSE)
+
+END
+
+ENDFILE

@@ -1,0 +1,7 @@
+	char	pb_numb[13] ;		/* Employee number    */
+	short	pb_pp;			/* Pay period		*/
+	long	pb_date;		/* Date of the transaction	*/
+	short	pb_fund ;		/* Fund number    */
+	char	pb_acct[19] ;		/* G/L Payroll Account	*/
+	char	pb_code[7];		/* Benefit code		*/
+	double	pb_amount;		/* Amount for the pay period	*/

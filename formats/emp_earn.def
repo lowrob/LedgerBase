@@ -1,0 +1,25 @@
+	char	en_numb[13] ;		/* Employee number    */
+	short	en_pp;			/* Pay period		*/
+	long	en_date;		/* Date of the transaction	*/
+	double	en_reg_units;		/* Regular units      */
+	double	en_high_units;		/* High units         */
+	double	en_reg_inc;		/* Reg income		*/
+	double	en_high_inc;		/* High income    */
+	double	en_def_inc;		/* Deffered income    */
+	double	en_cpp;			/* CPP contribution */
+	double	en_cpp_pen;		/* CPP pensionable earnings	*/
+	double	en_uic;			/* UIC premiums 	*/
+	double	en_reg1;		/* Registered pen plan contr rate1 */
+	double	en_reg2;		/* Registered pen plan contr rate2 */
+	double	en_reg3;		/* Registered pen plan contr rate3 */
+	double	en_tax;			/* Income tax		*/
+	double	en_net;			/* Net income	*/
+	long	en_chq_no;		/* Cheque No 		*/
+	char	en_chq_type[2];		/* Type M(anual) or R(egular) */
+	char	en_accno[19];		/* Account Number */
+	double	en_reg_prior;
+	double	en_reg_opt;
+	double	en_reg_nonm;
+	short	en_week;
+	short	en_year;		/* the year earnings were earned */
+	char	en_reg_pen[7];

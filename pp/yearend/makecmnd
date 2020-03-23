@@ -1,0 +1,3 @@
+make -f makecrty > err
+make -f makeratt >> err
+make -f makersen >> err

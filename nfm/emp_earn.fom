@@ -1,0 +1,508 @@
+HEADER
+SCREEN  emp_earn
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,30]  "EARNINGS MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,9]  "Employee # :" 
+
+ DISPLAY_MASK  [3,22] _(12) 
+STRING  X(12)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [3,36] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,69]  "Field:" 
+
+ DISPLAY_MASK  [3,76] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES)
+
+END
+
+ FIELD    800 
+
+ PROMPT [4,1]  "-------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,50]  "No Pay Per:" 
+
+ DISPLAY_MASK  [5,62] ## 
+NUMERIC   99
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [5,67]  "Status:" 
+
+ DISPLAY_MASK  [5,75] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,2]  "1. Deferred Income (P/F):" 
+
+ DISPLAY_MASK  [6,28] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [6,32] ###,###.## 
+NUMERIC   999F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [7,2]  "2. CPP Exempt (Y/N)     :" 
+
+ DISPLAY_MASK  [7,28] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,2]  "3. UIC Exempt (Y/N)     :" 
+
+ DISPLAY_MASK  [8,28] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    # 
+
+ PROMPT [8,45]  "YTD Income          :" 
+
+ DISPLAY_MASK  [8,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    # 
+
+ PROMPT [9,2]  "4. UIC Employee Rate    :" 
+
+ DISPLAY_MASK  [9,28] ###.#### 
+NUMERIC   999.9999
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [10,2]  "5. Reg Pension Plan     :" 
+
+ DISPLAY_MASK  [10,28] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,37] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,2]  "6. Reg Pension Prior    :" 
+
+ DISPLAY_MASK  [11,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ PROMPT [11,45]  "YTD Deffered Income :" 
+
+ DISPLAY_MASK  [11,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,2]  "7. Reg Pension Optional :" 
+
+ DISPLAY_MASK  [12,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,45]  "YTD CPP Contr       :" 
+
+ DISPLAY_MASK  [12,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,2]  "8. Reg Pension Non-Match:" 
+
+ DISPLAY_MASK  [13,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,45]  "CPP Pens Earnings   :" 
+
+ DISPLAY_MASK  [13,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,2]  "9. Fed Tax Exempt (Y/N) :" 
+
+ DISPLAY_MASK  [14,28] _ 
+STRING  X
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,45]  "UIC Premiums        :" 
+
+ DISPLAY_MASK  [14,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,1]  "10. Increase Tax Deduct  :" 
+
+ DISPLAY_MASK  [15,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    # 
+
+ PROMPT [15,45]  "UIC Ins Earnings    :" 
+
+ DISPLAY_MASK  [15,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,1]  "11. Other Federal Tax Cr :" 
+
+ DISPLAY_MASK  [16,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,45]  "Pen Plan Contr Rate1:" 
+
+ DISPLAY_MASK  [16,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,1]  "12. Housing Deduction    :" 
+
+ DISPLAY_MASK  [17,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,45]  "Pen Plan Contr Rate2:" 
+
+ DISPLAY_MASK  [17,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,1]  "13. Annual Deductions    :" 
+
+ DISPLAY_MASK  [18,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,45]  "Pen Plan Contr Rate3:" 
+
+ DISPLAY_MASK  [18,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,1]  "14. Family Allowance     :" 
+
+ DISPLAY_MASK  [19,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    # 
+
+ PROMPT [19,45]  "Pen Plan Contr Prior:" 
+
+ DISPLAY_MASK  [19,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,1]  "15. Old Age Security     :" 
+
+ DISPLAY_MASK  [20,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,45]  "Pen Plan Contr Opt  :" 
+
+ DISPLAY_MASK  [20,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,1]  "16. Inc Tax Union Ded    :" 
+
+ DISPLAY_MASK  [21,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,45]  "Pen Plan Non-Match  :" 
+
+ DISPLAY_MASK  [21,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4100 
+
+ MASK_CHAR    # 
+
+ PROMPT [22,1]  "17. Net Tax Credit       :" 
+
+ DISPLAY_MASK  [22,28] ##,###.## 
+NUMERIC   99F999.99
+LOG_ATTR (SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    4200 
+
+ MASK_CHAR    # 
+
+ PROMPT [22,45]  "YTD Income Tax      :" 
+
+ DISPLAY_MASK  [22,67] #,###,###.## 
+NUMERIC   9F999F999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    4400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

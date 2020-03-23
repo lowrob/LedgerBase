@@ -1,0 +1,14 @@
+make -f makecemp > err
+make -f makedelemp >> err
+make -f makeireact >> err
+make -f makematt >> err
+make -f makemroe >> err
+make -f makepperrp >> err
+make -f makepresen >> err
+make -f makeproe >> err
+make -f makeroea >> err
+make -f makeroed >> err
+make -f makeroes >> err
+make -f makesenaud >> err
+make -f makesenmnt >> err
+make -f makeupdtsen >> err

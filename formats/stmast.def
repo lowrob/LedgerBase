@@ -1,0 +1,28 @@
+	short	st_fund;		/* Fund to which stock belongs */
+	char	st_code[11];		/* Stock item code */
+	short	st_section;		/* Stock section number */
+	char	st_desc[31];		/* Description/Name of stock */
+	char	st_unit[7];		/* Unit of measurement */
+	double	st_on_hand;		/* Stock on hand */
+	double	st_on_order;		/* Stock on order */
+	double	st_po_ordqty;		/* Quantity committed from PO */
+	double	st_alloc;		/* Stock allocated */
+	double	st_paidfor;		/* Stock paid for */
+	double	st_rate;		/* Average price of a unit */
+	short	st_leaddays;		/* No. of leaddays for order */
+	double	st_committed;		/* Committed Amount from PO */
+	double	st_value;		/* Total value of the stock */
+	double	st_min;			/* Minimum Limit - Stock on hand */
+	double	st_max;			/* Maximum Limit - Stock on hand */
+	char	st_accno[19];		/* Default account associated */
+	long	st_lastdate;		/* Date of last receipt of stock */
+	double	st_y_opb;		/* This year opening balance */
+	double	st_y_iss;		/* This year issues */
+	double	st_y_rec;		/* This year receipts */
+	double	st_y_adj;		/* This year adjustments */
+	double	st_m_opb;		/* This month opening balance */
+	double	st_m_iss;		/* This month issues */
+	double	st_m_rec;		/* This month receipts */
+	double	st_m_adj;		/* This month adjustments */
+	double	st_bef_cnt;		/* Stock before physical count */
+	double	st_aft_cnt;		/* Stock after physical count */

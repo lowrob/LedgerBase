@@ -1,0 +1,10 @@
+	short	jr_fund ;		/* Fund number    */
+	short	jr_no ;			/* Item no	*/
+	long	jr_date;		/* Date of Transaction	*/
+	char	jr_acct[19] ;		/* G/L Payroll Account	*/
+	char	jr_emp_numb[13];	/* Employee Number	*/
+	char	jr_code[7];		/* Code			*/
+	char	jr_type[2];		/* Type */
+	double	jr_amount;		/* Amount of transaction*/
+	char	jr_class[7];		/* classification code*/
+	char	jr_pay_sen[2];		/* From payroll or seniority*/

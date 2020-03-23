@@ -1,0 +1,10 @@
+	short	jrh_fund ;		/* Fund number    */
+	short	jrh_no ;		/* Item no	*/
+	long	jrh_cheque ;		/* Cheque number	*/
+	long	jrh_date;		/* Date of Transaction	*/
+	char	jrh_acct[19] ;		/* G/L Payroll Account	*/
+	char	jrh_emp_numb[13];	/* Employee Number	*/
+	char	jrh_code[7];		/* Code			*/
+	char	jrh_type[2];		/* Type */
+	double	jrh_amount;		/* Amount of transaction*/
+	char	jrh_class[7];		/* classification code*/

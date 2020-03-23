@@ -1,0 +1,537 @@
+HEADER
+SCREEN  sen_par
+VERSION 1.0
+LANGUAGE C
+END
+
+ FIELD    100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [1,2] _(10) 
+STRING  X(10)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,24]  "SENIORITY PARAMETER MAINTENANCE" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    # 
+
+ PROMPT [1,63]  "Date:" 
+
+ DISPLAY_MASK  [1,69] ####/##/## 
+NUMERIC   9999F99F99
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,1]  "Fn:" 
+
+ DISPLAY_MASK  [3,5] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [3,9]  "Position:" 
+
+ DISPLAY_MASK  [3,19] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,28]  "Effective Date:" 
+
+ DISPLAY_MASK  [3,44] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (VALIDITY,UESCAPE,SHODUP)
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,70]  "Field:" 
+
+ DISPLAY_MASK  [3,77] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    800 
+
+ PROMPT [4,1]  "------------------------------------------------------------------------------" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [5,2]  "1. Max Number of Perm Days/Year:" 
+
+ DISPLAY_MASK  [5,35] ###.## 
+NUMERIC   999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [6,2]  "2. Number of Hours/Day         :" 
+
+ DISPLAY_MASK  [6,35] ###.## 
+NUMERIC   999.99
+LOG_ATTR (UESCAPE,SUP_ZEROES,SHODUP)
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,47]  "3. Bargaining Unit:" 
+
+ DISPLAY_MASK  [6,67] _(6) 
+STRING  X(6)
+LOG_ATTR (VALIDITY,UESCAPE,UCASE,SHODUP)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [7,47] _(30) 
+STRING  X(30)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [8,17]  "1         2         3" 
+
+ DISPLAY_MASK  [8,40] _ 
+STRING  X
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,8]  "1234567890123456789012345678901  POSSIBLE DAYS" 
+
+ DISPLAY_MASK  [9,56] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [10,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [11,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [11,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [11,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [12,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [12,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [12,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [13,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [13,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [13,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [14,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [14,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [14,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [15,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [15,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [15,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [16,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [16,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [16,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [17,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    4100 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [18,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    4300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [19,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    4400 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [19,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    4700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    4800 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [20,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    4900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,2] ___ 
+STRING  XXX
+
+END
+
+ FIELD    5000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,8] _(31) 
+STRING  X(31)
+
+END
+
+ FIELD    5100 
+
+ MASK_CHAR    # 
+
+ DISPLAY_MASK  [21,44] ###.## 
+NUMERIC   999.99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    5200 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,53]  "Date:" 
+
+ DISPLAY_MASK  [21,59] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (UESCAPE)
+
+END
+
+ FIELD    5300 
+
+ MASK_CHAR    # 
+
+ PROMPT [22,53]  "To:" 
+
+ DISPLAY_MASK  [22,59] ####/##/## 
+DATE    YYYYFMMFDD
+LOG_ATTR (UESCAPE)
+
+END
+
+ FIELD    5400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(77) 
+STRING  X(77)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    5500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,79] _ 
+STRING  X
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

@@ -1,0 +1,2 @@
+	char	i_code[3] ; 		/* Inactivation Code */
+	char	i_desc[31] ;		/* Inactivation description */

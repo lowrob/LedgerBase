@@ -1,0 +1,112 @@
+	char	em_numb[13] ;		/* Employee number    */
+	char	em_last_name[26] ;	/* Last name            */
+	char	em_first_name[16] ;	/* First name           */
+	char	em_mid_name[16] ;	/* Middle name          */
+	char	em_add1[31];		/* Address Line 1 */
+	char	em_add2[31];		/* Address Line 2 */
+	char	em_add3[31];		/* Address Line 3 */
+	char	em_add4[31];		/* Address Line 4 */
+	char	em_pc[11];		/* postal code */
+	char	em_sin[10];		/* sin         */
+	long	em_date;		/* birth date         */
+	char	em_sex[2];		/* sex */
+	char	em_mar_st[2];		/* Marital Status */
+	char	em_title[5];		/* Title          */
+	char	em_maid_name[16] ;	/* Maiden name  */
+	char	em_phone[11];		/* telephone number */
+	char	em_religion[3];		/* Religion code	*/
+	char	em_com[52];		/* Comment */
+	char	em_status[4];		/* Status */
+	char	em_pp_code[7];		/* Pay Period Code	*/
+	char	em_def_pf[2];		/* Deffered income Flag(P/F)  */
+	double	em_def_inc;		/* Deffered income    */
+	char	em_cpp_exp[2];		/* CPP exempt  */
+	char	em_uic_exp[2];		/* UIC exempt  */
+	char	em_tax_exp[2];		/* Tax exempt  */
+	char	em_reg_pen[7];		/* Registered Pens Plan    */
+	double	em_inc_tax;		/* Increased tax deduction */
+	double	em_other_fed;		/* Other federal tax credit */
+	double	em_union_dues;		/* Union dues   */
+	double	em_ho_ded;		/* Housing Deduction	*/
+	double	em_net_tax_cr;		/* Net tax credit       */
+	double	em_ann_ded;		/* Annual deduction     */
+	double	em_fam_all;   		/* Family Allowance     */
+	double	em_old_age;   		/* Old age security     */
+	short	em_last_pp;		/* Last Pay Period	*/
+	char	em_ben_cat[7];		/* Benefit category	*/
+	char	em_ded_cat[7];		/* Deduction category	*/
+	char	em_barg[7];		/* Bargaining unit code    */
+	char	em_pos[7];		/* Position code           */
+	double	em_perc;		/* Percentage           */
+	char	em_cert[6];		/* Certificate    */
+	short	em_level;		/* Level		*/
+	long	em_st_dt_ft;		/* Start date Ft      */
+	long	em_st_dt_pt;		/* Start date Pt      */
+	long	em_st_dt_ca;		/* Start date Ca      */
+	long	em_st_dt_su;		/* Start date Su      */
+	long	em_cont_dt;		/* Continuous date    */
+	long	em_app_dt;		/* Appointment date   */
+	short	em_ann;			/* Anniversary        */
+	char	em_lang[2];		/* Language Preffered  */
+	long	em_last_roe;		/* Last Record of employment   */
+	short	em_num_ins_wk;		/* Number of insurable weeks in */
+	char	em_un_tel[11];		/* Unlisted Telephone number   */
+	char	em_ins[2];		/* Insurance class     */
+	char	em_pre_paid[2];		/* Pre-paid		*/
+	long	em_term_dt;		/* Termination date   */
+	char	em_term[3];		/* Termination Code        */
+	double	em_vac_rate;		/* Vacation Pay rate       */
+	double	em_uic_rate;		/* UIC rate		*/
+	char	em_dir_dep[2];		/* Direct Deposit      */
+	char	em_bank[13] ;		/* Bank number    */
+	short	em_bank_acct ;		/* Bank account       */
+	short	em_cc ;			/* Cost center number */
+	char	em_chq_add1[31];	/* Cheque address line 1 */
+	char	em_chq_add2[31];	/* Cheque address line 2 */
+	char	em_chq_add3[31];	/* Cheque address line 3 */
+	char	em_chq_add4[31];	/* Cheque address line 4 */
+	char	em_chq_pc[8];		/* postal code */
+	char	em_cont[31];		/* contact person */
+	char	em_pre_lev[3];		/* Preffered Teaching level   */
+	double	em_sic_ent;		/* Sick days entitled 		*/
+	double	em_sic_bk;		/* Sick bank		*/
+	double	em_vac_bk;		/* Vacation bank    	*/
+	double	em_vac_ent;		/* Vacation entitled 	*/
+	long	em_exp;			/* Days/years experience	*/
+	long	em_yrs_out;		/* Years oustside of prov/state	*/
+	long	em_days_exp;		/* Days experience		*/
+	long	em_yrs_exp;		/* Years experience	 	*/
+	long	em_ini_casf;		/* Initial casual flag		*/
+	long	em_ini_casu;		/* Initial casual units		*/	
+	long	em_per_yrs;		/* Initial permanent years	*/
+	long	em_per_days;		/* Initial permanent days	*/
+	double	em_mth_vac;
+	double	em_mth_sic;
+	double	em_bal_sic;
+	double	em_bal_vac;
+	double	em_reg_prior;
+	double	em_reg_opt;
+	double	em_reg_nonm;
+	double	em_sck_acc[12];		/* the sick accrual for each month */
+	double	em_vac_acc[12];		/* the vac accrual for each month */
+	short	em_pref_cc;		/* Cost Center preference */
+	char	em_comm[12][28];	/* Comments */
+	char	em_inst[5][16];		/* Institution */
+	char	em_prog[5][16];		/* Program */
+	double	em_sen_perc;		/* Employee's seniority percent */
+	short	em_yrs_out_dist;	/* sen years out of district */
+	short	em_yrs_out_prov;	/* sen years out of province */
+	double	em_days_out_dist;	/* sen days out of district */
+	double	em_days_out_prov;	/* sen days out of province */
+	double	em_cas_hrs;	/* sen casual hours */
+	double	em_cas_days;	/* sen casual days */
+	double	em_perm_days;	/* sen perm days */
+	double	em_cas_tot_days;	/* sen casual total days */
+	short	em_cas_tot_yrs;		/* sen cas total yrs */
+	short	em_per_tot_yrs;		/* sen perm total yrs */
+	double	em_per_tot_days;	/* sen perm total days */
+	char	em_cntrct_stat[2];	/* contract status */
+	char	em_emerg_cntct[31];	/* emergency contact name */
+	char	em_emerg_tel[11];	/* emergency contact tel */
+	short	em_no_depends;		/* nbr of dependants */
+	char	em_class[7];		/* class code */

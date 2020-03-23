@@ -1,0 +1,7 @@
+	char	eah_numb[13] ;		/* Employee number    */
+	char	eah_code[4] ; 		/* Attendance code	 */
+	long	eah_date;		/* Date of the transaction	*/
+	char	eah_teach[13] ;		/* Teacher number    */
+	double	eah_sen_hours ;		/* Employee sen hours */
+	double 	eah_hours ;		/* Employee hours absent */
+	char	eah_vacproc[2];	/*Y when code is deduct from vac bank & done*/
