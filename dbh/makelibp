@@ -1,0 +1,64 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+L=$(HOME)/dbh/libpp.a
+CC=cc 
+
+.PRECIOUS : $L
+
+$L	: $L(recio.o) $L(misc.o) $L(err_chk.o) $L(tedit.o) $L(repgen.o) \
+	$L(dbhpp.o) $L(dbhcom.o) $L(switch.o) $L(hlp_com.o) \
+        $L(hlp_pp.o) \
+	$L(audit.o) $L(formpath.o) $L(getflds.o) $L(jrnl_dbh.o) $L(bld_indx.o) \
+	$L(isutils.o) $L(execute.o) $L(security.o) $L(profomfn.o) \
+	$L(pay_sec.o)
+#	ranlib $L
+
+.c.a	:
+	$(CC) -c -I$I -DENGLISH $*.c
+	ar rv $L $*.o
+	rm $*.o
+
+$L(recio.o) : $I/dberror.h $I/filein.h /usr/include/isnames.h \
+	$I/bfs_defs.h
+
+$L(bld_indx.o) : $I/filein.h /usr/include/isnames.h \
+	$I/bfs_defs.h
+
+$L(jrnl_dbh.o) : $I/dberror.h $I/filein.h $I/journal.h $I/bfs_defs.h
+
+$L(misc.o) : $I/bfs_defs.h $I/bfs_recs.h
+
+$L(err_chk.o) : $I/bfs_defs.h /usr/include/cfomstrc.h
+
+$L(tedit.o) : $I/repdef.h
+
+$L(repgen.o) : $I/bfs_defs.h $I/repdef.h
+
+$L(dbhpp.o) : $I/bfs_defs.h $I/bfs_pp.h
+
+$L(dbhcom.o) : $I/bfs_defs.h $I/bfs_com.h
+
+$L(switch.o) : $I/bfs_defs.h
+
+$L(hlp_com.o) : $I/bfs_defs.h $I/bfs_recs.h \
+		/usr/include/cfomtm.h /usr/include/cfomtcr.h
+
+$L(hlp_pp.o) : $I/bfs_defs.h $I/bfs_pp.h $I/bfs_com.h \
+		/usr/include/cfomtm.h /usr/include/cfomtcr.h
+
+$L(audit.o) : $I/bfs_defs.h $I/bfs_recs.h $I/fld_defs.h
+
+$L(formpath.o) : $I/bfs_defs.h
+
+$L(getflds.o) : $I/bfs_defs.h $I/fld_defs.h
+
+$L(isutils.o) : $I/bfs_defs.h $I/filein.h $I/dberror.h
+
+$L(execute.o) : $I/bfs_defs.h
+
+$L(security.o) : $I/bfs_defs.h $I/bfs_recs.h $I/dberror.h
+
+$L(profomfn.o) : $I/bfs_defs.h /usr/include/cfomstrc.h
+
+$L(pay_sec.o) : $I/bfs_defs.h $I/bfs_com.h $I/bfs_pp.h \
+		$I/dberror.h

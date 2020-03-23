@@ -1,0 +1,4 @@
+make -f makelib  2>err
+make -f makelibp 2>>err
+make -f makeinit 2>>err
+make -f makecrt  2>>err

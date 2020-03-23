@@ -1,0 +1,13 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a $(HOME)/dbh/libpp.a /lib/libuisam.a
+E=$(HOME)/bin/init_id.out
+CC=cc 
+
+$E	: init_id.o $(LIBS)
+	$(CC) init_id.o $(LIBS) -o $E
+	$E
+
+init_id.o : init_id.c $I/bfs_defs.h $I/bfs_pp.h $I/bfs_com.h $I/bfs_recs.h \
+		 $I/filein.h
+	$(CC) -c -I$I -DENGLISH init_id.c
+
