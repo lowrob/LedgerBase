@@ -1,0 +1,14 @@
+I=$(HOME)/include
+E=$(HOME)/bin/chqhisma.out
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/librp.a /lib/libuisam.a
+OBJECTS=chqhisma.o cashchq.o
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h
+

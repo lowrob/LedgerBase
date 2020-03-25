@@ -1,0 +1,18 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/librp.a /lib/libuisam.a
+OBJECTS=chqrep.o apreputl.o chqcirc.o 
+
+CC=cc
+
+$E/chqrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/chqrep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+chqrep.o  	: $I/bfs_defs.h $I/bfs_recs.h
+
+apreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+chqcirc.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h

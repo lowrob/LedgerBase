@@ -1,0 +1,17 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS1=deselect.o invcheck.o
+OBJECTS2=dselrep.o
+E=$(HOME)/bin/deselect.out
+CC=cc
+
+$E	: $(OBJECTS1) $(OBJECTS2) $(LIBS)
+	$(CC) $(OBJECTS1) $(OBJECTS2) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS1) : $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h
+
+$(OBJECTS2) : $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+

@@ -1,0 +1,6 @@
+make -f makecust 2>err
+make -f makearsi 2>>err
+make -f makenonr 2>>err
+make -f makerece 2>>err
+make -f makearre 2>>err
+make -f makeapply 2>>err

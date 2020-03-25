@@ -1,0 +1,18 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/librp.a /lib/libuisam.a
+OBJECTS=aprep1.o apreputl.o invlabels.o
+
+CC=cc
+
+$E/aprep1.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/aprep1.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+aprep1.o  	: $I/bfs_defs.h
+
+apreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+invlabels.o     : $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h

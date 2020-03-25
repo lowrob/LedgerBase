@@ -1,0 +1,37 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=arrep.o arreputl.o custrpt.o clabels.o agecust.o custstat.o \
+	artrlist.o  rcptlist.o custpurg.o nrcptlst.o prntinv.o custlst.o
+CC=cc -g
+
+$E/arrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/arrep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+arrep.o  	: $I/bfs_defs.h
+
+arreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+custrpt.o	: $I/bfs_defs.h $I/bfs_recs.h
+
+clabels.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+agecust.o	: $I/bfs_defs.h $I/bfs_recs.h $I/reports.h
+
+custstat.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+custlst.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+artrlist.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+rcptlist.o	: $I/bfs_defs.h $I/bfs_recs.h 
+
+custpurg.o	: $I/bfs_defs.h $I/bfs_recs.h 
+
+nrcptlst.o	: $I/bfs_defs.h $I/bfs_recs.h 
+
+prntinv.o 	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+

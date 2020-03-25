@@ -1,0 +1,14 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/librp.a /lib/libuisam.a
+OBJECTS=cashmain.o cashchq.o
+E=$(HOME)/bin/cashmain.out
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) : cashmain.c cashchq.c $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h
+

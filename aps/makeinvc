@@ -1,0 +1,17 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a /lib/librp.a
+OBJECTS1=apinvc.o apinvc12.o apinvc3.o holdback.o payment.o apcom.o chqcheck.o
+OBJECTS2=aptotals.o apinvrep.o
+E=$(HOME)/bin/apinvc.out
+CC=cc -g
+
+$E	: $(OBJECTS1) $(OBJECTS2) $(LIBS)
+	$(CC) $(OBJECTS1) $(OBJECTS2) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS1) : $I/bfs_defs.h $I/bfs_recs.h $I/apinvc.h /usr/include/cfomstrc.h
+
+$(OBJECTS2) : $I/bfs_defs.h $I/bfs_recs.h $I/apinvc.h $I/repdef.h
+

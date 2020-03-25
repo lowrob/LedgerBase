@@ -1,0 +1,18 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/librp.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=cheque.o chqreg.o chqupdt.o invcheck.o
+E=$(HOME)/bin
+CC=cc -g
+
+$E/cheque.out	: $(OBJECTS) $(LIBS)
+		$(CC) $(OBJECTS) $(LIBS) -o $E/cheque.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+cheque.o: $I/bfs_defs.h $I/bfs_recs.h $I/reports.h /usr/include/cfomstrc.h
+
+chqreg.o: $I/bfs_defs.h $I/bfs_recs.h $I/reports.h 
+
+chqupdt.o: $I/bfs_defs.h $I/bfs_recs.h  
+
