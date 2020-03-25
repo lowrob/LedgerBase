@@ -1,0 +1,23 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=farep.o fareputl.o farep1.o farep2.o farpt.o fabyroom.o
+CC=cc
+
+$E/farep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/farep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+farep.o  	: $I/bfs_defs.h
+
+fareputl.o	: $I/bfs_defs.h /usr/include/cfomstrc.h 
+
+farep1.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h $I/bfs_fa.h
+
+farep2.o	: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_fa.h
+
+farpt.o		: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_fa.h
+
+fabyroom.o	: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_fa.h

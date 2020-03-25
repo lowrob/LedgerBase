@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=convrhdr.o
+CC=cc
+
+$E/convrhdr.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/convrhdr.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :convrhdr.c $I/bfs_defs.h $I/bfs_recs.h
+

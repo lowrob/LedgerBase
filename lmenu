@@ -1,0 +1,39 @@
+trap "echo " 2
+while true
+do
+	clear
+	echo "\n\n\n"
+	echo "\t\t\t\tM E N U"
+	echo "\t\t\t\t======="
+	echo "\t\t\t\tE.  EXIT"
+	echo
+	echo "\t\t\t1.  ATTENDANCE REPORTS (Personnel)"
+	echo
+	echo "\t\t\t2.  DAILY ATTENDANCE (Personnel)"
+	echo
+	echo "\t\t\t3.  ATTENDANCE MAINTENANCE (Employee)"
+	echo
+	echo "\t\t\t4.  INDIVIDUAL ATTENDANCE (Personnel)"
+	echo
+	echo "\t\t\t5.  MASS ATTENDANCE (Personnel)"
+	echo
+	echo "\t\t\t6.  PRINT CHEQUES	(Payroll)"
+	echo
+	echo "\t\t\t7.  TIME ENTRY MAINTENANCE (Payroll)"
+	echo
+	echo "\t\t\t\tOPTION?  \c"
+	read option
+	case $option in
+		[Ee])exit;;
+		1) tattrep.out -d99 -tW85;;
+		2) tdail_att.out -d99 -tW85;;
+		3) temployee.out~-s1~-s5 -d99 -tW85;;
+		4) tind_att.out -d99 -tW85;;
+		5) tmass_att.out -d99 -tW85;;
+		6) tpay_cheque.out -d99 -tW85;;
+		7) ttime.out -d99 -tW85;;
+		*) echo "NOT A VALID OPTION"; sleep 1;;
+	esac
+done
+
+

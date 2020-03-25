@@ -1,0 +1,38 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=porep1.o poreputl.o prntpo.o pobypono.o pobysupp.o pobyacct.o supprpt.o poaged.o pooutstd.o  suppurge.o slabels.o supplst.o invlabels.o
+
+CC= cc -g
+
+$E/porep1.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/porep1.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+porep1.o  	: $I/bfs_defs.h
+
+poreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+prntpo.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+pobypono.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+pobysupp.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+pobyacct.o	: $I/bfs_defs.h $I/bfs_recs.h
+
+supprpt.o	: $I/bfs_defs.h $I/bfs_recs.h
+
+poaged.o	: $I/bfs_defs.h $I/bfs_recs.h
+
+pooutstd.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+suppurge.o	: $I/bfs_defs.h $I/bfs_recs.h
+
+slabels.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+supplst.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+invlabels.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h

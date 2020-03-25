@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=convstck.o
+CC=cc
+
+$E/convstck.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/convstck.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :convstck.c $I/bfs_defs.h $I/bfs_recs.h
+

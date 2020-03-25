@@ -1,0 +1,26 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+L=$(HOME)/requ/librequ.a
+CC=cc -g
+
+.PRECIOUS : $L
+
+$L	: $L(calcreq.o) $L(calctax.o) $L(settax.o) $L(stckreq.o) $L(calcomm.o)\
+		$L(reqproc.o)
+
+.c.a	:
+	$(CC) -c -I$I -DENGLISH $*.c
+	ar rv $L $*.o
+	rm $*.o
+
+$L(calcreq.o) : $I/bfs_defs.h $I/bfs_recs.h $I/requ.h
+
+$L(calctax.o) : $I/bfs_defs.h $I/bfs_recs.h $I/requ.h
+
+$L(settax.o) : $I/bfs_defs.h $I/bfs_recs.h $I/requ.h
+
+$L(stckreq.o) : $I/bfs_defs.h $I/bfs_recs.h $I/requ.h
+
+$L(calcomm.o) : $I/bfs_defs.h $I/bfs_recs.h $I/requ.h
+
+$L(reqproc.o) : $I/bfs_defs.h $I/bfs_recs.h $I/requ.h $I/linklist.h

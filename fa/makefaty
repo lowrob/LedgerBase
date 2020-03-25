@@ -1,0 +1,14 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=fatype.o
+CC=cc
+
+$E/fatype.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/fatype.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h
+

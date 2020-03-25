@@ -1,0 +1,14 @@
+I=$(HOME)/include
+E=$(HOME)/bin/convall.out    
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=convall.o     
+CC=cc -g
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : convall.c $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h 
+

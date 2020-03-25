@@ -1,0 +1,38 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libpp.a $(HOME)/dbh/libbfs.a /lib/librp.a /lib/libfom.a \
+		/lib/libuisam.a $(HOME)/requ/librequ.a
+OBJECTS=monthend.o eod_list.o stclose.o custstat.o custend.o\
+	popurge.o pobypono.o reqpurge.o reqbyno.o 
+E=$(HOME)/bin/monthend.out
+CC=cc -g
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+monthend.o : $I/bfs_defs.h $I/bfs_recs.h $I/requ.h
+
+eod_list.o : $I/bfs_defs.h $I/bfs_recs.h
+
+stclose.o : ../inv/stclose.c $I/bfs_defs.h $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH ../inv/stclose.c
+
+custstat.o : ../ars/custstat.c $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+	$(CC) -c -I$I -DENGLISH ../ars/custstat.c
+
+custend.o : ../ars/custend.c $I/bfs_defs.h $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH ../ars/custend.c
+
+popurge.o : ../po/popurge.c $I/bfs_defs.h $I/bfs_recs.h  
+	$(CC) -c -I$I -DENGLISH ../po/popurge.c
+
+pobypono.o : ../po/pobypono.c $I/bfs_defs.h $I/bfs_recs.h  
+	$(CC) -c -I$I -DENGLISH ../po/pobypono.c
+
+reqpurge.o : ../requ/reqpurge.c $I/bfs_defs.h $I/bfs_recs.h $I/requ.h 
+	$(CC) -c -I$I -DENGLISH ../requ/reqpurge.c
+
+reqbyno.o : ../requ/reqbyno.c $I/bfs_defs.h $I/bfs_recs.h $I/requ.h 
+	$(CC) -c -I$I -DENGLISH ../requ/reqbyno.c

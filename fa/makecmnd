@@ -1,0 +1,5 @@
+make -f makefama 2>err
+make -f makefaty 2>>err
+make -f makefade 2>>err
+make -f makefatr 2>>err
+make -f makefare 2>>err

@@ -1,0 +1,32 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/librp.a  /lib/libuisam.a
+OBJECTS=yearend.o eod_list.o poyend.o suppyend.o stclose.o \
+	custend.o pobypono.o
+E=$(HOME)/bin/yearend.out
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+yearend.o : $I/bfs_defs.h $I/bfs_recs.h
+
+eod_list.o : $I/bfs_defs.h $I/bfs_recs.h
+
+stclose.o : ../inv/stclose.c $I/bfs_defs.h $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH ../inv/stclose.c
+
+custend.o : ../ars/custend.c $I/bfs_defs.h $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH ../ars/custend.c
+
+poyend.o : ../po/poyend.c $I/bfs_defs.h $I/bfs_recs.h  
+	$(CC) -c -I$I -DENGLISH ../po/poyend.c
+
+suppyend.o : ../po/suppyend.c $I/bfs_defs.h $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH ../po/suppyend.c
+
+pobypono.o : ../po/pobypono.c $I/bfs_defs.h $I/bfs_recs.h  
+	$(CC) -c -I$I -DENGLISH ../po/pobypono.c
+

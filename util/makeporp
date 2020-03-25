@@ -1,0 +1,13 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a /lib/librp.a
+OBJECTS=porp.o
+E=$(HOME)/bin/porp.out
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+porp.o : $(I)/bfs_defs.h $(I)/bfs_recs.h

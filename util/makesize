@@ -1,0 +1,12 @@
+I=$(HOME)/include
+LIBS=
+E=$(HOME)/bin/sizes.out
+CC=cc
+
+$E	: sizes.o $(LIBS)
+	$(CC) sizes.o $(LIBS) -o $E
+	$E
+
+sizes.o : sizes.c $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH sizes.c
+

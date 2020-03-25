@@ -1,0 +1,19 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a /lib/librp.a
+OBJECTS=rgmain.o rgixinfo.o rgprint.o
+E=$(HOME)/bin/rgmain.out
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+rgmain.o   : $I/bfs_defs.h $I/bfs_recs.h $I/indxbld.h $I/fld_defs.h \
+		/usr/include/cfomstrc.h
+
+rgixinfo.o : $I/bfs_defs.h $I/indxbld.h $I/fld_defs.h /usr/include/cfomstrc.h
+
+rgprint.o : $I/bfs_defs.h $I/bfs_recs.h
+

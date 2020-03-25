@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=podeltend.o
+CC=cc -g
+
+$E/podeltend.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/podeltend.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :podeltend.c $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h 
+

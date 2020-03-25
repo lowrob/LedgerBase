@@ -1,0 +1,13 @@
+I=$(HOME)/include
+LIBS=$(HOME)/requ/librequ.a $(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=reqbdinq.o
+E=$(HOME)/bin/reqbdinq.out
+CC=cc -g
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h

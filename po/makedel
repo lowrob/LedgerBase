@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=podelete.o
+CC=cc -g
+
+$E/podelete.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/podelete.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :podelete.c $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h 
+

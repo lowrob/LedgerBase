@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=poconvD20.o
+CC=cc
+
+$E/poconv.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/poconvD20.out
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) :poconvD20.c $I/bfs_defs.h $I/bfs_recs.h
+

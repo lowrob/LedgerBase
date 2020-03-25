@@ -1,0 +1,31 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=glrep1.o reputils.o  registr.o trial.o bsheet.o\
+	jon.o journal.o chart.o suppgst.o
+CC=cc
+
+$E/glrep3.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/glrep3.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+glrep1.o  	: $I/bfs_defs.h
+
+reputils.o	: $I/bfs_defs.h /usr/include/cfomstrc.h 
+
+registr.o	: $(I)/bfs_defs.h $(I)/bfs_recs.h
+
+chart.o		: $(I)/bfs_defs.h $(I)/bfs_recs.h $I/section.h
+
+trial.o		: $(I)/bfs_defs.h $(I)/bfs_recs.h $I/section.h
+
+bsheet.o	: $(I)/bfs_defs.h $(I)/bfs_recs.h
+
+jon.o		: $(I)/bfs_defs.h $(I)/bfs_recs.h $I/repdef.h $I/section.h
+
+journal.o	: $(I)/bfs_defs.h $(I)/bfs_recs.h
+
+suppgst.o	: $(I)/bfs_defs.h $(I)/bfs_recs.h
+

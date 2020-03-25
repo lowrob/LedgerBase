@@ -1,0 +1,14 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=convars.o
+E=$(HOME)/bin/convars.out
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) : $I/bfs_defs1.h $I/bfs_recs1.h /usr/include/cfomstrc.h
+

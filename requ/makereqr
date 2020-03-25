@@ -1,0 +1,48 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a $(HOME)/requ/librequ.a /lib/libfom.a /lib/librp.a \
+	/lib/libuisam.a
+OBJECTS=reqrep.o reqreputl.o supprpt.o supplst.o reqbyno.o reqbystck.o \
+	reqbysupp.o reqbyccno.o reqbyacct.o stockrep.o reqaged.o procreq.o \
+	disrep.o prntreq.o reqaudit.o
+
+CC=cc
+
+$E/reqrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/reqrep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+reqrep.o  	: $I/bfs_defs.h $I/bfs_recs.h $I/requ.h
+
+reqreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+supprpt.o : ../po/supprpt.c $I/bfs_defs.h $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH ../po/supprpt.c
+
+supplst.o : ../po/supplst.c $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+	$(CC) -c -I$I -DENGLISH ../po/supplst.c
+
+reqbyno.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h $I/requ.h
+
+reqbysupp.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h $I/requ.h
+
+reqbyccno.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h $I/requ.h
+
+reqbyacct.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h $I/requ.h
+
+reqaged.o	: $I/bfs_defs.h $I/bfs_recs.h $I/requ.h
+
+procreq.o	: $I/bfs_defs.h $I/bfs_recs.h $I/requ.h $I/repdef.h
+
+reqbystck.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h $I/requ.h
+
+stockrep.o	: $I/bfs_defs.h $I/bfs_recs.h
+
+disrep.o	: $I/bfs_defs.h $I/bfs_recs.h $I/requ.h $I/repdef.h
+
+prntreq.o	: $I/bfs_defs.h $I/bfs_recs.h $I/requ.h $I/repdef.h
+
+reqaudit.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h $I/requ.h
+

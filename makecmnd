@@ -1,0 +1,23 @@
+cd $HOME/dbh
+makecmnd
+cd $HOME/util
+makecmnd
+cd $HOME/gl
+makecmnd
+cd $HOME/po
+makecmnd
+cd $HOME/requ
+makecmnd
+cd $HOME/aps
+makecmnd
+cd $HOME/inv
+makecmnd
+cd $HOME/ars
+makecmnd
+cd $HOME/fa
+makecmnd
+cd $HOME/pp
+makecmnd
+cd $HOME/tender
+makecmnd
+cd $HOME

@@ -1,0 +1,6 @@
+make -f makesupp 2>err
+make -f makepo  2>>err
+make -f makedel 2>>err
+make -f makepor1 2>>err
+make -f makeporeq 2>>err
+make -f makedelr 2>> err

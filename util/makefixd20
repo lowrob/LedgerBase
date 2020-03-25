@@ -1,0 +1,13 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a 
+OBJECTS=glfixd20.o
+E=$(HOME)/bin/glfixd20.out
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+glfixd20.o : $(I)/bfs_defs.h $(I)/bfs_recs.h

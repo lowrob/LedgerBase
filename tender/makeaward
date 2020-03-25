@@ -1,0 +1,13 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a /lib/librp.a
+OBJECTS=award.o
+CC=cc -g
+
+$E/award.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/award.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :award.c $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h 

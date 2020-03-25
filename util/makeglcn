@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=convgl.o
+CC=cc
+
+$E/convgl.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/convgl.out
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) :convgl.c $I/bfs_defs1.h $I/bfs_recs1.h
+

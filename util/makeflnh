@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libuisam.a
+OBJECTS=fixloanh.o
+CC=cc
+
+$E/fixloanh.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/fixloanh.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :fixloanh.c $I/bfs_defs.h $I/bfs_recs.h
+

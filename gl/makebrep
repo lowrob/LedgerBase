@@ -1,0 +1,26 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=bdgt_rep.o bdgt_tit.o bdgt_det.o bdgt_com.o bdgt_sum.o bdgt_dis.o
+E=$(HOME)/bin/bdgt_rep.out
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+bdgt_rep.o : $(I)/bdgt_rep.h $(I)/bfs_defs.h $(I)/bfs_recs.h $(I)/repdef.h \
+	/usr/include/cfomstrc.h
+
+bdgt_tit.o : $(I)/bdgt_rep.h $(I)/bfs_defs.h $(I)/bfs_recs.h \
+	/usr/include/isnames.h
+
+bdgt_det.o : $(I)/bdgt_rep.h $(I)/bfs_defs.h $(I)/bfs_recs.h $(I)/repdef.h
+
+bdgt_sum.o : $(I)/bdgt_rep.h $(I)/bfs_defs.h $(I)/bfs_recs.h $(I)/repdef.h
+
+bdgt_dis.o : $(I)/bdgt_rep.h $(I)/bfs_defs.h $(I)/bfs_recs.h $(I)/repdef.h
+
+bdgt_com.o : $(I)/bdgt_rep.h $(I)/bfs_defs.h $(I)/bfs_recs.h
+

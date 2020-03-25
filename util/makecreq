@@ -1,0 +1,17 @@
+I=$(HOME)/include
+AI=/usr/acct/sbase/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a  /lib/libuisam.a
+OBJECTS=c_reque.o convutil.o
+CC=cc
+
+$E/c_fund.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/c_reque.out
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+c_reque.o : $AI/sb_defs.h $AI/sb_recs.h /usr/include/isnames.h $I/convtype.h
+
+convutil.o : /usr/include/isnames.h $I/convtype.h
+

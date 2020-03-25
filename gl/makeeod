@@ -1,0 +1,37 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/librp.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=eod.o endutil.o postrec.o audrep.o eod_list.o tranlist.o artrlist.o \
+	rcptlist.o farep2.o
+
+CC=cc
+
+$E/eod.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/eod.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+eod.o	: $I/bfs_defs.h $I/bfs_recs.h $I/reports.h
+
+endutil.o: $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h 
+
+postrec.o: $I/bfs_defs.h $I/bfs_recs.h
+
+audrep.o: $I/bfs_defs.h $I/bfs_recs.h $I/reports.h $I/repdef.h $I/fld_defs.h \
+	/usr/include/isnames.h
+
+eod_list.o: $I/bfs_defs.h $I/bfs_recs.h
+
+tranlist.o : ../inv/tranlist.c $I/bfs_defs.h $I/bfs_recs.h $I/bfs_inv.h
+	$(CC) -c -I$I -DENGLISH ../inv/tranlist.c
+
+artrlist.o : ../ars/artrlist.c $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+	$(CC) -c -I$I -DENGLISH ../ars/artrlist.c
+
+rcptlist.o : ../ars/rcptlist.c $I/bfs_defs.h $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH ../ars/rcptlist.c
+
+farep2.o : ../fa/farep2.c $I/bfs_defs.h $I/bfs_recs.h $I/bfs_fa.h
+	$(CC) -c -I$I -DENGLISH ../fa/farep2.c
+

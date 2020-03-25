@@ -1,0 +1,15 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/requ/librequ.a $(HOME)/requ/liblink.a $(HOME)/dbh/libbfs.a \
+	/lib/libfom.a /lib/libuisam.a
+OBJECTS=reqmerge.o
+CC=cc -g
+
+$E/reqmerge.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/reqmerge.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :reqmerge.c $I/bfs_defs.h $I/bfs_recs.h $I/requ.h \
+		/usr/include/cfomstrc.h 

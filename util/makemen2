@@ -1,0 +1,16 @@
+I=$(HOME)/include
+E=$(HOME)/bin/menuscrn2.out
+LIBS=/lib/libfom.a $(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=menuscrn2.o 
+CC=cc
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+# Set UID on execution bit for semaphore removal by all group members
+#	chmod u+s $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h
+

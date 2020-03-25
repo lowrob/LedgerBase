@@ -1,0 +1,15 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a  /lib/libuisam.a  /lib/librp.a
+OBJECTS=jrentnfld.o jraudit.o
+CC=cc -g
+
+$E/jrentry.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/jrentry.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :jrentnfld.c $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h 
+
+$(OBJECTS) :jraudit.c $I/bfs_defs.h $I/bfs_recs.h

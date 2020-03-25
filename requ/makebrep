@@ -1,0 +1,34 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=reqbdrep.o bdgt_tit.o bdgt_det.o bdgt_com.o bdgt_sum.o bdgt_dis.o
+E=$(HOME)/bin/reqbdrep.out
+CC=cc -g
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+reqbdrep.o : $I/bdgt_rep.h $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h \
+	/usr/include/cfomstrc.h
+
+bdgt_tit.o : ../gl/bdgt_tit.c $I/bdgt_rep.h $I/bfs_defs.h $I/bfs_recs.h \
+		/usr/include/isnames.h
+	$(CC) -c -I$I -DENGLISH ../gl/bdgt_tit.c
+
+bdgt_det.o : ../gl/bdgt_det.c $I/bdgt_rep.h $I/bfs_defs.h $I/bfs_recs.h \
+		$I/repdef.h
+	$(CC) -c -I$I -DENGLISH ../gl/bdgt_det.c
+
+bdgt_sum.o : ../gl/bdgt_det.c $I/bdgt_rep.h $I/bfs_defs.h $I/bfs_recs.h \
+		$I/repdef.h
+	$(CC) -c -I$I -DENGLISH ../gl/bdgt_sum.c
+
+bdgt_dis.o : ../gl/bdgt_det.c $I/bdgt_rep.h $I/bfs_defs.h $I/bfs_recs.h \
+		$I/repdef.h
+	$(CC) -c -I$I -DENGLISH ../gl/bdgt_dis.c
+
+bdgt_com.o : ../gl/bdgt_det.c $I/bdgt_rep.h $I/bfs_defs.h $I/bfs_recs.h
+	$(CC) -c -I$I -DENGLISH ../gl/bdgt_com.c
+

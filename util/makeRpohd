@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=R_pohdr.o
+CC=cc
+
+$E/R_pohdr.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/R_pohdr.out
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) :R_pohdr.c $I/bfs_defs1.h $I/bfs_recs1.h
+

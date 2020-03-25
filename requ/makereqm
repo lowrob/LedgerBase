@@ -1,0 +1,14 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/requ/librequ.a $(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=reqmaint.o
+CC=cc -g
+
+$E/reqmaint.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/reqmaint.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :reqmaint.c $I/bfs_defs.h $I/bfs_recs.h $I/requ.h \
+		/usr/include/cfomstrc.h 

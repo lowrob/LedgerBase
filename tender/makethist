@@ -1,0 +1,13 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/libuisam.a
+OBJECTS=tendhist.o
+CC=cc -g
+
+$E/tendhist.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/tendhist.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :tendhist.c $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h 

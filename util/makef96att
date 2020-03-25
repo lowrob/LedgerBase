@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libpp.a /lib/libuisam.a
+OBJECTS=fix96att.o
+CC=cc
+
+$E/fix96att.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/fix96att.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) :fix96att.c $I/bfs_defs.h $I/bfs_recs.h
+

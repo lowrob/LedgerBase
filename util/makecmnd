@@ -1,0 +1,35 @@
+make -f makemen2 2>err
+make -f makedisp 2>>err
+make -f makecvin 2>>err
+make -f makejrls 2>>err
+make -f makedefs 2>>err
+make -f makereco 2>>err
+make -f makedist 2>>err
+make -f makesusr 2>>err
+make -f makesize 2>>err
+make -f makecfil 2>>err
+make -f makem2i 2>>err
+make -f makerjcust 2>>err
+make -f makejrop 2>>err
+make -f makerpgn 2>>err
+make -f makeutlr 2>>err
+make -f makeiutl 2>>err
+make -f makeupro 2>>err
+make -f makecvsc 2>> err
+make -f makecvsu 2>> err
+make -f makecvpo 2>> err
+make -f makecvponf 2>> err
+make -f makecvpoit 2>> err
+make -f makerebd 2>> err
+make -f makecvbh 2>> err
+make -f makecvbi 2>> err
+make -f makecvsk 2>> err
+make -f makecvri 2>> err
+make -f makecvst 2>> err
+make -f makednld 2>> err
+make -f makecvcu 2>> err
+make -f makecvah 2>> err
+make -f makecvai 2>> err
+make -f makecvrh 2>> err
+make -f makecvri 2>> err
+make -f makespool 2>> err

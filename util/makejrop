@@ -1,0 +1,11 @@
+I=$(HOME)/include
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+E=$(HOME)/bin/jrnl_opt.out
+CC=cc
+
+$E	: jrnl_opt.o $(LIBS)
+	$(CC) jrnl_opt.o $(LIBS) -o $E
+
+jrnl_opt.o : jrnl_opt.c $I/bfs_defs.h $I/bfs_recs.h $I/filein.h
+	$(CC) -c -I$I -DENGLISH jrnl_opt.c
+

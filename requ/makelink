@@ -1,0 +1,14 @@
+I=$(HOME)/include
+L=$(HOME)/requ/liblink.a
+CC=cc -g
+
+.PRECIOUS : $L
+
+$L	: $L(linklist.o)
+
+.c.a	:
+	$(CC) -c -I$I $*.c
+	ar rv $L $*.o
+	rm $*.o
+
+$L(linklist.o) : $I/linklist.h

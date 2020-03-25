@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=supprp.o
+CC=cc
+
+$E/supprp.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/supprp.out
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) :supprp.c $I/bfs_defs.h $I/bfs_recs.h
+

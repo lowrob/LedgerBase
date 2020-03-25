@@ -1,0 +1,50 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a $(HOME)/requ/liblink.a /lib/libfom.a \
+	/lib/librp.a /lib/libuisam.a
+OBJECTS=tendrep.o tendreputl.o categlst.o itmgrplst.o prnttend.o \
+	tendspread.o suppbidlst.o suppawdlst.o supplycat.o catbysupp.o \
+	unawdcat.o pricevarlst.o unawdsupp.o slabels.o pricevarhist.o \
+	purgecat.o histrep.o
+
+CC=cc -g
+
+$E/tendrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/tendrep.out
+
+.c.o :
+		$(CC) -c -I$I -DENGLISH $*.c
+
+tendrep.o  	: $I/bfs_defs.h
+
+tendreputl.o	: $I/bfs_defs.h  /usr/include/cfomstrc.h 
+
+categlst.o	: $I/bfs_defs.h $I/bfs_recs.h
+
+itmgrplst.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+prnttend.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+tendspread.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+suppbidlst.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+suppawdlst.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+supplycat.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+catbysupp.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+unawdcat.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+pricevarlst.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+unawdsupp.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+slabels.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h $I/linklist.h
+
+pricevarhist.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+purgecat.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h
+
+histrep.o	: $I/bfs_defs.h $I/bfs_recs.h $I/repdef.h

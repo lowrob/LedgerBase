@@ -1,0 +1,16 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a  /lib/libuisam.a
+OBJECTS=c_glmast.o convutil.o
+CC=cc
+
+$E/c_glmast.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E/c_glmast.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+c_glmast.o : $I/bfs_defs.h $I/bfs_recs.h /usr/include/isnames.h $I/convtype.h
+
+convutil.o : /usr/include/isnames.h $I/convtype.h
+

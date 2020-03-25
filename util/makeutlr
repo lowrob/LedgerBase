@@ -1,0 +1,22 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a  /lib/librp.a /lib/libuisam.a
+OBJECTS=utlrep.o reputils.o audrep.o ccrpt.o
+CC=cc -g
+
+$E/utlrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/utlrep.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+utlrep.o  : $I/bfs_defs.h $I/bfs_recs.h
+
+reputils.o: ../gl/reputils.c $I/bfs_defs.h /usr/include/cfomstrc.h 
+	$(CC) -c -I$I -DENGLISH ../gl/reputils.c
+
+audrep.o: ../gl/audrep.c $(I)/bfs_defs.h $(I)/bfs_recs.h $(I)/repdef.h \
+	$(I)/reports.h $(I)/fld_defs.h /usr/include/isnames.h
+	$(CC) -c -I$I -DENGLISH ../gl/audrep.c
+
+ccrpt.o : $I/bfs_defs.h $I/bfs_recs.h

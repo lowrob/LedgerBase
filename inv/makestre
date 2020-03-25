@@ -1,0 +1,28 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/librp.a /lib/libuisam.a
+OBJECTS=stockrep.o streputl.o phycnt.o ststatus.o tranlist.o alloclst.o\
+	mastlist.o stclear.o
+CC=cc -g
+
+$E/stockrep.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/stockrep.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+stockrep.o  	: $I/bfs_defs.h
+
+streputl.o	: $I/bfs_defs.h /usr/include/cfomstrc.h 
+
+phycnt.o	: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_inv.h
+
+ststatus.o	: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_inv.h
+
+alloclst.o	: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_inv.h
+
+tranlist.o	: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_inv.h
+
+mastlist.o	: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_inv.h $I/repdef.h
+
+stclear.o 	: $I/bfs_defs.h $I/bfs_recs.h $I/bfs_inv.h

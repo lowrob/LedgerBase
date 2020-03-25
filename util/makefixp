@@ -1,0 +1,14 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=fixperiod.o
+CC=cc
+
+$E/fixperiod.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/fixperiod.out
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) :fixperiod.c $I/bfs_defs.h $I/bfs_recs.h
+

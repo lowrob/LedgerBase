@@ -1,0 +1,14 @@
+I=$(HOME)/include
+E=$(HOME)/bin/spooler.out
+LIBS=/lib/libfom.a $(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=spooler.o 
+CC=cc -g
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+$(OBJECTS) : /usr/include/cfomstrc.h
+

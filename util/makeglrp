@@ -1,0 +1,15 @@
+
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+OBJECTS=glrp.o
+CC=cc
+
+$E/glrp.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/glrp.out
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) :glrp.c $I/bfs_defs.h $I/bfs_recs.h
+

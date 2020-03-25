@@ -1,0 +1,13 @@
+I=$(HOME)/include
+E=$(HOME)/bin
+LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a /lib/librp.a /lib/libuisam.a
+OBJECTS=pcpost.o
+CC=cc
+
+$E/pcpost.out : $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o  $E/pcpost.out
+
+.c.o :
+	$(CC) -c -I$I -DENGLISH $*.c
+
+pcpost.o :	$I/bfs_defs.h $I/bfs_recs.h $I/bfs_inv.h /usr/include/cfomstrc.h 
