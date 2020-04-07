@@ -1,0 +1,10 @@
+L=libuisam.a
+
+.PRECIOUS : $L
+
+$L	: $L(isam.o) $L(islock.o)
+#	ranlib $L
+
+$L(isam.o)   : isam.c  cr_indx.c isflsys.h isdef.h iserror.h isnames.h
+
+$L(islock.o) : islock.c isdef.h

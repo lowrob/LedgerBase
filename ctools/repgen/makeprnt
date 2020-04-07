@@ -1,0 +1,8 @@
+LIBS=
+E=$(HOME)/bin/prntproj.out
+OBJECTS=prntproj.o
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(CFLAGS) $(OBJECTS) $(LIBS) -o $E
+
+$(OBJECTS) : rep.h struct.h repname.h

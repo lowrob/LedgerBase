@@ -1,0 +1,8 @@
+LIBS=
+E=$(HOME)/bin/isconv.out
+OBJECTS=isconv.o
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+$(OBJECTS) : isdef.h isflsys.h isnames.h

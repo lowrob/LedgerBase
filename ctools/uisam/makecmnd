@@ -1,0 +1,5 @@
+make -f makelib  2>err
+make -f makeisco  2>>err
+make -f makeisch  2>>err
+make -f makeisrc  2>>err
+

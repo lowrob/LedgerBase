@@ -1,0 +1,8 @@
+LIBS=libuisam.a
+E=$(HOME)/bin/isrecrt.out
+OBJECTS=isrecrt.o
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+
+$(OBJECTS) : isdef.h isflsys.h isnames.h

@@ -1,0 +1,7 @@
+E=$(HOME)/bin/rpfom.out
+OBJECTS=rpfom.o
+
+$(E)	: $(OBJECTS) 
+	$(CC) $(CFLAGS) $(OBJECTS) -o $E
+
+$(OBJECTS): rep.h repname.h struct.h

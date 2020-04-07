@@ -4,6 +4,10 @@
 static char	err_file[60] ;
 static int	log_fd ;
 
+// Louis R. 2020/04/04
+/*** New compiler need to define functions with prototypes ***/
+static int open_log(void);
+
 stock_audit(prog_name,old_rec,new_rec,flag)
 char	*prog_name;
 St_mast	*old_rec ;
@@ -61,7 +65,7 @@ stock_commit()
 	close(log_fd);
 	return (0);
 }
-static 
+static int
 open_log() {
 	form_f_name("stock_log",err_file);
 

@@ -1,0 +1,16 @@
+# makecmnd to create report writer libraries for FRENCH
+
+L=libfrp.a
+
+.PRECIOUS : $L
+
+$L	: $L(brkrpt.o) $L(rp.o) 
+
+.c.a	:
+	$(CC) -c -DFRENCH $*.c
+	ar rv $L $*.o
+	rm $*.o
+	
+$L(brkrpt.o)  : 
+
+$L(rp.o)      : repname.h rep.h struct.h

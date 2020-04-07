@@ -1,0 +1,11 @@
+:
+#	filelist
+#
+#	Shell Script to create PROFOM source file list
+
+cd $HOME
+ls */*.c > list
+ls */*.h >> list
+ls */make* >> list
+ls repgen/*.fom >> list
+ls linkfiles >> list

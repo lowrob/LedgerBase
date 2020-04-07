@@ -23,6 +23,7 @@ NOTE:
 HISTORY:
  Date           Programmer     Description of modification
 ____/__/__      __________     ___________________________
+2020/04/04	Louis R		new compiler needs to have functions defined and prototype
 
 ******************************************************************************/
 #include <stdio.h>
@@ -34,6 +35,9 @@ int	SecurityStatus = -1;	/* Initialized when DBH is initialized */
 #else
 int	SecurityStatus = 0 ;
 #endif
+
+/*** Define functions ***/
+static int ChangeMesg(char *);
 
 /*
 *	CheckAccess()

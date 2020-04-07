@@ -1,0 +1,10 @@
+LIBS=/lib/libfom.a
+E=$(HOME)/bin/repname.out
+OBJECTS=repname.o win.o
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(CFLAGS) $(OBJECTS) $(LIBS) -o $E
+
+repname.o : rep.h repname.h struct.h /usr/include/cfomstrc.h
+
+win.o : /usr/include/cfomtm.h /usr/include/cfomtcr.h

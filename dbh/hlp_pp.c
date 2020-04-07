@@ -31,6 +31,9 @@
 		If journalling is OFF, there is no way to know if a record is
 	previously locked, and so the risk mentioned above remains.
 
+04 April 2020 - Louis R
+	New compiler - defining functions that are giving complile errors
+
 -----------------------------------------------------------------------------*/
 
 #include <stdio.h>
@@ -79,6 +82,15 @@ static	char	kee_name[50];
 #define T_TAB	9				/* Tab */
 #define T_NL	10 				/* New line */
 #define T_CRF   13 				/* Return   */
+
+/********************   Function declaires and prototype ****************/
+static void expnd_line(char *);
+static int acpt_resp(char *, int, int, int);
+static int valid_char(char c);
+static void draw_0_ttyp(int,int,int);
+static void draw_1_ttyp(int,int,int);
+static int window(int, int, int, int, char *text1);
+static int get_name(int, int, int, char *, char *, int);
 
 /*-----------------------------------------------------------------------
 	Usage :   emp_hlp   (emp_code, row, col )
@@ -250,7 +262,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -370,7 +382,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -486,7 +498,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -609,7 +621,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -733,7 +745,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -857,7 +869,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -981,7 +993,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -1112,7 +1124,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -1245,7 +1257,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -1376,7 +1388,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -1500,7 +1512,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -1623,7 +1635,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -1748,7 +1760,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -1896,7 +1908,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -2026,7 +2038,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -2179,7 +2191,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -2312,7 +2324,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -2454,7 +2466,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -2592,7 +2604,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -2724,7 +2736,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -2860,7 +2872,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -2999,7 +3011,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -3119,7 +3131,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -3244,7 +3256,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -3376,7 +3388,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -3483,7 +3495,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text ) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -3668,12 +3680,11 @@ int	type;	/* 1 - Numeric, 0 - String */
 /*--------------------------------------------------------------*/
 #ifdef	O_PROFOM
 static
-window(row,col,nch,nlines,text1, put_blanks ) 
+window(row,col,nch,nlines,text1 ) 
 int	row,
 	col,
 	nch,
 	nlines ; 
-int 	put_blanks ;		/* If The screen to be blanked before */
 char	*text1 ; 
 	        /*Displays window margin in reverse video */ 
 {
@@ -3877,7 +3888,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against
@@ -4002,7 +4013,7 @@ int	row,
 		if(i > height)height = i;
 
 		text = line;
-		if(window(row, col,WIDTH, (height+4), text, put_blanks ) < 0)
+		if(window(row, col,WIDTH, (height+4), text) < 0)
 			return(0); 
 
 		/* Get the user Response and Validate against

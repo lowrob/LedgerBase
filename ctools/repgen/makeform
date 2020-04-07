@@ -1,0 +1,10 @@
+LIBS=/lib/libfom.a
+E=$(HOME)/bin/form.out
+OBJECTS=form1.o win.o
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(CFLAGS) $(OBJECTS) $(LIBS) -o $E
+
+form1.o : form1.c form2.c repname.h rep.h struct.h /usr/include/cfomstrc.h
+
+win.o : win.c /usr/include/cfomtm.h /usr/include/cfomtcr.h

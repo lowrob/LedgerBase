@@ -110,8 +110,14 @@ int	*alt_array = NULL ;		/* ISAM keys write status array. Alloca-
 					   ted to MAX keys in init_dbh() */
 int	*keysarray = NULL ;		/* Keys array read from keydesc.id */
 
-long	lseek(),
-	seek_file() ;
+long	lseek();
+
+/************* Function & protocol definitions ************/
+
+static long seek_file(int, int) ;
+static int readdata(int, char *, long, int );
+static int crt_msg(int, int, int, char *, char *);
+
 
 #ifdef JRNL
 extern	int	journaling ;		/* Enable/Disable journaling */

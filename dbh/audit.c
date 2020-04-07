@@ -48,6 +48,7 @@ L.Robichaud    93/03/05		When two programs try to write to the audit
 				released. The screen is now also passed to
 				the write audit function to allow the display
 				of messages.
+L.Robichaud    20/04/04		Function declares needed for newer compiler.
 ------------------------------------------------------------------------*/
 
 
@@ -69,6 +70,9 @@ static	Aud_rec	au_rec ;		/* Audit Record */
 
 static	Fld_hdr	hdr ;
 static	Field	*field = NULL ;
+
+/**** Function and prototype declares ****/
+static int rite_flds(int, char*, char*, char*);
 
 /*-------------------------------------------------------------*/
 rite_audit(screen, file_no, type, new_rec, old_rec, e_mesg )

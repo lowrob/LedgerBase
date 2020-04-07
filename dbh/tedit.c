@@ -21,6 +21,14 @@
 static  short i,j,k,flag,nflag,nerr;
 static	char ma[25],no[25];
 
+/*** Function and prototype definitions ***/
+static int rm_dot(char *);
+static int asterisk(int);
+static int last();
+static int flot(int);
+static int form_format(char *, char*, int);
+static int suppress(int);
+
 /******
 tedit(src,mask,dest)
 long src;

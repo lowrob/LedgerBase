@@ -21,6 +21,8 @@ extern	int	*keysarray ;	/* keysarray allocated in init_dbh */
 extern	int	data_fd ;
 #endif
 
+/*** Function and prototype declares ***/
+static int 	WriteIndex(int, int, int, int (*val_func)(), char *);
 
 int
 CrtTmpIndx(source, dest, ixkeysarray, ix_file, val_func,  e_mesg) 
@@ -30,6 +32,7 @@ int	*ixkeysarray ;		/* keys array ( parts + {T,L,P,O}* ) */
 char	*ix_file ;		/* Temporay Index File Name */
 int	(*val_func)();		/* Ptr to user's fn() which validates a rec */
 char	*e_mesg ;
+
 {
 #ifndef	ORACLE
 	int	fd ;

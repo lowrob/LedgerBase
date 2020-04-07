@@ -93,6 +93,15 @@ static	char	kee_name[50];
 		  row, col 	; self explanatory .
 ------------------------------------------------------------------------*/
 
+/********************   Function declares and Prototype  ****************/
+static void draw_1_ttyp(int, int, int);
+static void draw_0_ttyp(int, int, int);
+static void expnd_line(char *);
+static int window(int,int,int,int,char *, int );
+static int valid_char(char);
+static int acpt_resp(char *, int, int, int);
+static void get_name(int, int, int, char *, char *,int);
+
 gl_hlp(fund_cd,acnt_no,rec_cd,row,col) 
 short	fund_cd ;
 char	*acnt_no ;
@@ -465,7 +474,7 @@ extern	char	cviatb;
 
 #endif
 /*----------------------------------------------------------*/
-static
+static void
 get_name(row, col,len, prompt, ptr,type)
 int 	row, col ;
 int	len ;
@@ -531,7 +540,7 @@ int	type;	/* 1 - Numeric, 0 - String */
 }	
 /*--------------------------------------------------------------*/
 #ifdef	O_PROFOM
-static
+static int
 window(row,col,nch,nlines,text1, put_blanks ) 
 int	row,
 	col,
@@ -621,7 +630,7 @@ char	*text1 ;
 	return(0);
 } 
 
-static
+static void
 draw_0_ttyp(row,col,nch)
 int	row,col,nch;
 {
@@ -635,7 +644,7 @@ int	row,col,nch;
 	for(n = 2; n <= nch ; n++)
 		putchar(' ') ; 
 }
-static
+static void
 draw_1_ttyp(row,col,nch)
 int	row,col,nch;
 {

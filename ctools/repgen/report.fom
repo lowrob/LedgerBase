@@ -1,0 +1,184 @@
+HEADER
+SCREEN  report
+VERSION 1
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ PROMPT [1,23]  "R E P O R T  G E N E R A T O R" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [4,25]  "REPORT DEFINITION SCREEN" 
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [6,9]  "Report Name :" 
+
+ DISPLAY_MASK  [6,24] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    400 
+
+ PROMPT [8,9]  "Record Names :" 
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    # 
+
+ PROMPT [10,17]  "1." 
+
+ DISPLAY_MASK  [10,21] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "00" 
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [12,17]  "2." 
+
+ DISPLAY_MASK  [12,21] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "00" 
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    # 
+
+ PROMPT [14,17]  "3." 
+
+ DISPLAY_MASK  [14,21] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "00" 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    # 
+
+ PROMPT [16,17]  "4." 
+
+ DISPLAY_MASK  [16,21] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "00" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,17]  "5." 
+
+ DISPLAY_MASK  [18,21] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "00" 
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,25] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [12,25] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [14,25] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [16,25] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,25] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [22,9]  "Want to Continue :" 
+
+ DISPLAY_MASK  [22,29] _ 
+BOOLEAN   B
+LOG_ATTR (UCASE)
+
+END
+
+ENDFILE

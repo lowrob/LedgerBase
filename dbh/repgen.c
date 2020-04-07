@@ -27,6 +27,9 @@ static	char	*printer ;
 #endif
 static	int	numberofcopies;
 
+/*** Function and prototype decleartion ***/
+static int prnt_mesg(char *);
+ 
 /*---------------------------------------------------------*/
 opn_prnt(disp,termnm,prntno,e_msg,spool) /* get printer device and open */
 char	*disp;   /* "D" - display, "P" - print and "F" - Disk file */

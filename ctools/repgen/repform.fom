@@ -1,0 +1,1144 @@
+HEADER
+SCREEN  repform
+VERSION 1
+LANGUAGE c
+END
+
+ FIELD    100 
+
+ PROMPT [1,2]  "REP-GEN" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    200 
+
+ PROMPT [1,29]  "FORMAT DEFINITION SCREEN" 
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [1,60]  "Project:" 
+
+ DISPLAY_MASK  [1,69] _(10) 
+STRING  X(10)
+PROMPT_VIDEO (REVERSE)
+
+END
+
+ FIELD    400 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,1]  "Report:" 
+
+ DISPLAY_MASK  [3,9] ## 
+NUMERIC   99
+LOG_ATTR (SUP_ZEROES)
+
+END
+
+ FIELD    500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [3,15] _(20) 
+STRING  X(20)
+
+END
+
+ FIELD    600 
+
+ MASK_CHAR    # 
+
+ PROMPT [3,47]  "Format:" 
+
+ DISPLAY_MASK  [3,55] # 
+NUMERIC   9
+LOG_ATTR (FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "0" 
+HELP_MESSAGE  "Type #/<CR>/Esc - D(elete form),H(Display forms),E(xit-no edit)"
+
+END
+
+ FIELD    700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [3,60] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    800 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,34]  "Page Width:" 
+
+ DISPLAY_MASK  [4,46] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "000" 
+
+END
+
+ FIELD    900 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,51]  "Page Size:" 
+
+ DISPLAY_MASK  [4,62] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "00" 
+
+END
+
+ FIELD    1000 
+
+ MASK_CHAR    # 
+
+ PROMPT [4,66]  "Line Space:" 
+
+ DISPLAY_MASK  [4,78] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "00" 
+
+END
+
+ FIELD    1100 
+
+ MASK_CHAR    _ 
+
+ PROMPT [4,1]  "Main Headers" 
+
+ DISPLAY_MASK  [5,1] _(79) 
+STRING  X(79)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                                                                               " 
+HELP_MESSAGE  "Type Main header<Cr>/<Cr> to skip"
+
+END
+
+ FIELD    1200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [6,1] _(79) 
+STRING  X(79)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                                                                               " 
+HELP_MESSAGE  "Type Second Line of Main header<CR>/<CR> to skip"
+
+END
+
+ FIELD    1300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [7,1] _(79) 
+STRING  X(79)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                                                                               " 
+HELP_MESSAGE  "Type Third line of Main Header<CR>/<CR> to skip"
+
+END
+
+ FIELD    1400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [9,1]  "Report Fields:" 
+
+ DISPLAY_MASK  [9,16] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    1500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,20] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    1600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,24] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    1700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,28] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    1800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,32] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    1900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,36] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,40] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,44] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,48] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,52] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,56] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,60] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,64] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,68] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [9,72] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    2900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,16] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,20] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,24] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,28] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,32] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,36] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,40] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,44] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,48] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,52] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    3900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,56] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    4000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,60] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    4100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,64] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    4200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,68] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    4300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [10,72] ___ 
+STRING  XXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "   " 
+
+END
+
+ FIELD    4400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,1]  "Select Field:" 
+
+ DISPLAY_MASK  [11,15] _ 
+STRING  X
+LOG_ATTR (UESCAPE,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE " " 
+
+END
+
+ FIELD    4500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,19]  "Field Name:" 
+
+ DISPLAY_MASK  [11,31] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    4600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,54]  "Type:" 
+
+ DISPLAY_MASK  [11,60] ____ 
+STRING  XXXX
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "    " 
+
+END
+
+ FIELD    4700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [11,68]  "Class:" 
+
+ DISPLAY_MASK  [11,75] _(5) 
+STRING  X(5)
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "     " 
+
+END
+
+ FIELD    4800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,1]  "Formula     :" 
+
+ DISPLAY_MASK  [12,15] _(50) 
+STRING  X(50)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                                                  " 
+
+END
+
+ FIELD    4900 
+
+ MASK_CHAR    _ 
+
+ PROMPT [12,69]  "Rep. Sup?" 
+
+ DISPLAY_MASK  [12,79] _ 
+BOOLEAN   B
+LOG_ATTR (UESCAPE,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "?" 
+
+END
+
+ FIELD    5000 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,1]  "Title       :" 
+
+ DISPLAY_MASK  [13,15] _(20) 
+STRING  X(20)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    5100 
+
+ MASK_CHAR    # 
+
+ PROMPT [13,37]  "Size:" 
+
+ DISPLAY_MASK  [13,43] ## 
+NUMERIC   99
+LOG_ATTR (UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "00" 
+
+END
+
+ FIELD    5200 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,50]  "Totalled?" 
+
+ DISPLAY_MASK  [13,60] _ 
+BOOLEAN   B
+LOG_ATTR (UESCAPE,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "?" 
+
+END
+
+ FIELD    5300 
+
+ MASK_CHAR    _ 
+
+ PROMPT [13,64]  "Justification :" 
+
+ DISPLAY_MASK  [13,79] _ 
+STRING  X
+LOG_ATTR (UESCAPE,FHOLD,UCASE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE " " 
+
+END
+
+ FIELD    5400 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,1]  "Edit mask   :" 
+
+ DISPLAY_MASK  [14,15] _(15) 
+STRING  X(15)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    5500 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,37]  "Constraint Min:" 
+
+ DISPLAY_MASK  [14,53] _(10) 
+STRING  X(10)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "          " 
+
+END
+
+ FIELD    5600 
+
+ MASK_CHAR    _ 
+
+ PROMPT [14,65]  "Max:" 
+
+ DISPLAY_MASK  [14,70] _(10) 
+STRING  X(10)
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "          " 
+
+END
+
+ FIELD    5700 
+
+ MASK_CHAR    _ 
+
+ PROMPT [16,1]  "Page Break & Total Fields       Message Text                    Edit Mask" 
+
+ DISPLAY_MASK  [16,79] _ 
+STRING  X
+
+END
+
+ FIELD    5800 
+
+ MASK_CHAR    _ 
+
+ PROMPT [19,1]  "Sub-total Fields" 
+
+ DISPLAY_MASK  [19,19] _ 
+STRING  X
+
+END
+
+ FIELD    5900 
+
+ MASK_CHAR    # 
+
+ PROMPT [17,3]  "1." 
+
+ DISPLAY_MASK  [17,6] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "000" 
+HELP_MESSAGE  "Type field #/Esc-H(to display field names),D(elete #),E(xit no edit)"
+
+END
+
+ FIELD    6000 
+
+ MASK_CHAR    # 
+
+ PROMPT [18,3]  "2." 
+
+ DISPLAY_MASK  [18,6] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "000" 
+HELP_MESSAGE  "Type field #/Esc-H(to display field names),D(elete #),E(xit no edit)"
+
+END
+
+ FIELD    6100 
+
+ MASK_CHAR    # 
+
+ PROMPT [20,3]  "1." 
+
+ DISPLAY_MASK  [20,6] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "000" 
+
+END
+
+ FIELD    6200 
+
+ MASK_CHAR    # 
+
+ PROMPT [21,3]  "2." 
+
+ DISPLAY_MASK  [21,6] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "000" 
+
+END
+
+ FIELD    6300 
+
+ MASK_CHAR    # 
+
+ PROMPT [22,3]  "3." 
+
+ DISPLAY_MASK  [22,6] ### 
+NUMERIC   999
+LOG_ATTR (UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "000" 
+
+END
+
+ FIELD    6400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,11] _(20) 
+STRING  X(20)
+LOG_ATTR (SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    6500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,11] _(20) 
+STRING  X(20)
+LOG_ATTR (SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    6600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,11] _(20) 
+STRING  X(20)
+LOG_ATTR (SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    6700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,11] _(20) 
+STRING  X(20)
+LOG_ATTR (SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    6800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [22,11] _(20) 
+STRING  X(20)
+LOG_ATTR (SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                    " 
+
+END
+
+ FIELD    6900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,33] _(30) 
+STRING  X(30)
+LOG_ATTR (REQUIRED,UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                              " 
+
+END
+
+ FIELD    7000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,33] _(30) 
+STRING  X(30)
+LOG_ATTR (REQUIRED,UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                              " 
+
+END
+
+ FIELD    7100 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,33] _(30) 
+STRING  X(30)
+LOG_ATTR (REQUIRED,UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                              " 
+
+END
+
+ FIELD    7200 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,33] _(30) 
+STRING  X(30)
+LOG_ATTR (REQUIRED,UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                              " 
+
+END
+
+ FIELD    7300 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [22,33] _(30) 
+STRING  X(30)
+LOG_ATTR (REQUIRED,UESCAPE,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "                              " 
+
+END
+
+ FIELD    7400 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [17,65] _(15) 
+STRING  X(15)
+LOG_ATTR (REQUIRED,UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "               " 
+
+END
+
+ FIELD    7500 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [18,65] _(15) 
+STRING  X(15)
+LOG_ATTR (REQUIRED,UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "               " 
+
+END
+
+ FIELD    7600 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [20,65] _(15) 
+STRING  X(15)
+LOG_ATTR (REQUIRED,UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "               " 
+
+END
+
+ FIELD    7700 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [21,65] _(15) 
+STRING  X(15)
+LOG_ATTR (REQUIRED,UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "               " 
+
+END
+
+ FIELD    7800 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [22,65] _(15) 
+STRING  X(15)
+LOG_ATTR (REQUIRED,UESCAPE,FHOLD,SHODUP)
+
+ DUP_CTRL  C    
+
+ DUP_VALUE "               " 
+
+END
+
+ FIELD    7900 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,1] _(75) 
+STRING  X(75)
+MASK_VIDEO (REVERSE)
+
+END
+
+ FIELD    8000 
+
+ MASK_CHAR    _ 
+
+ DISPLAY_MASK  [23,77] _ 
+BOOLEAN   B
+LOG_ATTR (REQUIRED,UCASE)
+
+END
+
+ENDFILE
