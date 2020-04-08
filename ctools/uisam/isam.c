@@ -202,7 +202,7 @@ static int output(int, char *);
 static int push(int, int);
 static int parent(int *);
 static int putdata(char *, int);
-static int isreads(int, char *, int);
+int isreads(int, char *, int);
 static int readseq(char *, int);
 static int copykeys(char *, char *, int);
 static int compkeys(char *, char *);

@@ -12,6 +12,7 @@
 +---------------------------------------------------------------------------*/
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "isnames.h"
 #include "isdef.h"
 #include "isflsys.h" 
@@ -30,7 +31,7 @@ static  int blen ;
 extern	int errno  ;
 
 long    lseek() ;
-char	*malloc() ;
+//char	*malloc() ;
 
 static struct
 {
