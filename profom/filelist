@@ -1,0 +1,13 @@
+#	filelist
+#
+#	Shell Script to create PROFOM source file list
+
+ls */*.c > list
+ls */make* >> list
+ls include/*.h >> list
+ls editor/*.fom >> list
+ls editor/*.sth >> list
+ls runtime/fomerr.src >> list
+ls runtime/fomint.err >> list
+ls runtime/ffomerr.src >> list
+ls linkfiles >> list

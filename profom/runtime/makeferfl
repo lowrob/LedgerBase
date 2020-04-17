@@ -1,0 +1,13 @@
+OBJECTS=crterfl.o
+LIBS=
+E=crtferfl.out
+I=$(HOME)/profom/include
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+	$E
+
+.c.o :
+	$(CC) -I$I -DFRENCH -c $*.c
+
+$(OBJECTS) : $(I)/cfomerr.h

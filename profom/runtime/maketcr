@@ -1,0 +1,13 @@
+OBJECTS=crttcr.o
+LIBS=
+E=crttcr.out
+I=$(HOME)/profom/include
+
+$E	: $(OBJECTS) $(LIBS)
+	$(CC) $(OBJECTS) $(LIBS) -o $E
+	$E
+
+.c.o :
+	$(CC) -c -I$I $*.c
+
+$(OBJECTS) : $(I)/cfomtcr.h $(I)/cfomdef.h

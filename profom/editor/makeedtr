@@ -1,0 +1,45 @@
+LIBS=$(HOME)/profom/runtime/libfom.a
+I=$(HOME)/profom/include
+OBJECTS=fomadf.o fomcfr.o fomcre.o fomcsc.o fomdif.o fomedt.o fomfld.o \
+	fomgcd.o fomgfo.o fomite.o fommfr.o fommln.o fomrmf.o fomsce.o \
+	fomtfr.o fomusc.o fommsc.o
+
+fomedtr : $(OBJECTS) $(LIBS)
+	$(CC) $(CFLAGS) $(OBJECTS) $(LIBS) -o fomedtr
+
+.c.o	:
+	$(CC) $(CFLAGS) -c -I$I $*.c
+
+fomadf.o : $(I)/fomlink.h $(I)/cfomstrc2.h $(I)/cfomfrm.h PROFOMF.sth
+
+fomcfr.o : $(I)/cfomstrc2.h $(I)/cfomfrm.h
+
+fomcre.o : $(I)/cfomfrm.h
+
+fomcsc.o : $(I)/cfomfrm.h
+
+fomdif.o : $(I)/cfomdef.h $(I)/fomlink.h $(I)/cfomstrc2.h $(I)/cfomfrm.h
+
+fomedt.o : $(I)/cfomfrm.h $(I)/fomlink.h $(I)/cfomstrc2.h PROFOMC.sth
+
+fomfld.o : $(I)/fomlink.h $(I)/cfomstrc2.h $(I)/cfomfrm.h PROFOMF.sth
+
+fomgcd.o : $(I)/cfomfrm.h $(I)/cfomdef.h
+
+fomgfo.o : $(I)/cfomfrm.h
+
+fomite.o : $(I)/cfomstrc2.h $(I)/fomlink.h PROFOMF.sth $(I)/cfomfrm.h
+
+fommfr.o : $(I)/cfomfrm.h $(I)/fomlink.h
+
+fommln.o : $(I)/fomlink.h $(I)/cfomstrc2.h $(I)/cfomfrm.h
+
+fomrmf.o : $(I)/fomlink.h $(I)/cfomstrc2.h PROFOMF.sth
+
+fomsce.o : $(I)/fomlink.h $(I)/cfomfrm.h $(I)/cfomstrc2.h PROFOMS.sth
+
+fomtfr.o : $(I)/cfomfrm.h
+
+fomusc.o : $(I)/cfomfrm.h $(I)/fomlink.h $(I)/cfomstrc2.h PROFOMU.sth
+
+fommsc.o : $(I)/cfomfrm.h

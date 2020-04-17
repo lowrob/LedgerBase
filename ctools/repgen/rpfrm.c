@@ -9,6 +9,7 @@
 #include "rep.h"
 #include "repname.h"
 #include "struct.h"
+#include <errno.h>
 
 
 #define	EFL		-200
@@ -34,9 +35,14 @@ FILE	*fopen(), *fom_fd, *err_fd ;
 
 static	char	*comp() ;	/* compressing blanks */
 
-extern	int	errno ;
+//extern	int	errno ;
 
 char	errmsg[200] ;
+
+/*** Define function and prototype ***/
+static int Rd_strrecs(char*);
+static int CheckRecords(char*);
+static int Rd_formrec(char*, int);
 
 main(argc,argv)
 int	argc;

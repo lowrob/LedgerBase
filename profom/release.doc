@@ -1,0 +1,217 @@
+
+
+
+
+				PROFOM
+				------
+
+	Version:	2.0
+
+	New Features/Changes:
+	---------------------
+
+		1. FOMRF returns RET_VAL_CHK, if the Validity check flag is
+		   set to YES. Even though manual says it does, in the old
+		   version it is not doing so.
+
+		2. Now PROFOM creates STH file with 'short' instead of 'int'
+		   for the numeric fields which are less than 5 digits. However
+		   for Boolean fields, it still creates 'int' only.
+
+	Changes to Source:
+	------------------
+
+	    A. INCLUDE:
+	    -----------
+
+		This is a new directory created under /usr/profom. Now all
+		the '.h' files from both 'runtime' and 'editor' directories
+		are moved to this directory. This step is necessary, because
+		eralier we were maintaining same '.h' files in both the
+		directories.
+
+		However '.sth' files in 'editor' directory are not moved to
+		this directory.
+
+
+	    B. RUNTIME:
+	    -----------
+
+		cfomfrm.h:
+		----------
+
+			Variable 'signed' is changed to 'Signed', bacause
+			latest compilers treat 'signed' as a key word.
+
+		cfomdef.h:
+		----------
+
+			Alignment define constants(ALGN...) are implemented as
+			a compile time definitions. Now these variables need not
+			be changed, whenever PROFOM is ported to new machine.
+
+		cfomstrc.h:
+		-----------
+
+			LV_INT and HV_INT are implemented as compile time
+			variables. Now this file also need not be changed,
+			when PROFOM is ported to new machine.
+
+			LV_LONG and HV_LONG are changed to exact minimum and
+			maximum values.
+
+
+
+
+		cfomfrm1.c:
+		-----------
+
+			In function fomrf(), the following lines are insetred
+			between 'convutoa();' line and 'retnoerr' line,
+			in 'case 0' of 'switch (rv)', to take care the change 1.
+
+		 		if (cf->lattr1 & LA_VALID){
+ 					sp->retcode = RET_VAL_CHK;
+ 					sp->curfld = cf->fldno;
+		 			return(0);
+ 				}
+
+		cfomfrm3.c:
+		-----------
+
+			In function loadform(), the code is changed as follows
+			at line 178, to take care the change 2.
+
+			Old
+			---
+
+		if (cfi->type == FITYP_NON){	/* non-numeric field */
+				. . . . .  . .  
+				. . . . .  . .  
+				. . . . .  . .
+				. . . . .  . .
+				}
+		else if (cfi->decimals == 0)	/* number without decimals */
+			if (cf->dfsize <= IMAXDIGITS) {	/* regular int */
+				offset = adjoff(offset,ALGN_INT);
+				cfi->aoff = offset;
+				cfi->stortype = STOR_INT;
+				offset += sizeof(int);
+				}
+			else {	/* long int required */
+				. . . . .  . .  
+				. . . . .  . .  
+				. . . . .  . .  
+				. . . . .  . .
+				}
+
+
+
+
+			New
+			---
+		if (cfi->type == FITYP_NON){	/* non-numeric field */
+				. . . . .  . .  
+				. . . . .  . .  
+				. . . . .  . .
+				. . . . .  . .
+				}
+		else if (cfi->decimals == 0)	/* number without decimals */
+			if (cf->dfsize <= SMAXDIGITS) {	/* regular short */
+			    if(cf->fldtyp == TYP_YN) {
+				offset = adjoff(offset,ALGN_INT);
+				cfi->aoff = offset;
+				cfi->stortype = STOR_INT;
+				offset += sizeof(int);
+				}
+			    else {
+				offset = adjoff(offset,ALGN_SHORT);
+				cfi->aoff = offset;
+				cfi->stortype = STOR_SHORT;
+				offset += sizeof(short);
+				}
+				}
+			else {	/* long int required */
+				. . . . .  . .  
+				. . . . .  . .  
+				. . . . .  . .
+				. . . . .  . .
+				}
+
+		cfomfld2.c:
+		-----------
+
+			1. Line 174 (in function convau(), block 'case
+			   STOR_SHORT') is changed as follows. This was a
+			   bug for short fields.
+
+				Old:
+				----
+
+		 		if (i == HV_SHORT)
+
+				New:
+				----
+
+		 		else if (i == HV_SHORT)
+
+			2. 'signed' varibale is changed to 'Signed' in all
+			   the places.
+
+
+
+
+	    C. EDITOR:
+	    ----------
+
+		'#include "fomfrm.h"' is changed to '#include "cfomfrom.h"'
+		in all the files.
+
+
+		PROFOM.sth:
+		-----------
+
+			"int	fe2000;" is changed as "short	fe2000;".
+
+		fomadf.c:
+		---------
+
+			"HV_INT" is changd to "HV_SHORT", wherever it is used.
+
+		fomfld.c:
+		---------
+
+			"LV_INT" is changd to "LV_SHORT", wherever it is used.
+			"HV_INT" is changd to "HV_SHORT", wherever it is used.
+
+		fomgcd:c:
+		---------
+
+			1. In function gencdr(), the code is changed as follows
+			   at line 147, to take care the change 2.
+
+			Old:
+			----
+
+			if (cf->dfsize <= IMAXDIGITS)	/* regular int */
+				fprintf(ofl,"\tint\t%s;",t2);
+
+			New:
+			----
+
+			if (cf->dfsize <= SMAXDIGITS) {	/* regular int */
+				if(cf->fldtyp == TYP_YN)
+					fprintf(ofl,"\tint\t%s;",t2);
+				else
+					fprintf(ofl,"\tshort\t%s;",t2);
+				}
+
+			2. 'signed' varibale is changed to 'Signed' in all
+			   the places.
+
+		fomite.c:
+		---------
+
+			"LV_INT" is changd to "LV_SHORT", wherever it is used.
+
+

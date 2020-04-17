@@ -1,0 +1,35 @@
+01 Usager-ESC n'est pas mis en fonction pour ce champ
+02 Rappel arriere de champ n'est pas permis
+03 Devancement de champ n'est pas permis
+04 Ce champ est obligatoire
+05 Caractere invalide
+06 Valeur excede les limites
+07 Entrer le prochain caractere pour l'Usager-ESC
+08 Pas de message d'assistance pour ce champ
+09 Doit entrer le signe en premier
+10 Champ est plein
+11 Doit entrer le signe en dernier
+12 Usager-ESC n'est pas mis en fonction pour ce champ
+13 Virgule decimale deja entree
+14 Pas de partie decimale dans ce champ
+15 Signe deja entre
+16 Champ n'est pas signe
+17 Doit entrer le signe en premier
+18 Deja au debut du champ
+19 Caractere invalide
+20 Champ est plein - Appuyer sur CR ou sur TAB
+21 Usager-ESC n'est pas mis en fonction pour ce champ
+22 Pas d'entrees qui peuvent etre eliminees
+23 Caractere interdit
+24 Usager-ESC n'est pas mis en fonction pour ce champ
+25 Champ doit etre pleinement rempli
+26 Pas d'entrees qui peuvent etre eliminees
+27 Champ est plein
+28 Caractere invalide
+29 Caractere alphabetique requis
+30 Caractere numerique requis
+31 Le mois excede les limites
+32 La date excede les limites
+33 Appuyer sur O,N,o, ou n
+34 Champ est plein - Appuyer sur CR ou sur TAB
+35 La fonction d'impression selective est mise hors service

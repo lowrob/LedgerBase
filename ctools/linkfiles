@@ -1,7 +1,7 @@
-cp /disk1/ctools/repgen/librp.a	/lib
-cp /disk1/ctools/repgen/libfrp.a	/lib
-cp /disk1/ctools/uisam/libuisam.a	/lib
-cp /disk1/ctools/uisam/isnames.h	/usr/include
-cp /disk1/ctools/uisam/iserror.h	/usr/include
-cp /disk1/ctools/repgen/repform.nfm	/disk1/ctools/bin
-cp /disk1/ctools/repgen/report.nfm	/disk1/ctools/bin
+cp $HOME/ctools/repgen/librp.a	$HOME/ctools/lib
+cp $HOME/ctools/repgen/libfrp.a	$HOME/ctools/lib
+cp $HOME/ctools/uisam/libuisam.a	$HOME/ctools/lib
+cp $HOME/ctools/uisam/isnames.h	$HOME/ctools/include
+cp $HOME/ctools/uisam/iserror.h	$HOME/ctools/include
+cp $HOME/ctools/repgen/repform.nfm	$HOME/ctools/bin
+cp $HOME/ctools/repgen/report.nfm	$HOME/ctools/bin

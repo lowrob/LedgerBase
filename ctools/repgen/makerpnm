@@ -1,4 +1,4 @@
-LIBS=/lib/libfom.a
+LIBS=$(HOME)/lib/libfom.a
 E=$(HOME)/bin/repname.out
 OBJECTS=repname.o win.o
 

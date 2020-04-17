@@ -61,10 +61,14 @@ D. Richardson  20-OCT-92
 	generation and kill the process. The signal handler is defined in 
 	the file 'brkrpt.c' found in the DBH directory.
 
+L. Robichaud  10-APR-2020
+	Fixing compiling errors and warning.
 *****************************************************************************/
 
 
 #include <stdio.h>
+#include <string.h>
+//#include <stdlib.h>
 /* Added by D. Richardson  10/20/92  - to handler break interrupts */
 #include <signal.h>
 
@@ -173,10 +177,86 @@ static	char	tempname[15] ;
 static	int	numberofcopies;
 #endif
 
-char	*malloc() ;
+static char	*malloc() ;
 long	lseek() ;
 
-
+/*** Define finctions and prototypes ***/
+static char get_fld(FIELDNO, NUMRET *);
+static char get_ftype(FIELDNO, short);
+static int disp_msgtext(short);
+static int printgline();
+static void right_jstfy(char, char, int);
+static void left_jstfy(char[], char[], int);
+static int cpystr(char[], int, char[]);
+static int main_header(char*, char*);
+static int report_embedded(void);
+static int print_header(void);
+static int fieldtitles(void);
+static int col_tit_line(short);
+static int initiate_keys(int);
+static int initzero_totals(NUMRET *);
+static void rpline(char **);
+#ifdef	DEBUG
+static int dump_val(short);
+#endif	
+store_val();
+static int check_repeat(short);
+static int put_linespace(void);
+static int check_bound(short);
+int check_keys(void);
+static int star(short, char[], short, short);
+int max_title_size(void);
+static int centre_jstfy(char[], char[], short);
+static int cp(char[], int, char[]);
+static int i_space(char[]);
+static int underline(int);
+int putline(char[]);
+static int field(short, char*);
+static int get_fieldval(UNIVAL *, short);
+static int subtotals(short);
+static int getyp(FIELDNO);
+int rpopen(char*, int, int, int, char *, char *, char *);
+int rpclose(void);
+static int free_space(void);
+static int acumulate(short, char, NUMRET *);
+static int intizero_totals(NUMRET *);
+#ifdef UNUSED
+static int iszero(NUMRET *, short);
+#endif
+static int Rd_strrecs(void);
+static int Rd_formrec(char *, short, short);
+static int Open_strfile(char *, int, char *);
+static int decide_dimension(void);
+static int ptr_get(FIELDNO, char *);
+static int allocate_lines(short);
+static int maxltitle(char *);
+static int findntitles(void);
+static int calc_rp(char*, NUMRET *);
+static int lpush(NUMRET*, char);
+static char lpop(NUMRET *);
+static int lgetop(char *, char *);
+static int comp_typ(char *);
+static int edit(NUMRET *, char *, char *, char);
+void suppress(int);
+void asterisk(int);
+void flot(int);
+void last(void);
+int form_format(char *, char *, int);
+void rm_dot(char *);
+int rpAddSubtotal(int, int, char *, char *, char *, int);
+int srch_fldnm(char *, int *, int *);
+int rpChangetitle(int, char *);
+int rpSummaryOn(void);
+int rpSummaryOff(void);
+int rpGetColPos(int);
+int rpMkline(int, char*);
+int rpPutline(void);
+void rpAddSubtittle(char *);
+int rpPagesize(int);
+int rpSetCopies(int);
+int rpclose_mesg(char *);
+int putmesg(char[]);
+/*** Beiging of functions ***/
 static	char 
 get_fld(fieldnr,retval)	/* gets fieldnr field value */
 FIELDNO	fieldnr;
@@ -347,7 +427,7 @@ int	len;
 /****************************************************************************/
 
 
-static int
+static void
 left_jstfy(st,sc,len)				/* left justification */
 char	st[],sc[];
 int	len;
@@ -1026,6 +1106,7 @@ char dest[];
 
 
 /******
+int
 max_title_size()
 {
 	int i,k;
@@ -1301,7 +1382,7 @@ FIELDNO n ;
 }
 
 
-
+int
 rpopen(name,logrec,formrec,outopt,discfile, pgm_name, date)
 char	*name ;
 int	logrec ;

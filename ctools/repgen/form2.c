@@ -1,4 +1,8 @@
 
+/*** Functon declare and prototype ***/
+static int sgetop(char *, short, char *);
+static int symbol_test(char *);
+
 /* Read field attributes for the reported fields	*/
 
 change_fld()

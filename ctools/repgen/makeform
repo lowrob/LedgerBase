@@ -1,4 +1,4 @@
-LIBS=/lib/libfom.a
+LIBS=$(HOME)/lib/libfom.a
 E=$(HOME)/bin/form.out
 OBJECTS=form1.o win.o
 

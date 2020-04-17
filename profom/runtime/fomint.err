@@ -1,0 +1,24 @@
+fominterrs - file of PROFOM internal error codes and descriptions
+----------------------------------------------------------------
+
+These are the codes for PROFOM internal errors.
+
+err	meaning							routine
+num								reporting
+---	-------------------					---------
+
+1	chkdv() returned non-sense				showform
+2	func to fomca2() is junk				fomca2
+3	field type invalid in form file record			fomqy
+4	call to rstty with tmode=0				rstty
+5	on-screen-size of field is 0				loadform
+6	putmask() called for prompt only field			putmask
+7	putdata() called for prompt only field			putdata
+8	putprom() called for mask only field			putprom
+9	clrprom() called for mask only field			clrprom
+10	clrfld() called for prompt only field			clrfld
+11	accept() returned field back space			fomrf,fomrd
+12	accept() returned unknown value				fomrf,fomrd
+13	accept() returned field forward				fomrf,fomrd
+14	errinit() called morethan once				errinit
+15	err() called without proper init being done		err

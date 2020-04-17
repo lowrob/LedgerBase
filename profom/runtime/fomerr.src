@@ -1,0 +1,35 @@
+01 User-Escape Not Enabled For This Field
+02 Field Backspace Not Allowed
+03 Field Forward Not Allowed
+04 This Is A Required Field
+05 Invalid Character
+06 Value Out Of Bounds
+07 Input Next Character For User-Escape
+08 No Help Message For This Field
+09 Sign Must Be Entered First
+10 Field Is Full
+11 Sign Must Be Entered Last
+12 User-Escape Not Enabled For This Field
+13 Decimal Point Already Entered
+14 No Decimal Part In The Field
+15 Sign Has Already Been Entered
+16 Field Is Not Signed
+17 Sign Must Be Entered First
+18 Already At The Beginning Of The Field
+19 Invalid Character
+20 Field Is Full - Press CR Or TAB
+21 User-Escape Not Enbled For This Field
+22 No Input That Can Be Deleted
+23 Illegal Character
+24 User-Escape Not Enabled For This Field
+25 Field Must Be Fully Entered
+26 No Input That Can Be Deleted
+27 Field Is Full
+28 Invalid Character
+29 Alphabetic Character Required
+30 Numeric Character Required
+31 Month Out Of Range
+32 Date Out Of Range
+33 Press Y, N, y Or n
+34 Field Is Full - Press CR Or TAB
+35 Snap-Screen-Image Function Disabled

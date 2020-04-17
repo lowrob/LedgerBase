@@ -1,0 +1,15 @@
+OBJECTS=fom_to_n.o fomtfr.o fommsc.o
+E=fom_to_n1
+I=$(HOME)/include
+
+$(E) : $(OBJECTS)
+	$(CC) $(OBJECTS) -o $(E)
+
+.c.o :
+	$(CC) -c -I$(I) $*.c
+
+fom_to_n.o : $(I)/cfomfrm.h $(I)/cfomstrc1.h
+
+fomtfr.o : $(I)/cfomfrm.h
+
+fommsc.o : $(I)/cfomfrm.h

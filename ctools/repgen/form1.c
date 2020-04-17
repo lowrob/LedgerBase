@@ -250,7 +250,10 @@ static int fdf ;		/* file fd for format def. file */
 char *malloc() ;
 long lseek() ;
 
-
+/*** Define functions and prototype ***/
+static int maxltitle(char *);
+static int itoa(int, char *);
+static int alter_rp(char *, char *); 
 
 main(argc,argv)
 int argc ;

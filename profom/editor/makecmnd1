@@ -1,0 +1,2 @@
+make -f makeedtr1 2>err
+make -f makenfm1 2>>err

@@ -1,0 +1,13 @@
+cp /disk1/profom/runtime/fomerr.bin	/usr/bin
+cp /disk1/profom/runtime/ffomerr.bin	/usr/bin
+cp /disk1/profom/runtime/fomtcr.bin	/usr/bin
+cp /disk1/profom/runtime/libfom.a		/lib
+cp /disk1/profom/runtime/libffom.a	/lib
+cp /disk1/profom/include/cfomstrc.h	/usr/include
+cp /disk1/profom/include/cfomtcr.h		/usr/include
+cp /disk1/profom/include/cfomtm.h		/usr/include
+cp /disk1/profom/editor/PROFOMC.nfm	/usr/bin
+cp /disk1/profom/editor/PROFOMF.nfm	/usr/bin
+cp /disk1/profom/editor/PROFOMS.nfm	/usr/bin
+cp /disk1/profom/editor/PROFOMU.nfm	/usr/bin
+cp /disk1/profom/editor/fomedtr		/usr/bin

@@ -1,0 +1,1121 @@
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfrm1.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomfrm1.c:49:7: warning: conflicting types for built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+ char *malloc();
+       ^~~~~~
+cfomfrm1.c:53:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomin(srp)  /* init profom runtime */
+ ^~~~~
+cfomfrm1.c: In function ‘fomin’:
+cfomfrm1.c:62:4: warning: implicit declaration of function ‘readstring’ [-Wimplicit-function-declaration]
+    readstring(sp->termnm,SR_TNML);
+    ^~~~~~~~~~
+cfomfrm1.c:65:7: warning: implicit declaration of function ‘tcrinit’ [-Wimplicit-function-declaration]
+   if (tcrinit(sp->termnm))
+       ^~~~~~~
+cfomfrm1.c:69:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   strcpy(sp->errset,PFMERFL);
+   ^~~~~~
+cfomfrm1.c:69:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+cfomfrm1.c:69:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+cfomfrm1.c:70:6: warning: implicit declaration of function ‘errinit’ [-Wimplicit-function-declaration]
+  if (errinit(sp->errset))
+      ^~~~~~~
+cfomfrm1.c: At top level:
+cfomfrm1.c:75:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomcs()  /* PROFOM clear screen call */
+ ^~~~~
+cfomfrm1.c: In function ‘fomcs’:
+cfomfrm1.c:79:7: warning: implicit declaration of function ‘clrscrn’ [-Wimplicit-function-declaration]
+   if (clrscrn())
+       ^~~~~~~
+cfomfrm1.c:83:6: warning: implicit declaration of function ‘clrall’ [-Wimplicit-function-declaration]
+  if (clrall())  /* clear current screen */
+      ^~~~~~
+cfomfrm1.c: At top level:
+cfomfrm1.c:88:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomce()  /* clear error line */
+ ^~~~~
+cfomfrm1.c: In function ‘fomce’:
+cfomfrm1.c:91:6: warning: implicit declaration of function ‘clreln’; did you mean ‘cvelm’? [-Wimplicit-function-declaration]
+  if (clreln())
+      ^~~~~~
+      cvelm
+cfomfrm1.c: At top level:
+cfomfrm1.c:96:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomen(s) /* display message on last line & keep cursor there */
+ ^~~~~
+cfomfrm1.c: In function ‘fomen’:
+cfomfrm1.c:100:6: warning: implicit declaration of function ‘ncmerr’; did you mean ‘stderr’? [-Wimplicit-function-declaration]
+  if (ncmerr(s))
+      ^~~~~~
+      stderr
+cfomfrm1.c: At top level:
+cfomfrm1.c:105:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomer(s) /* display error message */
+ ^~~~~
+cfomfrm1.c: In function ‘fomer’:
+cfomfrm1.c:109:6: warning: implicit declaration of function ‘pmerln’ [-Wimplicit-function-declaration]
+  if (pmerln(s))
+      ^~~~~~
+cfomfrm1.c: At top level:
+cfomfrm1.c:114:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomrt()  /* restore terminal characteristics to what they were before
+ ^~~~~
+cfomfrm1.c: In function ‘fomrt’:
+cfomfrm1.c:118:6: warning: implicit declaration of function ‘rstty’ [-Wimplicit-function-declaration]
+  if (rstty())
+      ^~~~~
+cfomfrm1.c: At top level:
+cfomfrm1.c:123:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomst()  /* set terminal characteristics to those needed by PROFOM */
+ ^~~~~
+cfomfrm1.c: In function ‘fomst’:
+cfomfrm1.c:126:6: warning: implicit declaration of function ‘settty’; did you mean ‘setbuf’? [-Wimplicit-function-declaration]
+  if (settty())
+      ^~~~~~
+      setbuf
+cfomfrm1.c: At top level:
+cfomfrm1.c:131:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomvn(s) /* retutn PROFOM version string in s */
+ ^~~~~
+cfomfrm1.c: In function ‘fomvn’:
+cfomfrm1.c:136:5: warning: implicit declaration of function ‘formreqd’; did you mean ‘fomrt’? [-Wimplicit-function-declaration]
+  if(formreqd())
+     ^~~~~~~~
+     fomrt
+cfomfrm1.c:138:2: warning: incompatible implicit declaration of built-in function ‘strcpy’
+  strcpy(s,fhp->version);  /* PFM_VERSN changed to fhp->version by Amar*/
+  ^~~~~~
+cfomfrm1.c:138:2: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+cfomfrm1.c: At top level:
+cfomfrm1.c:142:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomud(audrp)  /* update dup buffers call */
+ ^~~~~
+cfomfrm1.c: In function ‘fomud’:
+cfomfrm1.c:148:11: warning: implicit declaration of function ‘chkform’ [-Wimplicit-function-declaration]
+  if ((k = chkform()) == 1) /* see if new form required */
+           ^~~~~~~
+cfomfrm1.c:150:6: warning: implicit declaration of function ‘fldrange’ [-Wimplicit-function-declaration]
+  if (fldrange()) /* find range of fields */
+      ^~~~~~~~
+cfomfrm1.c:158:4: warning: implicit declaration of function ‘convau’ [-Wimplicit-function-declaration]
+    convau(); /* convert current field */
+    ^~~~~~
+cfomfrm1.c:159:11: warning: implicit declaration of function ‘chkudv’ [-Wimplicit-function-declaration]
+   switch (chkudv()){ /* check user data record */
+           ^~~~~~
+cfomfrm1.c:165:4: warning: implicit declaration of function ‘cpdupval’ [-Wimplicit-function-declaration]
+    cpdupval(); /* copy value into buff */
+    ^~~~~~~~
+cfomfrm1.c:170:4: warning: implicit declaration of function ‘clrdupbuf’ [-Wimplicit-function-declaration]
+    clrdupbuf(); /* clear the dup buffer */
+    ^~~~~~~~~
+cfomfrm1.c: At top level:
+cfomfrm1.c:180:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomwf(audrp) /* display field with data */
+ ^~~~~
+cfomfrm1.c: In function ‘fomwf’:
+cfomfrm1.c:188:6: warning: implicit declaration of function ‘findfld’ [-Wimplicit-function-declaration]
+  if (findfld() == -1)
+      ^~~~~~~
+cfomfrm1.c:194:6: warning: implicit declaration of function ‘chkdv’ [-Wimplicit-function-declaration]
+  pvc=chkdv();
+      ^~~~~
+cfomfrm1.c:201:9: warning: implicit declaration of function ‘putprom’ [-Wimplicit-function-declaration]
+     if (putprom())
+         ^~~~~~~
+cfomfrm1.c:204:8: warning: implicit declaration of function ‘putmask’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+    if (putmask())
+        ^~~~~~~
+        puts
+cfomfrm1.c:206:4: warning: implicit declaration of function ‘cpdata’ [-Wimplicit-function-declaration]
+    cpdata();
+    ^~~~~~
+cfomfrm1.c:221:8: warning: implicit declaration of function ‘cmpxx’ [-Wimplicit-function-declaration]
+    if(!cmpxx(ourdr+cf->drloc,userdr+cf->drloc,cf->dfsize))
+        ^~~~~
+cfomfrm1.c:224:8: warning: implicit declaration of function ‘putdata’ [-Wimplicit-function-declaration]
+    if (putdata())
+        ^~~~~~~
+cfomfrm1.c:238:9: warning: implicit declaration of function ‘clrprom’ [-Wimplicit-function-declaration]
+     if (clrprom())
+         ^~~~~~~
+cfomfrm1.c:240:8: warning: implicit declaration of function ‘clrfld’ [-Wimplicit-function-declaration]
+    if (clrfld())
+        ^~~~~~
+cfomfrm1.c: At top level:
+cfomfrm1.c:253:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomrf(audrp) /* read a single field from the screen */
+ ^~~~~
+cfomfrm1.c: In function ‘fomrf’:
+cfomfrm1.c:274:3: warning: implicit declaration of function ‘cpdvtou’ [-Wimplicit-function-declaration]
+   cpdvtou();
+   ^~~~~~~
+cfomfrm1.c:282:4: warning: implicit declaration of function ‘fillcb’; did you mean ‘fileno’? [-Wimplicit-function-declaration]
+    fillcb(userdr+cf->drloc, cf->dfsize, LOW_VAL) ;
+    ^~~~~~
+    fileno
+cfomfrm1.c:286:7: warning: implicit declaration of function ‘fomaccept’; did you mean ‘fomce’? [-Wimplicit-function-declaration]
+  rv = fomaccept(FALSE,FALSE);
+       ^~~~~~~~~
+       fomce
+cfomfrm1.c:290:3: warning: implicit declaration of function ‘convutoa’ [-Wimplicit-function-declaration]
+   convutoa();
+   ^~~~~~~~
+cfomfrm1.c: At top level:
+cfomfrm1.c:316:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomwr(audrp) /* multi-field write */
+ ^~~~~
+cfomfrm1.c:396:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomrd(audrp) /* multi-field read */
+ ^~~~~
+cfomfrm1.c:602:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomsc(bgclr,pfgclr,mfgclr,errclr) /* set colours */
+ ^~~~~
+cfomfrm1.c: In function ‘fomsc’:
+cfomfrm1.c:606:6: warning: implicit declaration of function ‘setcolours’ [-Wimplicit-function-declaration]
+  if (setcolours(bgclr,pfgclr,mfgclr,errclr))
+      ^~~~~~~~~~
+cfomfrm1.c: At top level:
+cfomfrm1.c:611:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomclroff(){ /* set colour pc to off */
+ ^~~~~~~~~
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfrm1.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfrm2.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomfrm2.c:30:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomcf(func,status) /* change function status */
+ ^~~~~
+cfomfrm2.c:58:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomfp(fld,fldpos,fldlen) /* return pos of fld in data rec and length */
+ ^~~~~
+cfomfrm2.c: In function ‘fomfp’:
+cfomfrm2.c:63:6: warning: implicit declaration of function ‘formreqd’; did you mean ‘fread’? [-Wimplicit-function-declaration]
+  if (formreqd())
+      ^~~~~~~~
+      fread
+cfomfrm2.c:65:6: warning: implicit declaration of function ‘getfld’; did you mean ‘getw’? [-Wimplicit-function-declaration]
+  if (getfld(fld) == -1)
+      ^~~~~~
+      getw
+cfomfrm2.c: At top level:
+cfomfrm2.c:90:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomxy(x,y) /* positon cursor at (x,y) on screen */
+ ^~~~~
+cfomfrm2.c: In function ‘fomxy’:
+cfomfrm2.c:93:6: warning: implicit declaration of function ‘poscur’ [-Wimplicit-function-declaration]
+  if (poscur(x,y))
+      ^~~~~~
+cfomfrm2.c: At top level:
+cfomfrm2.c:99:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fommc(x,y,s) /* pos curs at (x,y) and display s from there */
+ ^~~~~
+cfomfrm2.c:113:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fommf(mf) /* return no of last field on screen */
+ ^~~~~
+cfomfrm2.c: In function ‘fommf’:
+cfomfrm2.c:124:8: warning: implicit declaration of function ‘chkdv’ [-Wimplicit-function-declaration]
+    if (chkdv() != 1) {
+        ^~~~~
+cfomfrm2.c: At top level:
+cfomfrm2.c:133:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomca2(fld,func,arg1,arg2) /* fomca call with 2 arguements */
+ ^~~~~~
+cfomfrm2.c: In function ‘fomca2’:
+cfomfrm2.c:148:8: warning: implicit declaration of function ‘clrprom’ [-Wimplicit-function-declaration]
+    if (clrprom()) /* if up, remove the prompt */
+        ^~~~~~~
+cfomfrm2.c:157:8: warning: implicit declaration of function ‘putprom’ [-Wimplicit-function-declaration]
+    if (putprom())
+        ^~~~~~~
+cfomfrm2.c:164:8: warning: implicit declaration of function ‘clrfld’ [-Wimplicit-function-declaration]
+    if (clrfld())
+        ^~~~~~
+cfomfrm2.c:174:11: warning: implicit declaration of function ‘putdata’ [-Wimplicit-function-declaration]
+     { if (putdata()) return(1); }
+           ^~~~~~~
+cfomfrm2.c:176:11: warning: implicit declaration of function ‘putmask’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+     { if (putmask()) return(1); }
+           ^~~~~~~
+           puts
+cfomfrm2.c: At top level:
+cfomfrm2.c:213:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomca1(fld,func,arg) /* fomca call with 1 arguement */
+ ^~~~~~
+cfomfrm2.c: In function ‘fomca1’:
+cfomfrm2.c:305:3: warning: implicit declaration of function ‘cla1’ [-Wimplicit-function-declaration]
+   cla1(arg,LA_REQ);
+   ^~~~
+cfomfrm2.c:311:3: warning: implicit declaration of function ‘chva’ [-Wimplicit-function-declaration]
+   chva(arg,VA_BOLD);
+   ^~~~
+cfomfrm2.c:326:3: warning: implicit declaration of function ‘cla2’ [-Wimplicit-function-declaration]
+   cla2(arg,LA_SHODUP);
+   ^~~~
+cfomfrm2.c: At top level:
+cfomfrm2.c:373:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomqy(func,fld,s) /* return attribute of fld in s */
+ ^~~~~
+cfomfrm2.c: In function ‘fomqy’:
+cfomfrm2.c:390:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   strcpy(s,cvelm(helpmes)); /* changed cf->X to cvelm(X) */
+   ^~~~~~
+cfomfrm2.c:390:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+cfomfrm2.c:390:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+cfomfrm2.c:407:3: warning: implicit declaration of function ‘convtoa’ [-Wimplicit-function-declaration]
+   convtoa(cvelm(lbound),s); /* changed cf->X to cvelm(X) */
+   ^~~~~~~
+cfomfrm2.c: At top level:
+cfomfrm2.c:456:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomss(s,lines,columns) /* return screen image in s of size lines*columns */
+ ^~~~~
+cfomfrm2.c: In function ‘fomss’:
+cfomfrm2.c:461:6: warning: implicit declaration of function ‘scrimg’ [-Wimplicit-function-declaration]
+  if (scrimg(s,lines,columns))
+      ^~~~~~
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfrm2.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfrm3.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomfrm3.c:64:7: warning: conflicting types for built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+ char *malloc();
+       ^~~~~~
+cfomfrm3.c:92:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ readstring(s,maxl) /* read string from stdin */
+ ^~~~~~~~~~
+cfomfrm3.c:105:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ loadform() /* load the form file required */
+ ^~~~~~~~
+cfomfrm3.c: In function ‘loadform’:
+cfomfrm3.c:111:2: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+  strcpy(t,sp->scrnam);
+  ^~~~~~
+cfomfrm3.c:111:2: warning: incompatible implicit declaration of built-in function ‘strcpy’
+cfomfrm3.c:111:2: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+cfomfrm3.c:112:2: warning: implicit declaration of function ‘strcat’ [-Wimplicit-function-declaration]
+  strcat(t,FMXTUC); /* add upper case extension */
+  ^~~~~~
+cfomfrm3.c:112:2: warning: incompatible implicit declaration of built-in function ‘strcat’
+cfomfrm3.c:112:2: note: include ‘<string.h>’ or provide a declaration of ‘strcat’
+cfomfrm3.c:122:6: warning: implicit declaration of function ‘read’; did you mean ‘fread’? [-Wimplicit-function-declaration]
+  if (read(fd,(char *)fhp,FMH_SZ) != FMH_SZ) /* read header */
+      ^~~~
+      fread
+cfomfrm3.c:138:2: warning: implicit declaration of function ‘close’; did you mean ‘pclose’? [-Wimplicit-function-declaration]
+  close(fd);
+  ^~~~~
+  pclose
+cfomfrm3.c:167:12: warning: implicit declaration of function ‘onscrnsz’ [-Wimplicit-function-declaration]
+   if ((j = onscrnsz()) <= 0)
+            ^~~~~~~~
+cfomfrm3.c:170:3: warning: implicit declaration of function ‘fillconv’; did you mean ‘fileno’? [-Wimplicit-function-declaration]
+   fillconv();
+   ^~~~~~~~
+   fileno
+cfomfrm3.c:172:14: warning: implicit declaration of function ‘adjoff’ [-Wimplicit-function-declaration]
+     offset = adjoff(offset,ALGN_CHAR);
+              ^~~~~~
+cfomfrm3.c:222:3: warning: implicit declaration of function ‘convau’ [-Wimplicit-function-declaration]
+   convau(); /* convert value for current field */
+   ^~~~~~
+cfomfrm3.c:224:6: warning: implicit declaration of function ‘showform’; did you mean ‘loadform’? [-Wimplicit-function-declaration]
+  if (showform()) /* put up initial screen */
+      ^~~~~~~~
+      loadform
+cfomfrm3.c:227:3: warning: implicit declaration of function ‘flush’; did you mean ‘fflush’? [-Wimplicit-function-declaration]
+   flush();
+   ^~~~~
+   fflush
+cfomfrm3.c: At top level:
+cfomfrm3.c:232:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ oldform(){ /* check if the form is available and load it if yes */
+ ^~~~~~~
+cfomfrm3.c:270:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ chkform() /* check if a new form is required; if so, get it */
+ ^~~~~~~
+cfomfrm3.c: In function ‘chkform’:
+cfomfrm3.c:279:7: warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+  if (!strcmp(sp->scrnam,cfrmnam)) /* compare names */
+       ^~~~~~
+cfomfrm3.c:281:6: warning: implicit declaration of function ‘clrall’ [-Wimplicit-function-declaration]
+  if (clrall())  /* clear current screen */
+      ^~~~~~
+cfomfrm3.c: At top level:
+cfomfrm3.c:290:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ formreqd()  /* returns true if a new form is required */
+ ^~~~~~~~
+cfomfrm3.c:299:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ showform() /* put up initial screen */
+ ^~~~~~~~
+cfomfrm3.c: In function ‘showform’:
+cfomfrm3.c:305:6: warning: implicit declaration of function ‘clearscreen’; did you mean ‘clearerr’? [-Wimplicit-function-declaration]
+  if (clearscreen())
+      ^~~~~~~~~~~
+      clearerr
+cfomfrm3.c:311:10: warning: implicit declaration of function ‘putprom’ [-Wimplicit-function-declaration]
+    { if (putprom()) return(1); } /* so, put it up */
+          ^~~~~~~
+cfomfrm3.c:312:16: warning: implicit declaration of function ‘chkdv’ [-Wimplicit-function-declaration]
+   else switch (chkdv()) { /* check for data record value */
+                ^~~~~
+cfomfrm3.c:314:11: warning: implicit declaration of function ‘putmask’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+     { if (putmask()) return(1); }
+           ^~~~~~~
+           puts
+cfomfrm3.c:321:11: warning: implicit declaration of function ‘putdata’ [-Wimplicit-function-declaration]
+     { if (putdata()) return(1); }
+           ^~~~~~~
+cfomfrm3.c: At top level:
+cfomfrm3.c:337:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ findfld() /* find next field and put its address in cf else ret -1 */
+ ^~~~~~~
+cfomfrm3.c:361:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ getfld(fld) /* locate field by number and return its index else -1*/
+ ^~~~~~
+cfomfrm3.c:374:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ clrall() /* clear the screen and release all areas */
+ ^~~~~~
+cfomfrm3.c: In function ‘clrall’:
+cfomfrm3.c:378:6: warning: implicit declaration of function ‘clrscrn’ [-Wimplicit-function-declaration]
+  if (clrscrn())
+      ^~~~~~~
+cfomfrm3.c: At top level:
+cfomfrm3.c:436:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fldrange() /* find range of fields from info in status record and return
+ ^~~~~~~~
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfrm3.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfld1.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomfld1.c:15:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ chkdv()  /* check the value in internal data record for field in cf
+ ^~~~~
+cfomfld1.c: In function ‘chkdv’:
+cfomfld1.c:19:6: warning: implicit declaration of function ‘cmpcbc’ [-Wimplicit-function-declaration]
+  if (cmpcbc(ourdr+cf->drloc, cf->dfsize, LOW_VAL))
+      ^~~~~~
+cfomfld1.c: At top level:
+cfomfld1.c:27:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cmpcbx(s,t,l) /* compare two COBOL X fields and return true if equal */
+ ^~~~~~
+cfomfld1.c:39:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cmpcbc(s,l,c)  /* if all characters of s equal c return TRUE */
+ ^~~~~~
+cfomfld1.c:49:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ clrdupbuf() /* clear dup buf of *cf */
+ ^~~~~~~~~
+cfomfld1.c:58:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cmpstv(s,c) /* return true if all characters of s are c */
+ ^~~~~~
+cfomfld1.c:67:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cla1(t,mask) /* change la corr to mask in lattr1 based on t */
+ ^~~~
+cfomfld1.c:77:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cla2(t,mask) /* change la corr to mask in lattr2 based on t */
+ ^~~~
+cfomfld1.c:86:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ chva(t,mask) /* change va corr to mask based on t */
+ ^~~~
+cfomfld1.c:109:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cpscb(s,d,l) /* copy string s to COBOL X field d of length l */
+ ^~~~~
+cfomfld1.c:119:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cpcbs(x,l,s) /* copy COBOL field x of length l to string s */
+ ^~~~~
+cfomfld1.c:134:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cpdupval() /* copy the value from user data record to dup buffer for cf */
+ ^~~~~~~~
+cfomfld1.c:143:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ chkudv() /* check the value in user data record for field in cf
+ ^~~~~~
+cfomfld1.c:155:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ putmask(){ /* display the mask for current field */
+ ^~~~~~~
+cfomfld1.c: In function ‘putmask’:
+cfomfld1.c:158:6: warning: implicit declaration of function ‘display’ [-Wimplicit-function-declaration]
+  if (display(cf->fldx,cf->fldy,cf->fldva,cvelm(dmask),MASK))
+      ^~~~~~~
+cfomfld1.c: At top level:
+cfomfld1.c:162:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ putdata(){ /* display data for current field */
+ ^~~~~~~
+cfomfld1.c: In function ‘putdata’:
+cfomfld1.c:165:6: warning: implicit declaration of function ‘edit’ [-Wimplicit-function-declaration]
+  if (edit())
+      ^~~~
+cfomfld1.c: At top level:
+cfomfld1.c:172:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ putprom(){ /* display the prompt for current field */
+ ^~~~~~~
+cfomfld1.c:179:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ clrprom(){ /* clear prompt for current field */
+ ^~~~~~~
+cfomfld1.c: In function ‘clrprom’:
+cfomfld1.c:182:6: warning: implicit declaration of function ‘clear’; did you mean ‘cla2’? [-Wimplicit-function-declaration]
+  if (clear(cf->promx,cf->promy,strlen(cvelm(prompt)),cf->promva))
+      ^~~~~
+      cla2
+cfomfld1.c:182:32: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+  if (clear(cf->promx,cf->promy,strlen(cvelm(prompt)),cf->promva))
+                                ^~~~~~
+cfomfld1.c:182:32: warning: incompatible implicit declaration of built-in function ‘strlen’
+cfomfld1.c:182:32: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+cfomfld1.c: At top level:
+cfomfld1.c:187:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ clrfld(){ /* clear mask part for current field */
+ ^~~~~~
+cfomfld1.c:195:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cpdata(){ /* copy data from userdr to ourdr for cf */
+ ^~~~~~
+cfomfld1.c:206:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cpdvtou(){ /* copy dup value to user data record for cf */
+ ^~~~~~~
+cfomfld1.c:214:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ posinfld(n) /* pos cursor to nth char in mask for cf */
+ ^~~~~~~~
+cfomfld1.c: In function ‘posinfld’:
+cfomfld1.c:218:6: warning: implicit declaration of function ‘nextpos’; did you mean ‘fsetpos’? [-Wimplicit-function-declaration]
+  if (nextpos(cf->fldx,cf->fldy,n-1,&nl,&nc) == -1)
+      ^~~~~~~
+      fsetpos
+cfomfld1.c:220:6: warning: implicit declaration of function ‘poscur’ [-Wimplicit-function-declaration]
+  if (poscur(nl,nc))
+      ^~~~~~
+cfomfld1.c: At top level:
+cfomfld1.c:225:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ inbounds(){ /* returns TRUE if value in userdr for cf is in bounds
+ ^~~~~~~~
+cfomfld1.c: In function ‘inbounds’:
+cfomfld1.c:239:22: warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+   if (cf->lbound && (strcmp(s,cvelm(lbound)) < 0))
+                      ^~~~~~
+cfomfld1.c:247:14: warning: implicit declaration of function ‘signconv’ [-Wimplicit-function-declaration]
+   if ((uds = signconv(s+cf->dfsize-1)) == 0)
+              ^~~~~~~~
+cfomfld1.c: At top level:
+cfomfld1.c:299:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ signconv(cp) /* convert signed digit to plain char and return sign */
+ ^~~~~~~~
+cfomfld1.c:325:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ cmpxx(cp1,cp2,l)
+ ^~~~~
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfld1.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfld2.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomfld2.c:21:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ onscrnsz(){
+ ^~~~~~~~
+cfomfld2.c:41:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fillconv()  /* Fill up some details about current field */
+ ^~~~~~~~
+cfomfld2.c:71:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ edit()
+ ^~~~
+cfomfld2.c:147:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ adjoff(offset,align) /* adjust offset to ensure alignment */
+ ^~~~~~
+cfomfld2.c:154:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ convau(){ /* convert data from actual user data record for current fld */
+ ^~~~~~
+cfomfld2.c: In function ‘convau’:
+cfomfld2.c:164:4: warning: implicit declaration of function ‘fillcb’; did you mean ‘fillconv’? [-Wimplicit-function-declaration]
+    fillcb(userdr+cf->drloc,cf->dfsize,LOW_VAL);
+    ^~~~~~
+    fillconv
+cfomfld2.c:168:4: warning: implicit declaration of function ‘cpscb’ [-Wimplicit-function-declaration]
+    cpscb(actudr+cfi->aoff,userdr+cf->drloc,cf->dfsize);
+    ^~~~~
+cfomfld2.c:178:4: warning: implicit declaration of function ‘copyint’ [-Wimplicit-function-declaration]
+    copyint(s);
+    ^~~~~~~
+cfomfld2.c:223:4: warning: implicit declaration of function ‘copydec’ [-Wimplicit-function-declaration]
+    copydec(s);
+    ^~~~~~~
+cfomfld2.c: At top level:
+cfomfld2.c:242:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ copyint(s) /* copy the intger in s to userdr for cf */
+ ^~~~~~~
+cfomfld2.c: In function ‘copyint’:
+cfomfld2.c:248:8: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+  cp1=s+strlen(s)-1;
+        ^~~~~~
+cfomfld2.c:248:8: warning: incompatible implicit declaration of built-in function ‘strlen’
+cfomfld2.c:248:8: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+cfomfld2.c:274:3: warning: implicit declaration of function ‘gensign’ [-Wimplicit-function-declaration]
+   gensign(userdr+cf->drloc+cf->dfsize-1,sign);
+   ^~~~~~~
+cfomfld2.c: At top level:
+cfomfld2.c:279:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ copydec(s) /* copy the decimal no in s to userdr for cf */
+ ^~~~~~~
+cfomfld2.c:394:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fillcb(x,l,c) /* fill cobol X field of length l with c */
+ ^~~~~~
+cfomfld2.c:405:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ gensign(cp,sign) /* convert *cp to cobol signed character */
+ ^~~~~~~
+cfomfld2.c: In function ‘gensign’:
+cfomfld2.c:407:10: warning: type defaults to ‘int’ in declaration of ‘sign’ [-Wimplicit-int]
+ register sign;{
+          ^~~~
+cfomfld2.c: At top level:
+cfomfld2.c:418:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ edtnum(){ /* edit the value in userdr for cf for input to atoi() etc */
+ ^~~~~~
+cfomfld2.c: In function ‘edtnum’:
+cfomfld2.c:428:14: warning: implicit declaration of function ‘signconv’; did you mean ‘fillconv’? [-Wimplicit-function-declaration]
+  if ((sign = signconv(ivc+cf->dfsize-1)) == 0)
+              ^~~~~~~~
+              fillconv
+cfomfld2.c: At top level:
+cfomfld2.c:448:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ convutoa(){ /* convert value in userdr for cf to actuser format */
+ ^~~~~~~~
+cfomfld2.c: In function ‘convutoa’:
+cfomfld2.c:452:3: warning: implicit declaration of function ‘cpcbs’ [-Wimplicit-function-declaration]
+   cpcbs(userdr+cf->drloc,cf->dfsize,actudr+cfi->aoff);
+   ^~~~~
+cfomfld2.c:456:34: warning: implicit declaration of function ‘atoi’; did you mean ‘atof’? [-Wimplicit-function-declaration]
+   *(short *)(actudr+cfi->aoff) = atoi(ednum);
+                                  ^~~~
+                                  atof
+cfomfld2.c: At top level:
+cfomfld2.c:501:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ convtoa(vp,cp) /* convert unpacked value *vp to reqd type for cf and
+ ^~~~~~~
+cfomfld2.c: In function ‘convtoa’:
+cfomfld2.c:510:3: warning: implicit declaration of function ‘editvar’; did you mean ‘edit’? [-Wimplicit-function-declaration]
+   editvar(vp);
+   ^~~~~~~
+   edit
+cfomfld2.c: At top level:
+cfomfld2.c:539:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ editvar(vp) /* version of edit that takes the value to be edited as arg */
+ ^~~~~~~
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfld2.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfld3.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomfld3.c:59:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ firstmask() {
+ ^~~~~~~~~
+cfomfld3.c: In function ‘firstmask’:
+cfomfld3.c:60:8: warning: implicit declaration of function ‘posinfld’ [-Wimplicit-function-declaration]
+        posinfld(1);  /* First posn of mask */
+        ^~~~~~~~
+cfomfld3.c:65:10: warning: implicit declaration of function ‘put’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+          put(*dmaskptr);
+          ^~~
+          puts
+cfomfld3.c: At top level:
+cfomfld3.c:70:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomaccept(b,f)
+ ^~~~~~~~~
+cfomfld3.c: In function ‘fomaccept’:
+cfomfld3.c:97:15: warning: implicit declaration of function ‘fixup’ [-Wimplicit-function-declaration]
+               fixup(&signposn,&dotposn);
+               ^~~~~
+cfomfld3.c:98:21: warning: implicit declaration of function ‘fixdate’ [-Wimplicit-function-declaration]
+  if(type==TYP_DATE) fixdate(); /* set mflength and yrlength */
+                     ^~~~~~~
+cfomfld3.c:102:10: warning: implicit declaration of function ‘get’; did you mean ‘getw’? [-Wimplicit-function-declaration]
+        c=get();
+          ^~~
+          getw
+cfomfld3.c:109:39: warning: implicit declaration of function ‘uefom’ [-Wimplicit-function-declaration]
+                          if(( success=uefom())!=INVALID) return(RET_IMM);
+                                       ^~~~~
+cfomfld3.c:110:31: warning: implicit declaration of function ‘showerror’; did you mean ‘perror’? [-Wimplicit-function-declaration]
+                          else showerror(1);/*"User escape not allowed "*/
+                               ^~~~~~~~~
+                               perror
+cfomfld3.c:124:33: warning: implicit declaration of function ‘hretp’ [-Wimplicit-function-declaration]
+                         success=hretp();
+                                 ^~~~~
+cfomfld3.c:133:29: warning: implicit declaration of function ‘filldat’ [-Wimplicit-function-declaration]
+                             filldat(1);/* fill user data area from dup */
+                             ^~~~~~~
+cfomfld3.c:136:29: warning: implicit declaration of function ‘edit’ [-Wimplicit-function-declaration]
+                             edit(); /* edit the duplicn data */
+                             ^~~~
+cfomfld3.c:138:29: warning: implicit declaration of function ‘putdata’ [-Wimplicit-function-declaration]
+                             putdata(); /* Display edited data  */
+                             ^~~~~~~
+cfomfld3.c:159:25: warning: implicit declaration of function ‘redraw’ [-Wimplicit-function-declaration]
+             case REGEN: redraw();
+                         ^~~~~~
+cfomfld3.c:162:24: warning: implicit declaration of function ‘snapscreen’ [-Wimplicit-function-declaration]
+             case SNAP: snapscreen();
+                        ^~~~~~~~~~
+cfomfld3.c:165:28: warning: implicit declaration of function ‘putmask’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+                            putmask();
+                            ^~~~~~~
+                            puts
+cfomfld3.c:168:40: warning: implicit declaration of function ‘procnumeric’ [-Wimplicit-function-declaration]
+                                success=procnumeric();
+                                        ^~~~~~~~~~~
+cfomfld3.c:170:40: warning: implicit declaration of function ‘procalpha’; did you mean ‘isalpha’? [-Wimplicit-function-declaration]
+                                success=procalpha();
+                                        ^~~~~~~~~
+                                        isalpha
+cfomfld3.c:172:41: warning: implicit declaration of function ‘procdate’ [-Wimplicit-function-declaration]
+                                 success=procdate();
+                                         ^~~~~~~~
+cfomfld3.c:175:39: warning: implicit declaration of function ‘procbool’ [-Wimplicit-function-declaration]
+                               success=procbool();
+                                       ^~~~~~~~
+cfomfld3.c:184:14: warning: implicit declaration of function ‘inbounds’ [-Wimplicit-function-declaration]
+          if(!inbounds()) {
+              ^~~~~~~~
+cfomfld3.c: At top level:
+cfomfld3.c:229:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ uefom()   /* proc user escape request */
+ ^~~~~
+cfomfld3.c:244:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ hretp() /* proc a help return */
+ ^~~~~
+cfomfld3.c: In function ‘hretp’:
+cfomfld3.c:254:15: warning: implicit declaration of function ‘pmerln’ [-Wimplicit-function-declaration]
+               pmerln(fvp+cf->helpmes);
+               ^~~~~~
+cfomfld3.c: At top level:
+cfomfld3.c:263:2: warning: return type defaults to ‘int’ [-Wimplicit-int]
+  showchar(c) /* Display the character in c if it is printable character */
+  ^~~~~~~~
+cfomfld3.c:272:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ valnum(c) /* checks if the chara in c is a valid nymeric */
+ ^~~~~~
+cfomfld3.c:283:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ valalpha(c) /* checks if chara is valid alphanumeric */
+ ^~~~~~~~
+cfomfld3.c:297:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ procnumeric()
+ ^~~~~~~~~~~
+cfomfld3.c: In function ‘procnumeric’:
+cfomfld3.c:305:4: warning: implicit declaration of function ‘fomunget’; did you mean ‘fomaccept’? [-Wimplicit-function-declaration]
+    fomunget(c);
+    ^~~~~~~~
+    fomaccept
+cfomfld3.c:373:26: warning: implicit declaration of function ‘backspace’; did you mean ‘isspace’? [-Wimplicit-function-declaration]
+                          backspace();
+                          ^~~~~~~~~
+                          isspace
+cfomfld3.c:382:26: warning: implicit declaration of function ‘curpos’ [-Wimplicit-function-declaration]
+                          curpos(&xposn,&yposn); /* save the current posnition */
+                          ^~~~~~
+cfomfld3.c:385:26: warning: implicit declaration of function ‘align’ [-Wimplicit-function-declaration]
+                          align();
+                          ^~~~~
+cfomfld3.c:441:27: warning: implicit declaration of function ‘delete’ [-Wimplicit-function-declaration]
+                   else  { delete();
+                           ^~~~~~
+cfomfld3.c: At top level:
+cfomfld3.c:477:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fixup(signptr,dotptr)
+ ^~~~~
+cfomfld3.c:494:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ delete()
+ ^~~~~~
+cfomfld3.c: In function ‘delete’:
+cfomfld3.c:511:9: warning: implicit declaration of function ‘poscur’ [-Wimplicit-function-declaration]
+         poscur(xposn,yposn);
+         ^~~~~~
+cfomfld3.c: At top level:
+cfomfld3.c:525:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ procalpha()
+ ^~~~~~~~~
+cfomfld3.c: In function ‘procalpha’:
+cfomfld3.c:591:3: warning: implicit declaration of function ‘deletea’; did you mean ‘delete’? [-Wimplicit-function-declaration]
+   deletea();
+   ^~~~~~~
+   delete
+cfomfld3.c: At top level:
+cfomfld3.c:621:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ deletea()  /* delete for case =string */
+ ^~~~~~~
+cfomfld3.c:635:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ procdate()
+ ^~~~~~~~
+cfomfld3.c: In function ‘procdate’:
+cfomfld3.c:653:26: warning: implicit declaration of function ‘checkdate’; did you mean ‘procdate’? [-Wimplicit-function-declaration]
+                       if(checkdate(c)==INVALID) return(INVALID);
+                          ^~~~~~~~~
+                          procdate
+cfomfld3.c:679:22: warning: implicit declaration of function ‘deleted’; did you mean ‘deletea’? [-Wimplicit-function-declaration]
+                      deleted();
+                      ^~~~~~~
+                      deletea
+cfomfld3.c:684:10: warning: implicit declaration of function ‘valchar’; did you mean ‘putchar’? [-Wimplicit-function-declaration]
+  else if(valchar(c)==VALID) {
+          ^~~~~~~
+          putchar
+cfomfld3.c: At top level:
+cfomfld3.c:714:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ deleted()
+ ^~~~~~~
+cfomfld3.c:731:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ valchar(c)
+ ^~~~~~~
+cfomfld3.c:755:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ checkdate() /* check date field for corrctness */
+ ^~~~~~~~~
+cfomfld3.c: In function ‘checkdate’:
+cfomfld3.c:800:22: warning: implicit declaration of function ‘convmonth’ [-Wimplicit-function-declaration]
+             monthnum=convmonth(monthname);
+                      ^~~~~~~~~
+cfomfld3.c:807:7: warning: implicit declaration of function ‘leap’ [-Wimplicit-function-declaration]
+    if(leap(year)==VALID) monthlength[1]=29;
+       ^~~~
+cfomfld3.c: At top level:
+cfomfld3.c:818:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ convmonth(name)  /* convert month name to mont number */
+ ^~~~~~~~~
+cfomfld3.c: In function ‘convmonth’:
+cfomfld3.c:829:12: warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+         if(strcmp(name,months[i])==0) return(i+1);
+            ^~~~~~
+cfomfld3.c: At top level:
+cfomfld3.c:837:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ align()
+ ^~~~~
+cfomfld3.c:848:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fixdate() /* fixup mflength and yrlength */
+ ^~~~~~~
+cfomfld3.c:860:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ valdate(c) /* check if c is a valid character according to the mask */
+ ^~~~~~~
+cfomfld3.c:875:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ leap(year)
+ ^~~~
+cfomfld3.c:885:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ filldat(from)
+ ^~~~~~~
+cfomfld3.c:970:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ procbool() {
+ ^~~~~~~~
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomfld3.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomtcr1.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomtcr1.c:50:7: warning: conflicting types for built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+ char *malloc();
+       ^~~~~~
+cfomtcr1.c:53:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ bell() { /* ring bell */
+ ^~~~
+cfomtcr1.c:58:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ lockkb(){ /* lock key board */
+ ^~~~~~
+cfomtcr1.c:63:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ unlockkb(){ /* unlock key board */
+ ^~~~~~~~
+cfomtcr1.c:68:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ puts(s) /* write string s to terminal without updating screen image */
+ ^~~~
+cfomtcr1.c:79:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ poscur(x,y) /* position cursor to line x col y */
+ ^~~~~~
+cfomtcr1.c: In function ‘poscur’:
+cfomtcr1.c:91:24: warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+  if(telm(ttyp) == 1 && strcmp(sp->termnm, "N7901")) {
+                        ^~~~~~
+cfomtcr1.c: At top level:
+cfomtcr1.c:125:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ clrscrn(){ /* clear terminal screen and screen image */
+ ^~~~~~~
+cfomtcr1.c: In function ‘clrscrn’:
+cfomtcr1.c:128:2: warning: implicit declaration of function ‘clearscreen’; did you mean ‘clrscrn’? [-Wimplicit-function-declaration]
+  clearscreen();  /* clear physical screen */
+  ^~~~~~~~~~~
+  clrscrn
+cfomtcr1.c:139:2: warning: implicit declaration of function ‘home’ [-Wimplicit-function-declaration]
+  home(); /* leave cursor at home position */
+  ^~~~
+cfomtcr1.c: At top level:
+cfomtcr1.c:144:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ tcrinit(s) /* initialise tcr module for terminal named in s */
+ ^~~~~~~
+cfomtcr1.c: In function ‘tcrinit’:
+cfomtcr1.c:155:6: warning: implicit declaration of function ‘read’; did you mean ‘fread’? [-Wimplicit-function-declaration]
+  if (read(fd,(char *)tdp,TCD_SZ) != TCD_SZ)
+      ^~~~
+      fread
+cfomtcr1.c:165:2: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+  strcpy(termnal,tdp->trmnm[i]); /* copy terminal name */
+  ^~~~~~
+cfomtcr1.c:165:2: warning: incompatible implicit declaration of built-in function ‘strcpy’
+cfomtcr1.c:165:2: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+cfomtcr1.c:166:2: warning: implicit declaration of function ‘lseek’; did you mean ‘fseek’? [-Wimplicit-function-declaration]
+  lseek(fd,(long)TCB_SZ*(tdp->trmblk[i] - 1),1);
+  ^~~~~
+  fseek
+cfomtcr1.c:197:2: warning: implicit declaration of function ‘close’; did you mean ‘pclose’? [-Wimplicit-function-declaration]
+  close(fd);
+  ^~~~~
+  pclose
+cfomtcr1.c:198:6: warning: implicit declaration of function ‘settty’; did you mean ‘setbuf’? [-Wimplicit-function-declaration]
+  if (settty())
+      ^~~~~~
+      setbuf
+cfomtcr1.c: At top level:
+cfomtcr1.c:204:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ home(){ /* move cursor home */
+ ^~~~
+cfomtcr1.c:214:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ advcur(){ /* calculate new position of cursor */
+ ^~~~~~
+cfomtcr1.c:226:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ put(c)  /* send c to screen and image also */
+ ^~~
+cfomtcr1.c: In function ‘put’:
+cfomtcr1.c:233:7: warning: implicit declaration of function ‘backspace’ [-Wimplicit-function-declaration]
+   if (backspace())
+       ^~~~~~~~~
+cfomtcr1.c: At top level:
+cfomtcr1.c:260:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ clearscreen(){ /* clear physical screen but not the image */
+ ^~~~~~~~~~~
+cfomtcr1.c: In function ‘clearscreen’:
+cfomtcr1.c:271:3: warning: implicit declaration of function ‘setbgclr’; did you mean ‘setbuffer’? [-Wimplicit-function-declaration]
+   setbgclr(bgclr);
+   ^~~~~~~~
+   setbuffer
+cfomtcr1.c:273:2: warning: implicit declaration of function ‘delay’ [-Wimplicit-function-declaration]
+  delay(telm(cscrndelay));
+  ^~~~~
+cfomtcr1.c: At top level:
+cfomtcr1.c:277:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ putstring(s) /* send string s and update screen image */
+ ^~~~~~~~~
+cfomtcr1.c:286:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ delay(u) /* generate u units of delay for the terminal */
+ ^~~~~
+cfomtcr1.c:294:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ clreln(){ /* clear error line */
+ ^~~~~~
+cfomtcr1.c: In function ‘clreln’:
+cfomtcr1.c:303:3: warning: implicit declaration of function ‘resetva’ [-Wimplicit-function-declaration]
+   resetva(errorva); /* reset vas for error line */
+   ^~~~~~~
+cfomtcr1.c: At top level:
+cfomtcr1.c:339:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ curpos(xp,yp) /* return current position of cursor */
+ ^~~~~~
+cfomtcr1.c:346:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ pmerln(s) /* display message s on error line */
+ ^~~~~~
+cfomtcr1.c: In function ‘pmerln’:
+cfomtcr1.c:355:3: warning: implicit declaration of function ‘setfgclr’ [-Wimplicit-function-declaration]
+   setfgclr(efgclr);
+   ^~~~~~~~
+cfomtcr1.c:358:3: warning: implicit declaration of function ‘sendva’; did you mean ‘setdevs’? [-Wimplicit-function-declaration]
+   sendva(errorva);
+   ^~~~~~
+   setdevs
+cfomtcr1.c:369:2: warning: implicit declaration of function ‘flush’; did you mean ‘fflush’? [-Wimplicit-function-declaration]
+  flush();
+  ^~~~~
+  fflush
+cfomtcr1.c: At top level:
+cfomtcr1.c:373:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ showerror(eno) /* display error corr to eno */
+ ^~~~~~~~~
+cfomtcr1.c:380:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ ncmerr(s) /* put message on error line no cursor move */
+ ^~~~~~
+cfomtcr1.c:397:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ get(){ /* get next input character */
+ ^~~
+cfomtcr1.c: In function ‘get’:
+cfomtcr1.c:408:3: warning: implicit declaration of function ‘redraw’ [-Wimplicit-function-declaration]
+   redraw();
+   ^~~~~~
+cfomtcr1.c:411:3: warning: implicit declaration of function ‘rstty’ [-Wimplicit-function-declaration]
+   rstty();
+   ^~~~~
+cfomtcr1.c:412:3: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+   exit(0);
+   ^~~~
+cfomtcr1.c:412:3: warning: incompatible implicit declaration of built-in function ‘exit’
+cfomtcr1.c:412:3: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+cfomtcr1.c:416:3: warning: incompatible implicit declaration of built-in function ‘exit’
+   exit(0);
+   ^~~~
+cfomtcr1.c:416:3: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+cfomtcr1.c: At top level:
+cfomtcr1.c:423:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ setbgclr(bgc){ /* set background colour */
+ ^~~~~~~~
+cfomtcr1.c: In function ‘setbgclr’:
+cfomtcr1.c:423:1: warning: type of ‘bgc’ defaults to ‘int’ [-Wimplicit-int]
+cfomtcr1.c: At top level:
+cfomtcr1.c:432:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ setfgclr(fgc){ /* set foregroung colour */
+ ^~~~~~~~
+cfomtcr1.c: In function ‘setfgclr’:
+cfomtcr1.c:432:1: warning: type of ‘fgc’ defaults to ‘int’ [-Wimplicit-int]
+cfomtcr1.c: At top level:
+cfomtcr1.c:442:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ setcolours(bgc,pfgc,mfgc,efgc) /* set colours */
+ ^~~~~~~~~~
+cfomtcr1.c:453:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ fomunget(c)
+ ^~~~~~~~
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomtcr1.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomtcr2.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomtcr2.c:38:7: warning: conflicting types for built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+ char *malloc();
+       ^~~~~~
+cfomtcr2.c:42:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ redraw(){ /* redraw the screen from image */
+ ^~~~~~
+cfomtcr2.c: In function ‘redraw’:
+cfomtcr2.c:52:2: warning: implicit declaration of function ‘clearscreen’; did you mean ‘clearerr’? [-Wimplicit-function-declaration]
+  clearscreen(); /* clear physical screen */
+  ^~~~~~~~~~~
+  clearerr
+cfomtcr2.c:53:2: warning: implicit declaration of function ‘home’ [-Wimplicit-function-declaration]
+  home();
+  ^~~~
+cfomtcr2.c:62:5: warning: implicit declaration of function ‘poscur’ [-Wimplicit-function-declaration]
+     poscur(i+1,1);
+     ^~~~~~
+cfomtcr2.c:76:5: warning: implicit declaration of function ‘genva’ [-Wimplicit-function-declaration]
+     genva(cv);
+     ^~~~~
+cfomtcr2.c:81:5: warning: implicit declaration of function ‘setfgclr’ [-Wimplicit-function-declaration]
+     setfgclr(cb%10);
+     ^~~~~~~~
+cfomtcr2.c:82:5: warning: implicit declaration of function ‘setbgclr’; did you mean ‘setbuffer’? [-Wimplicit-function-declaration]
+     setbgclr(cb/10);
+     ^~~~~~~~
+     setbuffer
+cfomtcr2.c: At top level:
+cfomtcr2.c:149:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ scrimg(s,lns,cls) /* return screen image in s of size lns*cls */
+ ^~~~~~
+cfomtcr2.c: In function ‘scrimg’:
+cfomtcr2.c:158:4: warning: implicit declaration of function ‘cpcbs’ [-Wimplicit-function-declaration]
+    cpcbs(sip+i*telm(cols),telm(cols),s+i*cls);
+    ^~~~~
+cfomtcr2.c: At top level:
+cfomtcr2.c:162:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ snapscreen(){ /* append screen image to the screen-image-file */
+ ^~~~~~~~~~
+cfomtcr2.c: In function ‘snapscreen’:
+cfomtcr2.c:168:3: warning: implicit declaration of function ‘showerror’; did you mean ‘perror’? [-Wimplicit-function-declaration]
+   showerror(35);
+   ^~~~~~~~~
+   perror
+cfomtcr2.c:172:2: warning: implicit declaration of function ‘strcat’ [-Wimplicit-function-declaration]
+  strcat(s,".IMG"); /* last part of file name */
+  ^~~~~~
+cfomtcr2.c:172:2: warning: incompatible implicit declaration of built-in function ‘strcat’
+cfomtcr2.c:172:2: note: include ‘<string.h>’ or provide a declaration of ‘strcat’
+cfomtcr2.c: At top level:
+cfomtcr2.c:191:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ display(line,column,va,s,typ) /* display string s with va starting
+ ^~~~~~~
+cfomtcr2.c: In function ‘display’:
+cfomtcr2.c:200:7: warning: implicit declaration of function ‘putstring’ [-Wimplicit-function-declaration]
+   if (putstring(s))
+       ^~~~~~~~~
+cfomtcr2.c:212:7: warning: implicit declaration of function ‘sendva’; did you mean ‘setdevs’? [-Wimplicit-function-declaration]
+   if (sendva(va))
+       ^~~~~~
+       setdevs
+cfomtcr2.c:216:7: warning: implicit declaration of function ‘resetva’ [-Wimplicit-function-declaration]
+   if (resetva(va))
+       ^~~~~~~
+cfomtcr2.c:221:7: warning: implicit declaration of function ‘nextpos’; did you mean ‘fsetpos’? [-Wimplicit-function-declaration]
+   if (nextpos(line,column,strlen(s),&x,&y) == -1)
+       ^~~~~~~
+       fsetpos
+cfomtcr2.c:221:27: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+   if (nextpos(line,column,strlen(s),&x,&y) == -1)
+                           ^~~~~~
+cfomtcr2.c:221:27: warning: incompatible implicit declaration of built-in function ‘strlen’
+cfomtcr2.c:221:27: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+cfomtcr2.c:230:7: warning: implicit declaration of function ‘prevpos’; did you mean ‘fsetpos’? [-Wimplicit-function-declaration]
+   if (prevpos(line,column,&x,&y) == -1)
+       ^~~~~~~
+       fsetpos
+cfomtcr2.c: At top level:
+cfomtcr2.c:246:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ nextpos(line,column,length,nlp,ncp) /* calculate coordinates of char pos
+ ^~~~~~~
+cfomtcr2.c:261:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ prevpos(line,column,nlp,ncp) /* calculate coordinates of char pos
+ ^~~~~~~
+cfomtcr2.c:274:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ clear(x,y,l,va) /* clear l char pos starting from (x,y) */
+ ^~~~~
+cfomtcr2.c: In function ‘clear’:
+cfomtcr2.c:281:7: warning: implicit declaration of function ‘putblanks’ [-Wimplicit-function-declaration]
+   if (putblanks(l))
+       ^~~~~~~~~
+cfomtcr2.c: At top level:
+cfomtcr2.c:306:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ putblanks(n) /* write n blanks to screen */
+ ^~~~~~~~~
+cfomtcr2.c: In function ‘putblanks’:
+cfomtcr2.c:309:7: warning: implicit declaration of function ‘put’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+   if (put(' '))
+       ^~~
+       puts
+cfomtcr2.c: At top level:
+cfomtcr2.c:314:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ backspace(){ /* back space non-destructively */
+ ^~~~~~~~~
+cfomtcr2.c:332:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ genva(v) /* generate va sequences */
+ ^~~~~
+cfomtcr2.c: In function ‘genva’:
+cfomtcr2.c:358:6: warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+   if(strcmp(sp->termnm,"W50"))
+      ^~~~~~
+cfomtcr2.c: At top level:
+cfomtcr2.c:383:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ sendva(v) /* send sequences for all vas encoded in v */
+ ^~~~~~
+cfomtcr2.c: In function ‘sendva’:
+cfomtcr2.c:419:4: warning: implicit declaration of function ‘advcur’ [-Wimplicit-function-declaration]
+    advcur();
+    ^~~~~~
+cfomtcr2.c: At top level:
+cfomtcr2.c:477:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ resetva(va){ /* send reset va sequence to terminal */
+ ^~~~~~~
+cfomtcr2.c: In function ‘resetva’:
+cfomtcr2.c:477:1: warning: type of ‘va’ defaults to ‘int’ [-Wimplicit-int]
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomtcr2.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomerr.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomerr.c:17:7: warning: conflicting types for built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+ char *malloc();
+       ^~~~~~
+cfomerr.c:19:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ errinit(erflnm)  /* init for file *erflnm */
+ ^~~~~~~
+cfomerr.c: In function ‘errinit’:
+cfomerr.c:23:12: warning: implicit declaration of function ‘open’; did you mean ‘popen’? [-Wimplicit-function-declaration]
+  if ((fd = open(erflnm,0)) == -1)
+            ^~~~
+            popen
+cfomerr.c:25:6: warning: implicit declaration of function ‘read’; did you mean ‘fread’? [-Wimplicit-function-declaration]
+  if (read(fd,(char *)&eh,EHSZ) != EHSZ)
+      ^~~~
+      fread
+cfomerr.c:32:2: warning: implicit declaration of function ‘close’; did you mean ‘pclose’? [-Wimplicit-function-declaration]
+  close(fd);
+  ^~~~~
+  pclose
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomerr.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomioc.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.
+cfomioc.c:24:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ settty(){ /* set terminal to PROFOM mode */
+ ^~~~~~
+cfomioc.c:76:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ rstty(){ /* reset terminal mode to UNIX */
+ ^~~~~
+cfomioc.c:89:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ flush(){ /* flush type-ahead buffers */
+ ^~~~~
+cfomioc.c: In function ‘flush’:
+cfomioc.c:94:2: warning: implicit declaration of function ‘lockkb’ [-Wimplicit-function-declaration]
+  lockkb();
+  ^~~~~~
+cfomioc.c:100:2: warning: implicit declaration of function ‘unlockkb’; did you mean ‘funlockfile’? [-Wimplicit-function-declaration]
+  unlockkb();
+  ^~~~~~~~
+  funlockfile
+make[2]: Warning: Archive 'libfom.a' seems to have been created in deterministic mode. 'cfomioc.o' will always be updated. Please consider passing the U flag to ar to avoid the problem.

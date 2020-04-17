@@ -4,11 +4,13 @@
 ***/
 
 #include <stdio.h>
+#include <string.h>
 #include "rep.h"
 #include "struct.h"
 #include "repname.h"
+#include <errno.h>
 
-extern	int	errno ;
+//extern	int	errno ;
 
 /*
 *	Maximum Input fields (MAX_FIELDS) allowed are 127 at the current 
@@ -35,6 +37,10 @@ FILE *fopen() ;		/*  *fpin input file format */
 static int fdout ;	/* ouput file descriptor */
 
 static	int	array  ;
+
+/*** Define functions and prototypes ***/
+static int initialize(char *);
+static int openfiles(char *);
 
 main(argc,argv)
 int argc ;
@@ -168,7 +174,7 @@ char	*fl_name;		/* .def file */
 
 	for( t_flds=0, line_no = 0 , off_set = 0 ; ; line_no++){
 		if ( t_flds > MAX_FIELDS ) {
-		    printf("Too Many Flds In :%s.. Allowed only %d",
+		    printf("Too Many Flds In :%s.. Allowed only %ld",
 							fl_name,MAX_FIELDS);
 		    return(OPENERR);
 		}
@@ -371,7 +377,7 @@ int	*dimen ;
 }
 
 /*---------------------------------------*/
-
+void
 make_name(fld_name, len, fld_no)
 char	*fld_name ;
 int	len , fld_no ;
@@ -382,7 +388,7 @@ int	len , fld_no ;
 	if(len == 1) {
 		strncpy(c_name[fld_no] , fld_name, L_NAME-1) ;
 		c_name[fld_no][L_NAME-1] = '\0' ;
-		return(0) ;
+		return ;
 	}
 
 	for ( i = 0 ; i < len ; i++) {
@@ -391,7 +397,7 @@ int	len , fld_no ;
 		strncpy(c_name[fld_no+i] , name, L_NAME-1) ;
 		c_name[fld_no][L_NAME-1] = '\0' ;
 	}
-	return(0) ;
+	return ;
 }
 	
 /*--------------------E-N-D---O-F---F-I-L-E----------------------------*/

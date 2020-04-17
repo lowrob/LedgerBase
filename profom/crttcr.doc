@@ -1,0 +1,83 @@
+
+		   SET UP TERMINAL CHARACTERISTICS FOR PROFOM
+		   ==========================================
+
+FILES TO BE REFERED:
+===================
+
+	1. "/etc/termcap" file for the corresponding terminal capabilities.
+	2. "crttcr.c" file of PROFOM and if required "cfomtcr.h".
+	3. Terminal manual if any.
+
+RELATION between TERMCAP entries and the structure members of TCRFIX of PROFOM:
+==============================================================================
+
+	TCRFIX member	TERMCAP entry			Remark
+	-------------	-------------			------
+	ttyp				It's value is 1 if it's a dynamic
+					terminal, 2 for a terminal with no
+					video attribute facility otherwise 0.
+	lines		li		Number of lines on screen.
+	cols		co		Number of columns in a line.
+	wrap		am		It's presence in the termcap, indicates
+					that the terminal has auto wrap facility
+					and if so it is set to 1 else 0.
+	ceol		ce		Clear to end of line.
+	clin		ce/cd		Clear to end of line/display.
+	cscrn		cl		Clear screen.
+	left		kl		Move left/left arrow.
+	right		kr		Move right/right arrow.
+	up		ku/up		Move up/up arrow.
+	down		kd/do		Move down/down arrow.
+	home		kh/ho		Home.
+	sfa				Begin reverse/underline video mode.
+					e.g:	In case of 7901 he calls it as
+						"setting tagged data"    (so).
+	efa		se/ue		End the corr. modes.
+					e.g:	In case of 7901 he calls it as
+						"resetting tagged data"  (si).
+	rv		so		Reverse video sequence.
+	uline		us		Underline video sequence.
+
+	hiten		|		Not supported in termcap, but if
+			|------------>	available in any manual you can use
+	loten		|		these sequences.
+
+	The following refer to cursor motion capability:
+
+			cm		Cursor motion/Position cursor.
+					SYNTAX For 7901:
+						cm=\EY%+ %+ :
+
+	move				Any sequence of characters after escape
+					character('\E') and the first '%'.
+	movesep				Any character between X & Y coordinates.
+					e.g:	cm=\EY%+ ;%+ :
+						so here it's the character ';'.
+	xy				If %r is present in the 'cm' string, it
+					should be set to 1 else 0.
+					e.g:	cm=\E%r%+ %+ :
+	const				ASCII value of the character present
+					after %+.
+					e.g:	Above it's '%+ ', so add 32
+						as it's the ascii value of the
+						blank character.
+
+ADDITIONAL REFERENCES:
+=====================
+
+	1. Information available for TERMCAP(M) in Unix/Xenix manual.
+	2. Amar or Mohan !
+
+HOW TO GO ABOUT CREATING ?
+========================
+	1. Edit the crttcr.c file with the following details.
+	2. Fill the details of TCRFIX structure members with corr. capabilities
+	   present in the TERMCAP file or corr. terminal manual as explained
+	   above( code as shown in the crttcr.c file ).
+	3. Take care when using the functions sc(), stc() & sce() provided in
+	   crttcr.c file.
+		sc() :	It puts the control character corr. to the char passed.
+		stc():	Appends the string passed.
+		sce():	Prefixes ESC character to the string passed.
+

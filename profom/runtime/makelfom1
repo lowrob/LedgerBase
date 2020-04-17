@@ -1,0 +1,36 @@
+L=libfom1.a
+I=$(HOME)/profom/include
+
+.PRECIOUS : $L
+
+$L	: $L(cfomfrm1.o) $L(cfomfrm2.o) $L(cfomfrm3.o) $L(cfomfld1.o) \
+	$L(cfomfld2.o) $L(cfomfld3.o) $L(cfomtcr1.o) $L(cfomtcr2.o) \
+	$L(cfomerr.o) $L(cfomioc.o)
+#	ranlib	$L
+
+.c.a	:
+	$(CC) $(CFLAGS) -I$I -c $*.c
+	ar rv $L $*.o
+	rm $*.o
+
+$L(cfomfrm1.o) : $(I)/cfomfrm.h $(I)/cfomfts.h $(I)/cfomstrc1.h $(I)/profomlang.h
+
+$L(cfomfrm2.o) : $(I)/cfomdef.h $(I)/cfomfrm.h $(I)/cfomfts.h $(I)/cfomstrc1.h
+
+$L(cfomfrm3.o) : $(I)/cfomdef.h $(I)/cfomfrm.h $(I)/cfomfts.h $(I)/cfomstrc1.h
+
+$L(cfomfld1.o) : $(I)/cfomdef.h $(I)/cfomfrm.h $(I)/cfomstrc1.h
+
+$L(cfomfld2.o) : $(I)/cfomdef.h $(I)/cfomfrm.h $(I)/cfomstrc1.h $(I)/profomlang.h
+
+$L(cfomfld3.o) : $(I)/cfomdef.h $(I)/cfomfrm.h $(I)/cfomstrc1.h $(I)/profomlang.h
+
+$L(cfomtcr1.o) : $(I)/cfomdef.h $(I)/cfomfrm.h $(I)/cfomfts.h \
+		$(I)/cfomtcr.h $(I)/cfomtm.h $(I)/cfomstrc1.h
+
+$L(cfomtcr2.o) : $(I)/cfomdef.h $(I)/cfomfrm.h $(I)/cfomfts.h \
+		$(I)/cfomtcr.h $(I)/cfomtm.h $(I)/cfomstrc1.h
+
+$L(cfomerr.o) : $(I)/cfomdef.h $(I)/cfomerr.h $(I)/cfomstrc1.h
+
+$L(cfomioc.o) : 

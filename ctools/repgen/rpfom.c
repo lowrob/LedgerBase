@@ -5,9 +5,11 @@
 */
 
 #include <stdio.h>
+#include <string.h>
 #include "rep.h"
 #include "repname.h"
 #include "struct.h"
+#include <errno.h>
 
 #define	NO_FMT	10		/* end of all formats in a logical record */
 #define	NO_LOG	20 		/* end of logical records */
@@ -26,7 +28,12 @@ static	struct	rp_name repnamerec ;
 static	char	*comp() ;
 static	int	maxstruct ;
 
-extern	int	errno ;
+//extern	int	errno ;
+
+/*** Define function and prototypes ***/
+static int Rd_formrec(char*, int, int);
+static int Rd_strrecs(char *);
+
 
 main(argc, argv)
 int	argc;
