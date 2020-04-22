@@ -8,6 +8,7 @@
 *    Contains Defined Constants used by system.
 */
 
+#include<errno.h>
 #include "gen_routine.h"
 
 #define float double
@@ -589,7 +590,7 @@ extern	int	SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9 ;
 #define MONTH	2
 #define YEAR	3
 
-extern	int	errno ;
+//extern	int	errno ;
 extern	long	lseek(),
 		date_plus(),
 		days(),

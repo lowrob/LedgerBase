@@ -181,6 +181,15 @@ short	optionfldlen;	/* option field length, 1 or 2, changes dynamically */
 Pa_rec	param_rec;
 #endif
 
+/*** Declare functions and prototypes ***/
+static int ProcMenu(void);
+static void ErrExit(void);
+static int ShowMenu(void);
+static int ReadMenuData(void);
+static int InitScreen(void);
+static int InitProfom(char *);
+static int CloseProcess(void);
+
 main( argc, argv )
 int	argc;
 char	*argv[];
@@ -400,6 +409,7 @@ CloseProcess()
 }
 
 static
+int
 InitProfom(terminal)
 char *terminal;
 {
@@ -411,6 +421,7 @@ char *terminal;
 
 /* Initialize profom screen with high values in all fields */
 static
+int
 InitScreen()
 {
  	strcpy( sr.scrnam, NFM_PATH );
@@ -443,6 +454,7 @@ char	*string;
 
 /* Read Menudata file and fill the buffer area with data */
 static
+int
 ReadMenuData()	/* returns -1 on error,  or no_of_options */
 {
 	char *s, filename[OPTION_LEN+1]; 
@@ -547,6 +559,7 @@ char *string;
 /* Change Here J.Prescott */
 /* Display the menu items after reading from the m_item buffer */
 static
+int
 ShowMenu()
 {
 	short	i, j;
@@ -620,6 +633,7 @@ ShowMenu()
 }
 
 static
+void
 ErrExit()
 {
 	CloseProcess();
@@ -708,6 +722,7 @@ short	scr_index, /* index of item in screen's menuitem array */
 
 /* Read user's option, validate and return a value depending on it's type */
 static
+int
 ProcMenu()
 {
 	int	field_no;

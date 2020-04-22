@@ -15,13 +15,13 @@ export HOME=$PWD;
 export LBASE=$PWD;
 
 echo "Need to have a bin and lib folder for files created at compile.";
-if [ ! -d $HOME/lib ] 
+if [ ! -d $HOME/lib ]
 then
 	echo " ** Creating lib folder"
 	mkdir $HOME/lib
 fi
 
-if [ ! -d $HOME/bin ] 
+if [ ! -d $HOME/bin ]
 then
 	echo " ** Creating bin folder"
 	mkdir $HOME/bin
@@ -29,5 +29,8 @@ fi
 
 echo "Compile order:"
 ehco "profom compile, need to run linkfiles then"
-echo "		for each fom file need to creat and nfn file so run fom_to_n ####.fom"
+echo "		for each fom file need to create an nfn file so run fom_to_n ####.fom"
 echo "ctools"
+echo "nfm - need to run crtnfm.SH and to do so need PATH to include profom/editor (where fom_to_n is)"
+echo "dbh"
+echo "Util - needed to build menu system"

@@ -1,6 +1,6 @@
 I=$(HOME)/include
 E=$(HOME)/bin/menuscrn2.out
-LIBS=/lib/libfom.a $(HOME)/dbh/libbfs.a /lib/libuisam.a
+LIBS=$(HOME)/lib/libfom.a $(HOME)/dbh/libbfs.a $(HOME)/ctools/lib/libuisam.a
 OBJECTS=menuscrn2.o 
 CC=cc
 
@@ -13,4 +13,3 @@ $E	: $(OBJECTS) $(LIBS)
 	$(CC) -c -I$I -DENGLISH $*.c
 
 $(OBJECTS) : $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h
-
