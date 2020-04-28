@@ -15,7 +15,7 @@ struct stat_rec *sr;
 
 	if(sr->retcode == RET_ERROR)
 	{
-		err = sr->errno;
+		err = sr->errno_lou;
 		endfld = sr->endfld;
 		curfld = sr->curfld;
 		if(err == 88)           /* free error */
