@@ -15,16 +15,16 @@ export HOME=$PWD;
 export LBASE=$PWD;
 
 echo "Need to have a bin and lib folder for files created at compile.";
-if [ ! -d $HOME/lib ] 
+if [ ! -d $LBASE/lib ] 
 then
 	echo " ** Creating lib folder"
-	mkdir $HOME/lib
+	mkdir $LBASE/lib
 fi
 
-if [ ! -d $HOME/bin ] 
+if [ ! -d $LBASE/bin ] 
 then
 	echo " ** Creating bin folder"
-	mkdir $HOME/bin
+	mkdir $LBASE/bin
 fi
 
 echo "Compile order:"
