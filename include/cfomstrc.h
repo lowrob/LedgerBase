@@ -63,7 +63,7 @@ struct stat_rec {
 char	termnm[SR_TNML],	/* terminal name */
 	scrnam[SR_SCRNML];	/* screen name */
 int	retcode,		/* return code */
-	errno,			/* error number */
+	errno_lou,		/* error number */
 	nextfld,		/* next field number */
 	endfld,			/* last field number */
 	curfld,			/* current field number */

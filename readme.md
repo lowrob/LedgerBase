@@ -17,8 +17,11 @@ dbh = database code and utilities.
 
 nfm = menu system that was used on terminal - tnames limited access
 
+util = has menuscrn that is used to call the menu items .nfm
+
 pp = personnel / payroll
 
 include = include files for all the code
 
 formats = structures (don't remember how to use this yet - these are the source that builds data files of type .RPF, .RPN and .RPS)
+

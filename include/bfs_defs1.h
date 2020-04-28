@@ -247,6 +247,7 @@ extern	char	UserPasswd[];		/* defined in filein.h */
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <errno.h>
 
 #define	RDMODE		(O_BINARY | O_RDONLY)
 #define	WRMODE		(O_BINARY | O_WRONLY)
@@ -359,7 +360,7 @@ extern	int	SW1, SW2, SW3, SW4, SW5, SW6, SW7, SW8, SW9 ;
 #define MONTH	2
 #define YEAR	3
 
-extern	int	errno ;
+//extern	int	errno ;
 extern	long	lseek(),
 		date_plus(),
 		days(),
