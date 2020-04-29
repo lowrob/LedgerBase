@@ -1,23 +1,23 @@
-cd $HOME/dbh
+cd $LBASE/dbh
 makecmnd
-cd $HOME/util
+cd $LBASE/util
 makecmnd
-cd $HOME/gl
+cd $LBASE/gl
 makecmnd
-cd $HOME/po
+cd $LBASE/po
 makecmnd
-cd $HOME/requ
+cd $LBASE/requ
 makecmnd
-cd $HOME/aps
+cd $LBASE/aps
 makecmnd
-cd $HOME/inv
+cd $LBASE/inv
 makecmnd
-cd $HOME/ars
+cd $LBASE/ars
 makecmnd
-cd $HOME/fa
+cd $LBASE/fa
 makecmnd
-cd $HOME/pp
+cd $LBASE/pp
 makecmnd
-cd $HOME/tender
+cd $LBASE/tender
 makecmnd
-cd $HOME
+cd $LBASE
