@@ -1,0 +1,6 @@
+CTOOLS=/home/lbase/code/LedgerBase/ctools/bin
+LBASE=/home/lbase/code/LedgerBase/
+export CTOOLS LBASE
+TERM=vt100
+umask 002
+$LBASE/bin/menuscrn2.out menu0000 -d61

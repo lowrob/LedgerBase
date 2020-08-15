@@ -1,0 +1,5 @@
+CTOOLS=/disk1/ctools/bin
+LBASE=/devel/nfld
+export CTOOLS LBASE
+umask 002
+$LBASE/bin/menuscrn2.out menu0000 -d99
