@@ -14,10 +14,14 @@ profom;
 	linkfiles
 	
 dbh = database code and utilities.
+makecmnd
+makeinit (this is needed to initialize DB files)
 
 nfm = menu system that was used on terminal - tnames limited access
 
 util = has menuscrn that is used to call the menu items .nfm
+
+have to compile and run 
 
 pp = personnel / payroll
 
