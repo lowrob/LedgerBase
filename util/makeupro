@@ -1,7 +1,7 @@
 
-I=$(HOME)/include
-E=$(HOME)/bin
-LIBS=$(HOME)/dbh/libbfs.a /lib/libfom.a  /lib/libuisam.a
+I=$(LBASE)/include
+E=$(LBASE)/bin
+LIBS=$(LBASE)/dbh/libbfs.a $(LBASE)/lib/libfom.a  $(LBASE)/lib/libuisam.a
 OBJECTS=userprof.o
 CC=cc
 
@@ -11,5 +11,5 @@ $E/userprof.out : $(OBJECTS) $(LIBS)
 .c.o :
 	$(CC) -c -I$I -DENGLISH $*.c
 
-$(OBJECTS) :userprof.c $I/bfs_defs.h $I/bfs_recs.h /usr/include/cfomstrc.h 
+$(OBJECTS) :userprof.c $I/bfs_defs.h $I/bfs_recs.h $(LBASE)/include/cfomstrc.h 
 

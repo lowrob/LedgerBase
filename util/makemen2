@@ -1,8 +1,8 @@
-I=$(HOME)/include
-E=$(HOME)/bin/menuscrn2.out
-LIBS=$(HOME)/lib/libfom.a $(HOME)/dbh/libbfs.a $(HOME)/ctools/lib/libuisam.a
+I=$(LBASE)/include
+E=$(LBASE)/bin/menuscrn2.out
+LIBS=$(LBASE)/lib/libfom.a $(LBASE)/dbh/libbfs.a $(LBASE)/ctools/lib/libuisam.a
 OBJECTS=menuscrn2.o 
-CC=cc
+CC=cc -g
 
 $E	: $(OBJECTS) $(LIBS)
 	$(CC) $(OBJECTS) $(LIBS) -o $E

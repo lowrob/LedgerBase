@@ -1,6 +1,6 @@
-I=$(HOME)/include
-E=$(HOME)/bin/menuscrn.out
-LIBS=/lib/libfom.a $(HOME)/dbh/libbfs.a /lib/libuisam.a
+I=$(LBASE)/include
+E=$(LBASE)/bin/menuscrn.out
+LIBS=/lib/libfom.a $(LBASE)/dbh/libbfs.a /lib/libuisam.a
 OBJECTS=menuscrn.o 
 CC=cc -g
 

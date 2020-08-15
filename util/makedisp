@@ -1,5 +1,5 @@
 I=$(HOME)/include
-LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+LIBS=$(HOME)/dbh/libbfs.a $(LBASE)/ctools/lib/libuisam.a
 OBJECTS=dispfile.o
 E=$(HOME)/bin/dispfile.out
 CC=cc

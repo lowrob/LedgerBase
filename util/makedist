@@ -1,6 +1,6 @@
-I=$(HOME)/include
-E=$(HOME)/bin
-LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+I=$(LBASE)/include
+E=$(LBASE)/bin
+LIBS=$(LBASE)/dbh/libbfs.a $(LBASE)/lib/libuisam.a
 OBJECTS=add_dist.o
 CC=cc
 
@@ -10,5 +10,6 @@ $E/add_dist.out : $(OBJECTS) $(LIBS)
 .c.o :
 	$(CC) -c -I$I -DENGLISH $*.c
 
-$(OBJECTS) : $I/bfs_defs.h $I/bfs_recs.h
+$(OBJECTS) : /home/lbase/code/LedgerBase/include/bfs_defs.h /home/lbase/code/LedgerBase/include/bfs_recs.h
+#$(OBJECTS) : $I/bfs_defs.h $I/bfs_recs.h
 

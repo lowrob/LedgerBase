@@ -1,9 +1,9 @@
-I=$(HOME)/include
-E=$(HOME)/bin
-LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+I=$(LBASE)/include
+E=$(LBASE)/bin
+LIBS=$(LBASE)/dbh/libbfs.a $(LBASE)/lib/libuisam.a
 OBJECTS=superusr.o
-E=$(HOME)/bin/superusr.out
-CC=cc
+E=$(LBASE)/bin/superusr.out
+CC=cc -g
 
 $E : $(OBJECTS) $(LIBS)
 	$(CC) $(OBJECTS) $(LIBS) -o $E
