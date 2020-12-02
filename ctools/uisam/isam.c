@@ -410,6 +410,7 @@ int	*sptr, *dptr ;
 
 	if(seek(0) == ERROR) 
 		reterr(NODSKERR);
+
 	if(read(currslot.fd2,ptr2,INXHSZ)<INXHSZ)
 		reterr(IFLRDERR); /* SIZE OF HEADER BLOCK IN FILE < SIZE DECLARED IN ISNAMES.H */
 
@@ -429,7 +430,11 @@ int	*sptr, *dptr ;
 
 	if ( alloc_flg )
 		if (alloctable() == ERROR) return (ERROR) ;
-	altkptr = (struct keydat *)(++header); /* deserves attention..*/
+// zzz got a problem
+	++header;
+ 	printf("\n\tpast ++header");
+	altkptr = (struct keydat *) header; /* deserves attention..*/
+	printf("\n\tpast attention sec");
 
 	for(currkeyno = 0;currkeyno<currslot.altkeys;currkeyno++) {
 		currindex.proot = altkptr->proot;

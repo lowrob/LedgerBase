@@ -24,7 +24,7 @@ HISTORY:
  Date           Programmer     Description of modification
 ____/__/__      __________     ___________________________
 1991/01/01	C.Leadbeater   Implemented record locking for audit file.
-
+2020/07/20	L.Robichaud	New compiler needs to have function prototypes and declares
 ******************************************************************************/
 #include <stdio.h>
 
@@ -132,6 +132,50 @@ struct stat_rec 	sr;		/* profom status record */
 static short lastitemnumber;	/* keeps track of the last item number */
 static int totalitemsactive;	/* total items added in any add session */
 
+/* Declare functions and prototypes */
+static int Initialize (char *);
+static int InitProfom(char *);
+static int InitScreen(void);
+static int FillScrHdg(void);
+static int FillKeyFields(short);
+static int FillSeperatorLine(short);
+static int FillFieldNum(short);
+static int FillHeaderFields(short);
+static int FillMsgRespFields(short);
+static int FillLineHeading(int);
+static int FillItemLines(int, short, short);
+static int Process(void);
+static int ReadFunction(void);
+static int AddRecords(void);
+static int ReadKeyFields(void);
+static int ReadFields(int, int);
+static int WriteFields(int,int);
+static int ClearScreen(void);
+static int Validate(void);
+static int ConfirmHeader(v0id);
+static int DisplayMessage(char *);
+static int HideMessage(void);
+static int HideFldNo(void);
+static int EditHeaderFields(void);
+static Page *PageAllocated(void);
+static int ShowPage(void);
+static int ListToScreen(void);
+static int ConfirmItems(int);
+static int EditItemFields(void);
+static int LineChange(int);
+static int WriteSession(int);
+static int WriteRecord(int);
+static int FreeList(void);
+static int Inquire(int, int, int);
+static int DisplayRecord(int);
+static int GetNextRec(int);
+static int GetRecord(int);
+static int ShowHeaderFields(void);
+static int ShowItems(int);
+static int BuildList(int);
+
+
+
 /* Initialize profom fields, call entry procedures */
 main( argc, argv )
 int argc;
@@ -170,7 +214,7 @@ char *argv[];
 	exit( retval );
 }
 /* initialize profom and screen */
-static
+static int
 Initialize( terminal )
 char *terminal;
 {

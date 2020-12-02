@@ -1,5 +1,5 @@
 LIBS=libuisam.a
-E=$(HOME)/bin/isrecrt.out
+E=$(LBASE)/bin/isrecrt.out
 OBJECTS=isrecrt.o
 
 $E	: $(OBJECTS) $(LIBS)

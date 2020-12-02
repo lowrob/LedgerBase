@@ -65,7 +65,7 @@ char	*e_mesg;	/* Error message filled in this area */
 	if(SecurityStatus == -1) {
 		if(init_dbh() < 0){
 #ifdef ENGLISH
-		    strcpy(e_mesg, "SECURITY ERROR: Initializing DBH" );
+		    strcpy(e_mesg, "SECURITY ERROR 3: Initializing DBH" );
 #else
 		    strcpy(e_mesg, "ERREUR DE SECURITE: Initialise DBH" );
 #endif
@@ -141,7 +141,7 @@ char	*e_mesg;
 	if(SecurityStatus == -1) {
 		if(init_dbh() < 0){
 #ifdef ENGLISH
-		    strcpy(e_mesg, "SECURITY ERROR: Initializing DBH" );
+		    strcpy(e_mesg, "SECURITY ERROR 1: Initializing DBH" );
 #else
 		    strcpy(e_mesg, "ERREUR DE SECURITE: Initialise DBH" );
 #endif
@@ -196,7 +196,7 @@ char	*e_mesg;
 	if(SecurityStatus == -1) {
 		if(init_dbh() < 0){
 #ifdef ENGLISH
-		    strcpy(e_mesg, "SECURITY ERROR: Initializing DBH" );
+		    strcpy(e_mesg, "SECURITY ERROR 2: Initializing DBH" );
 #else
 		    strcpy(e_mesg, "ERREUR DE SECURITE: Initialise DBH");
 #endif

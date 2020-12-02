@@ -30,7 +30,7 @@ char	*argv[] ;
 		set_dist() ;
 
 	/* Fill up a Super user Profile */
-	strcpy( up_rec.u_id, "nfld" );
+	strcpy( up_rec.u_id, "louis" );
 	strcpy( up_rec.u_name, "SUPER USER" );
 	strcpy( up_rec.u_passwd, "\0" );
 	strcpy( up_rec.u_trml, "\0" );

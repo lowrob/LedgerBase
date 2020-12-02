@@ -35,6 +35,18 @@ extern	int	*keysarray ;
 
 static	int	pending_trans = 0 ;
 
+/*** Define functions and prototypes needed for new compilter ***/
+static int ask_key(char *, int, int, char *);
+static int SeqIsam(void);
+static int RandIsam(void);
+static int DispIsam(void);
+static int AddRecord(void);
+static int DispSeq(void);
+static int rand_read(void);
+static int seq_read(void);
+static int disp_rec(void);
+static int read_flds(int);
+
 main(argc, argv)
 int	argc ;
 char	*argv[] ;

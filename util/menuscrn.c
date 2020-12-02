@@ -77,7 +77,7 @@ ____/__/__      __________     ___________________________
 #define MOD_DATE	"23-JAN-90"
 
 #include <stdio.h>
-#include <bfs_defs.h>
+#include bfs_defs.h
 #include <cfomstrc.h>
 
 #ifdef ENGLISH

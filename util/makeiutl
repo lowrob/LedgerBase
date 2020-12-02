@@ -1,7 +1,7 @@
-I=$(HOME)/include
-LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+I=$(LBASE)/include
+LIBS=$(LBASE)/dbh/libbfs.a $(LBASE)/lib/libuisam.a
 OBJECTS=isamutil.o
-E=$(HOME)/bin/isamutil.out
+E=$(LBASE)/bin/isamutil.out
 CC=cc
 
 $E	: $(OBJECTS) $(LIBS)

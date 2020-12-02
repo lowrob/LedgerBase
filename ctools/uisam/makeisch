@@ -1,5 +1,5 @@
 LIBS=libuisam.a
-E=$(HOME)/bin/ischeck.out
+E=$(LBASE)/bin/ischeck.out
 OBJECTS=ischeck.o
 
 $E	: $(OBJECTS) $(LIBS)

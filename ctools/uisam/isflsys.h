@@ -13,6 +13,16 @@ struct  indxheader {
 };
 
 struct  keydat {
+	int     pkeylength;
+	long	proot;
+	int	pmaxkeys;
+	long	pnodesize;
+	int	pnumkeys;
+	int	pkeyparts ;
+	int	partsarray ;
+};
+/*** Trying something
+struct  keydat {
 	int     pkeylength,
 		proot,
 		pmaxkeys,
@@ -21,7 +31,7 @@ struct  keydat {
 		pkeyparts ,
 		*partsarray ;
 };
-
+***/
 struct  indxinfo {
 	int     numrecords ;
 	long    nxtposn ;

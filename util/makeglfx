@@ -1,7 +1,6 @@
-
-I=$(HOME)/include
-E=$(HOME)/bin
-LIBS=$(HOME)/dbh/libbfs.a /lib/libuisam.a
+I=$(LBASE)/include
+E=$(LBASE)/bin
+LIBS=$(LBASE)/dbh/libbfs.a $(LBASE)/lib/libuisam.a
 OBJECTS=glfix.o
 CC=cc
 
