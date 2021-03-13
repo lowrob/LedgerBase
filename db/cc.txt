@@ -1,0 +1,1 @@
+gcc -o qmcar query_mrow.c -I/usr/include/postgresql -lpq -std=c99
