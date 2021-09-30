@@ -1,0 +1,4 @@
+CC=gcc
+CFLAGS=-lpq -std=c99
+qmcar: qmcar.c
+	$CC -o qmcar query_mrow.c -I/usr/include/postgresql $(CFLAGS)
